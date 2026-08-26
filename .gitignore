@@ -1,0 +1,37 @@
+﻿# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Environment variables & secrets
+.env
+.env.local
+
+# Output files
+output/mp3_variations/*
+!output/mp3_variations/.gitkeep
+output/plots/*
+!output/plots/.gitkeep
+output/reports/*
+!output/reports/.gitkeep
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store

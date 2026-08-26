@@ -1,0 +1,1179 @@
+{
+  "arquivo": "999.mp4",
+  "codec": "opus",
+  "duracao_total_segundos": 465.15875,
+  "tempo_execucao_total_segundos": 52.643,
+  "tempo_processamento_nuvem_segundos": 43.224,
+  "metricas_tokens": {
+    "prompt_tokens_audio": 16792,
+    "candidate_tokens_texto": 11388,
+    "total_tokens": 37781
+  },
+  "custo_estimado": {
+    "custo_usd": 0.00935,
+    "custo_brl": 0.0533
+  },
+  "total_turnos_fala": 145,
+  "segmentos": [
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Alexander Souza Silva. Essa é uma audiência de custódia. A audiência de custódia tem por objetivo apenas verificar a prisão do senhor, se o senhor cometeu crime ou não, não vai ser verificado agora, tá?",
+      "timestamp": "00:00 - 00:09",
+      "segundos_inicio": 0.09,
+      "segundos_fim": 9.71,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "O senhor tem direito ao silêncio, o silêncio não será interpretado em prejuízo da sua defesa, mas é uma oportunidade de o senhor falar sobre a prisão, tá bom?",
+      "timestamp": "00:10 - 00:16",
+      "segundos_inicio": 10.32,
+      "segundos_fim": 16.32,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Vou fazer algumas perguntas pessoais, depois eu vou para a questão da prisão.",
+      "timestamp": "00:17 - 00:19",
+      "segundos_inicio": 17.29,
+      "segundos_fim": 19.46,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Nome completo, Bruno Alexander Souza Silva, correto?",
+      "timestamp": "00:20 - 00:22",
+      "segundos_inicio": 20.46,
+      "segundos_fim": 22.77,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Correto.",
+      "timestamp": "00:22 - 00:22",
+      "segundos_inicio": 22.77,
+      "segundos_fim": 22.97,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "E qual que o senhor se declara?",
+      "timestamp": "00:23 - 00:25",
+      "segundos_inicio": 23.69,
+      "segundos_fim": 25.0,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Pardo.",
+      "timestamp": "00:27 - 00:28",
+      "segundos_inicio": 27.91,
+      "segundos_fim": 28.31,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Pardo. O senhor é natural de que cidade?",
+      "timestamp": "00:28 - 00:31",
+      "segundos_inicio": 28.79,
+      "segundos_fim": 31.0,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "São Paulo.",
+      "timestamp": "00:31 - 00:32",
+      "segundos_inicio": 31.6,
+      "segundos_fim": 32.0,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "São Paulo.",
+      "timestamp": "00:32 - 00:33",
+      "segundos_inicio": 32.49,
+      "segundos_fim": 33.09,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Ah, qual que é o telefone do senhor?",
+      "timestamp": "00:34 - 00:37",
+      "segundos_inicio": 34.47,
+      "segundos_fim": 37.0,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "11 20 74 70 30.",
+      "timestamp": "00:38 - 00:40",
+      "segundos_inicio": 38.3,
+      "segundos_fim": 40.7,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "11 20 74 70 30.",
+      "timestamp": "00:41 - 00:45",
+      "segundos_inicio": 41.2,
+      "segundos_fim": 45.4,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "O senhor tem algum celular?",
+      "timestamp": "00:45 - 00:47",
+      "segundos_inicio": 45.7,
+      "segundos_fim": 47.0,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Não.",
+      "timestamp": "00:47 - 00:47",
+      "segundos_inicio": 47.4,
+      "segundos_fim": 47.7,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Não sei de cor, não.",
+      "timestamp": "00:48 - 00:49",
+      "segundos_inicio": 48.2,
+      "segundos_fim": 49.0,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Ou o e-mail?",
+      "timestamp": "00:49 - 00:50",
+      "segundos_inicio": 49.4,
+      "segundos_fim": 50.2,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "É...",
+      "timestamp": "00:51 - 00:52",
+      "segundos_inicio": 51.6,
+      "segundos_fim": 52.0,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Se não souber, não tem problema.",
+      "timestamp": "00:52 - 00:53",
+      "segundos_inicio": 52.5,
+      "segundos_fim": 53.7,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Não, não se recorda do celular, nem do e-mail.",
+      "timestamp": "00:54 - 00:56",
+      "segundos_inicio": 54.3,
+      "segundos_fim": 56.4,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Ah, o nome da mãe e do pai?",
+      "timestamp": "01:04 - 01:06",
+      "segundos_inicio": 64.7,
+      "segundos_fim": 66.2,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "É, Gislene Elias de Souza.",
+      "timestamp": "01:07 - 01:09",
+      "segundos_inicio": 67.4,
+      "segundos_fim": 69.3,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Gislene Elias de Souza.",
+      "timestamp": "01:09 - 01:11",
+      "segundos_inicio": 69.7,
+      "segundos_fim": 71.6,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "O nome do pai não consta?",
+      "timestamp": "01:13 - 01:14",
+      "segundos_inicio": 73.2,
+      "segundos_fim": 74.4,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Carlos Roberto Pereira.",
+      "timestamp": "01:14 - 01:15",
+      "segundos_inicio": 74.7,
+      "segundos_fim": 75.9,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Então, Gislene Elias de Souza e Carlos Alberto Roberto. Carlos Roberto Pereira da Silva.",
+      "timestamp": "01:16 - 01:25",
+      "segundos_inicio": 76.6,
+      "segundos_fim": 85.4,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Estado de São Paulo. Estado civil?",
+      "timestamp": "01:28 - 01:29",
+      "segundos_inicio": 88.0,
+      "segundos_fim": 89.7,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Casado.",
+      "timestamp": "01:30 - 01:30",
+      "segundos_inicio": 90.0,
+      "segundos_fim": 90.5,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Casado.",
+      "timestamp": "01:31 - 01:32",
+      "segundos_inicio": 91.3,
+      "segundos_fim": 92.0,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "RG?",
+      "timestamp": "01:33 - 01:34",
+      "segundos_inicio": 93.6,
+      "segundos_fim": 94.0,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "37 101 914-X.",
+      "timestamp": "01:34 - 01:40",
+      "segundos_inicio": 94.6,
+      "segundos_fim": 100.3,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "São Paulo, né?",
+      "timestamp": "01:41 - 01:42",
+      "segundos_inicio": 101.6,
+      "segundos_fim": 102.4,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "É.",
+      "timestamp": "01:42 - 01:43",
+      "segundos_inicio": 102.8,
+      "segundos_fim": 103.1,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Ah, o senhor sabe o seu CEP, senhor?",
+      "timestamp": "01:47 - 01:48",
+      "segundos_inicio": 107.22,
+      "segundos_fim": 108.82,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Sim.",
+      "timestamp": "01:50 - 01:51",
+      "segundos_inicio": 110.74,
+      "segundos_fim": 111.06,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Qual que é?",
+      "timestamp": "01:51 - 01:51",
+      "segundos_inicio": 111.34,
+      "segundos_fim": 111.64,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "427 540 498 00.",
+      "timestamp": "01:51 - 01:58",
+      "segundos_inicio": 111.92,
+      "segundos_fim": 118.12,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "O senhor mora onde?",
+      "timestamp": "01:59 - 01:59",
+      "segundos_inicio": 119.02,
+      "segundos_fim": 119.62,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Moro, é, tenho vários endereços, moça.",
+      "timestamp": "02:01 - 02:04",
+      "segundos_inicio": 121.12,
+      "segundos_fim": 124.82,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "É, pode falar todos.",
+      "timestamp": "02:05 - 02:06",
+      "segundos_inicio": 125.82,
+      "segundos_fim": 126.72,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Vou falar só o que eu lembro, que a única rua que eu lembro de cor é que eu nasci, Rua Biazi.",
+      "timestamp": "02:08 - 02:12",
+      "segundos_inicio": 128.12,
+      "segundos_fim": 132.82,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Rua Biazi?",
+      "timestamp": "02:14 - 02:14",
+      "segundos_inicio": 134.02,
+      "segundos_fim": 134.82,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Marchitelo.",
+      "timestamp": "02:15 - 02:16",
+      "segundos_inicio": 135.82,
+      "segundos_fim": 136.52,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Marchitelo?",
+      "timestamp": "02:17 - 02:18",
+      "segundos_inicio": 137.42,
+      "segundos_fim": 138.02,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "É, M A R C H I T T E L L O.",
+      "timestamp": "02:18 - 02:28",
+      "segundos_inicio": 138.42,
+      "segundos_fim": 148.82,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Qual que é o número?",
+      "timestamp": "02:29 - 02:30",
+      "segundos_inicio": 149.82,
+      "segundos_fim": 150.52,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Quatro.",
+      "timestamp": "02:31 - 02:31",
+      "segundos_inicio": 151.02,
+      "segundos_fim": 151.42,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "É uma casa?",
+      "timestamp": "02:32 - 02:32",
+      "segundos_inicio": 152.02,
+      "segundos_fim": 152.62,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Casa.",
+      "timestamp": "02:32 - 02:33",
+      "segundos_inicio": 152.92,
+      "segundos_fim": 153.32,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Aí quintal não, é só uma casa mesmo.",
+      "timestamp": "02:34 - 02:35",
+      "segundos_inicio": 154.02,
+      "segundos_fim": 155.82,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "É.",
+      "timestamp": "02:36 - 02:36",
+      "segundos_inicio": 156.02,
+      "segundos_fim": 156.22,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Qual que é o bairro?",
+      "timestamp": "02:36 - 02:37",
+      "segundos_inicio": 156.92,
+      "segundos_fim": 157.52,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "São Paulo, Itaquera.",
+      "timestamp": "02:38 - 02:39",
+      "segundos_inicio": 158.12,
+      "segundos_fim": 159.22,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "O senhor disse que nasceu nessa casa.",
+      "timestamp": "02:42 - 02:43",
+      "segundos_inicio": 162.12,
+      "segundos_fim": 163.22,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "É.",
+      "timestamp": "02:43 - 02:43",
+      "segundos_inicio": 163.32,
+      "segundos_fim": 163.52,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Mas atualmente o senhor mora onde?",
+      "timestamp": "02:43 - 03:25",
+      "segundos_inicio": 163.92,
+      "segundos_fim": 205.12,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "É, tem a do condomínio que é, condomínio é Guará.",
+      "timestamp": "03:25 - 03:28",
+      "segundos_inicio": 205.42,
+      "segundos_fim": 208.22,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Mas, é, onde o senhor dormiu ontem?",
+      "timestamp": "03:29 - 03:31",
+      "segundos_inicio": 209.12,
+      "segundos_fim": 211.42,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "É, Garatá.",
+      "timestamp": "03:32 - 03:33",
+      "segundos_inicio": 212.74,
+      "segundos_fim": 213.34,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "É rua Garatá?",
+      "timestamp": "03:36 - 03:37",
+      "segundos_inicio": 216.32,
+      "segundos_fim": 217.32,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Não, é, é cidade Garatá.",
+      "timestamp": "03:38 - 03:40",
+      "segundos_inicio": 218.22,
+      "segundos_fim": 220.12,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "E qual que é o nome da rua, o senhor não sabe?",
+      "timestamp": "03:40 - 03:42",
+      "segundos_inicio": 220.74,
+      "segundos_fim": 222.32,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Alameda das Manacas, eu acho.",
+      "timestamp": "03:43 - 03:45",
+      "segundos_inicio": 223.22,
+      "segundos_fim": 225.12,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Alameda?",
+      "timestamp": "03:46 - 03:46",
+      "segundos_inicio": 226.02,
+      "segundos_fim": 226.62,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Paraíso de Garatá.",
+      "timestamp": "03:47 - 03:48",
+      "segundos_inicio": 227.12,
+      "segundos_fim": 228.12,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "O senhor tá há quanto tempo nessa rua?",
+      "timestamp": "03:49 - 03:51",
+      "segundos_inicio": 229.74,
+      "segundos_fim": 231.22,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Dois anos.",
+      "timestamp": "03:52 - 03:53",
+      "segundos_inicio": 232.74,
+      "segundos_fim": 233.42,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "O senhor sabe o número?",
+      "timestamp": "03:55 - 03:57",
+      "segundos_inicio": 235.74,
+      "segundos_fim": 237.12,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "É, 278.",
+      "timestamp": "03:58 - 04:01",
+      "segundos_inicio": 238.02,
+      "segundos_fim": 241.32,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "278.",
+      "timestamp": "04:01 - 04:02",
+      "segundos_inicio": 241.74,
+      "segundos_fim": 242.62,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Qual que é o bairro?",
+      "timestamp": "04:04 - 04:05",
+      "segundos_inicio": 244.74,
+      "segundos_fim": 245.52,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Paraíso de Garatá.",
+      "timestamp": "04:07 - 04:08",
+      "segundos_inicio": 247.74,
+      "segundos_fim": 248.74,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Tem alguma razão para eu especificar aqui que o senhor não saiba direito informar o endereço do seu?",
+      "timestamp": "03:32 - 03:37",
+      "segundos_inicio": 212.18,
+      "segundos_fim": 217.68,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Eu mandei tudo já.",
+      "timestamp": "03:38 - 03:40",
+      "segundos_inicio": 218.28,
+      "segundos_fim": 220.28,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Endereço?",
+      "timestamp": "03:40 - 03:41",
+      "segundos_inicio": 220.98,
+      "segundos_fim": 221.48,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Não, eu tenho certeza.",
+      "timestamp": "03:42 - 03:44",
+      "segundos_inicio": 222.98,
+      "segundos_fim": 224.28,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Não, é, esse daí, Alamedas do Manacás, 278.",
+      "timestamp": "03:45 - 03:48",
+      "segundos_inicio": 225.08,
+      "segundos_fim": 228.88,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "278.",
+      "timestamp": "03:49 - 03:49",
+      "segundos_inicio": 229.28,
+      "segundos_fim": 229.68,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Para eu te garantir.",
+      "timestamp": "03:50 - 03:50",
+      "segundos_inicio": 230.18,
+      "segundos_fim": 230.98,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Tá. O senhor tá lá há dois anos.",
+      "timestamp": "03:51 - 03:53",
+      "segundos_inicio": 231.98,
+      "segundos_fim": 233.08,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Uhum.",
+      "timestamp": "03:53 - 03:53",
+      "segundos_inicio": 233.38,
+      "segundos_fim": 233.68,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "É, casa alugada?",
+      "timestamp": "03:54 - 03:55",
+      "segundos_inicio": 234.18,
+      "segundos_fim": 235.28,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Casa própria.",
+      "timestamp": "03:55 - 03:56",
+      "segundos_inicio": 235.48,
+      "segundos_fim": 236.18,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Própria?",
+      "timestamp": "03:56 - 03:57",
+      "segundos_inicio": 236.58,
+      "segundos_fim": 237.08,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "O senhor estudou até que grau?",
+      "timestamp": "04:10 - 04:11",
+      "segundos_inicio": 250.18,
+      "segundos_fim": 251.28,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Superior completo.",
+      "timestamp": "04:11 - 04:12",
+      "segundos_inicio": 251.88,
+      "segundos_fim": 252.88,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Superior?",
+      "timestamp": "04:13 - 04:14",
+      "segundos_inicio": 253.38,
+      "segundos_fim": 254.08,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Qual que é a faculdade?",
+      "timestamp": "04:14 - 04:15",
+      "segundos_inicio": 254.88,
+      "segundos_fim": 255.68,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Formado em Comércio Exterior.",
+      "timestamp": "04:16 - 04:17",
+      "segundos_inicio": 256.08,
+      "segundos_fim": 257.38,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Superior.",
+      "timestamp": "04:24 - 04:24",
+      "segundos_inicio": 264.28,
+      "segundos_fim": 264.88,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Qual que é a profissão do senhor?",
+      "timestamp": "04:35 - 04:36",
+      "segundos_inicio": 275.18,
+      "segundos_fim": 276.18,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Empresário.",
+      "timestamp": "04:36 - 04:37",
+      "segundos_inicio": 276.68,
+      "segundos_fim": 277.38,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Empresário.",
+      "timestamp": "04:37 - 04:38",
+      "segundos_inicio": 277.88,
+      "segundos_fim": 278.38,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Quanto que o senhor tem a promessa aproximadamente?",
+      "timestamp": "04:38 - 04:40",
+      "segundos_inicio": 278.68,
+      "segundos_fim": 280.68,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Varia, depende da publicidade. Tem mês que é um valor, tem mês que é outro.",
+      "timestamp": "04:41 - 04:45",
+      "segundos_inicio": 281.28,
+      "segundos_fim": 285.68,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Mas média de 1 milhão, 2 milhões?",
+      "timestamp": "04:46 - 04:48",
+      "segundos_inicio": 286.18,
+      "segundos_fim": 288.48,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Por mês?",
+      "timestamp": "04:48 - 04:49",
+      "segundos_inicio": 288.98,
+      "segundos_fim": 289.48,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Sim.",
+      "timestamp": "04:49 - 04:50",
+      "segundos_inicio": 289.88,
+      "segundos_fim": 290.18,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Tá.",
+      "timestamp": "04:55 - 04:56",
+      "segundos_inicio": 295.95,
+      "segundos_fim": 296.35,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "É, o senhor tem algum dependente?",
+      "timestamp": "04:57 - 04:59",
+      "segundos_inicio": 297.8,
+      "segundos_fim": 299.1,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Tenho.",
+      "timestamp": "05:00 - 05:00",
+      "segundos_inicio": 300.0,
+      "segundos_fim": 300.4,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Quem?",
+      "timestamp": "05:01 - 05:01",
+      "segundos_inicio": 301.2,
+      "segundos_fim": 301.5,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Ah, minha esposa.",
+      "timestamp": "05:02 - 05:03",
+      "segundos_inicio": 302.3,
+      "segundos_fim": 303.4,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Dependente menor? Ela ou ou",
+      "timestamp": "05:05 - 05:07",
+      "segundos_inicio": 305.2,
+      "segundos_fim": 307.4,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Tenho. Ah, minha filha, Valentina.",
+      "timestamp": "05:07 - 05:10",
+      "segundos_inicio": 307.8,
+      "segundos_fim": 310.0,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "E minha mulher tá grávida.",
+      "timestamp": "05:11 - 05:12",
+      "segundos_inicio": 311.0,
+      "segundos_fim": 312.2,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Tá, mas",
+      "timestamp": "05:13 - 05:14",
+      "segundos_inicio": 313.9,
+      "segundos_fim": 314.7,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Quantos anos tem a, a, a sua, a Valentina?",
+      "timestamp": "05:15 - 05:19",
+      "segundos_inicio": 315.8,
+      "segundos_fim": 319.4,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Quatro anos.",
+      "timestamp": "05:19 - 05:20",
+      "segundos_inicio": 319.7,
+      "segundos_fim": 320.3,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Quatro anos. Qual que é a data de nascimento dela?",
+      "timestamp": "05:20 - 05:22",
+      "segundos_inicio": 320.8,
+      "segundos_fim": 322.4,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "26 do 6 de 2021.",
+      "timestamp": "05:23 - 05:27",
+      "segundos_inicio": 323.6,
+      "segundos_fim": 327.1,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Ela agora tá com a mãe?",
+      "timestamp": "05:30 - 05:31",
+      "segundos_inicio": 330.2,
+      "segundos_fim": 331.2,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Uhum.",
+      "timestamp": "05:31 - 05:32",
+      "segundos_inicio": 331.6,
+      "segundos_fim": 332.0,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Tá com a mãe.",
+      "timestamp": "05:33 - 05:34",
+      "segundos_inicio": 333.7,
+      "segundos_fim": 334.3,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "O outro filho tá na barriga.",
+      "timestamp": "05:35 - 05:36",
+      "segundos_inicio": 335.7,
+      "segundos_fim": 336.9,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Tá bom.",
+      "timestamp": "05:37 - 05:38",
+      "segundos_inicio": 337.7,
+      "segundos_fim": 338.1,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "A esposa está grávida.",
+      "timestamp": "05:41 - 05:42",
+      "segundos_inicio": 341.8,
+      "segundos_fim": 342.8,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Seis meses.",
+      "timestamp": "05:47 - 05:47",
+      "segundos_inicio": 347.1,
+      "segundos_fim": 347.8,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Grávida de seis meses.",
+      "timestamp": "05:48 - 05:49",
+      "segundos_inicio": 348.6,
+      "segundos_fim": 349.8,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "O senhor tem alguma deficiência física, dependência química, doença ou é hígido?",
+      "timestamp": "05:58 - 06:04",
+      "segundos_inicio": 358.1,
+      "segundos_fim": 364.2,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Não.",
+      "timestamp": "06:05 - 06:05",
+      "segundos_inicio": 365.4,
+      "segundos_fim": 365.7,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Não?",
+      "timestamp": "06:06 - 06:06",
+      "segundos_inicio": 366.4,
+      "segundos_fim": 366.7,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Tá. Quando você foi preso, foi dada a ciência dos direitos constitucionais, de falar com o advogado?",
+      "timestamp": "06:08 - 06:13",
+      "segundos_inicio": 368.08,
+      "segundos_fim": 373.97,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Sim.",
+      "timestamp": "06:14 - 06:14",
+      "segundos_inicio": 374.22,
+      "segundos_fim": 374.62,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Tá.",
+      "timestamp": "06:15 - 06:15",
+      "segundos_inicio": 375.04,
+      "segundos_fim": 375.6,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "O senhor recebeu água potável e alimentação, da prisão?",
+      "timestamp": "06:16 - 06:20",
+      "segundos_inicio": 376.37,
+      "segundos_fim": 380.01,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Sim.",
+      "timestamp": "06:20 - 06:21",
+      "segundos_inicio": 380.88,
+      "segundos_fim": 381.28,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Tá. Como é que foi o cumprimento do mandado de prisão?",
+      "timestamp": "06:22 - 06:25",
+      "segundos_inicio": 382.46,
+      "segundos_fim": 385.09,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Chegaram lá em casa.",
+      "timestamp": "06:26 - 06:27",
+      "segundos_inicio": 386.2,
+      "segundos_fim": 387.26,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Tá.",
+      "timestamp": "06:27 - 06:27",
+      "segundos_inicio": 387.54,
+      "segundos_fim": 387.94,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "É, tava dormindo.",
+      "timestamp": "06:29 - 06:30",
+      "segundos_inicio": 389.05,
+      "segundos_fim": 390.8,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Só ouvi o barulho da porta bater, que a porta é blindada. Eles pedindo para abrir a porta. Aí eu saí na varanda, os policiais me rendeu na varanda, falou para eu ficar parado e pediu para a minha cunhada abrir a porta.",
+      "timestamp": "06:32 - 06:46",
+      "segundos_inicio": 392.04,
+      "segundos_fim": 406.06,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Tá.",
+      "timestamp": "06:46 - 06:46",
+      "segundos_inicio": 406.6,
+      "segundos_fim": 406.9,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "É, o senhor tem alguma coisa a relatar sobre o cumprimento da prisão? Foi tudo bem? Aconteceu alguma coisa?",
+      "timestamp": "06:47 - 06:52",
+      "segundos_inicio": 407.96,
+      "segundos_fim": 412.5,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Tudo bem.",
+      "timestamp": "06:52 - 06:53",
+      "segundos_inicio": 412.82,
+      "segundos_fim": 413.32,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Tudo bem? O senhor passou por IML?",
+      "timestamp": "06:53 - 06:55",
+      "segundos_inicio": 413.8,
+      "segundos_fim": 415.5,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Passei.",
+      "timestamp": "06:55 - 06:56",
+      "segundos_inicio": 415.9,
+      "segundos_fim": 416.3,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Tá. O senhor tem alguma pergunta?",
+      "timestamp": "06:57 - 07:00",
+      "segundos_inicio": 417.0,
+      "segundos_fim": 420.4,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "O, o Dr. Gonçalves, em relação ao requerimento, por gentileza, ligação para o familiar e cobertor. Isso.",
+      "timestamp": "07:01 - 07:48",
+      "segundos_inicio": 421.3,
+      "segundos_fim": 468.6,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Réu / Bruno",
+      "textodefala": "Isso.",
+      "timestamp": "07:48 - 07:49",
+      "segundos_inicio": 468.7,
+      "segundos_fim": 469.0,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Tá.",
+      "timestamp": "07:49 - 07:49",
+      "segundos_inicio": 469.6,
+      "segundos_fim": 469.9,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Bom, ah, tendo em vista que se trata de carta precatória, não foi verificado nenhuma mácula no cumprimento do mandado de prisão, não há nenhuma providência a ser tomada por esse juízo.",
+      "timestamp": "07:50 - 08:00",
+      "segundos_inicio": 470.9,
+      "segundos_fim": 480.0,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Ah, quanto aos requerimentos, novamente, o juízo, eh, não vê problemas na ligação para um familiar e quanto à cobertura de mais itens pessoais que a defesa queira providenciar, tem que passar antes pelas deliberações de segurança da custódia.",
+      "timestamp": "08:01 - 08:16",
+      "segundos_inicio": 481.3,
+      "segundos_fim": 496.0,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Então, declarada essa audiência, pode parar a gravação.",
+      "timestamp": "08:17 - 08:19",
+      "segundos_inicio": 497.1,
+      "segundos_fim": 499.4,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Apresentador",
+      "textodefala": "Você é um especialista em transcrição e diarização de audiências judiciais, reuniões e telecomunicações. Transcreva com fidelidade absoluta o áudio em português, identificando cada interlocutor com seu nome ou papel real e indicando os tempos exatos.",
+      "timestamp": "07:43 - 08:03",
+      "segundos_inicio": 463.61,
+      "segundos_fim": 483.61,
+      "chunk_origem": 6
+    }
+  ]
+}
