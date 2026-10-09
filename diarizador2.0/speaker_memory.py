@@ -1,11 +1,11 @@
-﻿"""
+"""
 Speaker Memory Registry (Memória Dinâmica de Falantes).
 Armazena a paleta de participantes identificados nos primeiros blocos
 e injeta o contexto nos blocos paralelos subsequentes para eliminar rótulos genéricos.
 """
 
 import re
-from typing import Dict, List, Set, Optional
+from typing import Dict, List, Set, Optional, Any
 
 
 class SpeakerMemoryRegistry:

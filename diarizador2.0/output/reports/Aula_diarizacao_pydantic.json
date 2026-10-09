@@ -1,0 +1,4539 @@
+{
+  "arquivo": "Aula.wav",
+  "codec": "opus",
+  "duracao_total_segundos": 2393.205125,
+  "tempo_execucao_total_segundos": 141.366,
+  "tempo_processamento_nuvem_segundos": 99.118,
+  "metricas_tokens": {
+    "prompt_tokens_audio": 85311,
+    "candidate_tokens_texto": 47204,
+    "total_tokens": 180967
+  },
+  "custo_estimado": {
+    "custo_usd": 0.04112,
+    "custo_brl": 0.2344
+  },
+  "total_turnos_fala": 565,
+  "segmentos": [
+    {
+      "quemfala": "Professor",
+      "textodefala": "Maria 15 e 10, né?",
+      "timestamp": "00:00 - 00:02",
+      "segundos_inicio": 0.49,
+      "segundos_fim": 2.22,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "15 e 10.",
+      "timestamp": "00:02 - 00:03",
+      "segundos_inicio": 2.66,
+      "segundos_fim": 3.37,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Aqui é da 254 e apareceu um carry out aqui que corresponde a somar o quê?",
+      "timestamp": "00:03 - 00:08",
+      "segundos_inicio": 3.65,
+      "segundos_fim": 8.4,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "256.",
+      "timestamp": "00:08 - 00:10",
+      "segundos_inicio": 8.91,
+      "segundos_fim": 10.1,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "A conta tá preservada, tá certo.",
+      "timestamp": "00:10 - 00:13",
+      "segundos_inicio": 10.99,
+      "segundos_fim": 13.1,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá?",
+      "timestamp": "00:14 - 00:14",
+      "segundos_inicio": 14.36,
+      "segundos_fim": 14.67,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Só olhando os sinais, diferente do overflow.",
+      "timestamp": "00:15 - 00:18",
+      "segundos_inicio": 15.77,
+      "segundos_fim": 18.25,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá claro isso aí, gente?",
+      "timestamp": "00:19 - 00:20",
+      "segundos_inicio": 19.26,
+      "segundos_fim": 20.27,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "A gente não tinha que subir quando o carry out",
+      "timestamp": "00:25 - 00:29",
+      "segundos_inicio": 25.4,
+      "segundos_fim": 29.74,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ah, boa pergunta.",
+      "timestamp": "00:30 - 00:31",
+      "segundos_inicio": 30.65,
+      "segundos_fim": 31.57,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Vamos lá, boa pergunta dela.",
+      "timestamp": "00:32 - 00:33",
+      "segundos_inicio": 32.48,
+      "segundos_fim": 33.68,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Como é que eu, né, como é que eu vou saber o que dá, o que não dá?",
+      "timestamp": "00:35 - 00:39",
+      "segundos_inicio": 35.79,
+      "segundos_fim": 39.75,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Vamos imaginar agora uma unidade que soma e subtrai.",
+      "timestamp": "00:40 - 00:42",
+      "segundos_inicio": 40.69,
+      "segundos_fim": 42.86,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Os números são inteiros sem sinal.",
+      "timestamp": "00:43 - 00:45",
+      "segundos_inicio": 43.59,
+      "segundos_fim": 45.16,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então vamos colocar aqui, ó.",
+      "timestamp": "00:47 - 00:48",
+      "segundos_inicio": 47.46,
+      "segundos_fim": 48.66,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "255 aqui, que é o limite, finge que tem 8 bits.",
+      "timestamp": "00:50 - 00:54",
+      "segundos_inicio": 50.59,
+      "segundos_fim": 54.4,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "255 aqui.",
+      "timestamp": "00:55 - 00:56",
+      "segundos_inicio": 55.39,
+      "segundos_fim": 56.76,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Né?",
+      "timestamp": "00:58 - 00:59",
+      "segundos_inicio": 58.45,
+      "segundos_fim": 59.0,
+      "chunk_origem": 1
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "É?",
+      "timestamp": "01:30 - 01:30",
+      "segundos_inicio": 90.0,
+      "segundos_fim": 90.3,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Vamos ver.",
+      "timestamp": "01:32 - 01:32",
+      "segundos_inicio": 92.0,
+      "segundos_fim": 92.4,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Que que, que que, quanto vale isso aqui?",
+      "timestamp": "01:33 - 01:35",
+      "segundos_inicio": 93.0,
+      "segundos_fim": 95.0,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Qual o resultado que deu aqui?",
+      "timestamp": "01:36 - 01:37",
+      "segundos_inicio": 96.0,
+      "segundos_fim": 97.4,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "254.",
+      "timestamp": "01:40 - 01:41",
+      "segundos_inicio": 100.2,
+      "segundos_fim": 101.0,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "254.",
+      "timestamp": "01:41 - 01:41",
+      "segundos_inicio": 101.0,
+      "segundos_fim": 101.6,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Só que o resultado é esse?",
+      "timestamp": "01:43 - 01:45",
+      "segundos_inicio": 103.5,
+      "segundos_fim": 105.0,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Não.",
+      "timestamp": "01:46 - 01:46",
+      "segundos_inicio": 106.2,
+      "segundos_fim": 106.5,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "O resultado é 254 mais 20 de carry, não é isso? Que no caso é 1 x 256.",
+      "timestamp": "01:51 - 02:01",
+      "segundos_inicio": 111.4,
+      "segundos_fim": 121.4,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "O resultado, na verdade, é o quê? 250, 510.",
+      "timestamp": "02:02 - 02:06",
+      "segundos_inicio": 122.2,
+      "segundos_fim": 126.6,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Bateu?",
+      "timestamp": "02:08 - 02:09",
+      "segundos_inicio": 128.2,
+      "segundos_fim": 129.0,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Bateu?",
+      "timestamp": "02:13 - 02:13",
+      "segundos_inicio": 133.0,
+      "segundos_fim": 133.4,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Não, você, a, a, a",
+      "timestamp": "02:16 - 02:17",
+      "segundos_inicio": 136.3,
+      "segundos_fim": 137.2,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Agora vamos fazer o contrário, vamos subtrair.",
+      "timestamp": "02:17 - 02:19",
+      "segundos_inicio": 137.5,
+      "segundos_fim": 139.3,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Vamos subtrair o cara aqui. Vamos supor que é primeiro é menor do que o segundo, então.",
+      "timestamp": "02:22 - 02:27",
+      "segundos_inicio": 142.0,
+      "segundos_fim": 147.3,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Vamos colocar aqui 1 menos 255.",
+      "timestamp": "02:28 - 02:38",
+      "segundos_inicio": 148.4,
+      "segundos_fim": 158.0,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ou 0 menos 255.",
+      "timestamp": "02:40 - 02:41",
+      "segundos_inicio": 160.0,
+      "segundos_fim": 161.4,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Que que ficaria isso?",
+      "timestamp": "02:45 - 02:46",
+      "segundos_inicio": 165.0,
+      "segundos_fim": 166.0,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Subtração isso aqui.",
+      "timestamp": "02:55 - 02:56",
+      "segundos_inicio": 175.0,
+      "segundos_fim": 176.3,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Subtração disso aqui vai ser 0.",
+      "timestamp": "02:58 - 03:00",
+      "segundos_inicio": 178.0,
+      "segundos_fim": 180.0,
+      "chunk_origem": 2
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "000.",
+      "timestamp": "03:04 - 03:06",
+      "segundos_inicio": 184.09,
+      "segundos_fim": 186.09,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Não? Isso aqui vai ser um.",
+      "timestamp": "03:07 - 03:09",
+      "segundos_inicio": 187.54,
+      "segundos_fim": 189.09,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Isso é para 000000.",
+      "timestamp": "03:10 - 03:15",
+      "segundos_inicio": 190.49,
+      "segundos_fim": 195.09,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Só que eu sei o quê? Que aqui quem é o o carry out?",
+      "timestamp": "03:18 - 03:22",
+      "segundos_inicio": 198.39,
+      "segundos_fim": 202.19,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Zero.",
+      "timestamp": "03:22 - 03:23",
+      "segundos_inicio": 202.89,
+      "segundos_fim": 203.29,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então se isso aqui é zero, o borrow é um.",
+      "timestamp": "03:24 - 03:28",
+      "segundos_inicio": 204.49,
+      "segundos_fim": 208.09,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então qual o resultado que deu aqui?",
+      "timestamp": "03:29 - 03:31",
+      "segundos_inicio": 209.69,
+      "segundos_fim": 211.29,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "0 - 255, cuspiu aqui, ó.",
+      "timestamp": "03:31 - 03:34",
+      "segundos_inicio": 211.49,
+      "segundos_fim": 214.09,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Um.",
+      "timestamp": "03:36 - 03:36",
+      "segundos_inicio": 216.09,
+      "segundos_fim": 216.49,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Mas gerou o quê? Borrow igual a um.",
+      "timestamp": "03:37 - 03:41",
+      "segundos_inicio": 217.69,
+      "segundos_fim": 221.49,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Se gerou borrow igual a um, o cara lá dentro somou 2 elevado a N.",
+      "timestamp": "03:43 - 03:48",
+      "segundos_inicio": 223.49,
+      "segundos_fim": 228.79,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então tem que pegar esse um e subtrair de 2 elevado a N.",
+      "timestamp": "03:48 - 03:52",
+      "segundos_inicio": 228.99,
+      "segundos_fim": 232.79,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Em particular aqui é o quê? É 2 elevado a 8.",
+      "timestamp": "03:54 - 03:58",
+      "segundos_inicio": 234.09,
+      "segundos_fim": 238.09,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá. Um que é mais 256.",
+      "timestamp": "03:59 - 04:02",
+      "segundos_inicio": 239.79,
+      "segundos_fim": 242.49,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então 255.",
+      "timestamp": "04:03 - 04:06",
+      "segundos_inicio": 243.49,
+      "segundos_fim": 246.09,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ah, mas lá dentro, esses sinais em termos de saída da caixa são diferentes.",
+      "timestamp": "04:08 - 04:13",
+      "segundos_inicio": 248.49,
+      "segundos_fim": 253.69,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Mas lá dentro na caixa, esses sinais vêm da mesma origem.",
+      "timestamp": "04:14 - 04:18",
+      "segundos_inicio": 254.69,
+      "segundos_fim": 258.09,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Quer dizer, no fundo, no fundo, se eu implementar esse cara aqui, qual?",
+      "timestamp": "04:19 - 04:22",
+      "segundos_inicio": 259.29,
+      "segundos_fim": 262.29,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Um somador, eu vou pegar o carry out ligado direto, e vou pegar esse aqui e vou, ó, colocar o inversor aqui.",
+      "timestamp": "04:22 - 04:29",
+      "segundos_inicio": 262.79,
+      "segundos_fim": 269.69,
+      "chunk_origem": 3
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "É um lugar.",
+      "timestamp": "04:30 - 04:30",
+      "segundos_inicio": 270.0,
+      "segundos_fim": 270.9,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Entendeu?",
+      "timestamp": "04:32 - 04:32",
+      "segundos_inicio": 272.0,
+      "segundos_fim": 272.4,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Internamente a origem é a mesma.",
+      "timestamp": "04:33 - 04:34",
+      "segundos_inicio": 273.3,
+      "segundos_fim": 274.9,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "A maneira que ele é externado, analisado, é diferente.",
+      "timestamp": "04:35 - 04:39",
+      "segundos_inicio": 275.7,
+      "segundos_fim": 279.6,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Eu tenho que olhar pro carry out e pro borrow quando eu tô subtraindo.",
+      "timestamp": "04:41 - 04:43",
+      "segundos_inicio": 281.2,
+      "segundos_fim": 283.9,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Eu tenho que olhar, em resumo, eu tenho que olhar pro carry out quando eu tô somando.",
+      "timestamp": "04:44 - 04:47",
+      "segundos_inicio": 284.3,
+      "segundos_fim": 287.6,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Que é o flag de estouro pra soma.",
+      "timestamp": "04:49 - 04:51",
+      "segundos_inicio": 289.0,
+      "segundos_fim": 291.4,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "E eu tenho que olhar pro pedido emprestado quando eu tô subtraindo.",
+      "timestamp": "04:51 - 04:55",
+      "segundos_inicio": 291.9,
+      "segundos_fim": 295.6,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ainda que lá dentro eles têm a mesma origem.",
+      "timestamp": "04:57 - 05:00",
+      "segundos_inicio": 297.9,
+      "segundos_fim": 300.0,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Cuidado pra não confundir isso, a lógica dela é boa.",
+      "timestamp": "05:00 - 05:02",
+      "segundos_inicio": 300.4,
+      "segundos_fim": 302.6,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Cuidado pra não confundir. Embora eles tenham a mesma origem, o sentido, o significado deles é diferente, como eu operacionalizo eles na minha conta é diferente.",
+      "timestamp": "05:03 - 05:10",
+      "segundos_inicio": 303.4,
+      "segundos_fim": 310.7,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá?",
+      "timestamp": "05:11 - 05:11",
+      "segundos_inicio": 311.5,
+      "segundos_fim": 311.9,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Beleza, gente?",
+      "timestamp": "05:14 - 05:15",
+      "segundos_inicio": 314.2,
+      "segundos_fim": 315.0,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Juntar tudo num pagode só. Ó.",
+      "timestamp": "05:17 - 05:19",
+      "segundos_inicio": 317.6,
+      "segundos_fim": 319.5,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Como é que é o pagode, ó.",
+      "timestamp": "05:20 - 05:21",
+      "segundos_inicio": 320.0,
+      "segundos_fim": 321.0,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Aqui ele fez o quê? Vamos lá.",
+      "timestamp": "05:23 - 05:25",
+      "segundos_inicio": 323.2,
+      "segundos_fim": 325.0,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ele resolveu, ó, colocou a flag do overflow.",
+      "timestamp": "05:27 - 06:10",
+      "segundos_inicio": 327.2,
+      "segundos_fim": 370.0,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá vendo? O overflow independe se é soma ou subtração.",
+      "timestamp": "06:10 - 06:13",
+      "segundos_inicio": 370.7,
+      "segundos_fim": 373.5,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Na realidade, o overflow é mais pra trabalhar complemento a dois, entendeu?",
+      "timestamp": "06:14 - 06:19",
+      "segundos_inicio": 374.3,
+      "segundos_fim": 379.0,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Porque, quando você trabalhar com números sem sinal, nunca vai dar overflow.",
+      "timestamp": "06:22 - 06:25",
+      "segundos_inicio": 382.1,
+      "segundos_fim": 385.5,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Que a gente acabou de chegar à conclusão é o seguinte: se os números estiverem na faixa sem sinal, nunca dá overflow.",
+      "timestamp": "06:26 - 06:32",
+      "segundos_inicio": 386.4,
+      "segundos_fim": 392.5,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "O overflow só existe pra complemento a dois.",
+      "timestamp": "06:33 - 06:35",
+      "segundos_inicio": 393.2,
+      "segundos_fim": 395.8,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Guarda isso.",
+      "timestamp": "06:36 - 06:36",
+      "segundos_inicio": 396.3,
+      "segundos_fim": 396.9,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Né? Ó lá, overflow.",
+      "timestamp": "06:38 - 06:40",
+      "segundos_inicio": 398.5,
+      "segundos_fim": 400.0,
+      "chunk_origem": 4
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "uso exclusivo.",
+      "timestamp": "06:00 - 06:01",
+      "segundos_inicio": 360.38,
+      "segundos_fim": 361.09,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "com o nome adicional, complemento a dois.",
+      "timestamp": "06:01 - 06:04",
+      "segundos_inicio": 361.76,
+      "segundos_fim": 364.31,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Não tem esse overflow se os números não tem sinal.",
+      "timestamp": "06:05 - 06:07",
+      "segundos_inicio": 365.39,
+      "segundos_fim": 367.49,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "A gente fez N contas aqui e não deu overflow.",
+      "timestamp": "06:08 - 06:12",
+      "segundos_inicio": 368.35,
+      "segundos_fim": 372.29,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Esse caso aqui, ó, 255 mais 255.",
+      "timestamp": "06:13 - 06:16",
+      "segundos_inicio": 373.49,
+      "segundos_fim": 376.59,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "O o resultante cabe? Não cabe.",
+      "timestamp": "06:17 - 06:20",
+      "segundos_inicio": 377.59,
+      "segundos_fim": 380.29,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tanto que deu 254, mas você com a flag do do carry, você recupera o resultado.",
+      "timestamp": "06:20 - 06:28",
+      "segundos_inicio": 380.89,
+      "segundos_fim": 388.49,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então, ó, carry e borrow não são flags críticas no sentido de que a conta está errada. Overflow a conta tá errada, joga no lixo.",
+      "timestamp": "06:30 - 06:42",
+      "segundos_inicio": 390.69,
+      "segundos_fim": 402.19,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Over",
+      "timestamp": "06:44 - 06:44",
+      "segundos_inicio": 404.09,
+      "segundos_fim": 404.49,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Overflow.",
+      "timestamp": "06:46 - 06:47",
+      "segundos_inicio": 406.29,
+      "segundos_fim": 407.09,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Perdão.",
+      "timestamp": "06:47 - 06:48",
+      "segundos_inicio": 407.59,
+      "segundos_fim": 408.09,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Carry out e borrow são flags que dizem pra gente o quê? Ó, corrige o resultado em alguns casos. É só isso, basicamente, é isso.",
+      "timestamp": "06:48 - 06:57",
+      "segundos_inicio": 408.89,
+      "segundos_fim": 417.29,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ou seja, se tem um carry out, o que que ele tem que fazer? O resultado que a máquina me deu, eu tenho que somar 2 elevado a N.",
+      "timestamp": "06:57 - 07:05",
+      "segundos_inicio": 417.69,
+      "segundos_fim": 425.29,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Se subtrair, deu borrow. Se o borrow, se tem borrow, eu tenho que subtrair 2 elevado a N do resultado.",
+      "timestamp": "07:06 - 07:15",
+      "segundos_inicio": 426.39,
+      "segundos_fim": 435.39,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Só isso.",
+      "timestamp": "07:15 - 07:16",
+      "segundos_inicio": 435.69,
+      "segundos_fim": 436.19,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Certo?",
+      "timestamp": "07:17 - 07:17",
+      "segundos_inicio": 437.09,
+      "segundos_fim": 437.59,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "O que ele fez aqui, ó, tô batendo nisso pra ver se isso entra como manta na sua cabeça, porque você nunca mais erra isso.",
+      "timestamp": "07:19 - 07:25",
+      "segundos_inicio": 439.09,
+      "segundos_fim": 445.49,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Você fica perdido aqui, um monte de",
+      "timestamp": "07:28 - 07:30",
+      "segundos_inicio": 448.09,
+      "segundos_fim": 450.09,
+      "chunk_origem": 5
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Acho.",
+      "timestamp": "07:30 - 07:30",
+      "segundos_inicio": 450.0,
+      "segundos_fim": 450.38,
+      "chunk_origem": 6
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Bom.",
+      "timestamp": "07:32 - 07:33",
+      "segundos_inicio": 452.89,
+      "segundos_fim": 453.16,
+      "chunk_origem": 6
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ó, o cara que, ó, montando a estrutura interna com o complementador dois, ele é malandro, para não dar bode.",
+      "timestamp": "07:33 - 07:42",
+      "segundos_inicio": 453.86,
+      "segundos_fim": 462.06,
+      "chunk_origem": 6
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Né? Então ele faz x + 1, x - y, manipula, senão faz essa manipulação com sinal, sem sinal, tudo certo.",
+      "timestamp": "07:42 - 07:50",
+      "segundos_inicio": 462.87,
+      "segundos_fim": 470.02,
+      "chunk_origem": 6
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Excelente.",
+      "timestamp": "07:50 - 07:52",
+      "segundos_inicio": 470.6,
+      "segundos_fim": 472.0,
+      "chunk_origem": 6
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Né?",
+      "timestamp": "07:52 - 07:53",
+      "segundos_inicio": 472.6,
+      "segundos_fim": 473.0,
+      "chunk_origem": 6
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Lembrando uma coisa, quando a gente fez um detalhe, quando a gente fez aquela caixinha, que eu já apaguei a caixinha. Quando a gente fez aquele subtrator com caixinha, a gente fez um subtrator a rigor que era para números sem sinal.",
+      "timestamp": "07:53 - 08:11",
+      "segundos_inicio": 473.57,
+      "segundos_fim": 491.5,
+      "chunk_origem": 6
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "A gente só mostrou esse subtrator funcionando para números com sinal e complementador dois.",
+      "timestamp": "08:12 - 08:18",
+      "segundos_inicio": 492.1,
+      "segundos_fim": 498.0,
+      "chunk_origem": 6
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá?",
+      "timestamp": "08:19 - 08:19",
+      "segundos_inicio": 499.0,
+      "segundos_fim": 499.4,
+      "chunk_origem": 6
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então, trabalhou com complementador dois, tem complementador dois na sua arquitetura, a solução vai ser o quê? Essa aqui.",
+      "timestamp": "08:20 - 08:27",
+      "segundos_inicio": 500.8,
+      "segundos_fim": 507.3,
+      "chunk_origem": 6
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Eu nunca testei o outro com número complementador dois, provavelmente vai dar o quê? Errado.",
+      "timestamp": "08:28 - 08:31",
+      "segundos_inicio": 508.2,
+      "segundos_fim": 511.5,
+      "chunk_origem": 6
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá?",
+      "timestamp": "08:32 - 08:32",
+      "segundos_inicio": 512.2,
+      "segundos_fim": 512.5,
+      "chunk_origem": 6
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então, ó, isso aqui, se eu for trabalhar, em outras palavras, se eu trabalho com números só inteiros e sem sinal.",
+      "timestamp": "08:35 - 08:42",
+      "segundos_inicio": 515.4,
+      "segundos_fim": 522.0,
+      "chunk_origem": 6
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Eu posso usar aquelas duas arquiteturas.",
+      "timestamp": "08:42 - 08:44",
+      "segundos_inicio": 522.7,
+      "segundos_fim": 524.6,
+      "chunk_origem": 6
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Posso usar essa e posso usar a das células somador, da propagação do borrow para subtração e da soma.",
+      "timestamp": "08:45 - 08:55",
+      "segundos_inicio": 525.9,
+      "segundos_fim": 535.0,
+      "chunk_origem": 6
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Se eu for trabalhar com complementador dois, essa aqui.",
+      "timestamp": "08:55 - 08:58",
+      "segundos_inicio": 535.5,
+      "segundos_fim": 538.2,
+      "chunk_origem": 6
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "E",
+      "timestamp": "08:58 - 08:59",
+      "segundos_inicio": 538.6,
+      "segundos_fim": 539.0,
+      "chunk_origem": 6
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Essa aqui.",
+      "timestamp": "08:59 - 09:00",
+      "segundos_inicio": 539.6,
+      "segundos_fim": 540.0,
+      "chunk_origem": 6
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "vou trabalhar, perdão, com números com sinal e sem sinal é essa que fica aqui. Default, padrão.",
+      "timestamp": "09:00 - 09:04",
+      "segundos_inicio": 540.0,
+      "segundos_fim": 544.3,
+      "chunk_origem": 7
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Complementador de segundo e aí vem aqui, ó, o carry out.",
+      "timestamp": "09:06 - 09:09",
+      "segundos_inicio": 546.0,
+      "segundos_fim": 549.4,
+      "chunk_origem": 7
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "O carry out, né, ele vai",
+      "timestamp": "09:10 - 09:13",
+      "segundos_inicio": 550.0,
+      "segundos_fim": 553.0,
+      "chunk_origem": 7
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Até interessante aqui, cadê? O carry out, ele, ah, o próprio sinal de soma ou subtração vai controlar o que tá saindo aqui.",
+      "timestamp": "09:14 - 09:21",
+      "segundos_inicio": 554.4,
+      "segundos_fim": 561.4,
+      "chunk_origem": 7
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ou vai sair o carry out ou vai sair o carry out barrado, porque ele quis botar no mesmo pino borrow.",
+      "timestamp": "09:22 - 09:27",
+      "segundos_inicio": 562.1,
+      "segundos_fim": 567.9,
+      "chunk_origem": 7
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Mas se tivesse pino separado, ele se um pino, né, esse.",
+      "timestamp": "09:28 - 09:31",
+      "segundos_inicio": 568.4,
+      "segundos_fim": 571.8,
+      "chunk_origem": 7
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Aqui, ó, eu tô escolhendo se esse carry out é carry out de fato ou se ele é borrow.",
+      "timestamp": "09:32 - 09:37",
+      "segundos_inicio": 572.5,
+      "segundos_fim": 577.6,
+      "chunk_origem": 7
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Basicamente isso, tá?",
+      "timestamp": "09:38 - 09:39",
+      "segundos_inicio": 578.4,
+      "segundos_fim": 579.8,
+      "chunk_origem": 7
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então tá aqui o nosso somador e subtrator.",
+      "timestamp": "09:40 - 09:42",
+      "segundos_inicio": 580.5,
+      "segundos_fim": 582.6,
+      "chunk_origem": 7
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "E tá aqui explicando, ó.",
+      "timestamp": "09:47 - 09:48",
+      "segundos_inicio": 587.5,
+      "segundos_fim": 588.7,
+      "chunk_origem": 7
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Overflow é só para complementador dois e o sentido da carry é eu poder saber o que fazer com o número sem sinal.",
+      "timestamp": "09:50 - 09:59",
+      "segundos_inicio": 590.6,
+      "segundos_fim": 599.9,
+      "chunk_origem": 7
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Vou perguntar aí, né?",
+      "timestamp": "10:00 - 10:01",
+      "segundos_inicio": 600.3,
+      "segundos_fim": 601.4,
+      "chunk_origem": 7
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Bom.",
+      "timestamp": "10:03 - 10:04",
+      "segundos_inicio": 603.6,
+      "segundos_fim": 604.2,
+      "chunk_origem": 7
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Agora vamos lá. Eh,",
+      "timestamp": "10:05 - 10:07",
+      "segundos_inicio": 605.2,
+      "segundos_fim": 607.3,
+      "chunk_origem": 7
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Que que acontece? A gente vai querer gravar esse resultado da última conta.",
+      "timestamp": "10:08 - 10:14",
+      "segundos_inicio": 608.6,
+      "segundos_fim": 614.2,
+      "chunk_origem": 7
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Né? Por que que a gente vai querer gravar o resultado da última conta?",
+      "timestamp": "10:15 - 10:17",
+      "segundos_inicio": 615.0,
+      "segundos_fim": 617.6,
+      "chunk_origem": 7
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Porque a gente vai pegar esse negócio, vai colocar numa máquina sequencial.",
+      "timestamp": "10:18 - 10:21",
+      "segundos_inicio": 618.3,
+      "segundos_fim": 621.6,
+      "chunk_origem": 7
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "E a cada, sei lá, segundo clock, a gente vai fazer uma operação diferente.",
+      "timestamp": "10:22 - 10:25",
+      "segundos_inicio": 622.3,
+      "segundos_fim": 625.9,
+      "chunk_origem": 7
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então é interessante que a gente guarde o status.",
+      "timestamp": "10:27 - 10:30",
+      "segundos_inicio": 627.2,
+      "segundos_fim": 630.0,
+      "chunk_origem": 7
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "né? Ou que a gente guarde o que que aconteceu na última operação feita.",
+      "timestamp": "10:30 - 10:35",
+      "segundos_inicio": 630.36,
+      "segundos_fim": 635.09,
+      "chunk_origem": 8
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então assim,",
+      "timestamp": "10:37 - 10:38",
+      "segundos_inicio": 637.27,
+      "segundos_fim": 638.09,
+      "chunk_origem": 8
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Por exemplo, fiz uma conta aqui.",
+      "timestamp": "10:39 - 10:41",
+      "segundos_inicio": 639.57,
+      "segundos_fim": 641.09,
+      "chunk_origem": 8
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Deu carry out.",
+      "timestamp": "10:42 - 10:43",
+      "segundos_inicio": 642.29,
+      "segundos_fim": 643.09,
+      "chunk_origem": 8
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Se eu fiz uma conta, deu carry out, eu tenho que lembrar que eu vou ter que fazer, por exemplo, alguma correção no valor lido,",
+      "timestamp": "10:44 - 10:51",
+      "segundos_inicio": 644.39,
+      "segundos_fim": 651.49,
+      "chunk_origem": 8
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "né?",
+      "timestamp": "10:52 - 10:52",
+      "segundos_inicio": 652.09,
+      "segundos_fim": 652.29,
+      "chunk_origem": 8
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Se eu tirei os números daqui, ó, acabou, vai ter outro resultado, vai ter outro carry out.",
+      "timestamp": "10:53 - 10:57",
+      "segundos_inicio": 653.09,
+      "segundos_fim": 657.49,
+      "chunk_origem": 8
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então, o que que a gente faz para armazenar os resultados dessas da carry out e do overflow?",
+      "timestamp": "10:58 - 11:03",
+      "segundos_inicio": 658.49,
+      "segundos_fim": 663.49,
+      "chunk_origem": 8
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "A gente alimenta os flip-flops, tá? E guarda no flip-flop do tipo D o último resultado, o último carry out e o último overflow da última operação feita.",
+      "timestamp": "11:04 - 11:15",
+      "segundos_inicio": 664.29,
+      "segundos_fim": 675.49,
+      "chunk_origem": 8
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá?",
+      "timestamp": "11:16 - 11:16",
+      "segundos_inicio": 676.29,
+      "segundos_fim": 676.59,
+      "chunk_origem": 8
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Isso a gente chama de flag. A gente chama esse de flag de status.",
+      "timestamp": "11:17 - 11:21",
+      "segundos_inicio": 677.29,
+      "segundos_fim": 681.09,
+      "chunk_origem": 8
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Né? Então, status ou flag de status se refere ao quê?",
+      "timestamp": "11:21 - 11:25",
+      "segundos_inicio": 681.79,
+      "segundos_fim": 685.09,
+      "chunk_origem": 8
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "A a a situação da conta, a situação da conta da última conta feita.",
+      "timestamp": "11:27 - 12:14",
+      "segundos_inicio": 687.29,
+      "segundos_fim": 734.29,
+      "chunk_origem": 8
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Deu carry out? Ele grava.",
+      "timestamp": "12:17 - 12:19",
+      "segundos_inicio": 737.09,
+      "segundos_fim": 739.09,
+      "chunk_origem": 8
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Deu overflow? Ele grava.",
+      "timestamp": "12:19 - 12:21",
+      "segundos_inicio": 739.69,
+      "segundos_fim": 741.09,
+      "chunk_origem": 8
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "E vai ter para outras coisas, vai ter uma flag para sinal, por exemplo, o resultado da última operação foi positivo ou negativo? Vai ter a flag de sinal.",
+      "timestamp": "12:21 - 12:29",
+      "segundos_inicio": 741.79,
+      "segundos_fim": 749.49,
+      "chunk_origem": 8
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá?",
+      "timestamp": "12:30 - 12:30",
+      "segundos_inicio": 750.29,
+      "segundos_fim": 750.59,
+      "chunk_origem": 8
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "O resultado da última operação foi igual a zero ou foi diferente de zero? Vai ter uma flag de zero também.",
+      "timestamp": "12:31 - 12:38",
+      "segundos_inicio": 751.49,
+      "segundos_fim": 758.49,
+      "chunk_origem": 8
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá?",
+      "timestamp": "12:38 - 12:39",
+      "segundos_inicio": 758.89,
+      "segundos_fim": 759.19,
+      "chunk_origem": 8
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "E aí, dando spoiler, a gente vai usar isso aonde?",
+      "timestamp": "12:00 - 12:03",
+      "segundos_inicio": 720.49,
+      "segundos_fim": 723.09,
+      "chunk_origem": 9
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Quando a gente começar a construir algoritmos.",
+      "timestamp": "12:03 - 12:06",
+      "segundos_inicio": 723.7,
+      "segundos_fim": 726.2,
+      "chunk_origem": 9
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Você vai fazer um if. Se A maior do que B.",
+      "timestamp": "12:06 - 12:09",
+      "segundos_inicio": 726.9,
+      "segundos_fim": 729.2,
+      "chunk_origem": 9
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Se A maior que B faz isso, se A menor que B faz aquilo.",
+      "timestamp": "12:10 - 12:13",
+      "segundos_inicio": 730.8,
+      "segundos_fim": 733.4,
+      "chunk_origem": 9
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Você vai olhar o quê? A flag de sinal.",
+      "timestamp": "12:13 - 12:16",
+      "segundos_inicio": 733.9,
+      "segundos_fim": 736.4,
+      "chunk_origem": 9
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Você vai fazer a conta e vai olhar a flag de sinal. E assim vai.",
+      "timestamp": "12:17 - 12:20",
+      "segundos_inicio": 737.7,
+      "segundos_fim": 740.4,
+      "chunk_origem": 9
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá? Beleza até aí? Tá claro?",
+      "timestamp": "12:20 - 12:22",
+      "segundos_inicio": 740.9,
+      "segundos_fim": 742.7,
+      "chunk_origem": 9
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Não, mudou nada.",
+      "timestamp": "12:24 - 12:25",
+      "segundos_inicio": 744.6,
+      "segundos_fim": 745.4,
+      "chunk_origem": 9
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "O que que a gente fez?",
+      "timestamp": "12:25 - 12:26",
+      "segundos_inicio": 745.9,
+      "segundos_fim": 746.7,
+      "chunk_origem": 9
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Pegou a saída da caixa, ligou nos flip-flops, ponto.",
+      "timestamp": "12:27 - 12:29",
+      "segundos_inicio": 747.3,
+      "segundos_fim": 749.8,
+      "chunk_origem": 9
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Esse flip-flop vai ser colocado aqui, controlado, vai ter um enable lá que a gente vai gerenciar depois, tá?",
+      "timestamp": "12:30 - 12:37",
+      "segundos_inicio": 750.8,
+      "segundos_fim": 757.0,
+      "chunk_origem": 9
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Olha mostrando aqui, ó, essas contas, né, no computador.",
+      "timestamp": "12:41 - 12:45",
+      "segundos_inicio": 761.6,
+      "segundos_fim": 765.7,
+      "chunk_origem": 9
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Que que é isso aqui? É grego, aramaico, alemão?",
+      "timestamp": "12:46 - 12:49",
+      "segundos_inicio": 766.7,
+      "segundos_fim": 769.6,
+      "chunk_origem": 9
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Quase isso.",
+      "timestamp": "12:50 - 12:51",
+      "segundos_inicio": 770.9,
+      "segundos_fim": 771.6,
+      "chunk_origem": 9
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Que que ele fez, ó?",
+      "timestamp": "12:51 - 12:52",
+      "segundos_inicio": 771.9,
+      "segundos_fim": 772.7,
+      "chunk_origem": 9
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ele pegou números.",
+      "timestamp": "12:53 - 12:56",
+      "segundos_inicio": 773.3,
+      "segundos_fim": 776.1,
+      "chunk_origem": 9
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Bom, vamos lá, você entendeu um pouquinho disso agora.",
+      "timestamp": "12:56 - 12:59",
+      "segundos_inicio": 776.7,
+      "segundos_fim": 779.8,
+      "chunk_origem": 9
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Você nunca viu esse troço, mas preto e branco.",
+      "timestamp": "13:40 - 13:42",
+      "segundos_inicio": 820.4,
+      "segundos_fim": 822.3,
+      "chunk_origem": 9
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Vamos lá, é...",
+      "timestamp": "13:42 - 13:43",
+      "segundos_inicio": 822.6,
+      "segundos_fim": 823.7,
+      "chunk_origem": 9
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "No seu computador, você tem o tal do processador, que é o chip central que faz tudo.",
+      "timestamp": "13:47 - 13:52",
+      "segundos_inicio": 827.4,
+      "segundos_fim": 832.4,
+      "chunk_origem": 9
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá? E ele, vamos dizer assim, ele responde a instruções.",
+      "timestamp": "13:53 - 13:57",
+      "segundos_inicio": 833.6,
+      "segundos_fim": 837.8,
+      "chunk_origem": 9
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então você dá uma instrução e ele...",
+      "timestamp": "13:58 - 14:00",
+      "segundos_inicio": 838.8,
+      "segundos_fim": 840.6,
+      "chunk_origem": 9
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Aqui, então, ele pegou lá no computador, um ambiente aí que vocês vão ver depois, e mandou o quê? Subtrair esse A L do B.",
+      "timestamp": "14:02 - 14:10",
+      "segundos_inicio": 842.3,
+      "segundos_fim": 850.0,
+      "chunk_origem": 9
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Quem são esses AL e BH?",
+      "timestamp": "13:30 - 13:33",
+      "segundos_inicio": 810.52,
+      "segundos_fim": 813.03,
+      "chunk_origem": 10
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Quando você manda esse cara fazer uma conta, você tem que guardar os números em algum lugar. Esse algum lugar se chama registrador.",
+      "timestamp": "13:33 - 13:40",
+      "segundos_inicio": 813.89,
+      "segundos_fim": 820.42,
+      "chunk_origem": 10
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "O registrador é um grande flip-flop, na verdade é um conjunto de flip-flops que vai ter um determinado tamanho, né?",
+      "timestamp": "13:41 - 13:49",
+      "segundos_inicio": 821.45,
+      "segundos_fim": 829.43,
+      "chunk_origem": 10
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Aqui, por exemplo, ó, esse AL aqui, ele tem 16 bits.",
+      "timestamp": "13:50 - 13:58",
+      "segundos_inicio": 830.3,
+      "segundos_fim": 838.0,
+      "chunk_origem": 10
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "É como se fosse, sei lá, você tem um AL ou um AH.",
+      "timestamp": "13:58 - 14:02",
+      "segundos_inicio": 838.45,
+      "segundos_fim": 842.0,
+      "chunk_origem": 10
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "O AL é a parte baixa, né, do do do A. E o AH é a parte alta do A.",
+      "timestamp": "14:02 - 14:11",
+      "segundos_inicio": 842.8,
+      "segundos_fim": 851.0,
+      "chunk_origem": 10
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Por que AL AH? Porque de onde vem essa idiotice?",
+      "timestamp": "14:12 - 14:15",
+      "segundos_inicio": 852.5,
+      "segundos_fim": 855.3,
+      "chunk_origem": 10
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Quando o cara inventou esse processador, essa arquitetura, ela vem lá do 8080.",
+      "timestamp": "14:16 - 14:21",
+      "segundos_inicio": 856.2,
+      "segundos_fim": 861.5,
+      "chunk_origem": 10
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Né? Que é o que é o sucessor do 4004, o primeiro processador. O primeiro processador tinha 4 bits.",
+      "timestamp": "14:22 - 14:29",
+      "segundos_inicio": 862.7,
+      "segundos_fim": 869.0,
+      "chunk_origem": 10
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "O segundo tinha 8. Esse tinha 16.",
+      "timestamp": "14:29 - 15:12",
+      "segundos_inicio": 869.5,
+      "segundos_fim": 912.3,
+      "chunk_origem": 10
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então ele pegou o A, que era o registrador de para fazer conta, e duplicou o número de bits.",
+      "timestamp": "15:13 - 15:20",
+      "segundos_inicio": 913.2,
+      "segundos_fim": 920.3,
+      "chunk_origem": 10
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Mas para poder se referenciar aos dois pedaços, ele colocou parte baixa e parte alta.",
+      "timestamp": "15:21 - 15:25",
+      "segundos_inicio": 921.2,
+      "segundos_fim": 925.2,
+      "chunk_origem": 10
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá tranquilo até aí?",
+      "timestamp": "15:25 - 15:26",
+      "segundos_inicio": 925.5,
+      "segundos_fim": 926.4,
+      "chunk_origem": 10
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então",
+      "timestamp": "15:28 - 15:29",
+      "segundos_inicio": 928.5,
+      "segundos_fim": 929.0,
+      "chunk_origem": 10
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Oi? Parte baixa, parte alta.",
+      "timestamp": "15:29 - 15:31",
+      "segundos_inicio": 929.6,
+      "segundos_fim": 931.0,
+      "chunk_origem": 10
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Imagina o seguinte aqui, ó. É uma palavra, você comum.",
+      "timestamp": "15:31 - 15:34",
+      "segundos_inicio": 931.7,
+      "segundos_fim": 934.5,
+      "chunk_origem": 10
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Normalmente a gente pensa em palavras em bytes.",
+      "timestamp": "15:35 - 15:37",
+      "segundos_inicio": 935.5,
+      "segundos_fim": 937.5,
+      "chunk_origem": 10
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ah, então aqui, por exemplo, o A",
+      "timestamp": "15:38 - 15:40",
+      "segundos_inicio": 938.5,
+      "segundos_fim": 940.0,
+      "chunk_origem": 10
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "de interior. O A0 até o A7.",
+      "timestamp": "15:00 - 15:03",
+      "segundos_inicio": 900.0,
+      "segundos_fim": 903.0,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "o A8 até o A15.",
+      "timestamp": "15:03 - 15:06",
+      "segundos_inicio": 903.4,
+      "segundos_fim": 906.0,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Esse seria o o A.",
+      "timestamp": "15:06 - 15:08",
+      "segundos_inicio": 906.8,
+      "segundos_fim": 908.3,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "chamar AX.",
+      "timestamp": "15:09 - 15:12",
+      "segundos_inicio": 909.4,
+      "segundos_fim": 912.0,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá?",
+      "timestamp": "15:13 - 15:13",
+      "segundos_inicio": 913.0,
+      "segundos_fim": 913.4,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Esse AX tem uma parte baixa, bits menos significativos e uma parte alta.",
+      "timestamp": "15:14 - 15:20",
+      "segundos_inicio": 914.3,
+      "segundos_fim": 920.0,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá?",
+      "timestamp": "15:21 - 15:21",
+      "segundos_inicio": 921.0,
+      "segundos_fim": 921.4,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ah, e o EAX?",
+      "timestamp": "15:23 - 15:24",
+      "segundos_inicio": 923.0,
+      "segundos_fim": 924.0,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "O EAX é o",
+      "timestamp": "15:26 - 15:27",
+      "segundos_inicio": 926.3,
+      "segundos_fim": 927.3,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "É isso aqui com 32.",
+      "timestamp": "15:28 - 15:29",
+      "segundos_inicio": 928.3,
+      "segundos_fim": 929.6,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá?",
+      "timestamp": "15:30 - 15:30",
+      "segundos_inicio": 930.4,
+      "segundos_fim": 930.7,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Mas isso aqui a gente, isso aqui só vai a partir do 386.",
+      "timestamp": "15:31 - 15:35",
+      "segundos_inicio": 931.4,
+      "segundos_fim": 935.4,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Esquece, por enquanto.",
+      "timestamp": "15:36 - 15:37",
+      "segundos_inicio": 936.3,
+      "segundos_fim": 937.4,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá?",
+      "timestamp": "15:38 - 15:38",
+      "segundos_inicio": 938.2,
+      "segundos_fim": 938.5,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "O seu, o seu tem 64, 64.",
+      "timestamp": "15:40 - 15:44",
+      "segundos_inicio": 940.3,
+      "segundos_fim": 944.3,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá?",
+      "timestamp": "15:45 - 15:45",
+      "segundos_inicio": 945.0,
+      "segundos_fim": 945.3,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Mas então, vamos lá. Aí o que que esse, como é que esse cara mais ou menos é, pra vocês terem uma noção?",
+      "timestamp": "15:46 - 15:50",
+      "segundos_inicio": 946.2,
+      "segundos_fim": 950.3,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Não vou ficar entrando muito nisso, isso é mais pro final e isso é uma arquitetura mais específica.",
+      "timestamp": "15:50 - 15:55",
+      "segundos_inicio": 950.6,
+      "segundos_fim": 955.4,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Esse, cada um desses registradores aqui, você pode ver, ó,",
+      "timestamp": "15:57 - 16:01",
+      "segundos_inicio": 957.8,
+      "segundos_fim": 961.0,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ah, olha que coisa legal aqui, ó.",
+      "timestamp": "16:02 - 16:04",
+      "segundos_inicio": 962.0,
+      "segundos_fim": 964.0,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Como é que eu sei que esse cara tem 16 bits, gente?",
+      "timestamp": "16:05 - 16:07",
+      "segundos_inicio": 965.4,
+      "segundos_fim": 967.9,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Eu falei que tem 16, você acreditou, mas como é que eu sei?",
+      "timestamp": "16:11 - 16:13",
+      "segundos_inicio": 971.4,
+      "segundos_fim": 973.6,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ali tá escrito ali, tem 16.",
+      "timestamp": "16:13 - 16:16",
+      "segundos_inicio": 973.7,
+      "segundos_fim": 976.0,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "A quantidade de bits disponíveis ali tá de",
+      "timestamp": "16:16 - 16:18",
+      "segundos_inicio": 976.5,
+      "segundos_fim": 978.4,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "O que o quê?",
+      "timestamp": "16:18 - 16:18",
+      "segundos_inicio": 978.5,
+      "segundos_fim": 978.9,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "A quantidade de bits disponíveis ali pra você anotar tá",
+      "timestamp": "16:19 - 16:21",
+      "segundos_inicio": 979.2,
+      "segundos_fim": 981.9,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "24.",
+      "timestamp": "16:23 - 16:23",
+      "segundos_inicio": 983.0,
+      "segundos_fim": 983.6,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Por que que é 4?",
+      "timestamp": "16:24 - 16:25",
+      "segundos_inicio": 984.4,
+      "segundos_fim": 985.2,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Você ia falar, vai.",
+      "timestamp": "16:27 - 16:28",
+      "segundos_inicio": 987.5,
+      "segundos_fim": 988.3,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Você ia falar.",
+      "timestamp": "16:29 - 16:29",
+      "segundos_inicio": 989.0,
+      "segundos_fim": 989.5,
+      "chunk_origem": 11
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Hum?",
+      "timestamp": "16:30 - 16:30",
+      "segundos_inicio": 990.0,
+      "segundos_fim": 990.3,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Você vai falar porque que tem 16.",
+      "timestamp": "16:31 - 16:33",
+      "segundos_inicio": 991.2,
+      "segundos_fim": 993.0,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Quatro algarismos.",
+      "timestamp": "16:34 - 16:38",
+      "segundos_inicio": 994.8,
+      "segundos_fim": 998.0,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Quatro algarismos em hexa, o conteúdo deles são quatro algarismos em hexa.",
+      "timestamp": "16:38 - 16:42",
+      "segundos_inicio": 998.9,
+      "segundos_fim": 1002.3,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Cada algarismo, algarismo em hexa leva quantos bits?",
+      "timestamp": "16:42 - 16:45",
+      "segundos_inicio": 1002.6,
+      "segundos_fim": 1005.4,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Quatro.",
+      "timestamp": "16:46 - 16:47",
+      "segundos_inicio": 1006.7,
+      "segundos_fim": 1007.2,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Quatro.",
+      "timestamp": "16:47 - 16:48",
+      "segundos_inicio": 1007.6,
+      "segundos_fim": 1008.0,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então, ó, 4 4 4 4.",
+      "timestamp": "16:48 - 16:50",
+      "segundos_inicio": 1008.7,
+      "segundos_fim": 1010.4,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "16.",
+      "timestamp": "16:51 - 16:52",
+      "segundos_inicio": 1011.4,
+      "segundos_fim": 1012.0,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "16.",
+      "timestamp": "16:52 - 16:52",
+      "segundos_inicio": 1012.2,
+      "segundos_fim": 1012.6,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então, pelo, pela palavra que eu te dei, você sabe o tamanho do registrador.",
+      "timestamp": "16:53 - 16:56",
+      "segundos_inicio": 1013.6,
+      "segundos_fim": 1016.5,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Beleza, grego.",
+      "timestamp": "16:57 - 16:59",
+      "segundos_inicio": 1017.8,
+      "segundos_fim": 1019.0,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Beleza, grego. Eu falei grego.",
+      "timestamp": "16:59 - 17:01",
+      "segundos_inicio": 1019.9,
+      "segundos_fim": 1021.4,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Vamos lá.",
+      "timestamp": "17:06 - 17:07",
+      "segundos_inicio": 1026.6,
+      "segundos_fim": 1027.1,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Suponha que eu tenho uma caixa lá, um registrador low, que eu não sei o tamanho, e eu venho aqui e escrevo nele.",
+      "timestamp": "17:09 - 17:16",
+      "segundos_inicio": 1029.6,
+      "segundos_fim": 1036.4,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "0x é só para dizer que tá em hexa, tá?",
+      "timestamp": "17:17 - 17:19",
+      "segundos_inicio": 1037.3,
+      "segundos_fim": 1039.0,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "A B C D E.",
+      "timestamp": "17:19 - 17:22",
+      "segundos_inicio": 1039.9,
+      "segundos_fim": 1042.2,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Quantos bits tem esse registrador?",
+      "timestamp": "17:22 - 17:24",
+      "segundos_inicio": 1042.9,
+      "segundos_fim": 1044.3,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Em hexa, para cada algarismo, eu preciso de quantos bits?",
+      "timestamp": "17:27 - 18:10",
+      "segundos_inicio": 1047.4,
+      "segundos_fim": 1090.0,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "20 bits.",
+      "timestamp": "18:10 - 18:11",
+      "segundos_inicio": 1090.6,
+      "segundos_fim": 1091.2,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Quatro.",
+      "timestamp": "18:12 - 18:12",
+      "segundos_inicio": 1092.2,
+      "segundos_fim": 1092.6,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Esse cara tem 20 bits.",
+      "timestamp": "18:13 - 18:15",
+      "segundos_inicio": 1093.9,
+      "segundos_fim": 1095.2,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá?",
+      "timestamp": "18:20 - 18:20",
+      "segundos_inicio": 1100.6,
+      "segundos_fim": 1100.9,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então, ó.",
+      "timestamp": "18:24 - 18:24",
+      "segundos_inicio": 1104.4,
+      "segundos_fim": 1104.8,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Esse cara tem esses registradores aqui, ó, AX, BX, CX, DX e outro.",
+      "timestamp": "18:26 - 18:31",
+      "segundos_inicio": 1106.9,
+      "segundos_fim": 1111.3,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá?",
+      "timestamp": "18:32 - 18:32",
+      "segundos_inicio": 1112.0,
+      "segundos_fim": 1112.3,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Cada um tem um papel, não vou ficar explicando aqui, que é papel de cada um.",
+      "timestamp": "18:32 - 18:36",
+      "segundos_inicio": 1112.8,
+      "segundos_fim": 1116.9,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ele ainda tem uma idiotice. Qual a idiotice dele?",
+      "timestamp": "18:37 - 18:40",
+      "segundos_inicio": 1117.9,
+      "segundos_fim": 1120.4,
+      "chunk_origem": 12
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Você faz a conta e a conta sempre volta para o AX.",
+      "timestamp": "18:00 - 18:05",
+      "segundos_inicio": 1080.82,
+      "segundos_fim": 1085.62,
+      "chunk_origem": 13
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então, todas as contas que esse malandro faz são assim.",
+      "timestamp": "18:06 - 18:09",
+      "segundos_inicio": 1086.32,
+      "segundos_fim": 1089.41,
+      "chunk_origem": 13
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "AX recebe AX mais algum, mais, menos, dividido, multiplicado, qualquer outro registrador.",
+      "timestamp": "18:09 - 18:18",
+      "segundos_inicio": 1089.82,
+      "segundos_fim": 1098.82,
+      "chunk_origem": 13
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá?",
+      "timestamp": "18:19 - 18:20",
+      "segundos_inicio": 1099.82,
+      "segundos_fim": 1100.12,
+      "chunk_origem": 13
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Isso é o que a gente chama de arquitetura orientada a acumulador.",
+      "timestamp": "18:21 - 18:24",
+      "segundos_inicio": 1101.71,
+      "segundos_fim": 1104.62,
+      "chunk_origem": 13
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Toda conta volta para o A.",
+      "timestamp": "18:25 - 18:27",
+      "segundos_inicio": 1105.71,
+      "segundos_fim": 1107.41,
+      "chunk_origem": 13
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Por que esse pesadelo?",
+      "timestamp": "18:29 - 18:30",
+      "segundos_inicio": 1109.12,
+      "segundos_fim": 1110.41,
+      "chunk_origem": 13
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Você história.",
+      "timestamp": "18:30 - 18:31",
+      "segundos_inicio": 1110.82,
+      "segundos_fim": 1111.41,
+      "chunk_origem": 13
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá? Essa arquitetura é de 1970, é, é retrocompatível com um negócio de 1974.",
+      "timestamp": "18:32 - 18:38",
+      "segundos_inicio": 1112.21,
+      "segundos_fim": 1118.82,
+      "chunk_origem": 13
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tinha uma série de restrições na época em termos de, de hardware, que faziam o cara fazer isso.",
+      "timestamp": "18:39 - 18:45",
+      "segundos_inicio": 1119.82,
+      "segundos_fim": 1125.71,
+      "chunk_origem": 13
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Isso aqui é para economizar porta, para economizar hardware.",
+      "timestamp": "18:45 - 18:48",
+      "segundos_inicio": 1125.91,
+      "segundos_fim": 1128.82,
+      "chunk_origem": 13
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "José Artur, ao extremo.",
+      "timestamp": "18:49 - 18:51",
+      "segundos_inicio": 1129.62,
+      "segundos_fim": 1131.21,
+      "chunk_origem": 13
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Hoje não é mais feito assim.",
+      "timestamp": "18:51 - 18:53",
+      "segundos_inicio": 1131.91,
+      "segundos_fim": 1133.12,
+      "chunk_origem": 13
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Graças ao Santo Bom Deus.",
+      "timestamp": "18:53 - 18:55",
+      "segundos_inicio": 1133.62,
+      "segundos_fim": 1135.12,
+      "chunk_origem": 13
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá?",
+      "timestamp": "18:55 - 18:56",
+      "segundos_inicio": 1135.82,
+      "segundos_fim": 1136.12,
+      "chunk_origem": 13
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então vamos lá, ele colocou A e 8F no registrador.",
+      "timestamp": "18:57 - 19:41",
+      "segundos_inicio": 1137.71,
+      "segundos_fim": 1181.12,
+      "chunk_origem": 13
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "E tá fazendo uma conta, ó, subtrai a parte baixa do AL, da parte, da parte baixa do BL.",
+      "timestamp": "19:01 - 19:08",
+      "segundos_inicio": 1141.62,
+      "segundos_fim": 1148.21,
+      "chunk_origem": 13
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então, ó, ele tá fazendo com o AX aqui, botou um BX aqui.",
+      "timestamp": "19:09 - 19:12",
+      "segundos_inicio": 1149.12,
+      "segundos_fim": 1152.41,
+      "chunk_origem": 13
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tem outro BX aqui em cima.",
+      "timestamp": "19:13 - 19:15",
+      "segundos_inicio": 1153.71,
+      "segundos_fim": 1155.41,
+      "chunk_origem": 13
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Esse BX tem um B low e tem um B high.",
+      "timestamp": "19:16 - 19:19",
+      "segundos_inicio": 1156.01,
+      "segundos_fim": 1159.41,
+      "chunk_origem": 13
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ele tá fazendo a conta entre essas duas partes aqui.",
+      "timestamp": "19:20 - 19:22",
+      "segundos_inicio": 1160.01,
+      "segundos_fim": 1162.62,
+      "chunk_origem": 13
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ok?",
+      "timestamp": "19:23 - 19:23",
+      "segundos_inicio": 1163.41,
+      "segundos_fim": 1163.82,
+      "chunk_origem": 13
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Então, se eu tivesse, se o BX fosse A08F, o A0 não ia fazer a...",
+      "timestamp": "19:25 - 19:29",
+      "segundos_inicio": 1165.01,
+      "segundos_fim": 1169.82,
+      "chunk_origem": 13
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Não é fazer.",
+      "timestamp": "19:29 - 19:30",
+      "segundos_inicio": 1169.82,
+      "segundos_fim": 1170.41,
+      "chunk_origem": 13
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Se o senhor quer BX, faz o quê?",
+      "timestamp": "19:30 - 19:32",
+      "segundos_inicio": 1170.9,
+      "segundos_fim": 1172.43,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "A08F.",
+      "timestamp": "19:32 - 19:33",
+      "segundos_inicio": 1172.77,
+      "segundos_fim": 1173.28,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "A0.",
+      "timestamp": "19:33 - 19:34",
+      "segundos_inicio": 1173.89,
+      "segundos_fim": 1174.2,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "A0 não ia fazer nada.",
+      "timestamp": "19:34 - 19:35",
+      "segundos_inicio": 1174.61,
+      "segundos_fim": 1175.38,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "A0 não ia fazer nada. Boa.",
+      "timestamp": "19:35 - 19:36",
+      "segundos_inicio": 1175.5,
+      "segundos_fim": 1176.5,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Pergunta dela aqui, ó.",
+      "timestamp": "19:37 - 19:38",
+      "segundos_inicio": 1177.27,
+      "segundos_fim": 1178.49,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Os números que ele colocou, vamos botar os números aqui, ó.",
+      "timestamp": "19:39 - 19:41",
+      "segundos_inicio": 1179.68,
+      "segundos_fim": 1181.64,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "No caso do AX, OK, aqui é 00, aqui é 0A.",
+      "timestamp": "19:42 - 19:47",
+      "segundos_inicio": 1182.62,
+      "segundos_fim": 1187.78,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Entendeu?",
+      "timestamp": "19:48 - 19:48",
+      "segundos_inicio": 1188.41,
+      "segundos_fim": 1188.82,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "No caso do BX, ah, ele foi legal também, botou 00 e botou 8F aqui, né?",
+      "timestamp": "19:49 - 19:55",
+      "segundos_inicio": 1189.14,
+      "segundos_fim": 1195.9,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Mas se eu coloco qualquer outra coisa aqui.",
+      "timestamp": "19:57 - 19:59",
+      "segundos_inicio": 1197.62,
+      "segundos_fim": 1199.12,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Se eu botar FF aqui, FF aqui.",
+      "timestamp": "20:00 - 20:02",
+      "segundos_inicio": 1200.01,
+      "segundos_fim": 1202.62,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "O cara ignora, tá nem aí.",
+      "timestamp": "20:04 - 20:05",
+      "segundos_inicio": 1204.2,
+      "segundos_fim": 1205.51,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Você mandou ele fazer a conta o quê?",
+      "timestamp": "20:05 - 20:07",
+      "segundos_inicio": 1205.91,
+      "segundos_fim": 1207.41,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Isso aqui.",
+      "timestamp": "20:09 - 20:09",
+      "segundos_inicio": 1209.01,
+      "segundos_fim": 1209.62,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então, onde ele vai olhar?",
+      "timestamp": "20:11 - 20:12",
+      "segundos_inicio": 1211.32,
+      "segundos_fim": 1212.41,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá?",
+      "timestamp": "20:13 - 20:14",
+      "segundos_inicio": 1213.82,
+      "segundos_fim": 1214.01,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Mas isso é um pedaço, é um pedaço da informação que tá naquele registrador.",
+      "timestamp": "20:14 - 20:18",
+      "segundos_inicio": 1214.71,
+      "segundos_fim": 1218.71,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Você vai querer só um pedaço da conta de um pedaço.",
+      "timestamp": "20:20 - 20:22",
+      "segundos_inicio": 1220.21,
+      "segundos_fim": 1222.62,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Boa.",
+      "timestamp": "20:23 - 20:23",
+      "segundos_inicio": 1223.12,
+      "segundos_fim": 1223.41,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Retrocompatibilidade.",
+      "timestamp": "20:24 - 20:25",
+      "segundos_inicio": 1224.01,
+      "segundos_fim": 1225.62,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "O que que ele queria?",
+      "timestamp": "20:26 - 20:27",
+      "segundos_inicio": 1226.21,
+      "segundos_fim": 1227.01,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Quando ele lançou a versão de 8 bits do processador,",
+      "timestamp": "20:27 - 21:10",
+      "segundos_inicio": 1227.82,
+      "segundos_fim": 1270.82,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "só fazia em cima dessa parte.",
+      "timestamp": "21:14 - 21:15",
+      "segundos_inicio": 1274.12,
+      "segundos_fim": 1275.51,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Nem existia.",
+      "timestamp": "21:16 - 21:17",
+      "segundos_inicio": 1276.32,
+      "segundos_fim": 1277.01,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Aí ele expandiu, na versão 2.0, ele expandiu.",
+      "timestamp": "21:18 - 21:21",
+      "segundos_inicio": 1278.01,
+      "segundos_fim": 1281.71,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Só que ele queria que o código do antigo rodasse, o código do novo rodasse no antigo.",
+      "timestamp": "21:22 - 21:26",
+      "segundos_inicio": 1282.91,
+      "segundos_fim": 1286.12,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Resposta é tão preguiça.",
+      "timestamp": "21:26 - 21:27",
+      "segundos_inicio": 1286.71,
+      "segundos_fim": 1287.82,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Não, é mais importante do que isso.",
+      "timestamp": "21:28 - 21:31",
+      "segundos_inicio": 1288.71,
+      "segundos_fim": 1291.41,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ele queria que o código do antigo rodasse no novo.",
+      "timestamp": "21:32 - 21:34",
+      "segundos_inicio": 1292.12,
+      "segundos_fim": 1294.12,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então, ou seja, ó, o código do antigo rodar no novo,",
+      "timestamp": "21:35 - 21:38",
+      "segundos_inicio": 1295.71,
+      "segundos_fim": 1298.01,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "que que eu tenho que fazer? Primeiro,",
+      "timestamp": "21:38 - 21:40",
+      "segundos_inicio": 1298.91,
+      "segundos_fim": 1300.41,
+      "chunk_origem": 14
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "a a a representação, a gente vai ver depois, a representação da ordem em bits, que a gente chama de palavra de instrução, tem que ser a mesma.",
+      "timestamp": "21:00 - 21:08",
+      "segundos_inicio": 1260.41,
+      "segundos_fim": 1268.82,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ele manteve a palavra de instrução.",
+      "timestamp": "21:09 - 21:11",
+      "segundos_inicio": 1269.32,
+      "segundos_fim": 1271.41,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ele manteve a mesma estrutura do antigo.",
+      "timestamp": "21:12 - 21:13",
+      "segundos_inicio": 1272.01,
+      "segundos_fim": 1273.82,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Mas aí ele deu liberdade para que usasse o novo.",
+      "timestamp": "21:14 - 21:16",
+      "segundos_inicio": 1274.41,
+      "segundos_fim": 1276.82,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Entendeu?",
+      "timestamp": "21:18 - 21:18",
+      "segundos_inicio": 1278.01,
+      "segundos_fim": 1278.82,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "E com isso, você só tem um PC em cima da mesa por causa disso, sabia?",
+      "timestamp": "21:19 - 21:23",
+      "segundos_inicio": 1279.82,
+      "segundos_fim": 1283.82,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Que um era compatível com o outro, que era compatível com o outro.",
+      "timestamp": "21:25 - 21:28",
+      "segundos_inicio": 1285.82,
+      "segundos_fim": 1288.21,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Se você muda a arquitetura e quebra a retrocompatibilidade, você tem que reescrever o software todinho.",
+      "timestamp": "21:28 - 21:35",
+      "segundos_inicio": 1288.62,
+      "segundos_fim": 1295.12,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "E a gente estava numa época que reescrever software não era trivial.",
+      "timestamp": "21:36 - 21:39",
+      "segundos_inicio": 1296.21,
+      "segundos_fim": 1299.21,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então a Intel meio que ganhou o mercado também por causa disso.",
+      "timestamp": "21:41 - 21:44",
+      "segundos_inicio": 1301.01,
+      "segundos_fim": 1304.62,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Você pega um código de 40 anos atrás, você roda aqui.",
+      "timestamp": "21:44 - 21:48",
+      "segundos_inicio": 1304.82,
+      "segundos_fim": 1308.32,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Você roda o mesmo código de 40, 50 anos atrás, você roda no seu computador.",
+      "timestamp": "21:50 - 21:54",
+      "segundos_inicio": 1310.62,
+      "segundos_fim": 1314.32,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Ainda?",
+      "timestamp": "21:54 - 21:55",
+      "segundos_inicio": 1314.91,
+      "segundos_fim": 1315.32,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ainda.",
+      "timestamp": "21:55 - 21:56",
+      "segundos_inicio": 1315.62,
+      "segundos_fim": 1316.01,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Roda.",
+      "timestamp": "21:57 - 21:57",
+      "segundos_inicio": 1317.41,
+      "segundos_fim": 1317.82,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "A menos que você faça as grandes paradas de acesso à memória, que o sistema vai dar erro de proteção, não sei o que, mas a grosso modo você roda o mesmo código.",
+      "timestamp": "21:58 - 22:05",
+      "segundos_inicio": 1318.91,
+      "segundos_fim": 1325.91,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá?",
+      "timestamp": "22:06 - 22:06",
+      "segundos_inicio": 1326.41,
+      "segundos_fim": 1326.71,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Essa é a graça disso aqui.",
+      "timestamp": "22:08 - 22:09",
+      "segundos_inicio": 1328.01,
+      "segundos_fim": 1329.12,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Isso aqui roda código de 50 anos atrás.",
+      "timestamp": "22:09 - 22:11",
+      "segundos_inicio": 1329.62,
+      "segundos_fim": 1331.62,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Nem nem faz mais sentido.",
+      "timestamp": "22:12 - 22:14",
+      "segundos_inicio": 1332.82,
+      "segundos_fim": 1334.21,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "E roda umas coisas.",
+      "timestamp": "22:15 - 22:16",
+      "segundos_inicio": 1335.12,
+      "segundos_fim": 1336.32,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Só que ele roda mal esse código.",
+      "timestamp": "22:17 - 22:19",
+      "segundos_inicio": 1337.91,
+      "segundos_fim": 1339.32,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então o que é que as pessoas fazem? Quando elas escrevem softwares novos, elas tiram essas operações antigas, que não fazia sentido.",
+      "timestamp": "22:19 - 22:25",
+      "segundos_inicio": 1339.91,
+      "segundos_fim": 1345.82,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Mas você roda.",
+      "timestamp": "22:26 - 22:27",
+      "segundos_inicio": 1346.82,
+      "segundos_fim": 1347.62,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Se você pegar o Windows,",
+      "timestamp": "22:28 - 22:30",
+      "segundos_inicio": 1348.71,
+      "segundos_fim": 1350.41,
+      "chunk_origem": 15
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ó, vou pegar um exemplo besta.",
+      "timestamp": "22:30 - 22:32",
+      "segundos_inicio": 1350.76,
+      "segundos_fim": 1352.42,
+      "chunk_origem": 16
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Você pega um Windows, XP.",
+      "timestamp": "22:32 - 22:36",
+      "segundos_inicio": 1352.87,
+      "segundos_fim": 1356.63,
+      "chunk_origem": 16
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Não, XP é bom. Pega um Windows 95, um Windows 311.",
+      "timestamp": "22:37 - 22:41",
+      "segundos_inicio": 1357.11,
+      "segundos_fim": 1361.5,
+      "chunk_origem": 16
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Se você pegar um Windows 311, você enfia ele aqui.",
+      "timestamp": "22:42 - 22:44",
+      "segundos_inicio": 1362.0,
+      "segundos_fim": 1364.74,
+      "chunk_origem": 16
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "No computador de hoje.",
+      "timestamp": "22:45 - 22:46",
+      "segundos_inicio": 1365.27,
+      "segundos_fim": 1366.5,
+      "chunk_origem": 16
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "1990, pô.",
+      "timestamp": "22:47 - 22:49",
+      "segundos_inicio": 1367.4,
+      "segundos_fim": 1369.42,
+      "chunk_origem": 16
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá? Por quê? Por causa da disso.",
+      "timestamp": "22:50 - 22:51",
+      "segundos_inicio": 1370.01,
+      "segundos_fim": 1371.5,
+      "chunk_origem": 16
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "E o Windows 311 trabalhava com 16. O teu hoje trabalha com 64, só para você ter uma noção de tamanho, tá?",
+      "timestamp": "22:51 - 22:58",
+      "segundos_inicio": 1371.98,
+      "segundos_fim": 1378.87,
+      "chunk_origem": 16
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Isso é legal.",
+      "timestamp": "23:01 - 23:01",
+      "segundos_inicio": 1381.12,
+      "segundos_fim": 1381.89,
+      "chunk_origem": 16
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Isso é o segredo da indústria.",
+      "timestamp": "23:03 - 23:04",
+      "segundos_inicio": 1383.12,
+      "segundos_fim": 1384.5,
+      "chunk_origem": 16
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Né? O que você, né? O que os caras mais quer? Comprei PlayStation 5, quero rodar o jogo do PlayStation 4, do 3, do 2, etc e tal.",
+      "timestamp": "23:05 - 23:13",
+      "segundos_inicio": 1385.9,
+      "segundos_fim": 1393.01,
+      "chunk_origem": 16
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "E aí o cara não pode inventar muito.",
+      "timestamp": "23:14 - 23:15",
+      "segundos_inicio": 1394.01,
+      "segundos_fim": 1395.71,
+      "chunk_origem": 16
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá?",
+      "timestamp": "23:16 - 23:16",
+      "segundos_inicio": 1396.62,
+      "segundos_fim": 1396.91,
+      "chunk_origem": 16
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Bom, vamos lá. Para não empolgar muito.",
+      "timestamp": "23:20 - 23:21",
+      "segundos_inicio": 1400.01,
+      "segundos_fim": 1401.71,
+      "chunk_origem": 16
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então, se eu não empolgo aqui dá ruim.",
+      "timestamp": "23:22 - 23:24",
+      "segundos_inicio": 1402.62,
+      "segundos_fim": 1404.12,
+      "chunk_origem": 16
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Vamos lá, supondo números inteiros sem sinal.",
+      "timestamp": "23:25 - 23:27",
+      "segundos_inicio": 1405.82,
+      "segundos_fim": 1407.82,
+      "chunk_origem": 16
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então, eu tinha esses valores aí, e quando eu botei esses valores aí, eu era um ser consciente.",
+      "timestamp": "23:28 - 23:37",
+      "segundos_inicio": 1408.71,
+      "segundos_fim": 1417.01,
+      "chunk_origem": 16
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "E coloquei eles certos, considerando eles inteiros sem sinal. Como esses caras são inteiros sem sinal,",
+      "timestamp": "23:38 - 23:43",
+      "segundos_inicio": 1418.71,
+      "segundos_fim": 1423.41,
+      "chunk_origem": 16
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "a representação do, do, do A. O A é 10, né?",
+      "timestamp": "23:43 - 23:47",
+      "segundos_inicio": 1423.71,
+      "segundos_fim": 1427.41,
+      "chunk_origem": 16
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Isso aqui não é, não é, não é 10?",
+      "timestamp": "23:47 - 23:49",
+      "segundos_inicio": 1427.82,
+      "segundos_fim": 1429.82,
+      "chunk_origem": 16
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "É.",
+      "timestamp": "23:50 - 23:50",
+      "segundos_inicio": 1430.12,
+      "segundos_fim": 1430.41,
+      "chunk_origem": 16
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Logo, você zera o A.",
+      "timestamp": "23:51 - 23:52",
+      "segundos_inicio": 1431.01,
+      "segundos_fim": 1432.12,
+      "chunk_origem": 16
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Para de chutar.",
+      "timestamp": "23:52 - 23:53",
+      "segundos_inicio": 1432.82,
+      "segundos_fim": 1433.62,
+      "chunk_origem": 16
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então, a representação do A e o outro, ó, 8F. 8F.",
+      "timestamp": "24:18 - 24:24",
+      "segundos_inicio": 1458.07,
+      "segundos_fim": 1464.45,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Beleza?",
+      "timestamp": "24:24 - 24:25",
+      "segundos_inicio": 1464.93,
+      "segundos_fim": 1465.49,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá tranquilo aí?",
+      "timestamp": "24:26 - 24:27",
+      "segundos_inicio": 1466.81,
+      "segundos_fim": 1467.5,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Bit a bit?",
+      "timestamp": "24:28 - 24:28",
+      "segundos_inicio": 1468.09,
+      "segundos_fim": 1468.64,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Vou pegar isso aqui e vou converter. Bom,",
+      "timestamp": "24:30 - 24:31",
+      "segundos_inicio": 1470.1,
+      "segundos_fim": 1471.47,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "isso aqui tá, tá em hexa, você coloquei em binário,",
+      "timestamp": "24:31 - 24:34",
+      "segundos_inicio": 1471.98,
+      "segundos_fim": 1474.63,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "né?",
+      "timestamp": "24:36 - 24:36",
+      "segundos_inicio": 1476.05,
+      "segundos_fim": 1476.42,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "E converti de binário para decimal. Então, você é 10 mais 143.",
+      "timestamp": "24:38 - 24:42",
+      "segundos_inicio": 1478.83,
+      "segundos_fim": 1482.68,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Vou fazer um menos o outro.",
+      "timestamp": "24:43 - 24:44",
+      "segundos_inicio": 1483.16,
+      "segundos_fim": 1484.43,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Um menos o outro. 10 menos 143 é menos 133.",
+      "timestamp": "24:46 - 24:50",
+      "segundos_inicio": 1486.77,
+      "segundos_fim": 1490.1,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Certo?",
+      "timestamp": "24:51 - 24:51",
+      "segundos_inicio": 1491.0,
+      "segundos_fim": 1491.5,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Vou fazer aquela ideia, ó.",
+      "timestamp": "24:51 - 24:52",
+      "segundos_inicio": 1491.88,
+      "segundos_fim": 1492.84,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Vou pegar o primeiro, complemento a dois do segundo e somar um.",
+      "timestamp": "24:53 - 24:57",
+      "segundos_inicio": 1493.11,
+      "segundos_fim": 1497.41,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Fazer aqui.",
+      "timestamp": "24:58 - 24:58",
+      "segundos_inicio": 1498.01,
+      "segundos_fim": 1498.62,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Você já fez 300, né?",
+      "timestamp": "25:01 - 25:02",
+      "segundos_inicio": 1501.6,
+      "segundos_fim": 1502.68,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tira.",
+      "timestamp": "25:04 - 25:05",
+      "segundos_inicio": 1504.8,
+      "segundos_fim": 1505.41,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Somar um. O resultado disso aqui é o quê? 7B.",
+      "timestamp": "25:07 - 25:10",
+      "segundos_inicio": 1507.5,
+      "segundos_fim": 1510.41,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Deu isso aqui.",
+      "timestamp": "25:11 - 25:12",
+      "segundos_inicio": 1511.69,
+      "segundos_fim": 1512.38,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "O resultado deu isso aqui,",
+      "timestamp": "25:13 - 25:14",
+      "segundos_inicio": 1513.49,
+      "segundos_fim": 1514.87,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "né?",
+      "timestamp": "25:15 - 25:16",
+      "segundos_inicio": 1515.82,
+      "segundos_fim": 1516.12,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "7B é 123.",
+      "timestamp": "25:16 - 25:18",
+      "segundos_inicio": 1516.7,
+      "segundos_fim": 1518.01,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Esse é o resultado que apareceu, 123.",
+      "timestamp": "25:18 - 25:20",
+      "segundos_inicio": 1518.99,
+      "segundos_fim": 1520.62,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Convertendo 123 para hexa,",
+      "timestamp": "25:21 - 25:24",
+      "segundos_inicio": 1521.12,
+      "segundos_fim": 1524.71,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "é BO.",
+      "timestamp": "25:25 - 25:26",
+      "segundos_inicio": 1525.41,
+      "segundos_fim": 1526.12,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então, se eu for olhar aqui o resultado aqui, ó, ah, cadê?",
+      "timestamp": "25:26 - 25:30",
+      "segundos_inicio": 1526.82,
+      "segundos_fim": 1530.41,
+      "chunk_origem": 17
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "B horas.",
+      "timestamp": "25:33 - 25:33",
+      "segundos_inicio": 1533.03,
+      "segundos_fim": 1533.53,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Isso. Só.",
+      "timestamp": "25:35 - 25:36",
+      "segundos_inicio": 1535.3,
+      "segundos_fim": 1536.41,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "B horas, B0, B0, tô maluco. B0.",
+      "timestamp": "25:36 - 25:39",
+      "segundos_inicio": 1536.89,
+      "segundos_fim": 1539.41,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Cadê o B0 na criança aqui? Espera aí.",
+      "timestamp": "25:40 - 25:41",
+      "segundos_inicio": 1540.01,
+      "segundos_fim": 1541.82,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Pra, pra, pra, pra, pra.",
+      "timestamp": "25:42 - 25:45",
+      "segundos_inicio": 1542.32,
+      "segundos_fim": 1545.62,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Aí, perdão, peraí.",
+      "timestamp": "25:49 - 25:49",
+      "segundos_inicio": 1549.01,
+      "segundos_fim": 1549.91,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Não, falei besteira.",
+      "timestamp": "25:51 - 25:51",
+      "segundos_inicio": 1551.01,
+      "segundos_fim": 1551.82,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "O resultado é 7B, né?",
+      "timestamp": "25:52 - 25:54",
+      "segundos_inicio": 1552.32,
+      "segundos_fim": 1554.01,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "O resultado é 7B.",
+      "timestamp": "25:55 - 25:56",
+      "segundos_inicio": 1555.32,
+      "segundos_fim": 1556.62,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Eu vou lá na saída do cara, após a realização da operação, e cheguei à conclusão que dá 7B, deu 7B.",
+      "timestamp": "25:57 - 26:03",
+      "segundos_inicio": 1557.32,
+      "segundos_fim": 1563.91,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá batendo.",
+      "timestamp": "26:04 - 26:04",
+      "segundos_inicio": 1564.21,
+      "segundos_fim": 1564.91,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Né?",
+      "timestamp": "26:06 - 26:06",
+      "segundos_inicio": 1566.01,
+      "segundos_fim": 1566.21,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Agora vem a questão da da interpretação, né?",
+      "timestamp": "26:06 - 26:09",
+      "segundos_inicio": 1566.91,
+      "segundos_fim": 1569.82,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Se o número era inteiro sem sinal, né?",
+      "timestamp": "26:10 - 26:13",
+      "segundos_inicio": 1570.82,
+      "segundos_fim": 1573.12,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "7B é 200.",
+      "timestamp": "26:13 - 26:18",
+      "segundos_inicio": 1573.71,
+      "segundos_fim": 1578.41,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "7B, na verdade, é quem?",
+      "timestamp": "26:18 - 26:21",
+      "segundos_inicio": 1578.91,
+      "segundos_fim": 1581.01,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "É, cadê?",
+      "timestamp": "26:22 - 26:23",
+      "segundos_inicio": 1582.32,
+      "segundos_fim": 1583.82,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Vamos lá, 7B é.",
+      "timestamp": "26:25 - 26:27",
+      "segundos_inicio": 1585.71,
+      "segundos_fim": 1587.12,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "255, 128, 128 menos.",
+      "timestamp": "26:30 - 26:35",
+      "segundos_inicio": 1590.82,
+      "segundos_fim": 1595.01,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "É, 128 menos 4.",
+      "timestamp": "26:35 - 26:38",
+      "segundos_inicio": 1595.91,
+      "segundos_fim": 1598.32,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "123.",
+      "timestamp": "26:40 - 26:41",
+      "segundos_inicio": 1600.12,
+      "segundos_fim": 1601.41,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Isso aí, 123.",
+      "timestamp": "26:41 - 26:43",
+      "segundos_inicio": 1601.91,
+      "segundos_fim": 1603.41,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Bom, esse número aqui, né, se eu pensasse nele em complemento a dois, ele é 123.",
+      "timestamp": "26:44 - 26:49",
+      "segundos_inicio": 1604.71,
+      "segundos_fim": 1609.12,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Esse número é 123, né?",
+      "timestamp": "26:50 - 26:52",
+      "segundos_inicio": 1610.82,
+      "segundos_fim": 1612.32,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Aí o que que eu vou observar?",
+      "timestamp": "26:55 - 26:56",
+      "segundos_inicio": 1615.01,
+      "segundos_fim": 1616.41,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Bom, ele tem uma flag aqui, ó, que disse assim, ó, pra ir de quebra.",
+      "timestamp": "26:56 - 27:00",
+      "segundos_inicio": 1616.82,
+      "segundos_fim": 1620.71,
+      "chunk_origem": 18
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "carry. Ele tá sinalizando uma flag de carry aqui pra gente.",
+      "timestamp": "27:00 - 27:04",
+      "segundos_inicio": 1620.41,
+      "segundos_fim": 1624.41,
+      "chunk_origem": 19
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Se ele sinalizou uma flag de carry, a gente lembra que o carry deu igual a um, né?",
+      "timestamp": "27:05 - 27:10",
+      "segundos_inicio": 1625.32,
+      "segundos_fim": 1630.82,
+      "chunk_origem": 19
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Espera aí. Então, se y o quê? Espera aí.",
+      "timestamp": "27:12 - 27:16",
+      "segundos_inicio": 1632.62,
+      "segundos_fim": 1636.41,
+      "chunk_origem": 19
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "É só borrow out, tem que ser o complemento do subtraendo.",
+      "timestamp": "27:22 - 27:24",
+      "segundos_inicio": 1642.01,
+      "segundos_fim": 1644.71,
+      "chunk_origem": 19
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Quando é soma, C é quando é carry, quando é subtração, C é igual a um.",
+      "timestamp": "27:30 - 27:34",
+      "segundos_inicio": 1650.82,
+      "segundos_fim": 1654.71,
+      "chunk_origem": 19
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Não, tudo bem. Mas ele deu um, né? Tem que dar zero, né, pra pedir emprestado. Eu tenho que pedir emprestado.",
+      "timestamp": "27:35 - 27:40",
+      "segundos_inicio": 1655.12,
+      "segundos_fim": 1660.71,
+      "chunk_origem": 19
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Não, mas aí eu acho que ele já converteu. Ele já fez o note do carry.",
+      "timestamp": "27:41 - 27:45",
+      "segundos_inicio": 1661.12,
+      "segundos_fim": 1665.62,
+      "chunk_origem": 19
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ah, é verdade. É isso. Tem razão. Da maneira como ele representa, exato.",
+      "timestamp": "27:46 - 27:51",
+      "segundos_inicio": 1666.62,
+      "segundos_fim": 1671.82,
+      "chunk_origem": 19
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então, ó, aqui, né, ele disse o seguinte, ó, CY aqui significa que ele teve, ele fez a subtração e deu a flag de borrow aqui, direto.",
+      "timestamp": "27:53 - 28:01",
+      "segundos_inicio": 1673.41,
+      "segundos_fim": 1681.71,
+      "chunk_origem": 19
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Eu pedi emprestado. Logo, esse número aqui, né, 123, ele está somado de 256.",
+      "timestamp": "28:02 - 28:09",
+      "segundos_inicio": 1682.71,
+      "segundos_fim": 1689.41,
+      "chunk_origem": 19
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Logo, eu tenho que subtrair 256 para dar o resultado 133.",
+      "timestamp": "28:10 - 28:13",
+      "segundos_inicio": 1690.41,
+      "segundos_fim": 1693.82,
+      "chunk_origem": 19
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então, ó, não é esse resultado aqui que seria 123. Ele tem que olhar esse cara aqui para saber que esse resultado deu negativo e adaptar o valor para saber o valor certo.",
+      "timestamp": "28:16 - 28:28",
+      "segundos_inicio": 1696.41,
+      "segundos_fim": 1708.12,
+      "chunk_origem": 19
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Agora, com números que tivessem sinal.",
+      "timestamp": "28:29 - 28:30",
+      "segundos_inicio": 1709.12,
+      "segundos_fim": 1710.71,
+      "chunk_origem": 19
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "sinal.",
+      "timestamp": "28:30 - 28:30",
+      "segundos_inicio": 1710.41,
+      "segundos_fim": 1710.9,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Se o número tem sinal, os mesmos números aqui já tem um valor diferente.",
+      "timestamp": "28:31 - 28:35",
+      "segundos_inicio": 1711.5,
+      "segundos_fim": 1715.7,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Primeiro continua com 10, obviamente.",
+      "timestamp": "28:35 - 28:37",
+      "segundos_inicio": 1715.98,
+      "segundos_fim": 1717.88,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Mas o segundo, ó, vai virar o quê? Tem que pegar, eu vejo que esse bit mais significativo é um, então fazer o complemento a dois do que restou.",
+      "timestamp": "28:38 - 28:46",
+      "segundos_inicio": 1718.81,
+      "segundos_fim": 1726.81,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "01, somar um, isso aqui vai dar menos 143.",
+      "timestamp": "28:47 - 28:52",
+      "segundos_inicio": 1727.4,
+      "segundos_fim": 1732.5,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Olha, isso aqui vai dar quanto? Vai dar menos, deixa eu ver.",
+      "timestamp": "28:54 - 28:56",
+      "segundos_inicio": 1734.4,
+      "segundos_fim": 1736.9,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "1 0",
+      "timestamp": "28:57 - 28:58",
+      "segundos_inicio": 1737.4,
+      "segundos_fim": 1738.61,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "64 32 com 16, mais um.",
+      "timestamp": "29:00 - 29:05",
+      "segundos_inicio": 1740.9,
+      "segundos_fim": 1745.9,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "63.",
+      "timestamp": "29:08 - 29:08",
+      "segundos_inicio": 1748.2,
+      "segundos_fim": 1748.9,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Vai dar 143.",
+      "timestamp": "29:11 - 29:12",
+      "segundos_inicio": 1751.0,
+      "segundos_fim": 1752.11,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Beleza.",
+      "timestamp": "29:12 - 29:13",
+      "segundos_inicio": 1752.7,
+      "segundos_fim": 1753.11,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Esse 143, então.",
+      "timestamp": "29:14 - 29:15",
+      "segundos_inicio": 1754.31,
+      "segundos_fim": 1755.9,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Beleza?",
+      "timestamp": "29:16 - 29:16",
+      "segundos_inicio": 1756.4,
+      "segundos_fim": 1756.9,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Esse 143 somados com o o 10, vão dar 153.",
+      "timestamp": "29:19 - 29:25",
+      "segundos_inicio": 1759.2,
+      "segundos_fim": 1765.5,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Daria 153.",
+      "timestamp": "29:26 - 29:28",
+      "segundos_inicio": 1766.7,
+      "segundos_fim": 1768.11,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Cadê? Peraí, peraí, peraí, peraí.",
+      "timestamp": "29:28 - 29:30",
+      "segundos_inicio": 1768.81,
+      "segundos_fim": 1770.31,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Não, tá certo.",
+      "timestamp": "30:14 - 30:15",
+      "segundos_inicio": 1814.9,
+      "segundos_fim": 1815.7,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tinha um número lá.",
+      "timestamp": "30:16 - 30:17",
+      "segundos_inicio": 1816.11,
+      "segundos_fim": 1817.0,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Isso, tem que fazer com.",
+      "timestamp": "30:17 - 30:18",
+      "segundos_inicio": 1817.9,
+      "segundos_fim": 1818.7,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Isso, isso aqui é 143.",
+      "timestamp": "30:19 - 30:20",
+      "segundos_inicio": 1819.11,
+      "segundos_fim": 1820.9,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Não, peraí.",
+      "timestamp": "30:22 - 30:22",
+      "segundos_inicio": 1822.11,
+      "segundos_fim": 1822.9,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tô fazendo.",
+      "timestamp": "30:24 - 30:25",
+      "segundos_inicio": 1824.5,
+      "segundos_fim": 1825.11,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Não, isso aqui não é 143, isso aqui é 63.",
+      "timestamp": "30:25 - 30:27",
+      "segundos_inicio": 1825.9,
+      "segundos_fim": 1827.9,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "143 já é o 143 é o valor de cara, né?",
+      "timestamp": "30:29 - 30:32",
+      "segundos_inicio": 1829.81,
+      "segundos_fim": 1832.81,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "6, 12, 3, vai.",
+      "timestamp": "30:33 - 30:35",
+      "segundos_inicio": 1833.81,
+      "segundos_fim": 1835.2,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ah,",
+      "timestamp": "30:39 - 30:40",
+      "segundos_inicio": 1839.9,
+      "segundos_fim": 1840.5,
+      "chunk_origem": 20
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "7 10 113.",
+      "timestamp": "30:00 - 30:02",
+      "segundos_inicio": 1800.85,
+      "segundos_fim": 1802.64,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então esse aqui é o -113, tá ali.",
+      "timestamp": "30:04 - 30:07",
+      "segundos_inicio": 1804.9,
+      "segundos_fim": 1807.11,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Jesus, o slide dele é um pouquinho confuso.",
+      "timestamp": "30:07 - 30:09",
+      "segundos_inicio": 1807.9,
+      "segundos_fim": 1809.9,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Né?",
+      "timestamp": "30:10 - 30:11",
+      "segundos_inicio": 1810.81,
+      "segundos_fim": 1811.11,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então esse cara é esse menos esse.",
+      "timestamp": "30:12 - 30:14",
+      "segundos_inicio": 1812.11,
+      "segundos_fim": 1814.2,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Esse número tá lá.",
+      "timestamp": "30:15 - 30:16",
+      "segundos_inicio": 1815.11,
+      "segundos_fim": 1816.0,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Vai dar os 123.",
+      "timestamp": "30:16 - 30:17",
+      "segundos_inicio": 1816.4,
+      "segundos_fim": 1817.7,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Né?",
+      "timestamp": "30:18 - 30:19",
+      "segundos_inicio": 1818.7,
+      "segundos_fim": 1819.0,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "O, o, o número resultante é o mesmo, ó, deu o mesmo 7B.",
+      "timestamp": "30:19 - 30:22",
+      "segundos_inicio": 1819.81,
+      "segundos_fim": 1822.9,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Né?",
+      "timestamp": "30:24 - 30:24",
+      "segundos_inicio": 1824.11,
+      "segundos_fim": 1824.5,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Fiz a subtração.",
+      "timestamp": "30:25 - 30:26",
+      "segundos_inicio": 1825.9,
+      "segundos_fim": 1826.7,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Só que é um número inteiro com sinal.",
+      "timestamp": "30:27 - 30:29",
+      "segundos_inicio": 1827.9,
+      "segundos_fim": 1829.11,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Não vou olhar o carry.",
+      "timestamp": "30:29 - 30:30",
+      "segundos_inicio": 1829.31,
+      "segundos_fim": 1830.31,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Não vou olhar o borrow.",
+      "timestamp": "30:30 - 30:31",
+      "segundos_inicio": 1830.9,
+      "segundos_fim": 1831.81,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Vou olhar o carry.",
+      "timestamp": "30:32 - 30:33",
+      "segundos_inicio": 1832.7,
+      "segundos_fim": 1833.5,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Né?",
+      "timestamp": "30:34 - 30:34",
+      "segundos_inicio": 1834.5,
+      "segundos_fim": 1834.81,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Esse carry aqui deu zero.",
+      "timestamp": "30:37 - 30:38",
+      "segundos_inicio": 1837.0,
+      "segundos_fim": 1838.5,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Esse carry deu zero, então significa que esse número não precisa de ajuste.",
+      "timestamp": "30:39 - 30:42",
+      "segundos_inicio": 1839.5,
+      "segundos_fim": 1842.61,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então, de fato, ele é mais, isso aqui é 123, ele é mais 123.",
+      "timestamp": "30:43 - 30:47",
+      "segundos_inicio": 1843.0,
+      "segundos_fim": 1847.5,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então, deu o mesmo resultado, ó, só que as interpretações, o que, são completamente diferentes, a depender de quê? A depender da anotação dos números que eu armazenei originalmente.",
+      "timestamp": "30:49 - 31:42",
+      "segundos_inicio": 1849.2,
+      "segundos_fim": 1902.81,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Pode explicar de novo?",
+      "timestamp": "31:43 - 31:43",
+      "segundos_inicio": 1903.2,
+      "segundos_fim": 1903.9,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Qual?",
+      "timestamp": "31:44 - 31:44",
+      "segundos_inicio": 1904.5,
+      "segundos_fim": 1904.81,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Esse último aqui?",
+      "timestamp": "31:45 - 31:46",
+      "segundos_inicio": 1905.2,
+      "segundos_fim": 1906.0,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "É.",
+      "timestamp": "31:46 - 31:46",
+      "segundos_inicio": 1906.5,
+      "segundos_fim": 1906.81,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então, vamos lá.",
+      "timestamp": "31:47 - 31:48",
+      "segundos_inicio": 1907.5,
+      "segundos_fim": 1908.2,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Fiz um menos o outro, tem complemento a dois.",
+      "timestamp": "31:48 - 31:50",
+      "segundos_inicio": 1908.9,
+      "segundos_fim": 1910.61,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Sim.",
+      "timestamp": "31:50 - 31:51",
+      "segundos_inicio": 1910.9,
+      "segundos_fim": 1911.2,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então, vou ter que subir, pegar o segundo e transformar ele o quê? Ele era, vou ter que fazer o complementador dele de novo, independente do valor que ele esteja ali.",
+      "timestamp": "31:51 - 32:00",
+      "segundos_inicio": 1911.5,
+      "segundos_fim": 1920.9,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Bom.",
+      "timestamp": "32:01 - 32:01",
+      "segundos_inicio": 1921.5,
+      "segundos_fim": 1921.81,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Esse cara já está em, vamos, vamos supor, esse cara já está em complementador dois.",
+      "timestamp": "32:02 - 32:05",
+      "segundos_inicio": 1922.11,
+      "segundos_fim": 1925.9,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ele em complementador dois é aqui, cadê? Esse cara aqui.",
+      "timestamp": "32:06 - 32:10",
+      "segundos_inicio": 1926.5,
+      "segundos_fim": 1930.5,
+      "chunk_origem": 21
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Enfim, aí tem que fazer o complementador em cima disso.",
+      "timestamp": "31:31 - 31:33",
+      "segundos_inicio": 1891.82,
+      "segundos_fim": 1893.82,
+      "chunk_origem": 22
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Isso.",
+      "timestamp": "31:34 - 31:34",
+      "segundos_inicio": 1894.12,
+      "segundos_fim": 1894.62,
+      "chunk_origem": 22
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Esse complementador em cima disso deu 143, né? Espera aí.",
+      "timestamp": "31:35 - 31:39",
+      "segundos_inicio": 1895.21,
+      "segundos_fim": 1899.82,
+      "chunk_origem": 22
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Vamos lá. Como vocês fazem isso?",
+      "timestamp": "31:40 - 31:42",
+      "segundos_inicio": 1900.32,
+      "segundos_fim": 1902.01,
+      "chunk_origem": 22
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "É um monte de operação que tem.",
+      "timestamp": "31:42 - 31:43",
+      "segundos_inicio": 1902.32,
+      "segundos_fim": 1903.71,
+      "chunk_origem": 22
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então, vamos lá. Vamos lá, pegar os números originalmente, acho que é complementador.",
+      "timestamp": "31:52 - 31:55",
+      "segundos_inicio": 1912.12,
+      "segundos_fim": 1915.82,
+      "chunk_origem": 22
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Esse cara aqui era 00. Esse aqui é o 0.",
+      "timestamp": "31:56 - 32:02",
+      "segundos_inicio": 1916.12,
+      "segundos_fim": 1922.51,
+      "chunk_origem": 22
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Esse cara é 1 0 0 0 1 1 1.",
+      "timestamp": "32:04 - 32:10",
+      "segundos_inicio": 1924.82,
+      "segundos_fim": 1930.41,
+      "chunk_origem": 22
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então esse cara aqui quem é?",
+      "timestamp": "32:11 - 32:13",
+      "segundos_inicio": 1931.71,
+      "segundos_fim": 1933.41,
+      "chunk_origem": 22
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "128 mais 15.",
+      "timestamp": "32:14 - 32:19",
+      "segundos_inicio": 1934.82,
+      "segundos_fim": 1939.41,
+      "chunk_origem": 22
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "É, eu tô fazendo ali.",
+      "timestamp": "32:20 - 32:21",
+      "segundos_inicio": 1940.41,
+      "segundos_fim": 1941.62,
+      "chunk_origem": 22
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Vai dar três, vai um, 143.",
+      "timestamp": "32:24 - 32:27",
+      "segundos_inicio": 1944.21,
+      "segundos_fim": 1947.01,
+      "chunk_origem": 22
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Esse cara, a rigor,",
+      "timestamp": "32:27 - 33:10",
+      "segundos_inicio": 1947.32,
+      "segundos_fim": 1990.41,
+      "chunk_origem": 22
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ah, não, desculpa. Esse cara tá em complementador dois. Vai com o sinal.",
+      "timestamp": "32:31 - 32:36",
+      "segundos_inicio": 1951.41,
+      "segundos_fim": 1956.82,
+      "chunk_origem": 22
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então esse cara, na verdade, é quem?",
+      "timestamp": "32:37 - 32:41",
+      "segundos_inicio": 1957.32,
+      "segundos_fim": 1961.51,
+      "chunk_origem": 22
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Esse cara, na verdade, era 0 1 1 1 0 0 0 0 1 1 0 0 0 1 1 1 0.",
+      "timestamp": "32:42 - 32:54",
+      "segundos_inicio": 1962.21,
+      "segundos_fim": 1974.82,
+      "chunk_origem": 22
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "E esse número aqui é esse aqui que eu fiz a conta.",
+      "timestamp": "32:55 - 32:59",
+      "segundos_inicio": 1975.41,
+      "segundos_fim": 1979.01,
+      "chunk_origem": 22
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "130.",
+      "timestamp": "32:59 - 33:00",
+      "segundos_inicio": 1979.82,
+      "segundos_fim": 1980.41,
+      "chunk_origem": 22
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "creio.",
+      "timestamp": "33:00 - 33:00",
+      "segundos_inicio": 1980.41,
+      "segundos_fim": 1980.82,
+      "chunk_origem": 23
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Logo, esse número aqui era menos 100 e 13.",
+      "timestamp": "33:01 - 33:06",
+      "segundos_inicio": 1981.62,
+      "segundos_fim": 1986.41,
+      "chunk_origem": 23
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Beleza?",
+      "timestamp": "33:08 - 33:08",
+      "segundos_inicio": 1988.21,
+      "segundos_fim": 1988.62,
+      "chunk_origem": 23
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Aí o que que eu, eu pedi pra máquina fazer?",
+      "timestamp": "33:10 - 33:12",
+      "segundos_inicio": 1990.12,
+      "segundos_fim": 1992.51,
+      "chunk_origem": 23
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "0 0 0 1",
+      "timestamp": "34:30 - 34:35",
+      "segundos_inicio": 2070.41,
+      "segundos_fim": 2075.41,
+      "chunk_origem": 24
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "0 1 0 1 0",
+      "timestamp": "34:35 - 34:40",
+      "segundos_inicio": 2075.41,
+      "segundos_fim": 2080.41,
+      "chunk_origem": 24
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "É porque que eu tenho que inserir na segunda parcela disso?",
+      "timestamp": "36:04 - 36:06",
+      "segundos_inicio": 2164.65,
+      "segundos_fim": 2166.65,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Não, não, não, não.",
+      "timestamp": "36:06 - 36:07",
+      "segundos_inicio": 2166.85,
+      "segundos_fim": 2167.65,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "É o outro, né?",
+      "timestamp": "36:07 - 36:08",
+      "segundos_inicio": 2167.85,
+      "segundos_fim": 2168.45,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Oi?",
+      "timestamp": "36:08 - 36:08",
+      "segundos_inicio": 2168.55,
+      "segundos_fim": 2168.85,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "É o outro, né?",
+      "timestamp": "36:08 - 36:09",
+      "segundos_inicio": 2168.95,
+      "segundos_fim": 2169.45,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Pega do outro segmento.",
+      "timestamp": "36:09 - 36:10",
+      "segundos_inicio": 2169.85,
+      "segundos_fim": 2170.85,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Exato. Esse que eu tô com medo grande.",
+      "timestamp": "36:11 - 36:13",
+      "segundos_inicio": 2171.25,
+      "segundos_fim": 2173.75,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Você vai pegar daqui direto.",
+      "timestamp": "36:15 - 36:16",
+      "segundos_inicio": 2175.15,
+      "segundos_fim": 2176.45,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Aqui é o máximo.",
+      "timestamp": "36:16 - 36:18",
+      "segundos_inicio": 2176.95,
+      "segundos_fim": 2178.05,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Menos com menos aqui vai dar mais, então em tese é isso aqui. Vai entrar aqui.",
+      "timestamp": "36:19 - 36:24",
+      "segundos_inicio": 2179.15,
+      "segundos_fim": 2184.85,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "É.",
+      "timestamp": "36:26 - 36:26",
+      "segundos_inicio": 2186.15,
+      "segundos_fim": 2186.45,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "É.",
+      "timestamp": "36:27 - 36:28",
+      "segundos_inicio": 2187.95,
+      "segundos_fim": 2188.25,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Agora dá certo.",
+      "timestamp": "36:29 - 36:29",
+      "segundos_inicio": 2189.05,
+      "segundos_fim": 2189.75,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Agora dá certo.",
+      "timestamp": "36:30 - 36:30",
+      "segundos_inicio": 2190.05,
+      "segundos_fim": 2190.65,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Mas tem que ter.",
+      "timestamp": "36:34 - 36:35",
+      "segundos_inicio": 2194.85,
+      "segundos_fim": 2195.65,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "E vai ser o quê?",
+      "timestamp": "36:38 - 36:39",
+      "segundos_inicio": 2198.95,
+      "segundos_fim": 2199.75,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Ele é 120.",
+      "timestamp": "36:40 - 36:40",
+      "segundos_inicio": 2200.15,
+      "segundos_fim": 2200.85,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Ele é 120, aqui é 127 menos",
+      "timestamp": "36:42 - 36:44",
+      "segundos_inicio": 2202.05,
+      "segundos_fim": 2204.75,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Isso aí é um quatro, menos.",
+      "timestamp": "36:45 - 36:46",
+      "segundos_inicio": 2205.25,
+      "segundos_fim": 2206.45,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Oi?",
+      "timestamp": "36:46 - 36:46",
+      "segundos_inicio": 2206.65,
+      "segundos_fim": 2206.95,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "O quarto bit é um.",
+      "timestamp": "36:47 - 36:48",
+      "segundos_inicio": 2207.25,
+      "segundos_fim": 2208.45,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Da direita para a esquerda.",
+      "timestamp": "36:50 - 36:51",
+      "segundos_inicio": 2210.65,
+      "segundos_fim": 2211.55,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "É.",
+      "timestamp": "36:52 - 36:52",
+      "segundos_inicio": 2212.05,
+      "segundos_fim": 2212.35,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Agora sim, acho que sim.",
+      "timestamp": "36:57 - 36:58",
+      "segundos_inicio": 2217.85,
+      "segundos_fim": 2218.75,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "E tá certo, né? Isso aqui é 127 menos 4.",
+      "timestamp": "36:59 - 37:04",
+      "segundos_inicio": 2219.75,
+      "segundos_fim": 2224.15,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "123.",
+      "timestamp": "37:05 - 37:06",
+      "segundos_inicio": 2225.85,
+      "segundos_fim": 2226.65,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Acho que foi, né?",
+      "timestamp": "37:09 - 37:10",
+      "segundos_inicio": 2229.95,
+      "segundos_fim": 2230.75,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Cheio de detalhezinho.",
+      "timestamp": "37:13 - 37:15",
+      "segundos_inicio": 2233.75,
+      "segundos_fim": 2235.25,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "E aqui, por exemplo, não gerou overflow, né?",
+      "timestamp": "37:17 - 37:19",
+      "segundos_inicio": 2237.15,
+      "segundos_fim": 2239.45,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então não gerou overflow, os números, aliás, melhor dizendo.",
+      "timestamp": "37:20 - 37:23",
+      "segundos_inicio": 2240.85,
+      "segundos_fim": 2243.75,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "É, aqui não tem flag de overflow, tá tudo certo.",
+      "timestamp": "37:24 - 37:27",
+      "segundos_inicio": 2244.65,
+      "segundos_fim": 2247.65,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Essa conta tá certa, sem problema, é ler direto.",
+      "timestamp": "37:28 - 37:31",
+      "segundos_inicio": 2248.95,
+      "segundos_fim": 2251.75,
+      "chunk_origem": 25
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Só não lê direto assim. Em resumo, se você parar para pensar, criar algoritmo, né? Se os números são inteiros com sinal, vai dar tudo certo se não tiver overflow. Eu interpreto direto em todos os casos. Isso é muito legal.",
+      "timestamp": "37:33 - 37:45",
+      "segundos_inicio": 2253.45,
+      "segundos_fim": 2265.45,
+      "chunk_origem": 26
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Quando os números forem, eh, sem sinal, aí é que eu posso ter uma questão de olhar o carry out, né? Pra soma, ou o borrow pra subtração.",
+      "timestamp": "37:47 - 37:59",
+      "segundos_inicio": 2267.45,
+      "segundos_fim": 2279.45,
+      "chunk_origem": 26
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Mas complementador, se não deu overflow, lê direto.",
+      "timestamp": "38:00 - 38:02",
+      "segundos_inicio": 2280.45,
+      "segundos_fim": 2282.45,
+      "chunk_origem": 26
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Isso aqui é positivo, outro é negativo. Acabou. Em resumo é isso.",
+      "timestamp": "38:03 - 38:06",
+      "segundos_inicio": 2283.45,
+      "segundos_fim": 2286.45,
+      "chunk_origem": 26
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Aí nesse caso, o meu C não estaria tipo como borrow out e ele daria zero, certo?",
+      "timestamp": "38:07 - 38:11",
+      "segundos_inicio": 2287.45,
+      "segundos_fim": 2291.45,
+      "chunk_origem": 26
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Isso.",
+      "timestamp": "38:12 - 38:13",
+      "segundos_inicio": 2292.45,
+      "segundos_fim": 2293.45,
+      "chunk_origem": 26
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Só que ele separou aqui, na hora de exibir, me pede para lembrar todos esses de cabeça, mas na hora de exibir, cada essas flags aqui mostraram, por exemplo, que esse aqui NV, né, seria o no overflow. Tá? Seria, seria isso.",
+      "timestamp": "38:14 - 38:29",
+      "segundos_inicio": 2294.45,
+      "segundos_fim": 2309.45,
+      "chunk_origem": 26
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "E elas só aparecem aí a existência delas indica que elas dão um?",
+      "timestamp": "38:31 - 38:36",
+      "segundos_inicio": 2311.45,
+      "segundos_fim": 2316.45,
+      "chunk_origem": 26
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "É. Quando a flag é igual a um, ele escreve. A flag ali é zero.",
+      "timestamp": "38:36 - 38:41",
+      "segundos_inicio": 2316.45,
+      "segundos_fim": 2321.45,
+      "chunk_origem": 26
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Tá. Então, nesse caso, como ele tá falando ali, não apareceria o NV ou estaria aparecendo o OV?",
+      "timestamp": "38:42 - 38:48",
+      "segundos_inicio": 2322.45,
+      "segundos_fim": 2328.45,
+      "chunk_origem": 26
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Não, aparece os dois. Aqui, ele tá dizendo assim, não houve overflow. Isso é um teste separado. Não houve overflow aqui e, e, e, e, ele tá dizendo aqui que houve borrow.",
+      "timestamp": "38:50 - 39:01",
+      "segundos_inicio": 2330.45,
+      "segundos_fim": 2341.45,
+      "chunk_origem": 26
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Se tivesse tido overflow,",
+      "timestamp": "39:02 - 39:03",
+      "segundos_inicio": 2342.45,
+      "segundos_fim": 2343.45,
+      "chunk_origem": 26
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "em vez do NV teria o A, né?",
+      "timestamp": "39:03 - 39:05",
+      "segundos_inicio": 2343.67,
+      "segundos_fim": 2345.47,
+      "chunk_origem": 27
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Em vez de ele falar, ah, existência dessa flag ou não existência dessa flag, ele só botou uma flag auxiliar",
+      "timestamp": "39:06 - 39:11",
+      "segundos_inicio": 2346.17,
+      "segundos_fim": 2351.07,
+      "chunk_origem": 27
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "pra",
+      "timestamp": "39:11 - 39:11",
+      "segundos_inicio": 2351.37,
+      "segundos_fim": 2351.67,
+      "chunk_origem": 27
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "poderia ser um nome diferente para um e para zero, exato.",
+      "timestamp": "39:12 - 39:14",
+      "segundos_inicio": 2352.77,
+      "segundos_fim": 2354.87,
+      "chunk_origem": 27
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá?",
+      "timestamp": "39:15 - 39:15",
+      "segundos_inicio": 2355.37,
+      "segundos_fim": 2355.67,
+      "chunk_origem": 27
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Só que esse é dele, desse cara aqui.",
+      "timestamp": "39:16 - 39:18",
+      "segundos_inicio": 2356.77,
+      "segundos_fim": 2358.07,
+      "chunk_origem": 27
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Outro seria diferente.",
+      "timestamp": "39:18 - 39:19",
+      "segundos_inicio": 2358.47,
+      "segundos_fim": 2359.47,
+      "chunk_origem": 27
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Então, vamos dizer assim, ah, pra eu saber isso tudo, eu tinha que fazer o quê? Ler um manual.",
+      "timestamp": "39:21 - 39:24",
+      "segundos_inicio": 2361.67,
+      "segundos_fim": 2364.67,
+      "chunk_origem": 27
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Alguns já é maldito, escolher essas letras para ele são intuitivas, né, que eles para você não são, e assim vai.",
+      "timestamp": "39:25 - 39:31",
+      "segundos_inicio": 2365.67,
+      "segundos_fim": 2371.47,
+      "chunk_origem": 27
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Tá.",
+      "timestamp": "39:31 - 39:32",
+      "segundos_inicio": 2371.97,
+      "segundos_fim": 2372.27,
+      "chunk_origem": 27
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Galera, faça esses exercícios aí pra praticar, tá?",
+      "timestamp": "39:33 - 39:35",
+      "segundos_inicio": 2373.37,
+      "segundos_fim": 2375.77,
+      "chunk_origem": 27
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Todos os exercícios.",
+      "timestamp": "39:37 - 39:38",
+      "segundos_inicio": 2377.27,
+      "segundos_fim": 2378.27,
+      "chunk_origem": 27
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Na aula que vem vamos fazer a nossa querida Alulu, e",
+      "timestamp": "39:39 - 39:41",
+      "segundos_inicio": 2379.07,
+      "segundos_fim": 2381.77,
+      "chunk_origem": 27
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "vamos juntar essa bodega toda numa caixa só.",
+      "timestamp": "39:42 - 39:44",
+      "segundos_inicio": 2382.37,
+      "segundos_fim": 2384.77,
+      "chunk_origem": 27
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Bom final de semana.",
+      "timestamp": "39:46 - 39:46",
+      "segundos_inicio": 2386.07,
+      "segundos_fim": 2386.97,
+      "chunk_origem": 27
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Falou.",
+      "timestamp": "39:47 - 39:47",
+      "segundos_inicio": 2387.37,
+      "segundos_fim": 2387.77,
+      "chunk_origem": 27
+    },
+    {
+      "quemfala": "Professor",
+      "textodefala": "Falou.",
+      "timestamp": "39:48 - 39:48",
+      "segundos_inicio": 2388.07,
+      "segundos_fim": 2388.47,
+      "chunk_origem": 27
+    },
+    {
+      "quemfala": "Aluna",
+      "textodefala": "Professor.",
+      "timestamp": "39:53 - 39:53",
+      "segundos_inicio": 2393.07,
+      "segundos_fim": 2393.47,
+      "chunk_origem": 27
+    }
+  ]
+}
