@@ -24,6 +24,7 @@ class SilenceAwareChunker:
         """
         cmd = [
             "ffmpeg",
+            "-vn",
             "-i", str(audio_path),
             "-af", f"silencedetect=noise={noise_threshold_db}dB:d={min_silence_sec}",
             "-f", "null",

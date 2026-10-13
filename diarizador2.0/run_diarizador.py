@@ -32,6 +32,8 @@ from config_diarizador import (
     DEFAULT_MODEL
 )
 from audio_prep import FastAudioPreparer
+from opus_encoder import OpusAudioPreparer
+from vad_compact import VadAudioCompactor, map_compact_to_original
 from gemini_diarizer import GeminiDiarizer
 from evaluator import DiarizationEvaluator
 
@@ -55,19 +57,42 @@ def run_diarization_suite(audio_file: Path, dry_run: bool = False, model_name: s
     for t in DIARIZATION_EXPERIMENT_MATRIX:
         t_id = t["id"]
         t_label = t["label"]
-        output_name = f"{audio_file.stem}_{t_id}.mp3"
-        output_mp3 = PROCESSED_AUDIO_DIR / output_name
+        is_vad = t.get("vad", False)
+        codec = t.get("codec", "opus" if "opus" in t_id else "mp3")
+        ext = ".opus" if codec == "opus" else ".mp3"
+        output_name = f"{audio_file.stem}_{t_id}{ext}"
+        output_audio = PROCESSED_AUDIO_DIR / output_name
 
         print(f"\n⚡ Processando: {t_label}...", end=" ", flush=True)
 
-        meta = FastAudioPreparer.prepare_mp3(
-            input_path=audio_file,
-            output_path=output_mp3,
-            bitrate=t["bitrate"],
-            sample_rate=t["sample_rate"],
-            channels=t["channels"],
-            filter_wideband=t["filter_wideband"]
-        )
+        if is_vad:
+            meta = VadAudioCompactor.compact_and_encode_audio(
+                input_path=audio_file,
+                output_path=output_audio,
+                codec=codec,
+                bitrate=t["bitrate"],
+                sample_rate=t["sample_rate"],
+                channels=t["channels"],
+                filter_wideband=t.get("filter_wideband", True)
+            )
+        elif codec == "opus":
+            meta = OpusAudioPreparer.prepare_opus(
+                input_path=audio_file,
+                output_path=output_audio,
+                bitrate=t["bitrate"],
+                sample_rate=t["sample_rate"],
+                channels=t["channels"],
+                filter_wideband=t.get("filter_wideband", True)
+            )
+        else:
+            meta = FastAudioPreparer.prepare_mp3(
+                input_path=audio_file,
+                output_path=output_audio,
+                bitrate=t["bitrate"],
+                sample_rate=t["sample_rate"],
+                channels=t["channels"],
+                filter_wideband=t.get("filter_wideband", False)
+            )
 
         size_kb = meta["file_size_kb"]
         saved_pct = round(((original_size - meta["file_size_bytes"]) / original_size) * 100.0, 2)
@@ -78,7 +103,7 @@ def run_diarization_suite(audio_file: Path, dry_run: bool = False, model_name: s
 
         if not dry_run:
             try:
-                res = diarizer.diarize(output_mp3)
+                res = diarizer.diarize(output_audio)
                 transcript = res["diarized_transcript"]
                 tokens = res["total_tokens"]
                 api_lat = res["api_latency_sec"]
@@ -92,7 +117,8 @@ def run_diarization_suite(audio_file: Path, dry_run: bool = False, model_name: s
                 print(f"ERRO: {e}")
                 transcript = f"[ERRO: {e}]"
         else:
-            print(f"OK (Dry-Run: {size_kb} KB em {meta['prep_time_sec']}s)")
+            vad_info = f" | VAD: -{meta.get('silence_saved_pct', 0)}% silêncio" if is_vad else ""
+            print(f"OK (Dry-Run: {size_kb} KB em {meta['prep_time_sec']}s{vad_info})")
 
         results.append({
             "treatment_id": t_id,
@@ -100,7 +126,9 @@ def run_diarization_suite(audio_file: Path, dry_run: bool = False, model_name: s
             "bitrate": t["bitrate"],
             "sample_rate": t["sample_rate"],
             "channels": t["channels"],
-            "filter_wideband": t["filter_wideband"],
+            "filter_wideband": t.get("filter_wideband", False),
+            "vad": is_vad,
+            "codec": codec,
             "file_size_kb": size_kb,
             "bandwidth_saved_pct": saved_pct,
             "prep_time_sec": meta["prep_time_sec"],
@@ -109,6 +137,7 @@ def run_diarization_suite(audio_file: Path, dry_run: bool = False, model_name: s
             "transcript": transcript,
             "speaker_turns": DiarizationEvaluator.count_speaker_turns(transcript) if transcript else 0
         })
+
 
     # 2. Calcular WER relativo contra o Baseline 320k
     if not dry_run and baseline_transcript:

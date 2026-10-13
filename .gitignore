@@ -1,4 +1,4 @@
-﻿# Byte-compiled / optimized / DLL files
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
@@ -24,6 +24,16 @@ output/plots/*
 !output/plots/.gitkeep
 output/reports/*
 !output/reports/.gitkeep
+diarizador2.0/output/audio/
+
+# Input media files
+input/*.mp4
+input/*.avi
+input/*.mov
+input/*.mkv
+input/*.mp3
+input/*.wav
+!input/.gitkeep
 
 # IDEs
 .vscode/

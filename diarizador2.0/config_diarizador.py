@@ -1,4 +1,4 @@
-﻿"""
+"""
 Configurações para o Diarizador 2.0.
 Focado em Diarização de Falantes, Áudio Contínuo (Sem VAD) e Sem Normalização Pesada.
 """
@@ -89,6 +89,30 @@ DIARIZATION_EXPERIMENT_MATRIX = [
         "sample_rate": 24000,
         "channels": 2,
         "filter_wideband": False,
-        "is_baseline": False
+        "is_baseline": False,
+        "vad": False
+    },
+    {
+        "id": "08_vad_compact_32k_mono",
+        "label": "MP3 32k Mono + VAD (Compactação e Correção Temporal)",
+        "bitrate": "32k",
+        "sample_rate": 16000,
+        "channels": 1,
+        "filter_wideband": True,
+        "is_baseline": False,
+        "vad": True,
+        "codec": "mp3"
+    },
+    {
+        "id": "09_vad_compact_16k_opus",
+        "label": "OPUS 16k VBR Mono + VAD (Máxima Eficiência e Precisão)",
+        "bitrate": "16k",
+        "sample_rate": 16000,
+        "channels": 1,
+        "filter_wideband": True,
+        "is_baseline": False,
+        "vad": True,
+        "codec": "opus"
     }
 ]
+

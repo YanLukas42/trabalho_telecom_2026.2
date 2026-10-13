@@ -32,6 +32,7 @@ from audio_prep import FastAudioPreparer
 from opus_encoder import OpusAudioPreparer
 from silence_chunker import SilenceAwareChunker
 from schema import FalaSegmento, TranscricaoChunkDiarizada
+from vad_compact import VadAudioCompactor, map_compact_to_original
 
 
 def format_seconds_to_timestamp(seconds: float) -> str:
@@ -220,55 +221,86 @@ class HybridParallelDiarizer:
         input_file: Path,
         target_chunk_sec: float = 90.0,
         max_parallel_workers: int = 8,
-        codec: str = "opus"
+        codec: str = "opus",
+        use_vad: bool = False
     ) -> Dict[str, Any]:
         """
         Executa o pipeline completo:
-        1. Pré-processamento OPUS 16k VBR / MP3 64k Mono + Filtro Wideband (CPU)
+        1. Pré-processamento OPUS 16k VBR / MP3 64k Mono + Filtro Wideband (com VAD opcional)
         2. Fatiamento inteligente em silêncio (CPU)
         3. Transcrição e Diarização Paralela com Pydantic e Speaker Memory (Gemini)
-        4. Costura temporal global determinística (CPU)
+        4. Costura temporal global determinística e Remapeamento VAD (CPU)
         5. Exportação em JSON, CSV e Markdown
         """
         input_file = Path(input_file)
         start_total = time.time()
+        orig_dur = VadAudioCompactor.get_audio_duration(input_file)
 
         print(f"\n=================================================================")
         print(f"🚀 INICIANDO DIARIZADOR HÍBRIDO PARALELO COM PYDANTIC ({codec.upper()})")
         print(f"   Arquivo: {input_file.name}")
+        print(f"   Duração Original: {round(orig_dur/60, 2)} min ({orig_dur:.1f}s)")
         print(f"   Tamanho Original: {round(input_file.stat().st_size / 1024, 2)} KB")
         print(f"   Codec de Áudio: {codec.upper()} ({'16 kbps VBR' if codec == 'opus' else '64 kbps CBR'})")
+        print(f"   Modo VAD (Compactação): {'🟢 ATIVO (Remoção de silêncio + Correção de Timestamps)' if use_vad else '⚪ DESATIVADO (Áudio Contínuo)'}")
         print(f"   Target Chunk: {target_chunk_sec}s (Fatiamento em Pausas)")
         print(f"=================================================================")
 
-        # 1. CPU: Preparar Áudio Otimizado (Opus 16k VBR ou MP3 64k)
+        # 1. CPU: Preparar Áudio Otimizado (com ou sem VAD)
         ext = ".opus" if codec == "opus" else ".mp3"
-        temp_audio = PROCESSED_AUDIO_DIR / f"{input_file.stem}_optimized{ext}"
+        vad_tag = "_vad_compact" if use_vad else "_optimized"
+        temp_audio = PROCESSED_AUDIO_DIR / f"{input_file.stem}{vad_tag}{ext}"
 
-        if codec == "opus":
-            print(f"⚡ [CPU] Otimizando áudio (OPUS 16k VBR Mono + Filtro Wideband)...", end=" ", flush=True)
-            prep_meta = OpusAudioPreparer.prepare_opus(
+        segments_map = None
+        silence_saved_sec = 0.0
+        silence_saved_pct = 0.0
+        comp_dur = orig_dur
+
+        if use_vad:
+            print(f"⚡ [CPU + VAD] Compactando áudio (removendo pausas mortas >0.4s)...", end=" ", flush=True)
+            prep_meta = VadAudioCompactor.compact_and_encode_audio(
                 input_path=input_file,
                 output_path=temp_audio,
-                bitrate="16k",
+                codec=codec,
+                bitrate="16k" if codec == "opus" else "64k",
                 sample_rate=16000,
                 channels=1,
-                filter_wideband=True
+                filter_wideband=True,
+                noise_threshold_db=-35.0,
+                min_silence_sec=0.4,
+                pad_sec=0.10
             )
+            segments_map = prep_meta["segments_map"]
+            comp_dur = prep_meta["compact_duration_sec"]
+            silence_saved_sec = prep_meta["silence_saved_sec"]
+            silence_saved_pct = prep_meta["silence_saved_pct"]
+            print(f"Concluído em {prep_meta['prep_time_sec']}s ({prep_meta['file_size_kb']} KB)")
+            print(f"✂️ [VAD] Duração reduzida de {orig_dur:.1f}s para {comp_dur:.1f}s ({silence_saved_sec:.1f}s / {silence_saved_pct}% de economia de áudio/tokens!)")
         else:
-            print(f"⚡ [CPU] Otimizando áudio (MP3 64k Mono + Filtro Wideband)...", end=" ", flush=True)
-            prep_meta = FastAudioPreparer.prepare_mp3(
-                input_path=input_file,
-                output_path=temp_audio,
-                bitrate="64k",
-                sample_rate=16000,
-                channels=1,
-                filter_wideband=True
-            )
-        print(f"Concluído em {prep_meta['prep_time_sec']}s ({prep_meta['file_size_kb']} KB)")
+            if codec == "opus":
+                print(f"⚡ [CPU] Otimizando áudio (OPUS 16k VBR Mono + Filtro Wideband)...", end=" ", flush=True)
+                prep_meta = OpusAudioPreparer.prepare_opus(
+                    input_path=input_file,
+                    output_path=temp_audio,
+                    bitrate="16k",
+                    sample_rate=16000,
+                    channels=1,
+                    filter_wideband=True
+                )
+            else:
+                print(f"⚡ [CPU] Otimizando áudio (MP3 64k Mono + Filtro Wideband)...", end=" ", flush=True)
+                prep_meta = FastAudioPreparer.prepare_mp3(
+                    input_path=input_file,
+                    output_path=temp_audio,
+                    bitrate="64k",
+                    sample_rate=16000,
+                    channels=1,
+                    filter_wideband=True
+                )
+            print(f"Concluído em {prep_meta['prep_time_sec']}s ({prep_meta['file_size_kb']} KB)")
 
         # 2. CPU: Fatiamento inteligente em momentos de silêncio
-        chunks_dir = PROCESSED_AUDIO_DIR / f"{input_file.stem}_chunks_{codec}"
+        chunks_dir = PROCESSED_AUDIO_DIR / f"{input_file.stem}_chunks_{codec}{'_vad' if use_vad else ''}"
         print(f"✂️ [CPU] Detectando pausas de silêncio e fatiando áudio...", end=" ", flush=True)
         chunks = SilenceAwareChunker.slice_audio(
             audio_path=temp_audio,
@@ -318,8 +350,8 @@ class HybridParallelDiarizer:
         # Ordenar os resultados pela ordem cronológica dos blocos
         chunk_results.sort(key=lambda x: x["chunk_index"])
 
-        # 4. CPU: Costura Global dos Segmentos, Padronização Canônica e Métricas Financeiras
-        print(f"\n🧮 [CPU] Costurando linha do tempo e padronizando nomes canônicos de falantes...")
+        # 4. CPU: Costura Global dos Segmentos, Remapeamento de Timestamps VAD e Padronização Canônica
+        print(f"\n🧮 [CPU] Costurando linha do tempo, {'aplicando remapeamento de timestamps VAD e ' if use_vad else ''}padronizando falantes...")
         todos_segmentos = []
         total_prompt_tokens = 0
         total_candidate_tokens = 0
@@ -333,6 +365,23 @@ class HybridParallelDiarizer:
             for seg in cr.get("segmentos", []):
                 # Normaliza o nome do falante para o nome canônico registrado na memória
                 seg["quemfala"] = speaker_memory.canonicalize_name(seg["quemfala"])
+
+                # Se o VAD foi aplicado, remapeia de volta para a linha do tempo original
+                if use_vad and segments_map:
+                    seg_c_inicio = seg["segundos_inicio"]
+                    seg_c_fim = seg["segundos_fim"]
+
+                    orig_inicio = map_compact_to_original(seg_c_inicio, segments_map)
+                    orig_fim = map_compact_to_original(seg_c_fim, segments_map)
+                    if orig_fim < orig_inicio:
+                        orig_fim = orig_inicio
+
+                    seg["segundos_inicio_compact"] = seg_c_inicio
+                    seg["segundos_fim_compact"] = seg_c_fim
+                    seg["segundos_inicio"] = orig_inicio
+                    seg["segundos_fim"] = orig_fim
+                    seg["timestamp"] = f"{format_seconds_to_timestamp(orig_inicio)} - {format_seconds_to_timestamp(orig_fim)}"
+
                 todos_segmentos.extend([seg])
 
         total_elapsed = round(time.time() - start_total, 3)
@@ -344,13 +393,18 @@ class HybridParallelDiarizer:
         cost_total_brl = round(cost_total_usd * 5.70, 4)
 
         # 5. Exportar JSON Estruturado Final
-        output_json_path = REPORTS_DIR / f"{input_file.stem}_diarizacao_pydantic.json"
-        output_md_path = REPORTS_DIR / f"{input_file.stem}_diarizacao_pydantic.md"
+        suffix_report = "_vad" if use_vad else ""
+        output_json_path = REPORTS_DIR / f"{input_file.stem}_diarizacao_pydantic{suffix_report}.json"
+        output_md_path = REPORTS_DIR / f"{input_file.stem}_diarizacao_pydantic{suffix_report}.md"
 
         final_payload = {
             "arquivo": input_file.name,
             "codec": codec,
-            "duracao_total_segundos": SilenceAwareChunker.get_audio_duration(temp_audio),
+            "vad_aplicado": use_vad,
+            "duracao_original_segundos": round(orig_dur, 2),
+            "duracao_compactada_segundos": round(comp_dur, 2),
+            "economia_silencio_segundos": round(silence_saved_sec, 2),
+            "economia_silencio_pct": round(silence_saved_pct, 2),
             "tempo_execucao_total_segundos": total_elapsed,
             "tempo_processamento_nuvem_segundos": cloud_duration,
             "metricas_tokens": {
@@ -366,15 +420,20 @@ class HybridParallelDiarizer:
             "segmentos": todos_segmentos
         }
 
+        if use_vad and segments_map:
+            final_payload["vad_segments_map"] = segments_map
+
         with open(output_json_path, "w", encoding="utf-8") as f:
             json.dump(final_payload, f, ensure_ascii=False, indent=2)
 
         # Exportar Markdown Formatado
-        md_text = f"# Transcrição Diarizada com Timestamps e Pydantic\n\n"
+        md_text = f"# Transcrição Diarizada com Timestamps e Pydantic{' (com VAD)' if use_vad else ''}\n\n"
         md_text += f"- **Arquivo:** `{input_file.name}`\n"
-        md_text += f"- **Duração do Áudio:** `{round(final_payload['duracao_total_segundos']/60, 2)} min` ({round(final_payload['duracao_total_segundos'], 1)}s)\n"
+        md_text += f"- **Duração Original do Áudio:** `{round(orig_dur/60, 2)} min` ({round(orig_dur, 1)}s)\n"
+        if use_vad:
+            md_text += f"- **Duração Compactada (VAD):** `{round(comp_dur/60, 2)} min` ({round(comp_dur, 1)}s) — Economia de `{silence_saved_pct}%` ({round(silence_saved_sec, 1)}s)\n"
         md_text += f"- **Tempo Total de Execução:** `{total_elapsed}s` ({round(total_elapsed/60, 2)} min)\n"
-        md_text += f"- **Tokens Utilizados:** `{total_tokens_geral}` (Entrada: `{total_prompt_tokens}`, Saída: `{total_candidate_tokens}`)\n"
+        md_text += f"- **Tokens Utilizados:** `{total_tokens_geral:,}` (Entrada: `{total_prompt_tokens:,}`, Saída: `{total_candidate_tokens:,}`)\n"
         md_text += f"- **Custo Estimado:** `US$ {cost_total_usd}` (~ `R$ {cost_total_brl}`)\n"
         md_text += f"- **Total de Turnos de Fala:** `{len(todos_segmentos)}`\n\n"
         md_text += "---\n\n"
@@ -387,7 +446,7 @@ class HybridParallelDiarizer:
 
         # 6. CPU: Gerar Alinhamento Palavra por Palavra
         from word_aligner import WordLevelTimestampAligner
-        word_json_path = REPORTS_DIR / f"{input_file.stem}_palavra_por_palavra.json"
+        word_json_path = REPORTS_DIR / f"{input_file.stem}_palavra_por_palavra{suffix_report}.json"
         WordLevelTimestampAligner.process_diarization_json(
             json_input_path=output_json_path,
             json_output_path=word_json_path
@@ -398,6 +457,8 @@ class HybridParallelDiarizer:
         print(f"   ⏱️ Tempo Total de Execução: {total_elapsed}s ({round(total_elapsed/60, 2)} min)")
         print(f"   📊 Total de Tokens: {total_tokens_geral:,} (Input: {total_prompt_tokens:,} | Output: {total_candidate_tokens:,})")
         print(f"   💰 Custo Estimado: US$ {cost_total_usd:.4f} (R$ {cost_total_brl:.3f})")
+        if use_vad:
+            print(f"   ✂️ Economia VAD: {silence_saved_pct}% ({silence_saved_sec:.1f}s silêncio cortado)")
         print(f"   📁 JSON Estruturado: {output_json_path}")
         print(f"   📁 JSON Palavra por Palavra: {word_json_path}")
         print(f"   📁 Markdown: {output_md_path}")
@@ -413,6 +474,7 @@ if __name__ == "__main__":
     parser.add_argument("--target-chunk", type=float, default=90.0, help="Tamanho alvo de cada fatia em segundos (padrão: 90s)")
     parser.add_argument("--workers", type=int, default=8, help="Número de threads simultâneas na API (padrão: 8)")
     parser.add_argument("--codec", type=str, choices=["opus", "mp3"], default="opus", help="Codec de áudio para compressão (padrão: opus)")
+    parser.add_argument("--vad", action="store_true", help="Ativa compactação VAD com remapeamento de timestamps para o tempo original")
 
     args = parser.parse_args()
 
@@ -430,7 +492,9 @@ if __name__ == "__main__":
             target_path,
             target_chunk_sec=args.target_chunk,
             max_parallel_workers=args.workers,
-            codec=args.codec
+            codec=args.codec,
+            use_vad=args.vad
         )
     else:
         print(f"Arquivo não encontrado: {target_path}")
+

@@ -1,0 +1,2457 @@
+{
+  "arquivo": "999.mp4",
+  "codec": "opus",
+  "vad_aplicado": true,
+  "duracao_original_segundos": 465.15,
+  "duracao_compactada_segundos": 280.79,
+  "economia_silencio_segundos": 184.36,
+  "economia_silencio_pct": 39.63,
+  "tempo_execucao_total_segundos": 75.431,
+  "tempo_processamento_nuvem_segundos": 68.26,
+  "metricas_tokens": {
+    "prompt_tokens_audio": 9829,
+    "candidate_tokens_texto": 11141,
+    "total_tokens": 26920
+  },
+  "custo_estimado": {
+    "custo_usd": 0.00816,
+    "custo_brl": 0.0465
+  },
+  "total_turnos_fala": 134,
+  "segmentos": [
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Alexander Souza Silva, essa é uma audiência de custódia. A audiência de custódia tem por objetivo apenas verificar a prisão do senhor, se o senhor cometeu o crime ou não, não vai ser verificado agora, tá?",
+      "timestamp": "00:00 - 00:10",
+      "segundos_inicio": 0.0,
+      "segundos_fim": 10.02,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 0.0,
+      "segundos_fim_compact": 9.8
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "O senhor tem direito a silêncio, o silêncio não será editado em prejuízo da sua defesa, mas é uma oportunidade de o senhor falar sobre a prisão, tá bom?",
+      "timestamp": "00:10 - 00:16",
+      "segundos_inicio": 10.02,
+      "segundos_fim": 16.49,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 9.8,
+      "segundos_fim_compact": 15.8
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Vou fazer algumas perguntas pessoais e depois eu vou para a questão da prisão.",
+      "timestamp": "00:16 - 00:20",
+      "segundos_inicio": 16.99,
+      "segundos_fim": 20.1,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 16.3,
+      "segundos_fim_compact": 19.1
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Nome completo, Bruno Alexander Souza Silva, correto?",
+      "timestamp": "00:20 - 00:22",
+      "segundos_inicio": 20.3,
+      "segundos_fim": 22.8,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 19.3,
+      "segundos_fim_compact": 21.8
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Que cor que o senhor se declara?",
+      "timestamp": "00:23 - 00:25",
+      "segundos_inicio": 23.86,
+      "segundos_fim": 25.06,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 22.2,
+      "segundos_fim_compact": 23.4
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Pardo.",
+      "timestamp": "00:28 - 00:28",
+      "segundos_inicio": 28.01,
+      "segundos_fim": 28.54,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 23.7,
+      "segundos_fim_compact": 24.0
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "O senhor é natural de que cidade?",
+      "timestamp": "00:29 - 00:30",
+      "segundos_inicio": 29.39,
+      "segundos_fim": 30.79,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 24.6,
+      "segundos_fim_compact": 26.0
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "São Paulo.",
+      "timestamp": "00:31 - 00:32",
+      "segundos_inicio": 31.58,
+      "segundos_fim": 32.08,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 26.4,
+      "segundos_fim_compact": 26.9
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "São Paulo.",
+      "timestamp": "00:32 - 00:32",
+      "segundos_inicio": 32.48,
+      "segundos_fim": 32.98,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 27.3,
+      "segundos_fim_compact": 27.8
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Ah, qual que é o telefone do senhor?",
+      "timestamp": "00:34 - 00:36",
+      "segundos_inicio": 34.55,
+      "segundos_fim": 36.82,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 28.4,
+      "segundos_fim_compact": 30.3
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "11 20 74 70 30.",
+      "timestamp": "00:38 - 00:40",
+      "segundos_inicio": 38.41,
+      "segundos_fim": 40.78,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 30.8,
+      "segundos_fim_compact": 32.7
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "11 20 74 70 30.",
+      "timestamp": "00:41 - 00:45",
+      "segundos_inicio": 41.44,
+      "segundos_fim": 45.42,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 33.0,
+      "segundos_fim_compact": 36.3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Uhum. O senhor tem algum celular?",
+      "timestamp": "00:45 - 00:46",
+      "segundos_inicio": 45.72,
+      "segundos_fim": 46.92,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 36.6,
+      "segundos_fim_compact": 37.8
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Não, não tem de cor não.",
+      "timestamp": "00:47 - 00:48",
+      "segundos_inicio": 47.44,
+      "segundos_fim": 48.64,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 38.0,
+      "segundos_fim_compact": 39.2
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Ou o e-mail?",
+      "timestamp": "00:49 - 00:49",
+      "segundos_inicio": 49.04,
+      "segundos_fim": 49.94,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 39.6,
+      "segundos_fim_compact": 40.5
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "É, também não consigo.",
+      "timestamp": "00:50 - 00:52",
+      "segundos_inicio": 50.14,
+      "segundos_fim": 52.83,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 40.7,
+      "segundos_fim_compact": 41.6
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Não, se não souber não tem problema.",
+      "timestamp": "00:52 - 00:54",
+      "segundos_inicio": 52.93,
+      "segundos_fim": 54.03,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 41.7,
+      "segundos_fim_compact": 42.8
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Não, não se recorda do celular nem do e-mail.",
+      "timestamp": "00:54 - 00:56",
+      "segundos_inicio": 54.33,
+      "segundos_fim": 56.43,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 43.1,
+      "segundos_fim_compact": 45.2
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Tá. É, o nome da mãe e do pai?",
+      "timestamp": "01:05 - 01:07",
+      "segundos_inicio": 65.06,
+      "segundos_fim": 67.03,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 45.6,
+      "segundos_fim_compact": 47.0
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "É, Gislene e Elias de Souza.",
+      "timestamp": "01:07 - 01:09",
+      "segundos_inicio": 67.43,
+      "segundos_fim": 69.23,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 47.4,
+      "segundos_fim_compact": 49.2
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Gislene Elias de Souza.",
+      "timestamp": "01:09 - 01:11",
+      "segundos_inicio": 69.87,
+      "segundos_fim": 71.47,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 49.6,
+      "segundos_fim_compact": 51.2
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "O nome do pai não consta?",
+      "timestamp": "01:13 - 01:14",
+      "segundos_inicio": 73.14,
+      "segundos_fim": 74.34,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 51.8,
+      "segundos_fim_compact": 53.0
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Carlos Roberto Pereira.",
+      "timestamp": "01:14 - 01:16",
+      "segundos_inicio": 74.74,
+      "segundos_fim": 76.74,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 53.4,
+      "segundos_fim_compact": 54.5
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Então Gislene Elias de Souza e Carlos Aberto...",
+      "timestamp": "01:16 - 01:20",
+      "segundos_inicio": 76.94,
+      "segundos_fim": 80.24,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 54.7,
+      "segundos_fim_compact": 58.0
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Roberto.",
+      "timestamp": "01:20 - 01:21",
+      "segundos_inicio": 80.54,
+      "segundos_fim": 81.04,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 58.3,
+      "segundos_fim_compact": 58.8
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Carlos Roberto Pereira da Silva.",
+      "timestamp": "01:21 - 01:25",
+      "segundos_inicio": 81.54,
+      "segundos_fim": 85.68,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 59.0,
+      "segundos_fim_compact": 61.8
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Da Silva.",
+      "timestamp": "01:25 - 01:28",
+      "segundos_inicio": 85.88,
+      "segundos_fim": 88.22,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 62.0,
+      "segundos_fim_compact": 62.4
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Estado de São Paulo.",
+      "timestamp": "01:28 - 01:29",
+      "segundos_inicio": 88.42,
+      "segundos_fim": 89.32,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 62.6,
+      "segundos_fim_compact": 63.5
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Estado civil?",
+      "timestamp": "01:29 - 01:30",
+      "segundos_inicio": 89.42,
+      "segundos_fim": 90.41,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 63.6,
+      "segundos_fim_compact": 64.3
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Casado.",
+      "timestamp": "01:30 - 01:31",
+      "segundos_inicio": 90.61,
+      "segundos_fim": 91.82,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 64.5,
+      "segundos_fim_compact": 64.9
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Casado.",
+      "timestamp": "01:32 - 01:33",
+      "segundos_inicio": 92.02,
+      "segundos_fim": 93.82,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 65.1,
+      "segundos_fim_compact": 65.5
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "RG?",
+      "timestamp": "01:34 - 01:34",
+      "segundos_inicio": 94.02,
+      "segundos_fim": 94.32,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 65.7,
+      "segundos_fim_compact": 66.0
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "37 101 914-X.",
+      "timestamp": "01:35 - 01:39",
+      "segundos_inicio": 95.2,
+      "segundos_fim": 99.97,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 66.3,
+      "segundos_fim_compact": 69.3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "São Paulo, né?",
+      "timestamp": "01:40 - 01:42",
+      "segundos_inicio": 100.27,
+      "segundos_fim": 102.4,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 69.6,
+      "segundos_fim_compact": 70.2
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "É.",
+      "timestamp": "01:43 - 01:43",
+      "segundos_inicio": 103.09,
+      "segundos_fim": 103.19,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 70.6,
+      "segundos_fim_compact": 70.7
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Ah, o senhor sabe o CPF, senhor?",
+      "timestamp": "01:46 - 01:47",
+      "segundos_inicio": 106.59,
+      "segundos_fim": 107.89,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 71.0,
+      "segundos_fim_compact": 72.3
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Sim.",
+      "timestamp": "01:48 - 01:50",
+      "segundos_inicio": 108.19,
+      "segundos_fim": 110.1,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 72.6,
+      "segundos_fim_compact": 72.9
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Qual que é?",
+      "timestamp": "01:50 - 01:51",
+      "segundos_inicio": 110.6,
+      "segundos_fim": 111.0,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 73.4,
+      "segundos_fim_compact": 73.8
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "427 540 498 00.",
+      "timestamp": "01:51 - 01:57",
+      "segundos_inicio": 111.2,
+      "segundos_fim": 117.2,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 74.0,
+      "segundos_fim_compact": 77.4
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "O senhor mora onde?",
+      "timestamp": "01:58 - 02:00",
+      "segundos_inicio": 118.2,
+      "segundos_fim": 120.04,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 77.6,
+      "segundos_fim_compact": 78.4
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Moro, é, tenho vários endereços, moça.",
+      "timestamp": "02:00 - 02:03",
+      "segundos_inicio": 120.24,
+      "segundos_fim": 123.93,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 78.6,
+      "segundos_fim_compact": 81.1
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "É? Pode falar todos.",
+      "timestamp": "02:05 - 02:05",
+      "segundos_inicio": 125.16,
+      "segundos_fim": 125.95,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 81.5,
+      "segundos_fim_compact": 82.3
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Vou falar só o que eu lembro, que a única rua que eu lembro de cor que eu nasci, Rua Biazi.",
+      "timestamp": "02:07 - 02:11",
+      "segundos_inicio": 127.64,
+      "segundos_fim": 131.54,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 82.6,
+      "segundos_fim_compact": 86.5
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Rua Biazi.",
+      "timestamp": "02:11 - 02:13",
+      "segundos_inicio": 131.64,
+      "segundos_fim": 133.95,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 86.6,
+      "segundos_fim_compact": 87.6
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Marchitelo.",
+      "timestamp": "02:14 - 02:15",
+      "segundos_inicio": 134.77,
+      "segundos_fim": 135.57,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 88.2,
+      "segundos_fim_compact": 89.0
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Marchitelo, é, M A R C H I T T E L L O.",
+      "timestamp": "02:16 - 02:28",
+      "segundos_inicio": 136.72,
+      "segundos_fim": 148.04,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 89.4,
+      "segundos_fim_compact": 94.3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Qual o número?",
+      "timestamp": "02:29 - 02:29",
+      "segundos_inicio": 149.21,
+      "segundos_fim": 149.61,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 94.6,
+      "segundos_fim_compact": 95.0
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "4.",
+      "timestamp": "02:30 - 02:31",
+      "segundos_inicio": 150.39,
+      "segundos_fim": 151.17,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 95.4,
+      "segundos_fim_compact": 95.6
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "É uma casa?",
+      "timestamp": "02:31 - 02:31",
+      "segundos_inicio": 151.47,
+      "segundos_fim": 151.97,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 95.9,
+      "segundos_fim_compact": 96.4
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Casa.",
+      "timestamp": "02:32 - 02:32",
+      "segundos_inicio": 152.17,
+      "segundos_fim": 152.47,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 96.6,
+      "segundos_fim_compact": 96.9
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "É quintal, não? É só uma casa mesmo.",
+      "timestamp": "02:33 - 02:35",
+      "segundos_inicio": 153.33,
+      "segundos_fim": 155.03,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 97.2,
+      "segundos_fim_compact": 98.9
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Qual que é o bairro?",
+      "timestamp": "02:36 - 02:36",
+      "segundos_inicio": 156.22,
+      "segundos_fim": 156.82,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 99.3,
+      "segundos_fim_compact": 99.9
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "São Paulo, Itaquera.",
+      "timestamp": "02:37 - 02:38",
+      "segundos_inicio": 157.69,
+      "segundos_fim": 158.49,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 100.1,
+      "segundos_fim_compact": 100.9
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "O senhor disse que nasceu nessa casa.",
+      "timestamp": "02:41 - 02:42",
+      "segundos_inicio": 161.36,
+      "segundos_fim": 162.56,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 101.2,
+      "segundos_fim_compact": 102.4
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "É.",
+      "timestamp": "02:42 - 02:42",
+      "segundos_inicio": 162.76,
+      "segundos_fim": 162.86,
+      "chunk_origem": 1,
+      "segundos_inicio_compact": 102.6,
+      "segundos_fim_compact": 102.7
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "É, tem a do condomínio que é condomínio é do Manacá.",
+      "timestamp": "02:44 - 02:48",
+      "segundos_inicio": 164.93,
+      "segundos_fim": 168.52,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 104.77,
+      "segundos_fim_compact": 107.46
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Mas eh, onde o senhor dormiu ontem?",
+      "timestamp": "02:48 - 02:51",
+      "segundos_inicio": 168.84,
+      "segundos_fim": 171.88,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 107.78,
+      "segundos_fim_compact": 109.67
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "É, Garatá.",
+      "timestamp": "02:52 - 02:52",
+      "segundos_inicio": 172.24,
+      "segundos_fim": 172.87,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 110.03,
+      "segundos_fim_compact": 110.66
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "É, a rua Garatá?",
+      "timestamp": "02:55 - 02:56",
+      "segundos_inicio": 175.82,
+      "segundos_fim": 176.53,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 111.08,
+      "segundos_fim_compact": 111.79
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Não, é, é a cidade de Garatá.",
+      "timestamp": "02:58 - 02:59",
+      "segundos_inicio": 178.12,
+      "segundos_fim": 179.96,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 112.46,
+      "segundos_fim_compact": 114.3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "E qual que é o nome da rua, o senhor não sabe?",
+      "timestamp": "03:00 - 03:01",
+      "segundos_inicio": 180.41,
+      "segundos_fim": 181.65,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 114.75,
+      "segundos_fim_compact": 115.99
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Alameda do Manacás, eu acho. Alameda Paraíso de Garatá.",
+      "timestamp": "03:02 - 03:06",
+      "segundos_inicio": 182.79,
+      "segundos_fim": 186.79,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 116.3,
+      "segundos_fim_compact": 119.79
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "O senhor tá há quanto tempo nessa rua?",
+      "timestamp": "03:09 - 03:11",
+      "segundos_inicio": 189.24,
+      "segundos_fim": 191.88,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 120.3,
+      "segundos_fim_compact": 121.69
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Uns dois anos.",
+      "timestamp": "03:12 - 03:14",
+      "segundos_inicio": 192.47,
+      "segundos_fim": 194.78,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 122.06,
+      "segundos_fim_compact": 122.63
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "O senhor sabe o número?",
+      "timestamp": "03:15 - 03:16",
+      "segundos_inicio": 195.24,
+      "segundos_fim": 196.45,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 123.09,
+      "segundos_fim_compact": 124.3
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "É, 278.",
+      "timestamp": "03:17 - 03:20",
+      "segundos_inicio": 197.64,
+      "segundos_fim": 200.68,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 124.97,
+      "segundos_fim_compact": 126.59
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "278.",
+      "timestamp": "03:21 - 03:23",
+      "segundos_inicio": 201.43,
+      "segundos_fim": 203.94,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 126.99,
+      "segundos_fim_compact": 127.69
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Qual que é o bairro?",
+      "timestamp": "03:24 - 03:27",
+      "segundos_inicio": 204.25,
+      "segundos_fim": 207.22,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 127.99,
+      "segundos_fim_compact": 128.69
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Paraíso de Garatá.",
+      "timestamp": "03:27 - 03:31",
+      "segundos_inicio": 207.41,
+      "segundos_fim": 211.63,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 128.89,
+      "segundos_fim_compact": 129.69
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Tem alguma razão que eu especificar aqui que o senhor não saiba direito informar o endereço do senhor?",
+      "timestamp": "03:31 - 03:37",
+      "segundos_inicio": 211.93,
+      "segundos_fim": 217.25,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 129.99,
+      "segundos_fim_compact": 134.69
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Ah, não, não.",
+      "timestamp": "03:37 - 03:38",
+      "segundos_inicio": 217.65,
+      "segundos_fim": 218.25,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 135.09,
+      "segundos_fim_compact": 135.69
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Eu moro aí tudo já.",
+      "timestamp": "03:39 - 03:40",
+      "segundos_inicio": 219.35,
+      "segundos_fim": 220.72,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 136.79,
+      "segundos_fim_compact": 137.59
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Endereço.",
+      "timestamp": "03:42 - 03:42",
+      "segundos_inicio": 222.03,
+      "segundos_fim": 222.53,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 137.99,
+      "segundos_fim_compact": 138.49
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Qual que o senhor tem certeza?",
+      "timestamp": "03:42 - 03:43",
+      "segundos_inicio": 222.93,
+      "segundos_fim": 223.83,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 138.89,
+      "segundos_fim_compact": 139.79
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Não, é, é esse daí, Alameda do Manacás, 278.",
+      "timestamp": "03:44 - 03:48",
+      "segundos_inicio": 224.34,
+      "segundos_fim": 228.95,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 140.3,
+      "segundos_fim_compact": 144.3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "278.",
+      "timestamp": "03:49 - 03:49",
+      "segundos_inicio": 229.34,
+      "segundos_fim": 229.95,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 144.69,
+      "segundos_fim_compact": 145.3
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Paraíso de Garatá.",
+      "timestamp": "03:50 - 03:51",
+      "segundos_inicio": 230.14,
+      "segundos_fim": 231.76,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 145.49,
+      "segundos_fim_compact": 146.19
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Tá. O senhor tá lá há dois anos.",
+      "timestamp": "03:51 - 03:53",
+      "segundos_inicio": 231.86,
+      "segundos_fim": 233.06,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 146.29,
+      "segundos_fim_compact": 147.49
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Uhum.",
+      "timestamp": "03:53 - 03:53",
+      "segundos_inicio": 233.46,
+      "segundos_fim": 233.87,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 147.89,
+      "segundos_fim_compact": 148.3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "É, casa alugada?",
+      "timestamp": "03:54 - 03:54",
+      "segundos_inicio": 234.26,
+      "segundos_fim": 234.87,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 148.69,
+      "segundos_fim_compact": 149.3
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Casa própria.",
+      "timestamp": "03:55 - 03:56",
+      "segundos_inicio": 235.36,
+      "segundos_fim": 236.3,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 149.79,
+      "segundos_fim_compact": 150.3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Própria?",
+      "timestamp": "03:56 - 04:00",
+      "segundos_inicio": 236.49,
+      "segundos_fim": 240.5,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 150.49,
+      "segundos_fim_compact": 150.99
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "O senhor estudou até que grau?",
+      "timestamp": "04:09 - 04:10",
+      "segundos_inicio": 249.8,
+      "segundos_fim": 250.41,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 151.69,
+      "segundos_fim_compact": 152.3
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Superior completo.",
+      "timestamp": "04:11 - 04:13",
+      "segundos_inicio": 251.53,
+      "segundos_fim": 253.17,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 152.79,
+      "segundos_fim_compact": 153.69
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Superior?",
+      "timestamp": "04:13 - 04:14",
+      "segundos_inicio": 253.78,
+      "segundos_fim": 254.09,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 153.99,
+      "segundos_fim_compact": 154.3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Qual que é a faculdade?",
+      "timestamp": "04:14 - 04:15",
+      "segundos_inicio": 254.68,
+      "segundos_fim": 255.38,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 154.89,
+      "segundos_fim_compact": 155.59
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Formado em Comércio Exterior.",
+      "timestamp": "04:15 - 04:23",
+      "segundos_inicio": 255.68,
+      "segundos_fim": 263.79,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 155.89,
+      "segundos_fim_compact": 156.89
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Comércio Exterior.",
+      "timestamp": "04:23 - 04:27",
+      "segundos_inicio": 263.99,
+      "segundos_fim": 267.01,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 157.09,
+      "segundos_fim_compact": 157.69
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Qual que é a profissão do senhor?",
+      "timestamp": "04:27 - 04:34",
+      "segundos_inicio": 267.31,
+      "segundos_fim": 274.74,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 157.99,
+      "segundos_fim_compact": 159.09
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Empresário.",
+      "timestamp": "04:34 - 04:36",
+      "segundos_inicio": 274.95,
+      "segundos_fim": 276.4,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 159.3,
+      "segundos_fim_compact": 159.89
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Empresário.",
+      "timestamp": "04:37 - 04:37",
+      "segundos_inicio": 277.12,
+      "segundos_fim": 277.61,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 160.3,
+      "segundos_fim_compact": 160.79
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Quanto que o senhor tem por mês aproximadamente?",
+      "timestamp": "04:38 - 04:40",
+      "segundos_inicio": 278.11,
+      "segundos_fim": 280.86,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 161.29,
+      "segundos_fim_compact": 163.3
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Varia, depende da publicidade. Tem mês que é um valor, tem mês que é outro.",
+      "timestamp": "04:41 - 06:09",
+      "segundos_inicio": 281.15,
+      "segundos_fim": 369.84,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 163.59,
+      "segundos_fim_compact": 207.3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Mas em média de 1 milhão, 2 milhões?",
+      "timestamp": "06:10 - 06:12",
+      "segundos_inicio": 370.43,
+      "segundos_fim": 372.33,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 207.89,
+      "segundos_fim_compact": 209.79
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Por mês?",
+      "timestamp": "06:12 - 06:12",
+      "segundos_inicio": 372.53,
+      "segundos_fim": 372.84,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 209.99,
+      "segundos_fim_compact": 210.3
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Sim.",
+      "timestamp": "06:13 - 06:13",
+      "segundos_inicio": 373.23,
+      "segundos_fim": 373.95,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 210.69,
+      "segundos_fim_compact": 210.99
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Eh, o senhor tem algum dependente?",
+      "timestamp": "06:14 - 06:16",
+      "segundos_inicio": 374.65,
+      "segundos_fim": 376.76,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 211.69,
+      "segundos_fim_compact": 212.79
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Tenho.",
+      "timestamp": "06:17 - 06:17",
+      "segundos_inicio": 377.06,
+      "segundos_fim": 377.27,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 213.09,
+      "segundos_fim_compact": 213.3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Quem?",
+      "timestamp": "06:17 - 06:18",
+      "segundos_inicio": 377.86,
+      "segundos_fim": 378.16,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 213.89,
+      "segundos_fim_compact": 214.19
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "A minha esposa.",
+      "timestamp": "06:18 - 06:18",
+      "segundos_inicio": 378.27,
+      "segundos_fim": 378.96,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 214.3,
+      "segundos_fim_compact": 214.99
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Dependente menor, ela ou ou?",
+      "timestamp": "06:19 - 06:22",
+      "segundos_inicio": 379.27,
+      "segundos_fim": 382.58,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 215.3,
+      "segundos_fim_compact": 217.3
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Tenho. A minha filha, Valentina.",
+      "timestamp": "06:22 - 06:25",
+      "segundos_inicio": 382.87,
+      "segundos_fim": 385.9,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 217.59,
+      "segundos_fim_compact": 219.59
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Tá.",
+      "timestamp": "06:26 - 06:26",
+      "segundos_inicio": 386.2,
+      "segundos_fim": 386.5,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 219.89,
+      "segundos_fim_compact": 220.19
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "E minha mulher tá grávida.",
+      "timestamp": "06:26 - 06:28",
+      "segundos_inicio": 386.61,
+      "segundos_fim": 388.22,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 220.3,
+      "segundos_fim_compact": 221.09
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Tá, entendi.",
+      "timestamp": "06:28 - 06:29",
+      "segundos_inicio": 388.43,
+      "segundos_fim": 389.94,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 221.3,
+      "segundos_fim_compact": 221.89
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Quantos anos tem a a a a Valentina?",
+      "timestamp": "06:31 - 06:35",
+      "segundos_inicio": 391.04,
+      "segundos_fim": 395.36,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 222.3,
+      "segundos_fim_compact": 225.79
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Quatro anos.",
+      "timestamp": "06:36 - 06:36",
+      "segundos_inicio": 396.05,
+      "segundos_fim": 396.55,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 226.09,
+      "segundos_fim_compact": 226.59
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Quatro anos? Qual que é a data de nascimento dela?",
+      "timestamp": "06:36 - 06:38",
+      "segundos_inicio": 396.85,
+      "segundos_fim": 398.6,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 226.89,
+      "segundos_fim_compact": 228.3
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "26/06/2021.",
+      "timestamp": "06:38 - 06:41",
+      "segundos_inicio": 398.99,
+      "segundos_fim": 401.29,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 228.69,
+      "segundos_fim_compact": 230.99
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Ela agora tá com a mãe?",
+      "timestamp": "06:41 - 06:43",
+      "segundos_inicio": 401.98,
+      "segundos_fim": 403.9,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 231.3,
+      "segundos_fim_compact": 232.29
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Uhum.",
+      "timestamp": "06:44 - 06:44",
+      "segundos_inicio": 404.2,
+      "segundos_fim": 404.61,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 232.59,
+      "segundos_fim_compact": 232.99
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Tá com o outro filho, tá com a mãe.",
+      "timestamp": "06:45 - 06:48",
+      "segundos_inicio": 405.2,
+      "segundos_fim": 408.17,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 233.59,
+      "segundos_fim_compact": 234.79
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "A minha esposa está grávida.",
+      "timestamp": "06:48 - 06:49",
+      "segundos_inicio": 408.47,
+      "segundos_fim": 409.47,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 235.09,
+      "segundos_fim_compact": 236.09
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Seis meses.",
+      "timestamp": "06:49 - 06:50",
+      "segundos_inicio": 409.68,
+      "segundos_fim": 410.17,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 236.3,
+      "segundos_fim_compact": 236.79
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Grávida, seis meses.",
+      "timestamp": "06:50 - 06:51",
+      "segundos_inicio": 410.68,
+      "segundos_fim": 411.47,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 237.3,
+      "segundos_fim_compact": 238.09
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Doutor, tem alguma deficiência física, dependência química, doença ou hermogênia?",
+      "timestamp": "06:52 - 06:58",
+      "segundos_inicio": 412.07,
+      "segundos_fim": 418.33,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 238.69,
+      "segundos_fim_compact": 243.79
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Não.",
+      "timestamp": "06:58 - 06:59",
+      "segundos_inicio": 418.93,
+      "segundos_fim": 419.14,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 244.09,
+      "segundos_fim_compact": 244.3
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Não.",
+      "timestamp": "06:59 - 06:59",
+      "segundos_inicio": 419.53,
+      "segundos_fim": 419.83,
+      "chunk_origem": 2,
+      "segundos_inicio_compact": 244.69,
+      "segundos_fim_compact": 244.99
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Quando o senhor foi preso, foi dada a ciência dos direitos constitucionais, de falar com o advogado?",
+      "timestamp": "06:08 - 06:13",
+      "segundos_inicio": 368.08,
+      "segundos_fim": 373.1,
+      "chunk_origem": 3,
+      "segundos_inicio_compact": 205.54,
+      "segundos_fim_compact": 210.56
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Sim.",
+      "timestamp": "06:13 - 06:14",
+      "segundos_inicio": 373.79,
+      "segundos_fim": 374.09,
+      "chunk_origem": 3,
+      "segundos_inicio_compact": 210.83,
+      "segundos_fim_compact": 211.13
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "O senhor recebeu água potável, alimentação, da prisão?",
+      "timestamp": "06:15 - 06:20",
+      "segundos_inicio": 375.85,
+      "segundos_fim": 380.37,
+      "chunk_origem": 3,
+      "segundos_inicio_compact": 211.88,
+      "segundos_fim_compact": 216.1
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Sim.",
+      "timestamp": "06:20 - 06:21",
+      "segundos_inicio": 380.45,
+      "segundos_fim": 381.76,
+      "chunk_origem": 3,
+      "segundos_inicio_compact": 216.18,
+      "segundos_fim_compact": 216.48
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Como é que foi o cumprimento do mandado de prisão?",
+      "timestamp": "06:22 - 06:24",
+      "segundos_inicio": 382.04,
+      "segundos_fim": 384.42,
+      "chunk_origem": 3,
+      "segundos_inicio_compact": 216.76,
+      "segundos_fim_compact": 219.14
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Eles chegaram lá em casa.",
+      "timestamp": "06:25 - 06:27",
+      "segundos_inicio": 385.9,
+      "segundos_fim": 387.09,
+      "chunk_origem": 3,
+      "segundos_inicio_compact": 219.59,
+      "segundos_fim_compact": 220.49
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Tá.",
+      "timestamp": "06:27 - 06:28",
+      "segundos_inicio": 387.28,
+      "segundos_fim": 388.01,
+      "chunk_origem": 3,
+      "segundos_inicio_compact": 220.68,
+      "segundos_fim_compact": 220.88
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "É, tava dormindo. Só ouvi o barulho da porta batendo, que a porta é blindada. Eles pedindo para abrir a porta. Aí eu saí na varanda, os policiais me rendeu na varanda, falou para eu ficar parado e pediu para a minha cunhada abrir a porta.",
+      "timestamp": "06:29 - 06:47",
+      "segundos_inicio": 389.45,
+      "segundos_fim": 407.17,
+      "chunk_origem": 3,
+      "segundos_inicio_compact": 221.4,
+      "segundos_fim_compact": 233.79
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "É, o senhor tem alguma coisa a relatar sobre a casa, o cumprimento da prisão? Foi tudo bem? Aconteceu alguma coisa?",
+      "timestamp": "06:47 - 06:52",
+      "segundos_inicio": 407.55,
+      "segundos_fim": 412.04,
+      "chunk_origem": 3,
+      "segundos_inicio_compact": 234.17,
+      "segundos_fim_compact": 238.66
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Tudo bem.",
+      "timestamp": "06:52 - 06:52",
+      "segundos_inicio": 412.48,
+      "segundos_fim": 412.78,
+      "chunk_origem": 3,
+      "segundos_inicio_compact": 239.1,
+      "segundos_fim_compact": 239.4
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Tudo bem? O senhor passou pelo IML?",
+      "timestamp": "06:53 - 06:54",
+      "segundos_inicio": 413.14,
+      "segundos_fim": 414.87,
+      "chunk_origem": 3,
+      "segundos_inicio_compact": 239.76,
+      "segundos_fim_compact": 241.1
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Passei.",
+      "timestamp": "06:55 - 06:56",
+      "segundos_inicio": 415.63,
+      "segundos_fim": 416.15,
+      "chunk_origem": 3,
+      "segundos_inicio_compact": 241.53,
+      "segundos_fim_compact": 241.83
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Tá. O senhor quer alguma coisa a relatar sobre o cumprimento da prisão? Não tem perguntas. O Dr. quer que eu faça assinar?",
+      "timestamp": "06:56 - 07:02",
+      "segundos_inicio": 416.81,
+      "segundos_fim": 422.44,
+      "chunk_origem": 3,
+      "segundos_inicio_compact": 242.27,
+      "segundos_fim_compact": 247.1
+    },
+    {
+      "quemfala": "Réu",
+      "textodefala": "Mesmo, é, requerimento por gentileza.",
+      "timestamp": "07:02 - 07:04",
+      "segundos_inicio": 422.93,
+      "segundos_fim": 424.93,
+      "chunk_origem": 3,
+      "segundos_inicio_compact": 247.59,
+      "segundos_fim_compact": 249.59
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Ligação para familiar e cobertor.",
+      "timestamp": "07:05 - 07:08",
+      "segundos_inicio": 425.44,
+      "segundos_fim": 428.04,
+      "chunk_origem": 3,
+      "segundos_inicio_compact": 250.1,
+      "segundos_fim_compact": 252.7
+    },
+    {
+      "quemfala": "Juíza",
+      "textodefala": "Bom, tendo em vista que se trata de carta precatória, não foi verificado nenhuma mácula no cumprimento do mandado de prisão, não há nenhuma providência a ser tomada por esse juízo. Quanto aos requerimentos, novamente, o juízo não vê problemas na ligação para um familiar e quanto à cobertura de mais itens específicos que a defesa queira providenciar, tem que passar antes pelas deliberações de segurança da custódia. Então, declaro encerrada essa audiência, pode parar a gravação.",
+      "timestamp": "07:10 - 07:42",
+      "segundos_inicio": 430.11,
+      "segundos_fim": 462.238,
+      "chunk_origem": 3,
+      "segundos_inicio_compact": 253.5,
+      "segundos_fim_compact": 319.5
+    }
+  ],
+  "vad_segments_map": [
+    {
+      "orig_start": 0.0,
+      "orig_end": 2.251,
+      "comp_start": 0.0,
+      "comp_end": 2.251,
+      "duration": 2.251
+    },
+    {
+      "orig_start": 2.475,
+      "orig_end": 10.288,
+      "comp_start": 2.251,
+      "comp_end": 10.063,
+      "duration": 7.812
+    },
+    {
+      "orig_start": 10.535,
+      "orig_end": 16.253,
+      "comp_start": 10.063,
+      "comp_end": 15.781,
+      "duration": 5.718
+    },
+    {
+      "orig_start": 16.469,
+      "orig_end": 19.75,
+      "comp_start": 15.781,
+      "comp_end": 19.062,
+      "duration": 3.281
+    },
+    {
+      "orig_start": 20.064,
+      "orig_end": 22.963,
+      "comp_start": 19.062,
+      "comp_end": 21.961,
+      "duration": 2.899
+    },
+    {
+      "orig_start": 23.618,
+      "orig_end": 25.115,
+      "comp_start": 21.961,
+      "comp_end": 23.458,
+      "duration": 1.497
+    },
+    {
+      "orig_start": 27.765,
+      "orig_end": 28.22,
+      "comp_start": 23.458,
+      "comp_end": 23.914,
+      "duration": 0.456
+    },
+    {
+      "orig_start": 28.454,
+      "orig_end": 29.056,
+      "comp_start": 23.914,
+      "comp_end": 24.515,
+      "duration": 0.601
+    },
+    {
+      "orig_start": 29.308,
+      "orig_end": 31.048,
+      "comp_start": 24.515,
+      "comp_end": 26.255,
+      "duration": 1.74
+    },
+    {
+      "orig_start": 31.439,
+      "orig_end": 33.213,
+      "comp_start": 26.255,
+      "comp_end": 28.029,
+      "duration": 1.774
+    },
+    {
+      "orig_start": 34.18,
+      "orig_end": 34.823,
+      "comp_start": 28.029,
+      "comp_end": 28.672,
+      "duration": 0.643
+    },
+    {
+      "orig_start": 35.196,
+      "orig_end": 36.947,
+      "comp_start": 28.672,
+      "comp_end": 30.422,
+      "duration": 1.75
+    },
+    {
+      "orig_start": 38.028,
+      "orig_end": 38.948,
+      "comp_start": 30.422,
+      "comp_end": 31.342,
+      "duration": 0.92
+    },
+    {
+      "orig_start": 39.425,
+      "orig_end": 40.941,
+      "comp_start": 31.342,
+      "comp_end": 32.858,
+      "duration": 1.516
+    },
+    {
+      "orig_start": 41.296,
+      "orig_end": 42.875,
+      "comp_start": 32.858,
+      "comp_end": 34.437,
+      "duration": 1.579
+    },
+    {
+      "orig_start": 43.555,
+      "orig_end": 46.969,
+      "comp_start": 34.437,
+      "comp_end": 37.851,
+      "duration": 3.414
+    },
+    {
+      "orig_start": 47.294,
+      "orig_end": 50.266,
+      "comp_start": 37.851,
+      "comp_end": 40.823,
+      "duration": 2.972
+    },
+    {
+      "orig_start": 51.565,
+      "orig_end": 52.013,
+      "comp_start": 40.823,
+      "comp_end": 41.272,
+      "duration": 0.449
+    },
+    {
+      "orig_start": 52.502,
+      "orig_end": 56.485,
+      "comp_start": 41.272,
+      "comp_end": 45.255,
+      "duration": 3.983
+    },
+    {
+      "orig_start": 64.719,
+      "orig_end": 66.458,
+      "comp_start": 45.255,
+      "comp_end": 46.994,
+      "duration": 1.739
+    },
+    {
+      "orig_start": 67.025,
+      "orig_end": 69.479,
+      "comp_start": 46.994,
+      "comp_end": 49.448,
+      "duration": 2.454
+    },
+    {
+      "orig_start": 69.716,
+      "orig_end": 72.051,
+      "comp_start": 49.448,
+      "comp_end": 51.783,
+      "duration": 2.335
+    },
+    {
+      "orig_start": 73.121,
+      "orig_end": 75.788,
+      "comp_start": 51.783,
+      "comp_end": 54.45,
+      "duration": 2.667
+    },
+    {
+      "orig_start": 76.689,
+      "orig_end": 81.17,
+      "comp_start": 54.45,
+      "comp_end": 58.931,
+      "duration": 4.481
+    },
+    {
+      "orig_start": 81.469,
+      "orig_end": 82.675,
+      "comp_start": 58.931,
+      "comp_end": 60.137,
+      "duration": 1.206
+    },
+    {
+      "orig_start": 83.156,
+      "orig_end": 83.79,
+      "comp_start": 60.137,
+      "comp_end": 60.771,
+      "duration": 0.634
+    },
+    {
+      "orig_start": 84.311,
+      "orig_end": 84.844,
+      "comp_start": 60.771,
+      "comp_end": 61.304,
+      "duration": 0.533
+    },
+    {
+      "orig_start": 85.181,
+      "orig_end": 86.152,
+      "comp_start": 61.304,
+      "comp_end": 62.275,
+      "duration": 0.971
+    },
+    {
+      "orig_start": 88.098,
+      "orig_end": 89.904,
+      "comp_start": 62.275,
+      "comp_end": 64.082,
+      "duration": 1.807
+    },
+    {
+      "orig_start": 90.19,
+      "orig_end": 90.752,
+      "comp_start": 64.082,
+      "comp_end": 64.645,
+      "duration": 0.563
+    },
+    {
+      "orig_start": 91.563,
+      "orig_end": 92.256,
+      "comp_start": 64.645,
+      "comp_end": 65.339,
+      "duration": 0.694
+    },
+    {
+      "orig_start": 93.66,
+      "orig_end": 94.345,
+      "comp_start": 65.339,
+      "comp_end": 66.024,
+      "duration": 0.685
+    },
+    {
+      "orig_start": 94.928,
+      "orig_end": 95.733,
+      "comp_start": 66.024,
+      "comp_end": 66.829,
+      "duration": 0.805
+    },
+    {
+      "orig_start": 96.467,
+      "orig_end": 97.235,
+      "comp_start": 66.829,
+      "comp_end": 67.597,
+      "duration": 0.768
+    },
+    {
+      "orig_start": 98.264,
+      "orig_end": 100.294,
+      "comp_start": 67.597,
+      "comp_end": 69.627,
+      "duration": 2.03
+    },
+    {
+      "orig_start": 101.831,
+      "orig_end": 102.581,
+      "comp_start": 69.627,
+      "comp_end": 70.377,
+      "duration": 0.75
+    },
+    {
+      "orig_start": 102.868,
+      "orig_end": 103.224,
+      "comp_start": 70.377,
+      "comp_end": 70.733,
+      "duration": 0.356
+    },
+    {
+      "orig_start": 106.321,
+      "orig_end": 108.351,
+      "comp_start": 70.733,
+      "comp_end": 72.762,
+      "duration": 2.029
+    },
+    {
+      "orig_start": 109.966,
+      "orig_end": 112.069,
+      "comp_start": 72.762,
+      "comp_end": 74.865,
+      "duration": 2.103
+    },
+    {
+      "orig_start": 113.035,
+      "orig_end": 114.156,
+      "comp_start": 74.865,
+      "comp_end": 75.987,
+      "duration": 1.122
+    },
+    {
+      "orig_start": 114.734,
+      "orig_end": 115.611,
+      "comp_start": 75.987,
+      "comp_end": 76.864,
+      "duration": 0.877
+    },
+    {
+      "orig_start": 116.665,
+      "orig_end": 117.29,
+      "comp_start": 76.864,
+      "comp_end": 77.489,
+      "duration": 0.625
+    },
+    {
+      "orig_start": 118.092,
+      "orig_end": 118.991,
+      "comp_start": 77.489,
+      "comp_end": 78.388,
+      "duration": 0.899
+    },
+    {
+      "orig_start": 120.027,
+      "orig_end": 120.724,
+      "comp_start": 78.388,
+      "comp_end": 79.085,
+      "duration": 0.697
+    },
+    {
+      "orig_start": 121.087,
+      "orig_end": 121.975,
+      "comp_start": 79.085,
+      "comp_end": 79.973,
+      "duration": 0.888
+    },
+    {
+      "orig_start": 122.799,
+      "orig_end": 124.076,
+      "comp_start": 79.973,
+      "comp_end": 81.249,
+      "duration": 1.276
+    },
+    {
+      "orig_start": 124.904,
+      "orig_end": 125.973,
+      "comp_start": 81.249,
+      "comp_end": 82.318,
+      "duration": 1.069
+    },
+    {
+      "orig_start": 127.359,
+      "orig_end": 131.875,
+      "comp_start": 82.318,
+      "comp_end": 86.835,
+      "duration": 4.517
+    },
+    {
+      "orig_start": 133.181,
+      "orig_end": 134.493,
+      "comp_start": 86.835,
+      "comp_end": 88.147,
+      "duration": 1.312
+    },
+    {
+      "orig_start": 134.717,
+      "orig_end": 135.773,
+      "comp_start": 88.147,
+      "comp_end": 89.203,
+      "duration": 1.056
+    },
+    {
+      "orig_start": 136.519,
+      "orig_end": 138.446,
+      "comp_start": 89.203,
+      "comp_end": 91.13,
+      "duration": 1.927
+    },
+    {
+      "orig_start": 140.884,
+      "orig_end": 142.186,
+      "comp_start": 91.13,
+      "comp_end": 92.432,
+      "duration": 1.302
+    },
+    {
+      "orig_start": 144.391,
+      "orig_end": 145.199,
+      "comp_start": 92.432,
+      "comp_end": 93.24,
+      "duration": 0.808
+    },
+    {
+      "orig_start": 146.48,
+      "orig_end": 146.872,
+      "comp_start": 93.24,
+      "comp_end": 93.632,
+      "duration": 0.392
+    },
+    {
+      "orig_start": 147.369,
+      "orig_end": 148.097,
+      "comp_start": 93.632,
+      "comp_end": 94.36,
+      "duration": 0.728
+    },
+    {
+      "orig_start": 148.97,
+      "orig_end": 149.807,
+      "comp_start": 94.36,
+      "comp_end": 95.198,
+      "duration": 0.838
+    },
+    {
+      "orig_start": 150.189,
+      "orig_end": 150.534,
+      "comp_start": 95.198,
+      "comp_end": 95.543,
+      "duration": 0.345
+    },
+    {
+      "orig_start": 151.118,
+      "orig_end": 152.511,
+      "comp_start": 95.543,
+      "comp_end": 96.935,
+      "duration": 1.392
+    },
+    {
+      "orig_start": 153.062,
+      "orig_end": 155.193,
+      "comp_start": 96.935,
+      "comp_end": 99.066,
+      "duration": 2.131
+    },
+    {
+      "orig_start": 155.984,
+      "orig_end": 156.827,
+      "comp_start": 99.066,
+      "comp_end": 99.91,
+      "duration": 0.844
+    },
+    {
+      "orig_start": 157.495,
+      "orig_end": 158.574,
+      "comp_start": 99.91,
+      "comp_end": 100.989,
+      "duration": 1.079
+    },
+    {
+      "orig_start": 161.146,
+      "orig_end": 167.433,
+      "comp_start": 100.989,
+      "comp_end": 107.276,
+      "duration": 6.287
+    },
+    {
+      "orig_start": 168.34,
+      "orig_end": 169.32,
+      "comp_start": 107.276,
+      "comp_end": 108.256,
+      "duration": 0.98
+    },
+    {
+      "orig_start": 169.627,
+      "orig_end": 170.988,
+      "comp_start": 108.256,
+      "comp_end": 109.618,
+      "duration": 1.362
+    },
+    {
+      "orig_start": 171.831,
+      "orig_end": 172.875,
+      "comp_start": 109.618,
+      "comp_end": 110.661,
+      "duration": 1.043
+    },
+    {
+      "orig_start": 175.402,
+      "orig_end": 176.86,
+      "comp_start": 110.661,
+      "comp_end": 112.119,
+      "duration": 1.458
+    },
+    {
+      "orig_start": 177.782,
+      "orig_end": 181.677,
+      "comp_start": 112.119,
+      "comp_end": 116.014,
+      "duration": 3.895
+    },
+    {
+      "orig_start": 182.509,
+      "orig_end": 184.42,
+      "comp_start": 116.014,
+      "comp_end": 117.925,
+      "duration": 1.911
+    },
+    {
+      "orig_start": 184.923,
+      "orig_end": 186.863,
+      "comp_start": 117.925,
+      "comp_end": 119.865,
+      "duration": 1.94
+    },
+    {
+      "orig_start": 188.806,
+      "orig_end": 190.463,
+      "comp_start": 119.865,
+      "comp_end": 121.522,
+      "duration": 1.657
+    },
+    {
+      "orig_start": 191.712,
+      "orig_end": 192.113,
+      "comp_start": 121.522,
+      "comp_end": 121.923,
+      "duration": 0.401
+    },
+    {
+      "orig_start": 192.336,
+      "orig_end": 193.027,
+      "comp_start": 121.923,
+      "comp_end": 122.614,
+      "duration": 0.691
+    },
+    {
+      "orig_start": 194.766,
+      "orig_end": 196.607,
+      "comp_start": 122.614,
+      "comp_end": 124.455,
+      "duration": 1.841
+    },
+    {
+      "orig_start": 197.126,
+      "orig_end": 198.195,
+      "comp_start": 124.455,
+      "comp_end": 125.524,
+      "duration": 1.069
+    },
+    {
+      "orig_start": 198.489,
+      "orig_end": 198.892,
+      "comp_start": 125.524,
+      "comp_end": 125.928,
+      "duration": 0.404
+    },
+    {
+      "orig_start": 200.02,
+      "orig_end": 200.739,
+      "comp_start": 125.928,
+      "comp_end": 126.647,
+      "duration": 0.719
+    },
+    {
+      "orig_start": 201.084,
+      "orig_end": 202.104,
+      "comp_start": 126.647,
+      "comp_end": 127.666,
+      "duration": 1.019
+    },
+    {
+      "orig_start": 203.921,
+      "orig_end": 204.77,
+      "comp_start": 127.666,
+      "comp_end": 128.515,
+      "duration": 0.849
+    },
+    {
+      "orig_start": 207.04,
+      "orig_end": 208.004,
+      "comp_start": 128.515,
+      "comp_end": 129.479,
+      "duration": 0.964
+    },
+    {
+      "orig_start": 211.417,
+      "orig_end": 212.715,
+      "comp_start": 129.479,
+      "comp_end": 130.777,
+      "duration": 1.298
+    },
+    {
+      "orig_start": 212.959,
+      "orig_end": 216.85,
+      "comp_start": 130.777,
+      "comp_end": 134.668,
+      "duration": 3.891
+    },
+    {
+      "orig_start": 217.225,
+      "orig_end": 219.773,
+      "comp_start": 134.668,
+      "comp_end": 137.216,
+      "duration": 2.548
+    },
+    {
+      "orig_start": 220.35,
+      "orig_end": 220.895,
+      "comp_start": 137.216,
+      "comp_end": 137.761,
+      "duration": 0.545
+    },
+    {
+      "orig_start": 221.8,
+      "orig_end": 225.229,
+      "comp_start": 137.761,
+      "comp_end": 141.19,
+      "duration": 3.429
+    },
+    {
+      "orig_start": 225.598,
+      "orig_end": 228.46,
+      "comp_start": 141.19,
+      "comp_end": 144.052,
+      "duration": 2.862
+    },
+    {
+      "orig_start": 228.697,
+      "orig_end": 230.182,
+      "comp_start": 144.052,
+      "comp_end": 145.537,
+      "duration": 1.485
+    },
+    {
+      "orig_start": 231.111,
+      "orig_end": 235.565,
+      "comp_start": 145.537,
+      "comp_end": 149.991,
+      "duration": 4.454
+    },
+    {
+      "orig_start": 235.987,
+      "orig_end": 236.647,
+      "comp_start": 149.991,
+      "comp_end": 150.651,
+      "duration": 0.66
+    },
+    {
+      "orig_start": 240.166,
+      "orig_end": 240.637,
+      "comp_start": 150.651,
+      "comp_end": 151.123,
+      "duration": 0.472
+    },
+    {
+      "orig_start": 249.237,
+      "orig_end": 250.543,
+      "comp_start": 151.123,
+      "comp_end": 152.43,
+      "duration": 1.307
+    },
+    {
+      "orig_start": 251.171,
+      "orig_end": 252.055,
+      "comp_start": 152.43,
+      "comp_end": 153.314,
+      "duration": 0.884
+    },
+    {
+      "orig_start": 252.796,
+      "orig_end": 253.471,
+      "comp_start": 153.314,
+      "comp_end": 153.989,
+      "duration": 0.675
+    },
+    {
+      "orig_start": 253.778,
+      "orig_end": 256.494,
+      "comp_start": 153.989,
+      "comp_end": 156.705,
+      "duration": 2.716
+    },
+    {
+      "orig_start": 263.604,
+      "orig_end": 264.075,
+      "comp_start": 156.705,
+      "comp_end": 157.176,
+      "duration": 0.471
+    },
+    {
+      "orig_start": 266.496,
+      "orig_end": 267.687,
+      "comp_start": 157.176,
+      "comp_end": 158.366,
+      "duration": 1.19
+    },
+    {
+      "orig_start": 274.019,
+      "orig_end": 274.961,
+      "comp_start": 158.366,
+      "comp_end": 159.309,
+      "duration": 0.943
+    },
+    {
+      "orig_start": 275.817,
+      "orig_end": 276.526,
+      "comp_start": 159.309,
+      "comp_end": 160.017,
+      "duration": 0.708
+    },
+    {
+      "orig_start": 276.835,
+      "orig_end": 279.808,
+      "comp_start": 160.017,
+      "comp_end": 162.991,
+      "duration": 2.974
+    },
+    {
+      "orig_start": 280.555,
+      "orig_end": 285.347,
+      "comp_start": 162.991,
+      "comp_end": 167.783,
+      "duration": 4.792
+    },
+    {
+      "orig_start": 285.667,
+      "orig_end": 287.808,
+      "comp_start": 167.783,
+      "comp_end": 169.924,
+      "duration": 2.141
+    },
+    {
+      "orig_start": 288.14,
+      "orig_end": 288.627,
+      "comp_start": 169.924,
+      "comp_end": 170.411,
+      "duration": 0.487
+    },
+    {
+      "orig_start": 288.902,
+      "orig_end": 289.237,
+      "comp_start": 170.411,
+      "comp_end": 170.746,
+      "duration": 0.335
+    },
+    {
+      "orig_start": 295.509,
+      "orig_end": 295.951,
+      "comp_start": 170.746,
+      "comp_end": 171.188,
+      "duration": 0.442
+    },
+    {
+      "orig_start": 297.12,
+      "orig_end": 298.523,
+      "comp_start": 171.188,
+      "comp_end": 172.591,
+      "duration": 1.403
+    },
+    {
+      "orig_start": 299.628,
+      "orig_end": 300.115,
+      "comp_start": 172.591,
+      "comp_end": 173.078,
+      "duration": 0.487
+    },
+    {
+      "orig_start": 300.838,
+      "orig_end": 301.256,
+      "comp_start": 173.078,
+      "comp_end": 173.497,
+      "duration": 0.419
+    },
+    {
+      "orig_start": 301.842,
+      "orig_end": 303.222,
+      "comp_start": 173.497,
+      "comp_end": 174.877,
+      "duration": 1.38
+    },
+    {
+      "orig_start": 304.762,
+      "orig_end": 305.737,
+      "comp_start": 174.877,
+      "comp_end": 175.852,
+      "duration": 0.975
+    },
+    {
+      "orig_start": 305.956,
+      "orig_end": 309.699,
+      "comp_start": 175.852,
+      "comp_end": 179.595,
+      "duration": 3.743
+    },
+    {
+      "orig_start": 310.378,
+      "orig_end": 311.785,
+      "comp_start": 179.595,
+      "comp_end": 181.002,
+      "duration": 1.407
+    },
+    {
+      "orig_start": 313.404,
+      "orig_end": 314.525,
+      "comp_start": 181.002,
+      "comp_end": 182.123,
+      "duration": 1.121
+    },
+    {
+      "orig_start": 315.54,
+      "orig_end": 319.66,
+      "comp_start": 182.123,
+      "comp_end": 186.243,
+      "duration": 4.12
+    },
+    {
+      "orig_start": 319.943,
+      "orig_end": 322.12,
+      "comp_start": 186.243,
+      "comp_end": 188.42,
+      "duration": 2.177
+    },
+    {
+      "orig_start": 323.119,
+      "orig_end": 323.946,
+      "comp_start": 188.42,
+      "comp_end": 189.247,
+      "duration": 0.827
+    },
+    {
+      "orig_start": 325.086,
+      "orig_end": 326.84,
+      "comp_start": 189.247,
+      "comp_end": 191.001,
+      "duration": 1.754
+    },
+    {
+      "orig_start": 329.787,
+      "orig_end": 330.888,
+      "comp_start": 191.001,
+      "comp_end": 192.101,
+      "duration": 1.1
+    },
+    {
+      "orig_start": 331.17,
+      "orig_end": 331.661,
+      "comp_start": 192.101,
+      "comp_end": 192.593,
+      "duration": 0.492
+    },
+    {
+      "orig_start": 333.227,
+      "orig_end": 333.822,
+      "comp_start": 192.593,
+      "comp_end": 193.188,
+      "duration": 0.595
+    },
+    {
+      "orig_start": 335.199,
+      "orig_end": 336.595,
+      "comp_start": 193.188,
+      "comp_end": 194.583,
+      "duration": 1.395
+    },
+    {
+      "orig_start": 337.682,
+      "orig_end": 338.074,
+      "comp_start": 194.583,
+      "comp_end": 194.975,
+      "duration": 0.392
+    },
+    {
+      "orig_start": 341.179,
+      "orig_end": 342.308,
+      "comp_start": 194.975,
+      "comp_end": 196.104,
+      "duration": 1.129
+    },
+    {
+      "orig_start": 346.655,
+      "orig_end": 347.28,
+      "comp_start": 196.104,
+      "comp_end": 196.729,
+      "duration": 0.625
+    },
+    {
+      "orig_start": 348.139,
+      "orig_end": 349.363,
+      "comp_start": 196.729,
+      "comp_end": 197.953,
+      "duration": 1.224
+    },
+    {
+      "orig_start": 357.757,
+      "orig_end": 358.167,
+      "comp_start": 197.953,
+      "comp_end": 198.363,
+      "duration": 0.41
+    },
+    {
+      "orig_start": 358.602,
+      "orig_end": 364.097,
+      "comp_start": 198.363,
+      "comp_end": 203.857,
+      "duration": 5.494
+    },
+    {
+      "orig_start": 365.201,
+      "orig_end": 366.029,
+      "comp_start": 203.857,
+      "comp_end": 204.686,
+      "duration": 0.829
+    },
+    {
+      "orig_start": 367.227,
+      "orig_end": 373.303,
+      "comp_start": 204.686,
+      "comp_end": 210.762,
+      "duration": 6.076
+    },
+    {
+      "orig_start": 373.722,
+      "orig_end": 374.713,
+      "comp_start": 210.762,
+      "comp_end": 211.753,
+      "duration": 0.991
+    },
+    {
+      "orig_start": 375.726,
+      "orig_end": 379.921,
+      "comp_start": 211.753,
+      "comp_end": 215.948,
+      "duration": 4.195
+    },
+    {
+      "orig_start": 380.218,
+      "orig_end": 380.586,
+      "comp_start": 215.948,
+      "comp_end": 216.315,
+      "duration": 0.367
+    },
+    {
+      "orig_start": 381.599,
+      "orig_end": 384.56,
+      "comp_start": 216.315,
+      "comp_end": 219.276,
+      "duration": 2.961
+    },
+    {
+      "orig_start": 385.585,
+      "orig_end": 386.685,
+      "comp_start": 219.276,
+      "comp_end": 220.376,
+      "duration": 1.1
+    },
+    {
+      "orig_start": 386.972,
+      "orig_end": 387.372,
+      "comp_start": 220.376,
+      "comp_end": 220.776,
+      "duration": 0.4
+    },
+    {
+      "orig_start": 387.903,
+      "orig_end": 388.522,
+      "comp_start": 220.776,
+      "comp_end": 221.395,
+      "duration": 0.619
+    },
+    {
+      "orig_start": 389.446,
+      "orig_end": 390.267,
+      "comp_start": 221.395,
+      "comp_end": 222.216,
+      "duration": 0.821
+    },
+    {
+      "orig_start": 390.96,
+      "orig_end": 393.422,
+      "comp_start": 222.216,
+      "comp_end": 224.678,
+      "duration": 2.462
+    },
+    {
+      "orig_start": 394.252,
+      "orig_end": 395.375,
+      "comp_start": 224.678,
+      "comp_end": 225.801,
+      "duration": 1.123
+    },
+    {
+      "orig_start": 395.761,
+      "orig_end": 398.241,
+      "comp_start": 225.801,
+      "comp_end": 228.281,
+      "duration": 2.48
+    },
+    {
+      "orig_start": 398.583,
+      "orig_end": 401.364,
+      "comp_start": 228.281,
+      "comp_end": 231.061,
+      "duration": 2.78
+    },
+    {
+      "orig_start": 401.741,
+      "orig_end": 402.703,
+      "comp_start": 231.061,
+      "comp_end": 232.023,
+      "duration": 0.962
+    },
+    {
+      "orig_start": 403.638,
+      "orig_end": 405.331,
+      "comp_start": 232.023,
+      "comp_end": 233.717,
+      "duration": 1.694
+    },
+    {
+      "orig_start": 407.093,
+      "orig_end": 413.401,
+      "comp_start": 233.717,
+      "comp_end": 240.025,
+      "duration": 6.308
+    },
+    {
+      "orig_start": 413.798,
+      "orig_end": 415.006,
+      "comp_start": 240.025,
+      "comp_end": 241.234,
+      "duration": 1.209
+    },
+    {
+      "orig_start": 415.332,
+      "orig_end": 415.866,
+      "comp_start": 241.234,
+      "comp_end": 241.767,
+      "duration": 0.533
+    },
+    {
+      "orig_start": 416.086,
+      "orig_end": 416.488,
+      "comp_start": 241.767,
+      "comp_end": 242.17,
+      "duration": 0.403
+    },
+    {
+      "orig_start": 416.715,
+      "orig_end": 418.391,
+      "comp_start": 242.17,
+      "comp_end": 243.846,
+      "duration": 1.676
+    },
+    {
+      "orig_start": 418.686,
+      "orig_end": 420.089,
+      "comp_start": 243.846,
+      "comp_end": 245.249,
+      "duration": 1.403
+    },
+    {
+      "orig_start": 420.587,
+      "orig_end": 428.303,
+      "comp_start": 245.249,
+      "comp_end": 252.966,
+      "duration": 7.717
+    },
+    {
+      "orig_start": 428.82,
+      "orig_end": 429.192,
+      "comp_start": 252.966,
+      "comp_end": 253.338,
+      "duration": 0.372
+    },
+    {
+      "orig_start": 429.952,
+      "orig_end": 439.507,
+      "comp_start": 253.338,
+      "comp_end": 262.893,
+      "duration": 9.555
+    },
+    {
+      "orig_start": 440.679,
+      "orig_end": 442.599,
+      "comp_start": 262.893,
+      "comp_end": 264.813,
+      "duration": 1.92
+    },
+    {
+      "orig_start": 442.802,
+      "orig_end": 444.657,
+      "comp_start": 264.813,
+      "comp_end": 266.668,
+      "duration": 1.855
+    },
+    {
+      "orig_start": 445.041,
+      "orig_end": 452.072,
+      "comp_start": 266.668,
+      "comp_end": 273.7,
+      "duration": 7.032
+    },
+    {
+      "orig_start": 452.316,
+      "orig_end": 455.366,
+      "comp_start": 273.7,
+      "comp_end": 276.75,
+      "duration": 3.05
+    },
+    {
+      "orig_start": 456.359,
+      "orig_end": 459.143,
+      "comp_start": 276.75,
+      "comp_end": 279.534,
+      "duration": 2.784
+    },
+    {
+      "orig_start": 460.984,
+      "orig_end": 462.238,
+      "comp_start": 279.534,
+      "comp_end": 280.788,
+      "duration": 1.254
+    }
+  ]
+}

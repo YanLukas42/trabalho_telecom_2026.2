@@ -1,0 +1,6710 @@
+{
+  "arquivo": "999.mp4",
+  "total_palavras": 838,
+  "palavras": [
+    {
+      "palavra": "Alexander",
+      "quemfala": "Juíza",
+      "segundos_inicio": 0.0,
+      "segundos_fim": 0.5,
+      "timestamp": "00:00.000 - 00:00.500",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Souza",
+      "quemfala": "Juíza",
+      "segundos_inicio": 0.5,
+      "segundos_fim": 0.81,
+      "timestamp": "00:00.500 - 00:00.810",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Silva,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 0.81,
+      "segundos_fim": 1.131,
+      "timestamp": "00:00.810 - 00:01.131",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "essa",
+      "quemfala": "Juíza",
+      "segundos_inicio": 1.131,
+      "segundos_fim": 1.362,
+      "timestamp": "00:01.131 - 00:01.362",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "é",
+      "quemfala": "Juíza",
+      "segundos_inicio": 1.362,
+      "segundos_fim": 1.441,
+      "timestamp": "00:01.362 - 00:01.441",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "uma",
+      "quemfala": "Juíza",
+      "segundos_inicio": 1.441,
+      "segundos_fim": 1.636,
+      "timestamp": "00:01.441 - 00:01.636",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "audiência",
+      "quemfala": "Juíza",
+      "segundos_inicio": 1.636,
+      "segundos_fim": 2.22,
+      "timestamp": "00:01.636 - 00:02.220",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "de",
+      "quemfala": "Juíza",
+      "segundos_inicio": 2.22,
+      "segundos_fim": 2.336,
+      "timestamp": "00:02.220 - 00:02.336",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "custódia.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 2.336,
+      "segundos_fim": 2.894,
+      "timestamp": "00:02.336 - 00:02.894",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "A",
+      "quemfala": "Juíza",
+      "segundos_inicio": 2.894,
+      "segundos_fim": 2.973,
+      "timestamp": "00:02.894 - 00:02.973",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "audiência",
+      "quemfala": "Juíza",
+      "segundos_inicio": 2.973,
+      "segundos_fim": 3.557,
+      "timestamp": "00:02.973 - 00:03.557",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "de",
+      "quemfala": "Juíza",
+      "segundos_inicio": 3.557,
+      "segundos_fim": 3.673,
+      "timestamp": "00:03.557 - 00:03.673",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "custódia",
+      "quemfala": "Juíza",
+      "segundos_inicio": 3.673,
+      "segundos_fim": 4.136,
+      "timestamp": "00:03.673 - 00:04.136",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "tem",
+      "quemfala": "Juíza",
+      "segundos_inicio": 4.136,
+      "segundos_fim": 4.289,
+      "timestamp": "00:04.136 - 00:04.289",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "por",
+      "quemfala": "Juíza",
+      "segundos_inicio": 4.289,
+      "segundos_fim": 4.442,
+      "timestamp": "00:04.289 - 00:04.442",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "objetivo",
+      "quemfala": "Juíza",
+      "segundos_inicio": 4.442,
+      "segundos_fim": 4.905,
+      "timestamp": "00:04.442 - 00:04.905",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "apenas",
+      "quemfala": "Juíza",
+      "segundos_inicio": 4.905,
+      "segundos_fim": 5.252,
+      "timestamp": "00:04.905 - 00:05.252",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "verificar",
+      "quemfala": "Juíza",
+      "segundos_inicio": 5.252,
+      "segundos_fim": 5.752,
+      "timestamp": "00:05.252 - 00:05.752",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Juíza",
+      "segundos_inicio": 5.752,
+      "segundos_fim": 5.831,
+      "timestamp": "00:05.752 - 00:05.831",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "prisão",
+      "quemfala": "Juíza",
+      "segundos_inicio": 5.831,
+      "segundos_fim": 6.178,
+      "timestamp": "00:05.831 - 00:06.178",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "do",
+      "quemfala": "Juíza",
+      "segundos_inicio": 6.178,
+      "segundos_fim": 6.294,
+      "timestamp": "00:06.178 - 00:06.294",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "senhor,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 6.294,
+      "segundos_fim": 6.652,
+      "timestamp": "00:06.294 - 00:06.652",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "se",
+      "quemfala": "Juíza",
+      "segundos_inicio": 6.652,
+      "segundos_fim": 6.768,
+      "timestamp": "00:06.652 - 00:06.768",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 6.768,
+      "segundos_fim": 6.847,
+      "timestamp": "00:06.768 - 00:06.847",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "senhor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 6.847,
+      "segundos_fim": 7.152,
+      "timestamp": "00:06.847 - 00:07.152",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "cometeu",
+      "quemfala": "Juíza",
+      "segundos_inicio": 7.152,
+      "segundos_fim": 7.578,
+      "timestamp": "00:07.152 - 00:07.578",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 7.578,
+      "segundos_fim": 7.657,
+      "timestamp": "00:07.578 - 00:07.657",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "crime",
+      "quemfala": "Juíza",
+      "segundos_inicio": 7.657,
+      "segundos_fim": 7.925,
+      "timestamp": "00:07.657 - 00:07.925",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "ou",
+      "quemfala": "Juíza",
+      "segundos_inicio": 7.925,
+      "segundos_fim": 8.083,
+      "timestamp": "00:07.925 - 00:08.083",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "não,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 8.083,
+      "segundos_fim": 8.33,
+      "timestamp": "00:08.083 - 00:08.330",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "não",
+      "quemfala": "Juíza",
+      "segundos_inicio": 8.33,
+      "segundos_fim": 8.525,
+      "timestamp": "00:08.330 - 00:08.525",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "vai",
+      "quemfala": "Juíza",
+      "segundos_inicio": 8.525,
+      "segundos_fim": 8.72,
+      "timestamp": "00:08.525 - 00:08.720",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "ser",
+      "quemfala": "Juíza",
+      "segundos_inicio": 8.72,
+      "segundos_fim": 8.873,
+      "timestamp": "00:08.720 - 00:08.873",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "verificado",
+      "quemfala": "Juíza",
+      "segundos_inicio": 8.873,
+      "segundos_fim": 9.452,
+      "timestamp": "00:08.873 - 00:09.452",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "agora,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 9.452,
+      "segundos_fim": 9.815,
+      "timestamp": "00:09.452 - 00:09.815",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "tá?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 9.815,
+      "segundos_fim": 10.02,
+      "timestamp": "00:09.815 - 00:10.020",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "O",
+      "quemfala": "Juíza",
+      "segundos_inicio": 10.02,
+      "segundos_fim": 10.091,
+      "timestamp": "00:10.020 - 00:10.091",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "senhor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 10.091,
+      "segundos_fim": 10.364,
+      "timestamp": "00:10.091 - 00:10.364",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "tem",
+      "quemfala": "Juíza",
+      "segundos_inicio": 10.364,
+      "segundos_fim": 10.5,
+      "timestamp": "00:10.364 - 00:10.500",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "direito",
+      "quemfala": "Juíza",
+      "segundos_inicio": 10.5,
+      "segundos_fim": 10.881,
+      "timestamp": "00:10.500 - 00:10.881",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Juíza",
+      "segundos_inicio": 10.881,
+      "segundos_fim": 10.952,
+      "timestamp": "00:10.881 - 00:10.952",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "silêncio,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 10.952,
+      "segundos_fim": 11.413,
+      "timestamp": "00:10.952 - 00:11.413",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 11.413,
+      "segundos_fim": 11.484,
+      "timestamp": "00:11.413 - 00:11.484",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "silêncio",
+      "quemfala": "Juíza",
+      "segundos_inicio": 11.484,
+      "segundos_fim": 11.898,
+      "timestamp": "00:11.484 - 00:11.898",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "não",
+      "quemfala": "Juíza",
+      "segundos_inicio": 11.898,
+      "segundos_fim": 12.072,
+      "timestamp": "00:11.898 - 00:12.072",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "será",
+      "quemfala": "Juíza",
+      "segundos_inicio": 12.072,
+      "segundos_fim": 12.279,
+      "timestamp": "00:12.072 - 00:12.279",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "editado",
+      "quemfala": "Juíza",
+      "segundos_inicio": 12.279,
+      "segundos_fim": 12.66,
+      "timestamp": "00:12.279 - 00:12.660",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "em",
+      "quemfala": "Juíza",
+      "segundos_inicio": 12.66,
+      "segundos_fim": 12.763,
+      "timestamp": "00:12.660 - 00:12.763",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "prejuízo",
+      "quemfala": "Juíza",
+      "segundos_inicio": 12.763,
+      "segundos_fim": 13.177,
+      "timestamp": "00:12.763 - 00:13.177",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "da",
+      "quemfala": "Juíza",
+      "segundos_inicio": 13.177,
+      "segundos_fim": 13.28,
+      "timestamp": "00:13.177 - 00:13.280",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "sua",
+      "quemfala": "Juíza",
+      "segundos_inicio": 13.28,
+      "segundos_fim": 13.454,
+      "timestamp": "00:13.280 - 00:13.454",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "defesa,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 13.454,
+      "segundos_fim": 13.811,
+      "timestamp": "00:13.454 - 00:13.811",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "mas",
+      "quemfala": "Juíza",
+      "segundos_inicio": 13.811,
+      "segundos_fim": 13.947,
+      "timestamp": "00:13.811 - 00:13.947",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "é",
+      "quemfala": "Juíza",
+      "segundos_inicio": 13.947,
+      "segundos_fim": 14.018,
+      "timestamp": "00:13.947 - 00:14.018",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "uma",
+      "quemfala": "Juíza",
+      "segundos_inicio": 14.018,
+      "segundos_fim": 14.192,
+      "timestamp": "00:14.018 - 00:14.192",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "oportunidade",
+      "quemfala": "Juíza",
+      "segundos_inicio": 14.192,
+      "segundos_fim": 14.813,
+      "timestamp": "00:14.192 - 00:14.813",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "de",
+      "quemfala": "Juíza",
+      "segundos_inicio": 14.813,
+      "segundos_fim": 14.916,
+      "timestamp": "00:14.813 - 00:14.916",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 14.916,
+      "segundos_fim": 14.987,
+      "timestamp": "00:14.916 - 00:14.987",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "senhor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 14.987,
+      "segundos_fim": 15.26,
+      "timestamp": "00:14.987 - 00:15.260",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "falar",
+      "quemfala": "Juíza",
+      "segundos_inicio": 15.26,
+      "segundos_fim": 15.5,
+      "timestamp": "00:15.260 - 00:15.500",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "sobre",
+      "quemfala": "Juíza",
+      "segundos_inicio": 15.5,
+      "segundos_fim": 15.74,
+      "timestamp": "00:15.500 - 00:15.740",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Juíza",
+      "segundos_inicio": 15.74,
+      "segundos_fim": 15.811,
+      "timestamp": "00:15.740 - 00:15.811",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "prisão,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 15.811,
+      "segundos_fim": 16.168,
+      "timestamp": "00:15.811 - 00:16.168",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "tá",
+      "quemfala": "Juíza",
+      "segundos_inicio": 16.168,
+      "segundos_fim": 16.271,
+      "timestamp": "00:16.168 - 00:16.271",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "bom?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 16.271,
+      "segundos_fim": 16.49,
+      "timestamp": "00:16.271 - 00:16.490",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Vou",
+      "quemfala": "Juíza",
+      "segundos_inicio": 16.99,
+      "segundos_fim": 17.148,
+      "timestamp": "00:16.990 - 00:17.148",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "fazer",
+      "quemfala": "Juíza",
+      "segundos_inicio": 17.148,
+      "segundos_fim": 17.365,
+      "timestamp": "00:17.148 - 00:17.365",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "algumas",
+      "quemfala": "Juíza",
+      "segundos_inicio": 17.365,
+      "segundos_fim": 17.676,
+      "timestamp": "00:17.365 - 00:17.676",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "perguntas",
+      "quemfala": "Juíza",
+      "segundos_inicio": 17.676,
+      "segundos_fim": 18.047,
+      "timestamp": "00:17.676 - 00:18.047",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "pessoais",
+      "quemfala": "Juíza",
+      "segundos_inicio": 18.047,
+      "segundos_fim": 18.422,
+      "timestamp": "00:18.047 - 00:18.422",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "e",
+      "quemfala": "Juíza",
+      "segundos_inicio": 18.422,
+      "segundos_fim": 18.486,
+      "timestamp": "00:18.422 - 00:18.486",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "depois",
+      "quemfala": "Juíza",
+      "segundos_inicio": 18.486,
+      "segundos_fim": 18.767,
+      "timestamp": "00:18.486 - 00:18.767",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "eu",
+      "quemfala": "Juíza",
+      "segundos_inicio": 18.767,
+      "segundos_fim": 18.895,
+      "timestamp": "00:18.767 - 00:18.895",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "vou",
+      "quemfala": "Juíza",
+      "segundos_inicio": 18.895,
+      "segundos_fim": 19.053,
+      "timestamp": "00:18.895 - 00:19.053",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "para",
+      "quemfala": "Juíza",
+      "segundos_inicio": 19.053,
+      "segundos_fim": 19.24,
+      "timestamp": "00:19.053 - 00:19.240",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Juíza",
+      "segundos_inicio": 19.24,
+      "segundos_fim": 19.304,
+      "timestamp": "00:19.240 - 00:19.304",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "questão",
+      "quemfala": "Juíza",
+      "segundos_inicio": 19.304,
+      "segundos_fim": 19.649,
+      "timestamp": "00:19.304 - 00:19.649",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "da",
+      "quemfala": "Juíza",
+      "segundos_inicio": 19.649,
+      "segundos_fim": 19.743,
+      "timestamp": "00:19.649 - 00:19.743",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "prisão.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 19.743,
+      "segundos_fim": 20.1,
+      "timestamp": "00:19.743 - 00:20.100",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Nome",
+      "quemfala": "Juíza",
+      "segundos_inicio": 20.3,
+      "segundos_fim": 20.524,
+      "timestamp": "00:20.300 - 00:20.524",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "completo,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 20.524,
+      "segundos_fim": 20.982,
+      "timestamp": "00:20.524 - 00:20.982",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Bruno",
+      "quemfala": "Juíza",
+      "segundos_inicio": 20.982,
+      "segundos_fim": 21.242,
+      "timestamp": "00:20.982 - 00:21.242",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Alexander",
+      "quemfala": "Juíza",
+      "segundos_inicio": 21.242,
+      "segundos_fim": 21.726,
+      "timestamp": "00:21.242 - 00:21.726",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Souza",
+      "quemfala": "Juíza",
+      "segundos_inicio": 21.726,
+      "segundos_fim": 22.026,
+      "timestamp": "00:21.726 - 00:22.026",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Silva,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 22.026,
+      "segundos_fim": 22.337,
+      "timestamp": "00:22.026 - 00:22.337",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "correto?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 22.337,
+      "segundos_fim": 22.8,
+      "timestamp": "00:22.337 - 00:22.800",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Que",
+      "quemfala": "Juíza",
+      "segundos_inicio": 23.86,
+      "segundos_fim": 24.014,
+      "timestamp": "00:23.860 - 00:24.014",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "cor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 24.014,
+      "segundos_fim": 24.134,
+      "timestamp": "00:24.014 - 00:24.134",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Juíza",
+      "segundos_inicio": 24.134,
+      "segundos_fim": 24.288,
+      "timestamp": "00:24.134 - 00:24.288",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 24.288,
+      "segundos_fim": 24.35,
+      "timestamp": "00:24.288 - 00:24.350",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "senhor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 24.35,
+      "segundos_fim": 24.591,
+      "timestamp": "00:24.350 - 00:24.591",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "se",
+      "quemfala": "Juíza",
+      "segundos_inicio": 24.591,
+      "segundos_fim": 24.682,
+      "timestamp": "00:24.591 - 00:24.682",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "declara?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 24.682,
+      "segundos_fim": 25.06,
+      "timestamp": "00:24.682 - 00:25.060",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Pardo.",
+      "quemfala": "Réu",
+      "segundos_inicio": 28.01,
+      "segundos_fim": 28.54,
+      "timestamp": "00:28.010 - 00:28.540",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "O",
+      "quemfala": "Juíza",
+      "segundos_inicio": 29.39,
+      "segundos_fim": 29.459,
+      "timestamp": "00:29.390 - 00:29.459",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "senhor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 29.459,
+      "segundos_fim": 29.726,
+      "timestamp": "00:29.459 - 00:29.726",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "é",
+      "quemfala": "Juíza",
+      "segundos_inicio": 29.726,
+      "segundos_fim": 29.795,
+      "timestamp": "00:29.726 - 00:29.795",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "natural",
+      "quemfala": "Juíza",
+      "segundos_inicio": 29.795,
+      "segundos_fim": 30.131,
+      "timestamp": "00:29.795 - 00:30.131",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "de",
+      "quemfala": "Juíza",
+      "segundos_inicio": 30.131,
+      "segundos_fim": 30.232,
+      "timestamp": "00:30.131 - 00:30.232",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Juíza",
+      "segundos_inicio": 30.232,
+      "segundos_fim": 30.402,
+      "timestamp": "00:30.232 - 00:30.402",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "cidade?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 30.402,
+      "segundos_fim": 30.79,
+      "timestamp": "00:30.402 - 00:30.790",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "São",
+      "quemfala": "Réu",
+      "segundos_inicio": 31.58,
+      "segundos_fim": 31.742,
+      "timestamp": "00:31.580 - 00:31.742",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Paulo.",
+      "quemfala": "Réu",
+      "segundos_inicio": 31.742,
+      "segundos_fim": 32.08,
+      "timestamp": "00:31.742 - 00:32.080",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "São",
+      "quemfala": "Juíza",
+      "segundos_inicio": 32.48,
+      "segundos_fim": 32.642,
+      "timestamp": "00:32.480 - 00:32.642",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Paulo.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 32.642,
+      "segundos_fim": 32.98,
+      "timestamp": "00:32.642 - 00:32.980",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Ah,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 34.55,
+      "segundos_fim": 34.771,
+      "timestamp": "00:34.550 - 00:34.771",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "qual",
+      "quemfala": "Juíza",
+      "segundos_inicio": 34.771,
+      "segundos_fim": 35.075,
+      "timestamp": "00:34.771 - 00:35.075",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Juíza",
+      "segundos_inicio": 35.075,
+      "segundos_fim": 35.33,
+      "timestamp": "00:35.075 - 00:35.330",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "é",
+      "quemfala": "Juíza",
+      "segundos_inicio": 35.33,
+      "segundos_fim": 35.433,
+      "timestamp": "00:35.330 - 00:35.433",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 35.433,
+      "segundos_fim": 35.536,
+      "timestamp": "00:35.433 - 00:35.536",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "telefone",
+      "quemfala": "Juíza",
+      "segundos_inicio": 35.536,
+      "segundos_fim": 36.143,
+      "timestamp": "00:35.536 - 00:36.143",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "do",
+      "quemfala": "Juíza",
+      "segundos_inicio": 36.143,
+      "segundos_fim": 36.295,
+      "timestamp": "00:36.143 - 00:36.295",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "senhor?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 36.295,
+      "segundos_fim": 36.82,
+      "timestamp": "00:36.295 - 00:36.820",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "11",
+      "quemfala": "Réu",
+      "segundos_inicio": 38.41,
+      "segundos_fim": 38.787,
+      "timestamp": "00:38.410 - 00:38.787",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "20",
+      "quemfala": "Réu",
+      "segundos_inicio": 38.787,
+      "segundos_fim": 39.164,
+      "timestamp": "00:38.787 - 00:39.164",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "74",
+      "quemfala": "Réu",
+      "segundos_inicio": 39.164,
+      "segundos_fim": 39.541,
+      "timestamp": "00:39.164 - 00:39.541",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "70",
+      "quemfala": "Réu",
+      "segundos_inicio": 39.541,
+      "segundos_fim": 39.918,
+      "timestamp": "00:39.541 - 00:39.918",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "30.",
+      "quemfala": "Réu",
+      "segundos_inicio": 39.918,
+      "segundos_fim": 40.78,
+      "timestamp": "00:39.918 - 00:40.780",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "11",
+      "quemfala": "Juíza",
+      "segundos_inicio": 41.44,
+      "segundos_fim": 42.073,
+      "timestamp": "00:41.440 - 00:42.073",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "20",
+      "quemfala": "Juíza",
+      "segundos_inicio": 42.073,
+      "segundos_fim": 42.706,
+      "timestamp": "00:42.073 - 00:42.706",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "74",
+      "quemfala": "Juíza",
+      "segundos_inicio": 42.706,
+      "segundos_fim": 43.339,
+      "timestamp": "00:42.706 - 00:43.339",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "70",
+      "quemfala": "Juíza",
+      "segundos_inicio": 43.339,
+      "segundos_fim": 43.972,
+      "timestamp": "00:43.339 - 00:43.972",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "30.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 43.972,
+      "segundos_fim": 45.42,
+      "timestamp": "00:43.972 - 00:45.420",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Uhum.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 45.72,
+      "segundos_fim": 45.963,
+      "timestamp": "00:45.720 - 00:45.963",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "O",
+      "quemfala": "Juíza",
+      "segundos_inicio": 45.963,
+      "segundos_fim": 46.022,
+      "timestamp": "00:45.963 - 00:46.022",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "senhor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 46.022,
+      "segundos_fim": 46.249,
+      "timestamp": "00:46.022 - 00:46.249",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "tem",
+      "quemfala": "Juíza",
+      "segundos_inicio": 46.249,
+      "segundos_fim": 46.363,
+      "timestamp": "00:46.249 - 00:46.363",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "algum",
+      "quemfala": "Juíza",
+      "segundos_inicio": 46.363,
+      "segundos_fim": 46.563,
+      "timestamp": "00:46.363 - 00:46.563",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "celular?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 46.563,
+      "segundos_fim": 46.92,
+      "timestamp": "00:46.563 - 00:46.920",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Não,",
+      "quemfala": "Réu",
+      "segundos_inicio": 47.44,
+      "segundos_fim": 47.698,
+      "timestamp": "00:47.440 - 00:47.698",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "não",
+      "quemfala": "Réu",
+      "segundos_inicio": 47.698,
+      "segundos_fim": 47.901,
+      "timestamp": "00:47.698 - 00:47.901",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "tem",
+      "quemfala": "Réu",
+      "segundos_inicio": 47.901,
+      "segundos_fim": 48.06,
+      "timestamp": "00:47.901 - 00:48.060",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "de",
+      "quemfala": "Réu",
+      "segundos_inicio": 48.06,
+      "segundos_fim": 48.181,
+      "timestamp": "00:48.060 - 00:48.181",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "cor",
+      "quemfala": "Réu",
+      "segundos_inicio": 48.181,
+      "segundos_fim": 48.34,
+      "timestamp": "00:48.181 - 00:48.340",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "não.",
+      "quemfala": "Réu",
+      "segundos_inicio": 48.34,
+      "segundos_fim": 48.64,
+      "timestamp": "00:48.340 - 00:48.640",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Ou",
+      "quemfala": "Juíza",
+      "segundos_inicio": 49.04,
+      "segundos_fim": 49.261,
+      "timestamp": "00:49.040 - 00:49.261",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 49.261,
+      "segundos_fim": 49.372,
+      "timestamp": "00:49.261 - 00:49.372",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "e-mail?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 49.372,
+      "segundos_fim": 49.94,
+      "timestamp": "00:49.372 - 00:49.940",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "É,",
+      "quemfala": "Réu",
+      "segundos_inicio": 50.14,
+      "segundos_fim": 50.459,
+      "timestamp": "00:50.140 - 00:50.459",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "também",
+      "quemfala": "Réu",
+      "segundos_inicio": 50.459,
+      "segundos_fim": 51.198,
+      "timestamp": "00:50.459 - 00:51.198",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "não",
+      "quemfala": "Réu",
+      "segundos_inicio": 51.198,
+      "segundos_fim": 51.67,
+      "timestamp": "00:51.198 - 00:51.670",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "consigo.",
+      "quemfala": "Réu",
+      "segundos_inicio": 51.67,
+      "segundos_fim": 52.83,
+      "timestamp": "00:51.670 - 00:52.830",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Não,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 52.93,
+      "segundos_fim": 53.084,
+      "timestamp": "00:52.930 - 00:53.084",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "se",
+      "quemfala": "Juíza",
+      "segundos_inicio": 53.084,
+      "segundos_fim": 53.156,
+      "timestamp": "00:53.084 - 00:53.156",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "não",
+      "quemfala": "Juíza",
+      "segundos_inicio": 53.156,
+      "segundos_fim": 53.277,
+      "timestamp": "00:53.156 - 00:53.277",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "souber",
+      "quemfala": "Juíza",
+      "segundos_inicio": 53.277,
+      "segundos_fim": 53.493,
+      "timestamp": "00:53.277 - 00:53.493",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "não",
+      "quemfala": "Juíza",
+      "segundos_inicio": 53.493,
+      "segundos_fim": 53.614,
+      "timestamp": "00:53.493 - 00:53.614",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "tem",
+      "quemfala": "Juíza",
+      "segundos_inicio": 53.614,
+      "segundos_fim": 53.709,
+      "timestamp": "00:53.614 - 00:53.709",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "problema.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 53.709,
+      "segundos_fim": 54.03,
+      "timestamp": "00:53.709 - 00:54.030",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Não,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 54.33,
+      "segundos_fim": 54.576,
+      "timestamp": "00:54.330 - 00:54.576",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "não",
+      "quemfala": "Juíza",
+      "segundos_inicio": 54.576,
+      "segundos_fim": 54.769,
+      "timestamp": "00:54.576 - 00:54.769",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "se",
+      "quemfala": "Juíza",
+      "segundos_inicio": 54.769,
+      "segundos_fim": 54.884,
+      "timestamp": "00:54.769 - 00:54.884",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "recorda",
+      "quemfala": "Juíza",
+      "segundos_inicio": 54.884,
+      "segundos_fim": 55.265,
+      "timestamp": "00:54.884 - 00:55.265",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "do",
+      "quemfala": "Juíza",
+      "segundos_inicio": 55.265,
+      "segundos_fim": 55.38,
+      "timestamp": "00:55.265 - 00:55.380",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "celular",
+      "quemfala": "Juíza",
+      "segundos_inicio": 55.38,
+      "segundos_fim": 55.761,
+      "timestamp": "00:55.380 - 00:55.761",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "nem",
+      "quemfala": "Juíza",
+      "segundos_inicio": 55.761,
+      "segundos_fim": 55.912,
+      "timestamp": "00:55.761 - 00:55.912",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "do",
+      "quemfala": "Juíza",
+      "segundos_inicio": 55.912,
+      "segundos_fim": 56.027,
+      "timestamp": "00:55.912 - 00:56.027",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "e-mail.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 56.027,
+      "segundos_fim": 56.43,
+      "timestamp": "00:56.027 - 00:56.430",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Tá.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 65.06,
+      "segundos_fim": 65.347,
+      "timestamp": "01:05.060 - 01:05.347",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "É,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 65.347,
+      "segundos_fim": 65.526,
+      "timestamp": "01:05.347 - 01:05.526",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 65.526,
+      "segundos_fim": 65.633,
+      "timestamp": "01:05.526 - 01:05.633",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "nome",
+      "quemfala": "Juíza",
+      "segundos_inicio": 65.633,
+      "segundos_fim": 65.948,
+      "timestamp": "01:05.633 - 01:05.948",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "da",
+      "quemfala": "Juíza",
+      "segundos_inicio": 65.948,
+      "segundos_fim": 66.106,
+      "timestamp": "01:05.948 - 01:06.106",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "mãe",
+      "quemfala": "Juíza",
+      "segundos_inicio": 66.106,
+      "segundos_fim": 66.371,
+      "timestamp": "01:06.106 - 01:06.371",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "e",
+      "quemfala": "Juíza",
+      "segundos_inicio": 66.371,
+      "segundos_fim": 66.478,
+      "timestamp": "01:06.371 - 01:06.478",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "do",
+      "quemfala": "Juíza",
+      "segundos_inicio": 66.478,
+      "segundos_fim": 66.636,
+      "timestamp": "01:06.478 - 01:06.636",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "pai?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 66.636,
+      "segundos_fim": 67.03,
+      "timestamp": "01:06.636 - 01:07.030",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "É,",
+      "quemfala": "Réu",
+      "segundos_inicio": 67.43,
+      "segundos_fim": 67.596,
+      "timestamp": "01:07.430 - 01:07.596",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Gislene",
+      "quemfala": "Réu",
+      "segundos_inicio": 67.596,
+      "segundos_fim": 68.081,
+      "timestamp": "01:07.596 - 01:08.081",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "e",
+      "quemfala": "Réu",
+      "segundos_inicio": 68.081,
+      "segundos_fim": 68.181,
+      "timestamp": "01:08.081 - 01:08.181",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Elias",
+      "quemfala": "Réu",
+      "segundos_inicio": 68.181,
+      "segundos_fim": 68.573,
+      "timestamp": "01:08.181 - 01:08.573",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "de",
+      "quemfala": "Réu",
+      "segundos_inicio": 68.573,
+      "segundos_fim": 68.719,
+      "timestamp": "01:08.573 - 01:08.719",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Souza.",
+      "quemfala": "Réu",
+      "segundos_inicio": 68.719,
+      "segundos_fim": 69.23,
+      "timestamp": "01:08.719 - 01:09.230",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Gislene",
+      "quemfala": "Juíza",
+      "segundos_inicio": 69.87,
+      "segundos_fim": 70.376,
+      "timestamp": "01:09.870 - 01:10.376",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Elias",
+      "quemfala": "Juíza",
+      "segundos_inicio": 70.376,
+      "segundos_fim": 70.785,
+      "timestamp": "01:10.376 - 01:10.785",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "de",
+      "quemfala": "Juíza",
+      "segundos_inicio": 70.785,
+      "segundos_fim": 70.937,
+      "timestamp": "01:10.785 - 01:10.937",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Souza.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 70.937,
+      "segundos_fim": 71.47,
+      "timestamp": "01:10.937 - 01:11.470",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "O",
+      "quemfala": "Juíza",
+      "segundos_inicio": 73.14,
+      "segundos_fim": 73.218,
+      "timestamp": "01:13.140 - 01:13.218",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "nome",
+      "quemfala": "Juíza",
+      "segundos_inicio": 73.218,
+      "segundos_fim": 73.447,
+      "timestamp": "01:13.218 - 01:13.447",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "do",
+      "quemfala": "Juíza",
+      "segundos_inicio": 73.447,
+      "segundos_fim": 73.561,
+      "timestamp": "01:13.447 - 01:13.561",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "pai",
+      "quemfala": "Juíza",
+      "segundos_inicio": 73.561,
+      "segundos_fim": 73.753,
+      "timestamp": "01:13.561 - 01:13.753",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "não",
+      "quemfala": "Juíza",
+      "segundos_inicio": 73.753,
+      "segundos_fim": 73.945,
+      "timestamp": "01:13.753 - 01:13.945",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "consta?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 73.945,
+      "segundos_fim": 74.34,
+      "timestamp": "01:13.945 - 01:14.340",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Carlos",
+      "quemfala": "Réu",
+      "segundos_inicio": 74.74,
+      "segundos_fim": 75.244,
+      "timestamp": "01:14.740 - 01:15.244",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Roberto",
+      "quemfala": "Réu",
+      "segundos_inicio": 75.244,
+      "segundos_fim": 75.879,
+      "timestamp": "01:15.244 - 01:15.879",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Pereira.",
+      "quemfala": "Réu",
+      "segundos_inicio": 75.879,
+      "segundos_fim": 76.74,
+      "timestamp": "01:15.879 - 01:16.740",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Então",
+      "quemfala": "Juíza",
+      "segundos_inicio": 76.94,
+      "segundos_fim": 77.394,
+      "timestamp": "01:16.940 - 01:17.394",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Gislene",
+      "quemfala": "Juíza",
+      "segundos_inicio": 77.394,
+      "segundos_fim": 77.956,
+      "timestamp": "01:17.394 - 01:17.956",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Elias",
+      "quemfala": "Juíza",
+      "segundos_inicio": 77.956,
+      "segundos_fim": 78.41,
+      "timestamp": "01:17.956 - 01:18.410",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "de",
+      "quemfala": "Juíza",
+      "segundos_inicio": 78.41,
+      "segundos_fim": 78.579,
+      "timestamp": "01:18.410 - 01:18.579",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Souza",
+      "quemfala": "Juíza",
+      "segundos_inicio": 78.579,
+      "segundos_fim": 79.033,
+      "timestamp": "01:18.579 - 01:19.033",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "e",
+      "quemfala": "Juíza",
+      "segundos_inicio": 79.033,
+      "segundos_fim": 79.148,
+      "timestamp": "01:19.033 - 01:19.148",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Carlos",
+      "quemfala": "Juíza",
+      "segundos_inicio": 79.148,
+      "segundos_fim": 79.594,
+      "timestamp": "01:19.148 - 01:19.594",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Aberto...",
+      "quemfala": "Juíza",
+      "segundos_inicio": 79.594,
+      "segundos_fim": 80.24,
+      "timestamp": "01:19.594 - 01:20.240",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Roberto.",
+      "quemfala": "Réu",
+      "segundos_inicio": 80.54,
+      "segundos_fim": 81.04,
+      "timestamp": "01:20.540 - 01:21.040",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Carlos",
+      "quemfala": "Juíza",
+      "segundos_inicio": 81.54,
+      "segundos_fim": 82.332,
+      "timestamp": "01:21.540 - 01:22.332",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Roberto",
+      "quemfala": "Juíza",
+      "segundos_inicio": 82.332,
+      "segundos_fim": 83.329,
+      "timestamp": "01:22.332 - 01:23.329",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Pereira",
+      "quemfala": "Juíza",
+      "segundos_inicio": 83.329,
+      "segundos_fim": 84.436,
+      "timestamp": "01:23.329 - 01:24.436",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "da",
+      "quemfala": "Juíza",
+      "segundos_inicio": 84.436,
+      "segundos_fim": 84.737,
+      "timestamp": "01:24.436 - 01:24.737",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Silva.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 84.737,
+      "segundos_fim": 85.68,
+      "timestamp": "01:24.737 - 01:25.680",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Da",
+      "quemfala": "Réu",
+      "segundos_inicio": 85.88,
+      "segundos_fim": 86.446,
+      "timestamp": "01:25.880 - 01:26.446",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Silva.",
+      "quemfala": "Réu",
+      "segundos_inicio": 86.446,
+      "segundos_fim": 88.22,
+      "timestamp": "01:26.446 - 01:28.220",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Estado",
+      "quemfala": "Juíza",
+      "segundos_inicio": 88.42,
+      "segundos_fim": 88.714,
+      "timestamp": "01:28.420 - 01:28.714",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "de",
+      "quemfala": "Juíza",
+      "segundos_inicio": 88.714,
+      "segundos_fim": 88.812,
+      "timestamp": "01:28.714 - 01:28.812",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "São",
+      "quemfala": "Juíza",
+      "segundos_inicio": 88.812,
+      "segundos_fim": 88.977,
+      "timestamp": "01:28.812 - 01:28.977",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Paulo.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 88.977,
+      "segundos_fim": 89.32,
+      "timestamp": "01:28.977 - 01:29.320",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Estado",
+      "quemfala": "Juíza",
+      "segundos_inicio": 89.42,
+      "segundos_fim": 89.904,
+      "timestamp": "01:29.420 - 01:29.904",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "civil?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 89.904,
+      "segundos_fim": 90.41,
+      "timestamp": "01:29.904 - 01:30.410",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Casado.",
+      "quemfala": "Réu",
+      "segundos_inicio": 90.61,
+      "segundos_fim": 91.82,
+      "timestamp": "01:30.610 - 01:31.820",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Casado.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 92.02,
+      "segundos_fim": 93.82,
+      "timestamp": "01:32.020 - 01:33.820",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "RG?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 94.02,
+      "segundos_fim": 94.32,
+      "timestamp": "01:34.020 - 01:34.320",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "37",
+      "quemfala": "Réu",
+      "segundos_inicio": 95.2,
+      "segundos_fim": 96.024,
+      "timestamp": "01:35.200 - 01:36.024",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "101",
+      "quemfala": "Réu",
+      "segundos_inicio": 96.024,
+      "segundos_fim": 97.261,
+      "timestamp": "01:36.024 - 01:37.261",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "914-X.",
+      "quemfala": "Réu",
+      "segundos_inicio": 97.261,
+      "segundos_fim": 99.97,
+      "timestamp": "01:37.261 - 01:39.970",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "São",
+      "quemfala": "Juíza",
+      "segundos_inicio": 100.27,
+      "segundos_fim": 100.81,
+      "timestamp": "01:40.270 - 01:40.810",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Paulo,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 100.81,
+      "segundos_fim": 101.817,
+      "timestamp": "01:40.810 - 01:41.817",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "né?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 101.817,
+      "segundos_fim": 102.4,
+      "timestamp": "01:41.817 - 01:42.400",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "É.",
+      "quemfala": "Réu",
+      "segundos_inicio": 103.09,
+      "segundos_fim": 103.19,
+      "timestamp": "01:43.090 - 01:43.190",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Ah,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 106.59,
+      "segundos_fim": 106.744,
+      "timestamp": "01:46.590 - 01:46.744",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 106.744,
+      "segundos_fim": 106.816,
+      "timestamp": "01:46.744 - 01:46.816",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "senhor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 106.816,
+      "segundos_fim": 107.094,
+      "timestamp": "01:46.816 - 01:47.094",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "sabe",
+      "quemfala": "Juíza",
+      "segundos_inicio": 107.094,
+      "segundos_fim": 107.305,
+      "timestamp": "01:47.094 - 01:47.305",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 107.305,
+      "segundos_fim": 107.377,
+      "timestamp": "01:47.305 - 01:47.377",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "CPF,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 107.377,
+      "segundos_fim": 107.526,
+      "timestamp": "01:47.377 - 01:47.526",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "senhor?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 107.526,
+      "segundos_fim": 107.89,
+      "timestamp": "01:47.526 - 01:47.890",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Sim.",
+      "quemfala": "Réu",
+      "segundos_inicio": 108.19,
+      "segundos_fim": 110.1,
+      "timestamp": "01:48.190 - 01:50.100",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Qual",
+      "quemfala": "Juíza",
+      "segundos_inicio": 110.6,
+      "segundos_fim": 110.754,
+      "timestamp": "01:50.600 - 01:50.754",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Juíza",
+      "segundos_inicio": 110.754,
+      "segundos_fim": 110.884,
+      "timestamp": "01:50.754 - 01:50.884",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "é?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 110.884,
+      "segundos_fim": 111.0,
+      "timestamp": "01:50.884 - 01:51.000",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "427",
+      "quemfala": "Réu",
+      "segundos_inicio": 111.2,
+      "segundos_fim": 112.526,
+      "timestamp": "01:51.200 - 01:52.526",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "540",
+      "quemfala": "Réu",
+      "segundos_inicio": 112.526,
+      "segundos_fim": 113.852,
+      "timestamp": "01:52.526 - 01:53.852",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "498",
+      "quemfala": "Réu",
+      "segundos_inicio": 113.852,
+      "segundos_fim": 115.178,
+      "timestamp": "01:53.852 - 01:55.178",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "00.",
+      "quemfala": "Réu",
+      "segundos_inicio": 115.178,
+      "segundos_fim": 117.2,
+      "timestamp": "01:55.178 - 01:57.200",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "O",
+      "quemfala": "Juíza",
+      "segundos_inicio": 118.2,
+      "segundos_fim": 118.354,
+      "timestamp": "01:58.200 - 01:58.354",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "senhor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 118.354,
+      "segundos_fim": 118.95,
+      "timestamp": "01:58.354 - 01:58.950",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "mora",
+      "quemfala": "Juíza",
+      "segundos_inicio": 118.95,
+      "segundos_fim": 119.402,
+      "timestamp": "01:58.950 - 01:59.402",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "onde?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 119.402,
+      "segundos_fim": 120.04,
+      "timestamp": "01:59.402 - 02:00.040",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Moro,",
+      "quemfala": "Réu",
+      "segundos_inicio": 120.24,
+      "segundos_fim": 120.789,
+      "timestamp": "02:00.240 - 02:00.789",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "é,",
+      "quemfala": "Réu",
+      "segundos_inicio": 120.789,
+      "segundos_fim": 121.043,
+      "timestamp": "02:00.789 - 02:01.043",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "tenho",
+      "quemfala": "Réu",
+      "segundos_inicio": 121.043,
+      "segundos_fim": 121.561,
+      "timestamp": "02:01.043 - 02:01.561",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "vários",
+      "quemfala": "Réu",
+      "segundos_inicio": 121.561,
+      "segundos_fim": 122.232,
+      "timestamp": "02:01.561 - 02:02.232",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "endereços,",
+      "quemfala": "Réu",
+      "segundos_inicio": 122.232,
+      "segundos_fim": 123.299,
+      "timestamp": "02:02.232 - 02:03.299",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "moça.",
+      "quemfala": "Réu",
+      "segundos_inicio": 123.299,
+      "segundos_fim": 123.93,
+      "timestamp": "02:03.299 - 02:03.930",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "É?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 125.16,
+      "segundos_fim": 125.292,
+      "timestamp": "02:05.160 - 02:05.292",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Pode",
+      "quemfala": "Juíza",
+      "segundos_inicio": 125.292,
+      "segundos_fim": 125.468,
+      "timestamp": "02:05.292 - 02:05.468",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "falar",
+      "quemfala": "Juíza",
+      "segundos_inicio": 125.468,
+      "segundos_fim": 125.673,
+      "timestamp": "02:05.468 - 02:05.673",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "todos.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 125.673,
+      "segundos_fim": 125.95,
+      "timestamp": "02:05.673 - 02:05.950",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Vou",
+      "quemfala": "Réu",
+      "segundos_inicio": 127.64,
+      "segundos_fim": 127.815,
+      "timestamp": "02:07.640 - 02:07.815",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "falar",
+      "quemfala": "Réu",
+      "segundos_inicio": 127.815,
+      "segundos_fim": 128.056,
+      "timestamp": "02:07.815 - 02:08.056",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "só",
+      "quemfala": "Réu",
+      "segundos_inicio": 128.056,
+      "segundos_fim": 128.16,
+      "timestamp": "02:08.056 - 02:08.160",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Réu",
+      "segundos_inicio": 128.16,
+      "segundos_fim": 128.231,
+      "timestamp": "02:08.160 - 02:08.231",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Réu",
+      "segundos_inicio": 128.231,
+      "segundos_fim": 128.406,
+      "timestamp": "02:08.231 - 02:08.406",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "eu",
+      "quemfala": "Réu",
+      "segundos_inicio": 128.406,
+      "segundos_fim": 128.548,
+      "timestamp": "02:08.406 - 02:08.548",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "lembro,",
+      "quemfala": "Réu",
+      "segundos_inicio": 128.548,
+      "segundos_fim": 128.869,
+      "timestamp": "02:08.548 - 02:08.869",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Réu",
+      "segundos_inicio": 128.869,
+      "segundos_fim": 129.044,
+      "timestamp": "02:08.869 - 02:09.044",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Réu",
+      "segundos_inicio": 129.044,
+      "segundos_fim": 129.115,
+      "timestamp": "02:09.044 - 02:09.115",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "única",
+      "quemfala": "Réu",
+      "segundos_inicio": 129.115,
+      "segundos_fim": 129.394,
+      "timestamp": "02:09.115 - 02:09.394",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "rua",
+      "quemfala": "Réu",
+      "segundos_inicio": 129.394,
+      "segundos_fim": 129.569,
+      "timestamp": "02:09.394 - 02:09.569",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Réu",
+      "segundos_inicio": 129.569,
+      "segundos_fim": 129.744,
+      "timestamp": "02:09.569 - 02:09.744",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "eu",
+      "quemfala": "Réu",
+      "segundos_inicio": 129.744,
+      "segundos_fim": 129.886,
+      "timestamp": "02:09.744 - 02:09.886",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "lembro",
+      "quemfala": "Réu",
+      "segundos_inicio": 129.886,
+      "segundos_fim": 130.16,
+      "timestamp": "02:09.886 - 02:10.160",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "de",
+      "quemfala": "Réu",
+      "segundos_inicio": 130.16,
+      "segundos_fim": 130.264,
+      "timestamp": "02:10.160 - 02:10.264",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "cor",
+      "quemfala": "Réu",
+      "segundos_inicio": 130.264,
+      "segundos_fim": 130.401,
+      "timestamp": "02:10.264 - 02:10.401",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Réu",
+      "segundos_inicio": 130.401,
+      "segundos_fim": 130.576,
+      "timestamp": "02:10.401 - 02:10.576",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "eu",
+      "quemfala": "Réu",
+      "segundos_inicio": 130.576,
+      "segundos_fim": 130.718,
+      "timestamp": "02:10.576 - 02:10.718",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "nasci,",
+      "quemfala": "Réu",
+      "segundos_inicio": 130.718,
+      "segundos_fim": 131.006,
+      "timestamp": "02:10.718 - 02:11.006",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Rua",
+      "quemfala": "Réu",
+      "segundos_inicio": 131.006,
+      "segundos_fim": 131.181,
+      "timestamp": "02:11.006 - 02:11.181",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Biazi.",
+      "quemfala": "Réu",
+      "segundos_inicio": 131.181,
+      "segundos_fim": 131.54,
+      "timestamp": "02:11.181 - 02:11.540",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Rua",
+      "quemfala": "Juíza",
+      "segundos_inicio": 131.64,
+      "segundos_fim": 132.39,
+      "timestamp": "02:11.640 - 02:12.390",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Biazi.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 132.39,
+      "segundos_fim": 133.95,
+      "timestamp": "02:12.390 - 02:13.950",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Marchitelo.",
+      "quemfala": "Réu",
+      "segundos_inicio": 134.77,
+      "segundos_fim": 135.57,
+      "timestamp": "02:14.770 - 02:15.570",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Marchitelo,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 136.72,
+      "segundos_fim": 141.018,
+      "timestamp": "02:16.720 - 02:21.018",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "é,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 141.018,
+      "segundos_fim": 141.977,
+      "timestamp": "02:21.018 - 02:21.977",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "M",
+      "quemfala": "Juíza",
+      "segundos_inicio": 141.977,
+      "segundos_fim": 142.361,
+      "timestamp": "02:21.977 - 02:22.361",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "A",
+      "quemfala": "Juíza",
+      "segundos_inicio": 142.361,
+      "segundos_fim": 142.937,
+      "timestamp": "02:22.361 - 02:22.937",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "R",
+      "quemfala": "Juíza",
+      "segundos_inicio": 142.937,
+      "segundos_fim": 143.321,
+      "timestamp": "02:22.937 - 02:23.321",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "C",
+      "quemfala": "Juíza",
+      "segundos_inicio": 143.321,
+      "segundos_fim": 143.705,
+      "timestamp": "02:23.321 - 02:23.705",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "H",
+      "quemfala": "Juíza",
+      "segundos_inicio": 143.705,
+      "segundos_fim": 144.089,
+      "timestamp": "02:23.705 - 02:24.089",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "I",
+      "quemfala": "Juíza",
+      "segundos_inicio": 144.089,
+      "segundos_fim": 144.665,
+      "timestamp": "02:24.089 - 02:24.665",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "T",
+      "quemfala": "Juíza",
+      "segundos_inicio": 144.665,
+      "segundos_fim": 145.049,
+      "timestamp": "02:24.665 - 02:25.049",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "T",
+      "quemfala": "Juíza",
+      "segundos_inicio": 145.049,
+      "segundos_fim": 145.433,
+      "timestamp": "02:25.049 - 02:25.433",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "E",
+      "quemfala": "Juíza",
+      "segundos_inicio": 145.433,
+      "segundos_fim": 146.009,
+      "timestamp": "02:25.433 - 02:26.009",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "L",
+      "quemfala": "Juíza",
+      "segundos_inicio": 146.009,
+      "segundos_fim": 146.393,
+      "timestamp": "02:26.009 - 02:26.393",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "L",
+      "quemfala": "Juíza",
+      "segundos_inicio": 146.393,
+      "segundos_fim": 146.777,
+      "timestamp": "02:26.393 - 02:26.777",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "O.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 146.777,
+      "segundos_fim": 148.04,
+      "timestamp": "02:26.777 - 02:28.040",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Qual",
+      "quemfala": "Juíza",
+      "segundos_inicio": 149.21,
+      "segundos_fim": 149.333,
+      "timestamp": "02:29.210 - 02:29.333",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 149.333,
+      "segundos_fim": 149.375,
+      "timestamp": "02:29.333 - 02:29.375",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "número?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 149.375,
+      "segundos_fim": 149.61,
+      "timestamp": "02:29.375 - 02:29.610",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "4.",
+      "quemfala": "Réu",
+      "segundos_inicio": 150.39,
+      "segundos_fim": 151.17,
+      "timestamp": "02:30.390 - 02:31.170",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "É",
+      "quemfala": "Juíza",
+      "segundos_inicio": 151.47,
+      "segundos_fim": 151.536,
+      "timestamp": "02:31.470 - 02:31.536",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "uma",
+      "quemfala": "Juíza",
+      "segundos_inicio": 151.536,
+      "segundos_fim": 151.698,
+      "timestamp": "02:31.536 - 02:31.698",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "casa?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 151.698,
+      "segundos_fim": 151.97,
+      "timestamp": "02:31.698 - 02:31.970",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Casa.",
+      "quemfala": "Réu",
+      "segundos_inicio": 152.17,
+      "segundos_fim": 152.47,
+      "timestamp": "02:32.170 - 02:32.470",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "É",
+      "quemfala": "Juíza",
+      "segundos_inicio": 153.33,
+      "segundos_fim": 153.405,
+      "timestamp": "02:33.330 - 02:33.405",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "quintal,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 153.405,
+      "segundos_fim": 153.82,
+      "timestamp": "02:33.405 - 02:33.820",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "não?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 153.82,
+      "segundos_fim": 154.095,
+      "timestamp": "02:33.820 - 02:34.095",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "É",
+      "quemfala": "Juíza",
+      "segundos_inicio": 154.095,
+      "segundos_fim": 154.17,
+      "timestamp": "02:34.095 - 02:34.170",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "só",
+      "quemfala": "Juíza",
+      "segundos_inicio": 154.17,
+      "segundos_fim": 154.28,
+      "timestamp": "02:34.170 - 02:34.280",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "uma",
+      "quemfala": "Juíza",
+      "segundos_inicio": 154.28,
+      "segundos_fim": 154.465,
+      "timestamp": "02:34.280 - 02:34.465",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "casa",
+      "quemfala": "Juíza",
+      "segundos_inicio": 154.465,
+      "segundos_fim": 154.685,
+      "timestamp": "02:34.465 - 02:34.685",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "mesmo.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 154.685,
+      "segundos_fim": 155.03,
+      "timestamp": "02:34.685 - 02:35.030",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Qual",
+      "quemfala": "Juíza",
+      "segundos_inicio": 156.22,
+      "segundos_fim": 156.355,
+      "timestamp": "02:36.220 - 02:36.355",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Juíza",
+      "segundos_inicio": 156.355,
+      "segundos_fim": 156.469,
+      "timestamp": "02:36.355 - 02:36.469",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "é",
+      "quemfala": "Juíza",
+      "segundos_inicio": 156.469,
+      "segundos_fim": 156.515,
+      "timestamp": "02:36.469 - 02:36.515",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 156.515,
+      "segundos_fim": 156.561,
+      "timestamp": "02:36.515 - 02:36.561",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "bairro?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 156.561,
+      "segundos_fim": 156.82,
+      "timestamp": "02:36.561 - 02:36.820",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "São",
+      "quemfala": "Réu",
+      "segundos_inicio": 157.69,
+      "segundos_fim": 157.825,
+      "timestamp": "02:37.690 - 02:37.825",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Paulo,",
+      "quemfala": "Réu",
+      "segundos_inicio": 157.825,
+      "segundos_fim": 158.076,
+      "timestamp": "02:37.825 - 02:38.076",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "Itaquera.",
+      "quemfala": "Réu",
+      "segundos_inicio": 158.076,
+      "segundos_fim": 158.49,
+      "timestamp": "02:38.076 - 02:38.490",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "O",
+      "quemfala": "Juíza",
+      "segundos_inicio": 161.36,
+      "segundos_fim": 161.413,
+      "timestamp": "02:41.360 - 02:41.413",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "senhor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 161.413,
+      "segundos_fim": 161.618,
+      "timestamp": "02:41.413 - 02:41.618",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "disse",
+      "quemfala": "Juíza",
+      "segundos_inicio": 161.618,
+      "segundos_fim": 161.798,
+      "timestamp": "02:41.618 - 02:41.798",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Juíza",
+      "segundos_inicio": 161.798,
+      "segundos_fim": 161.929,
+      "timestamp": "02:41.798 - 02:41.929",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "nasceu",
+      "quemfala": "Juíza",
+      "segundos_inicio": 161.929,
+      "segundos_fim": 162.162,
+      "timestamp": "02:41.929 - 02:42.162",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "nessa",
+      "quemfala": "Juíza",
+      "segundos_inicio": 162.162,
+      "segundos_fim": 162.342,
+      "timestamp": "02:42.162 - 02:42.342",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "casa.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 162.342,
+      "segundos_fim": 162.56,
+      "timestamp": "02:42.342 - 02:42.560",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "É.",
+      "quemfala": "Réu",
+      "segundos_inicio": 162.76,
+      "segundos_fim": 162.86,
+      "timestamp": "02:42.760 - 02:42.860",
+      "chunk_origem": 1
+    },
+    {
+      "palavra": "É,",
+      "quemfala": "Réu",
+      "segundos_inicio": 164.93,
+      "segundos_fim": 165.115,
+      "timestamp": "02:44.930 - 02:45.115",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "tem",
+      "quemfala": "Réu",
+      "segundos_inicio": 165.115,
+      "segundos_fim": 165.33,
+      "timestamp": "02:45.115 - 02:45.330",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Réu",
+      "segundos_inicio": 165.33,
+      "segundos_fim": 165.441,
+      "timestamp": "02:45.330 - 02:45.441",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "do",
+      "quemfala": "Réu",
+      "segundos_inicio": 165.441,
+      "segundos_fim": 165.604,
+      "timestamp": "02:45.441 - 02:45.604",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "condomínio",
+      "quemfala": "Réu",
+      "segundos_inicio": 165.604,
+      "segundos_fim": 166.42,
+      "timestamp": "02:45.604 - 02:46.420",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Réu",
+      "segundos_inicio": 166.42,
+      "segundos_fim": 166.694,
+      "timestamp": "02:46.420 - 02:46.694",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "é",
+      "quemfala": "Réu",
+      "segundos_inicio": 166.694,
+      "segundos_fim": 166.805,
+      "timestamp": "02:46.694 - 02:46.805",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "condomínio",
+      "quemfala": "Réu",
+      "segundos_inicio": 166.805,
+      "segundos_fim": 167.621,
+      "timestamp": "02:46.805 - 02:47.621",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "é",
+      "quemfala": "Réu",
+      "segundos_inicio": 167.621,
+      "segundos_fim": 167.732,
+      "timestamp": "02:47.621 - 02:47.732",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "do",
+      "quemfala": "Réu",
+      "segundos_inicio": 167.732,
+      "segundos_fim": 167.895,
+      "timestamp": "02:47.732 - 02:47.895",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Manacá.",
+      "quemfala": "Réu",
+      "segundos_inicio": 167.895,
+      "segundos_fim": 168.52,
+      "timestamp": "02:47.895 - 02:48.520",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Mas",
+      "quemfala": "Juíza",
+      "segundos_inicio": 168.84,
+      "segundos_fim": 169.122,
+      "timestamp": "02:48.840 - 02:49.122",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "eh,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 169.122,
+      "segundos_fim": 169.433,
+      "timestamp": "02:49.122 - 02:49.433",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "onde",
+      "quemfala": "Juíza",
+      "segundos_inicio": 169.433,
+      "segundos_fim": 169.86,
+      "timestamp": "02:49.433 - 02:49.860",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 169.86,
+      "segundos_fim": 170.006,
+      "timestamp": "02:49.860 - 02:50.006",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "senhor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 170.006,
+      "segundos_fim": 170.569,
+      "timestamp": "02:50.006 - 02:50.569",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "dormiu",
+      "quemfala": "Juíza",
+      "segundos_inicio": 170.569,
+      "segundos_fim": 171.21,
+      "timestamp": "02:50.569 - 02:51.210",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "ontem?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 171.21,
+      "segundos_fim": 171.88,
+      "timestamp": "02:51.210 - 02:51.880",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "É,",
+      "quemfala": "Réu",
+      "segundos_inicio": 172.24,
+      "segundos_fim": 172.384,
+      "timestamp": "02:52.240 - 02:52.384",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Garatá.",
+      "quemfala": "Réu",
+      "segundos_inicio": 172.384,
+      "segundos_fim": 172.87,
+      "timestamp": "02:52.384 - 02:52.870",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "É,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 175.82,
+      "segundos_fim": 175.93,
+      "timestamp": "02:55.820 - 02:55.930",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Juíza",
+      "segundos_inicio": 175.93,
+      "segundos_fim": 175.996,
+      "timestamp": "02:55.930 - 02:55.996",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "rua",
+      "quemfala": "Juíza",
+      "segundos_inicio": 175.996,
+      "segundos_fim": 176.159,
+      "timestamp": "02:55.996 - 02:56.159",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Garatá?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 176.159,
+      "segundos_fim": 176.53,
+      "timestamp": "02:56.159 - 02:56.530",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Não,",
+      "quemfala": "Réu",
+      "segundos_inicio": 178.12,
+      "segundos_fim": 178.436,
+      "timestamp": "02:58.120 - 02:58.436",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "é,",
+      "quemfala": "Réu",
+      "segundos_inicio": 178.436,
+      "segundos_fim": 178.604,
+      "timestamp": "02:58.436 - 02:58.604",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "é",
+      "quemfala": "Réu",
+      "segundos_inicio": 178.604,
+      "segundos_fim": 178.705,
+      "timestamp": "02:58.604 - 02:58.705",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Réu",
+      "segundos_inicio": 178.705,
+      "segundos_fim": 178.806,
+      "timestamp": "02:58.705 - 02:58.806",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "cidade",
+      "quemfala": "Réu",
+      "segundos_inicio": 178.806,
+      "segundos_fim": 179.249,
+      "timestamp": "02:58.806 - 02:59.249",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "de",
+      "quemfala": "Réu",
+      "segundos_inicio": 179.249,
+      "segundos_fim": 179.397,
+      "timestamp": "02:59.249 - 02:59.397",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Garatá.",
+      "quemfala": "Réu",
+      "segundos_inicio": 179.397,
+      "segundos_fim": 179.96,
+      "timestamp": "02:59.397 - 02:59.960",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "E",
+      "quemfala": "Juíza",
+      "segundos_inicio": 180.41,
+      "segundos_fim": 180.455,
+      "timestamp": "03:00.410 - 03:00.455",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "qual",
+      "quemfala": "Juíza",
+      "segundos_inicio": 180.455,
+      "segundos_fim": 180.588,
+      "timestamp": "03:00.455 - 03:00.588",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Juíza",
+      "segundos_inicio": 180.588,
+      "segundos_fim": 180.7,
+      "timestamp": "03:00.588 - 03:00.700",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "é",
+      "quemfala": "Juíza",
+      "segundos_inicio": 180.7,
+      "segundos_fim": 180.745,
+      "timestamp": "03:00.700 - 03:00.745",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 180.745,
+      "segundos_fim": 180.79,
+      "timestamp": "03:00.745 - 03:00.790",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "nome",
+      "quemfala": "Juíza",
+      "segundos_inicio": 180.79,
+      "segundos_fim": 180.923,
+      "timestamp": "03:00.790 - 03:00.923",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "da",
+      "quemfala": "Juíza",
+      "segundos_inicio": 180.923,
+      "segundos_fim": 180.989,
+      "timestamp": "03:00.923 - 03:00.989",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "rua,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 180.989,
+      "segundos_fim": 181.131,
+      "timestamp": "03:00.989 - 03:01.131",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 181.131,
+      "segundos_fim": 181.176,
+      "timestamp": "03:01.131 - 03:01.176",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "senhor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 181.176,
+      "segundos_fim": 181.351,
+      "timestamp": "03:01.176 - 03:01.351",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "não",
+      "quemfala": "Juíza",
+      "segundos_inicio": 181.351,
+      "segundos_fim": 181.463,
+      "timestamp": "03:01.351 - 03:01.463",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "sabe?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 181.463,
+      "segundos_fim": 181.65,
+      "timestamp": "03:01.463 - 03:01.650",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Alameda",
+      "quemfala": "Réu",
+      "segundos_inicio": 182.79,
+      "segundos_fim": 183.383,
+      "timestamp": "03:02.790 - 03:03.383",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "do",
+      "quemfala": "Réu",
+      "segundos_inicio": 183.383,
+      "segundos_fim": 183.544,
+      "timestamp": "03:03.383 - 03:03.544",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Manacás,",
+      "quemfala": "Réu",
+      "segundos_inicio": 183.544,
+      "segundos_fim": 184.152,
+      "timestamp": "03:03.544 - 03:04.152",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "eu",
+      "quemfala": "Réu",
+      "segundos_inicio": 184.152,
+      "segundos_fim": 184.372,
+      "timestamp": "03:04.152 - 03:04.372",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "acho.",
+      "quemfala": "Réu",
+      "segundos_inicio": 184.372,
+      "segundos_fim": 184.826,
+      "timestamp": "03:04.372 - 03:04.826",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Alameda",
+      "quemfala": "Réu",
+      "segundos_inicio": 184.826,
+      "segundos_fim": 185.419,
+      "timestamp": "03:04.826 - 03:05.419",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Paraíso",
+      "quemfala": "Réu",
+      "segundos_inicio": 185.419,
+      "segundos_fim": 186.012,
+      "timestamp": "03:05.419 - 03:06.012",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "de",
+      "quemfala": "Réu",
+      "segundos_inicio": 186.012,
+      "segundos_fim": 186.173,
+      "timestamp": "03:06.012 - 03:06.173",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Garatá.",
+      "quemfala": "Réu",
+      "segundos_inicio": 186.173,
+      "segundos_fim": 186.79,
+      "timestamp": "03:06.173 - 03:06.790",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "O",
+      "quemfala": "Juíza",
+      "segundos_inicio": 189.24,
+      "segundos_fim": 189.356,
+      "timestamp": "03:09.240 - 03:09.356",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "senhor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 189.356,
+      "segundos_fim": 189.806,
+      "timestamp": "03:09.356 - 03:09.806",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "tá",
+      "quemfala": "Juíza",
+      "segundos_inicio": 189.806,
+      "segundos_fim": 189.977,
+      "timestamp": "03:09.806 - 03:09.977",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "há",
+      "quemfala": "Juíza",
+      "segundos_inicio": 189.977,
+      "segundos_fim": 190.148,
+      "timestamp": "03:09.977 - 03:10.148",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "quanto",
+      "quemfala": "Juíza",
+      "segundos_inicio": 190.148,
+      "segundos_fim": 190.66,
+      "timestamp": "03:10.148 - 03:10.660",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "tempo",
+      "quemfala": "Juíza",
+      "segundos_inicio": 190.66,
+      "segundos_fim": 191.056,
+      "timestamp": "03:10.660 - 03:11.056",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "nessa",
+      "quemfala": "Juíza",
+      "segundos_inicio": 191.056,
+      "segundos_fim": 191.452,
+      "timestamp": "03:11.056 - 03:11.452",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "rua?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 191.452,
+      "segundos_fim": 191.88,
+      "timestamp": "03:11.452 - 03:11.880",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Uns",
+      "quemfala": "Réu",
+      "segundos_inicio": 192.47,
+      "segundos_fim": 192.966,
+      "timestamp": "03:12.470 - 03:12.966",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "dois",
+      "quemfala": "Réu",
+      "segundos_inicio": 192.966,
+      "segundos_fim": 193.719,
+      "timestamp": "03:12.966 - 03:13.719",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "anos.",
+      "quemfala": "Réu",
+      "segundos_inicio": 193.719,
+      "segundos_fim": 194.78,
+      "timestamp": "03:13.719 - 03:14.780",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "O",
+      "quemfala": "Juíza",
+      "segundos_inicio": 195.24,
+      "segundos_fim": 195.324,
+      "timestamp": "03:15.240 - 03:15.324",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "senhor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 195.324,
+      "segundos_fim": 195.649,
+      "timestamp": "03:15.324 - 03:15.649",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "sabe",
+      "quemfala": "Juíza",
+      "segundos_inicio": 195.649,
+      "segundos_fim": 195.895,
+      "timestamp": "03:15.649 - 03:15.895",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 195.895,
+      "segundos_fim": 195.979,
+      "timestamp": "03:15.895 - 03:15.979",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "número?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 195.979,
+      "segundos_fim": 196.45,
+      "timestamp": "03:15.979 - 03:16.450",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "É,",
+      "quemfala": "Réu",
+      "segundos_inicio": 197.64,
+      "segundos_fim": 198.827,
+      "timestamp": "03:17.640 - 03:18.827",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "278.",
+      "quemfala": "Réu",
+      "segundos_inicio": 198.827,
+      "segundos_fim": 200.68,
+      "timestamp": "03:18.827 - 03:20.680",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "278.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 201.43,
+      "segundos_fim": 203.94,
+      "timestamp": "03:21.430 - 03:23.940",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Qual",
+      "quemfala": "Juíza",
+      "segundos_inicio": 204.25,
+      "segundos_fim": 204.92,
+      "timestamp": "03:24.250 - 03:24.920",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Juíza",
+      "segundos_inicio": 204.92,
+      "segundos_fim": 205.484,
+      "timestamp": "03:24.920 - 03:25.484",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "é",
+      "quemfala": "Juíza",
+      "segundos_inicio": 205.484,
+      "segundos_fim": 205.712,
+      "timestamp": "03:25.484 - 03:25.712",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 205.712,
+      "segundos_fim": 205.94,
+      "timestamp": "03:25.712 - 03:25.940",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "bairro?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 205.94,
+      "segundos_fim": 207.22,
+      "timestamp": "03:25.940 - 03:27.220",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Paraíso",
+      "quemfala": "Réu",
+      "segundos_inicio": 207.41,
+      "segundos_fim": 209.238,
+      "timestamp": "03:27.410 - 03:29.238",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "de",
+      "quemfala": "Réu",
+      "segundos_inicio": 209.238,
+      "segundos_fim": 209.734,
+      "timestamp": "03:29.238 - 03:29.734",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Garatá.",
+      "quemfala": "Réu",
+      "segundos_inicio": 209.734,
+      "segundos_fim": 211.63,
+      "timestamp": "03:29.734 - 03:31.630",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Tem",
+      "quemfala": "Juíza",
+      "segundos_inicio": 211.93,
+      "segundos_fim": 212.091,
+      "timestamp": "03:31.930 - 03:32.091",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "alguma",
+      "quemfala": "Juíza",
+      "segundos_inicio": 212.091,
+      "segundos_fim": 212.458,
+      "timestamp": "03:32.091 - 03:32.458",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "razão",
+      "quemfala": "Juíza",
+      "segundos_inicio": 212.458,
+      "segundos_fim": 212.786,
+      "timestamp": "03:32.458 - 03:32.786",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Juíza",
+      "segundos_inicio": 212.786,
+      "segundos_fim": 212.991,
+      "timestamp": "03:32.786 - 03:32.991",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "eu",
+      "quemfala": "Juíza",
+      "segundos_inicio": 212.991,
+      "segundos_fim": 213.158,
+      "timestamp": "03:32.991 - 03:33.158",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "especificar",
+      "quemfala": "Juíza",
+      "segundos_inicio": 213.158,
+      "segundos_fim": 213.808,
+      "timestamp": "03:33.158 - 03:33.808",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "aqui",
+      "quemfala": "Juíza",
+      "segundos_inicio": 213.808,
+      "segundos_fim": 214.097,
+      "timestamp": "03:33.808 - 03:34.097",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Juíza",
+      "segundos_inicio": 214.097,
+      "segundos_fim": 214.302,
+      "timestamp": "03:34.097 - 03:34.302",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 214.302,
+      "segundos_fim": 214.385,
+      "timestamp": "03:34.302 - 03:34.385",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "senhor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 214.385,
+      "segundos_fim": 214.707,
+      "timestamp": "03:34.385 - 03:34.707",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "não",
+      "quemfala": "Juíza",
+      "segundos_inicio": 214.707,
+      "segundos_fim": 214.912,
+      "timestamp": "03:34.707 - 03:34.912",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "saiba",
+      "quemfala": "Juíza",
+      "segundos_inicio": 214.912,
+      "segundos_fim": 215.24,
+      "timestamp": "03:34.912 - 03:35.240",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "direito",
+      "quemfala": "Juíza",
+      "segundos_inicio": 215.24,
+      "segundos_fim": 215.69,
+      "timestamp": "03:35.240 - 03:35.690",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "informar",
+      "quemfala": "Juíza",
+      "segundos_inicio": 215.69,
+      "segundos_fim": 216.134,
+      "timestamp": "03:35.690 - 03:36.134",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 216.134,
+      "segundos_fim": 216.217,
+      "timestamp": "03:36.134 - 03:36.217",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "endereço",
+      "quemfala": "Juíza",
+      "segundos_inicio": 216.217,
+      "segundos_fim": 216.706,
+      "timestamp": "03:36.217 - 03:36.706",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "do",
+      "quemfala": "Juíza",
+      "segundos_inicio": 216.706,
+      "segundos_fim": 216.828,
+      "timestamp": "03:36.706 - 03:36.828",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "senhor?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 216.828,
+      "segundos_fim": 217.25,
+      "timestamp": "03:36.828 - 03:37.250",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Ah,",
+      "quemfala": "Réu",
+      "segundos_inicio": 217.65,
+      "segundos_fim": 217.793,
+      "timestamp": "03:37.650 - 03:37.793",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "não,",
+      "quemfala": "Réu",
+      "segundos_inicio": 217.793,
+      "segundos_fim": 218.003,
+      "timestamp": "03:37.793 - 03:38.003",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "não.",
+      "quemfala": "Réu",
+      "segundos_inicio": 218.003,
+      "segundos_fim": 218.25,
+      "timestamp": "03:38.003 - 03:38.250",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Eu",
+      "quemfala": "Réu",
+      "segundos_inicio": 219.35,
+      "segundos_fim": 219.569,
+      "timestamp": "03:39.350 - 03:39.569",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "moro",
+      "quemfala": "Réu",
+      "segundos_inicio": 219.569,
+      "segundos_fim": 219.89,
+      "timestamp": "03:39.569 - 03:39.890",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "aí",
+      "quemfala": "Réu",
+      "segundos_inicio": 219.89,
+      "segundos_fim": 220.109,
+      "timestamp": "03:39.890 - 03:40.109",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "tudo",
+      "quemfala": "Réu",
+      "segundos_inicio": 220.109,
+      "segundos_fim": 220.43,
+      "timestamp": "03:40.109 - 03:40.430",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "já.",
+      "quemfala": "Réu",
+      "segundos_inicio": 220.43,
+      "segundos_fim": 220.72,
+      "timestamp": "03:40.430 - 03:40.720",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Endereço.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 222.03,
+      "segundos_fim": 222.53,
+      "timestamp": "03:42.030 - 03:42.530",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Qual",
+      "quemfala": "Juíza",
+      "segundos_inicio": 222.93,
+      "segundos_fim": 223.075,
+      "timestamp": "03:42.930 - 03:43.075",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Juíza",
+      "segundos_inicio": 223.075,
+      "segundos_fim": 223.197,
+      "timestamp": "03:43.075 - 03:43.197",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 223.197,
+      "segundos_fim": 223.246,
+      "timestamp": "03:43.197 - 03:43.246",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "senhor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 223.246,
+      "segundos_fim": 223.437,
+      "timestamp": "03:43.246 - 03:43.437",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "tem",
+      "quemfala": "Juíza",
+      "segundos_inicio": 223.437,
+      "segundos_fim": 223.532,
+      "timestamp": "03:43.437 - 03:43.532",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "certeza?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 223.532,
+      "segundos_fim": 223.83,
+      "timestamp": "03:43.532 - 03:43.830",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Não,",
+      "quemfala": "Réu",
+      "segundos_inicio": 224.34,
+      "segundos_fim": 224.878,
+      "timestamp": "03:44.340 - 03:44.878",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "é,",
+      "quemfala": "Réu",
+      "segundos_inicio": 224.878,
+      "segundos_fim": 225.164,
+      "timestamp": "03:44.878 - 03:45.164",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "é",
+      "quemfala": "Réu",
+      "segundos_inicio": 225.164,
+      "segundos_fim": 225.336,
+      "timestamp": "03:45.164 - 03:45.336",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "esse",
+      "quemfala": "Réu",
+      "segundos_inicio": 225.336,
+      "segundos_fim": 225.839,
+      "timestamp": "03:45.336 - 03:45.839",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "daí,",
+      "quemfala": "Réu",
+      "segundos_inicio": 225.839,
+      "segundos_fim": 226.377,
+      "timestamp": "03:45.839 - 03:46.377",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Alameda",
+      "quemfala": "Réu",
+      "segundos_inicio": 226.377,
+      "segundos_fim": 227.304,
+      "timestamp": "03:46.377 - 03:47.304",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "do",
+      "quemfala": "Réu",
+      "segundos_inicio": 227.304,
+      "segundos_fim": 227.556,
+      "timestamp": "03:47.304 - 03:47.556",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Manacás,",
+      "quemfala": "Réu",
+      "segundos_inicio": 227.556,
+      "segundos_fim": 228.505,
+      "timestamp": "03:47.556 - 03:48.505",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "278.",
+      "quemfala": "Réu",
+      "segundos_inicio": 228.505,
+      "segundos_fim": 228.95,
+      "timestamp": "03:48.505 - 03:48.950",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "278.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 229.34,
+      "segundos_fim": 229.95,
+      "timestamp": "03:49.340 - 03:49.950",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Paraíso",
+      "quemfala": "Réu",
+      "segundos_inicio": 230.14,
+      "segundos_fim": 230.842,
+      "timestamp": "03:50.140 - 03:50.842",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "de",
+      "quemfala": "Réu",
+      "segundos_inicio": 230.842,
+      "segundos_fim": 231.033,
+      "timestamp": "03:50.842 - 03:51.033",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Garatá.",
+      "quemfala": "Réu",
+      "segundos_inicio": 231.033,
+      "segundos_fim": 231.76,
+      "timestamp": "03:51.033 - 03:51.760",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Tá.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 231.86,
+      "segundos_fim": 232.028,
+      "timestamp": "03:51.860 - 03:52.028",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "O",
+      "quemfala": "Juíza",
+      "segundos_inicio": 232.028,
+      "segundos_fim": 232.091,
+      "timestamp": "03:52.028 - 03:52.091",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "senhor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 232.091,
+      "segundos_fim": 232.335,
+      "timestamp": "03:52.091 - 03:52.335",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "tá",
+      "quemfala": "Juíza",
+      "segundos_inicio": 232.335,
+      "segundos_fim": 232.428,
+      "timestamp": "03:52.335 - 03:52.428",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "lá",
+      "quemfala": "Juíza",
+      "segundos_inicio": 232.428,
+      "segundos_fim": 232.521,
+      "timestamp": "03:52.428 - 03:52.521",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "há",
+      "quemfala": "Juíza",
+      "segundos_inicio": 232.521,
+      "segundos_fim": 232.614,
+      "timestamp": "03:52.521 - 03:52.614",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "dois",
+      "quemfala": "Juíza",
+      "segundos_inicio": 232.614,
+      "segundos_fim": 232.799,
+      "timestamp": "03:52.614 - 03:52.799",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "anos.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 232.799,
+      "segundos_fim": 233.06,
+      "timestamp": "03:52.799 - 03:53.060",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Uhum.",
+      "quemfala": "Réu",
+      "segundos_inicio": 233.46,
+      "segundos_fim": 233.87,
+      "timestamp": "03:53.460 - 03:53.870",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "É,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 234.26,
+      "segundos_fim": 234.351,
+      "timestamp": "03:54.260 - 03:54.351",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "casa",
+      "quemfala": "Juíza",
+      "segundos_inicio": 234.351,
+      "segundos_fim": 234.511,
+      "timestamp": "03:54.351 - 03:54.511",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "alugada?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 234.511,
+      "segundos_fim": 234.87,
+      "timestamp": "03:54.511 - 03:54.870",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Casa",
+      "quemfala": "Réu",
+      "segundos_inicio": 235.36,
+      "segundos_fim": 235.666,
+      "timestamp": "03:55.360 - 03:55.666",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "própria.",
+      "quemfala": "Réu",
+      "segundos_inicio": 235.666,
+      "segundos_fim": 236.3,
+      "timestamp": "03:55.666 - 03:56.300",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Própria?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 236.49,
+      "segundos_fim": 240.5,
+      "timestamp": "03:56.490 - 04:00.500",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "O",
+      "quemfala": "Juíza",
+      "segundos_inicio": 249.8,
+      "segundos_fim": 249.832,
+      "timestamp": "04:09.800 - 04:09.832",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "senhor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 249.832,
+      "segundos_fim": 249.954,
+      "timestamp": "04:09.832 - 04:09.954",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "estudou",
+      "quemfala": "Juíza",
+      "segundos_inicio": 249.954,
+      "segundos_fim": 250.124,
+      "timestamp": "04:09.954 - 04:10.124",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "até",
+      "quemfala": "Juíza",
+      "segundos_inicio": 250.124,
+      "segundos_fim": 250.202,
+      "timestamp": "04:10.124 - 04:10.202",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Juíza",
+      "segundos_inicio": 250.202,
+      "segundos_fim": 250.28,
+      "timestamp": "04:10.202 - 04:10.280",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "grau?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 250.28,
+      "segundos_fim": 250.41,
+      "timestamp": "04:10.280 - 04:10.410",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Superior",
+      "quemfala": "Réu",
+      "segundos_inicio": 251.53,
+      "segundos_fim": 252.306,
+      "timestamp": "04:11.530 - 04:12.306",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "completo.",
+      "quemfala": "Réu",
+      "segundos_inicio": 252.306,
+      "segundos_fim": 253.17,
+      "timestamp": "04:12.306 - 04:13.170",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Superior?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 253.78,
+      "segundos_fim": 254.09,
+      "timestamp": "04:13.780 - 04:14.090",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Qual",
+      "quemfala": "Juíza",
+      "segundos_inicio": 254.68,
+      "segundos_fim": 254.817,
+      "timestamp": "04:14.680 - 04:14.817",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Juíza",
+      "segundos_inicio": 254.817,
+      "segundos_fim": 254.933,
+      "timestamp": "04:14.817 - 04:14.933",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "é",
+      "quemfala": "Juíza",
+      "segundos_inicio": 254.933,
+      "segundos_fim": 254.98,
+      "timestamp": "04:14.933 - 04:14.980",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Juíza",
+      "segundos_inicio": 254.98,
+      "segundos_fim": 255.027,
+      "timestamp": "04:14.980 - 04:15.027",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "faculdade?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 255.027,
+      "segundos_fim": 255.38,
+      "timestamp": "04:15.027 - 04:15.380",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Formado",
+      "quemfala": "Réu",
+      "segundos_inicio": 255.68,
+      "segundos_fim": 257.729,
+      "timestamp": "04:15.680 - 04:17.729",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "em",
+      "quemfala": "Réu",
+      "segundos_inicio": 257.729,
+      "segundos_fim": 258.346,
+      "timestamp": "04:17.729 - 04:18.346",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Comércio",
+      "quemfala": "Réu",
+      "segundos_inicio": 258.346,
+      "segundos_fim": 260.815,
+      "timestamp": "04:18.346 - 04:20.815",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Exterior.",
+      "quemfala": "Réu",
+      "segundos_inicio": 260.815,
+      "segundos_fim": 263.79,
+      "timestamp": "04:20.815 - 04:23.790",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Comércio",
+      "quemfala": "Juíza",
+      "segundos_inicio": 263.99,
+      "segundos_fim": 265.36,
+      "timestamp": "04:23.990 - 04:25.360",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Exterior.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 265.36,
+      "segundos_fim": 267.01,
+      "timestamp": "04:25.360 - 04:27.010",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Qual",
+      "quemfala": "Juíza",
+      "segundos_inicio": 267.31,
+      "segundos_fim": 268.385,
+      "timestamp": "04:27.310 - 04:28.385",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Juíza",
+      "segundos_inicio": 268.385,
+      "segundos_fim": 269.289,
+      "timestamp": "04:28.385 - 04:29.289",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "é",
+      "quemfala": "Juíza",
+      "segundos_inicio": 269.289,
+      "segundos_fim": 269.656,
+      "timestamp": "04:29.289 - 04:29.656",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Juíza",
+      "segundos_inicio": 269.656,
+      "segundos_fim": 270.023,
+      "timestamp": "04:29.656 - 04:30.023",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "profissão",
+      "quemfala": "Juíza",
+      "segundos_inicio": 270.023,
+      "segundos_fim": 272.345,
+      "timestamp": "04:30.023 - 04:32.345",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "do",
+      "quemfala": "Juíza",
+      "segundos_inicio": 272.345,
+      "segundos_fim": 272.883,
+      "timestamp": "04:32.345 - 04:32.883",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "senhor?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 272.883,
+      "segundos_fim": 274.74,
+      "timestamp": "04:32.883 - 04:34.740",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Empresário.",
+      "quemfala": "Réu",
+      "segundos_inicio": 274.95,
+      "segundos_fim": 276.4,
+      "timestamp": "04:34.950 - 04:36.400",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Empresário.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 277.12,
+      "segundos_fim": 277.61,
+      "timestamp": "04:37.120 - 04:37.610",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Quanto",
+      "quemfala": "Juíza",
+      "segundos_inicio": 278.11,
+      "segundos_fim": 278.521,
+      "timestamp": "04:38.110 - 04:38.521",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Juíza",
+      "segundos_inicio": 278.521,
+      "segundos_fim": 278.751,
+      "timestamp": "04:38.521 - 04:38.751",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 278.751,
+      "segundos_fim": 278.844,
+      "timestamp": "04:38.751 - 04:38.844",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "senhor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 278.844,
+      "segundos_fim": 279.205,
+      "timestamp": "04:38.844 - 04:39.205",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "tem",
+      "quemfala": "Juíza",
+      "segundos_inicio": 279.205,
+      "segundos_fim": 279.385,
+      "timestamp": "04:39.205 - 04:39.385",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "por",
+      "quemfala": "Juíza",
+      "segundos_inicio": 279.385,
+      "segundos_fim": 279.565,
+      "timestamp": "04:39.385 - 04:39.565",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "mês",
+      "quemfala": "Juíza",
+      "segundos_inicio": 279.565,
+      "segundos_fim": 279.745,
+      "timestamp": "04:39.565 - 04:39.745",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "aproximadamente?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 279.745,
+      "segundos_fim": 280.86,
+      "timestamp": "04:39.745 - 04:40.860",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Varia,",
+      "quemfala": "Réu",
+      "segundos_inicio": 281.15,
+      "segundos_fim": 290.163,
+      "timestamp": "04:41.150 - 04:50.163",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "depende",
+      "quemfala": "Réu",
+      "segundos_inicio": 290.163,
+      "segundos_fim": 299.698,
+      "timestamp": "04:50.163 - 04:59.698",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "da",
+      "quemfala": "Réu",
+      "segundos_inicio": 299.698,
+      "segundos_fim": 302.572,
+      "timestamp": "04:59.698 - 05:02.572",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "publicidade.",
+      "quemfala": "Réu",
+      "segundos_inicio": 302.572,
+      "segundos_fim": 320.206,
+      "timestamp": "05:02.572 - 05:20.206",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Tem",
+      "quemfala": "Réu",
+      "segundos_inicio": 320.206,
+      "segundos_fim": 323.994,
+      "timestamp": "05:20.206 - 05:23.994",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "mês",
+      "quemfala": "Réu",
+      "segundos_inicio": 323.994,
+      "segundos_fim": 327.782,
+      "timestamp": "05:23.994 - 05:27.782",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Réu",
+      "segundos_inicio": 327.782,
+      "segundos_fim": 332.615,
+      "timestamp": "05:27.782 - 05:32.615",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "é",
+      "quemfala": "Réu",
+      "segundos_inicio": 332.615,
+      "segundos_fim": 334.574,
+      "timestamp": "05:32.615 - 05:34.574",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "um",
+      "quemfala": "Réu",
+      "segundos_inicio": 334.574,
+      "segundos_fim": 337.448,
+      "timestamp": "05:34.574 - 05:37.448",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "valor,",
+      "quemfala": "Réu",
+      "segundos_inicio": 337.448,
+      "segundos_fim": 345.416,
+      "timestamp": "05:37.448 - 05:45.416",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "tem",
+      "quemfala": "Réu",
+      "segundos_inicio": 345.416,
+      "segundos_fim": 349.204,
+      "timestamp": "05:45.416 - 05:49.204",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "mês",
+      "quemfala": "Réu",
+      "segundos_inicio": 349.204,
+      "segundos_fim": 352.992,
+      "timestamp": "05:49.204 - 05:52.992",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Réu",
+      "segundos_inicio": 352.992,
+      "segundos_fim": 357.825,
+      "timestamp": "05:52.992 - 05:57.825",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "é",
+      "quemfala": "Réu",
+      "segundos_inicio": 357.825,
+      "segundos_fim": 359.784,
+      "timestamp": "05:57.825 - 05:59.784",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "outro.",
+      "quemfala": "Réu",
+      "segundos_inicio": 359.784,
+      "segundos_fim": 369.84,
+      "timestamp": "05:59.784 - 06:09.840",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Mas",
+      "quemfala": "Juíza",
+      "segundos_inicio": 370.43,
+      "segundos_fim": 370.603,
+      "timestamp": "06:10.430 - 06:10.603",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "em",
+      "quemfala": "Juíza",
+      "segundos_inicio": 370.603,
+      "segundos_fim": 370.734,
+      "timestamp": "06:10.603 - 06:10.734",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "média",
+      "quemfala": "Juíza",
+      "segundos_inicio": 370.734,
+      "segundos_fim": 371.085,
+      "timestamp": "06:10.734 - 06:11.085",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "de",
+      "quemfala": "Juíza",
+      "segundos_inicio": 371.085,
+      "segundos_fim": 371.216,
+      "timestamp": "06:11.085 - 06:11.216",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "1",
+      "quemfala": "Juíza",
+      "segundos_inicio": 371.216,
+      "segundos_fim": 371.276,
+      "timestamp": "06:11.216 - 06:11.276",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "milhão,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 371.276,
+      "segundos_fim": 371.729,
+      "timestamp": "06:11.276 - 06:11.729",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "2",
+      "quemfala": "Juíza",
+      "segundos_inicio": 371.729,
+      "segundos_fim": 371.789,
+      "timestamp": "06:11.729 - 06:11.789",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "milhões?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 371.789,
+      "segundos_fim": 372.33,
+      "timestamp": "06:11.789 - 06:12.330",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Por",
+      "quemfala": "Juíza",
+      "segundos_inicio": 372.53,
+      "segundos_fim": 372.648,
+      "timestamp": "06:12.530 - 06:12.648",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "mês?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 372.648,
+      "segundos_fim": 372.84,
+      "timestamp": "06:12.648 - 06:12.840",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Sim.",
+      "quemfala": "Réu",
+      "segundos_inicio": 373.23,
+      "segundos_fim": 373.95,
+      "timestamp": "06:13.230 - 06:13.950",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Eh,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 374.65,
+      "segundos_fim": 374.871,
+      "timestamp": "06:14.650 - 06:14.871",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 374.871,
+      "segundos_fim": 374.975,
+      "timestamp": "06:14.871 - 06:14.975",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "senhor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 374.975,
+      "segundos_fim": 375.376,
+      "timestamp": "06:14.975 - 06:15.376",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "tem",
+      "quemfala": "Juíza",
+      "segundos_inicio": 375.376,
+      "segundos_fim": 375.577,
+      "timestamp": "06:15.376 - 06:15.577",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "algum",
+      "quemfala": "Juíza",
+      "segundos_inicio": 375.577,
+      "segundos_fim": 375.93,
+      "timestamp": "06:15.577 - 06:15.930",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "dependente?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 375.93,
+      "segundos_fim": 376.76,
+      "timestamp": "06:15.930 - 06:16.760",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Tenho.",
+      "quemfala": "Réu",
+      "segundos_inicio": 377.06,
+      "segundos_fim": 377.27,
+      "timestamp": "06:17.060 - 06:17.270",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Quem?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 377.86,
+      "segundos_fim": 378.16,
+      "timestamp": "06:17.860 - 06:18.160",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "A",
+      "quemfala": "Réu",
+      "segundos_inicio": 378.27,
+      "segundos_fim": 378.339,
+      "timestamp": "06:18.270 - 06:18.339",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "minha",
+      "quemfala": "Réu",
+      "segundos_inicio": 378.339,
+      "segundos_fim": 378.574,
+      "timestamp": "06:18.339 - 06:18.574",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "esposa.",
+      "quemfala": "Réu",
+      "segundos_inicio": 378.574,
+      "segundos_fim": 378.96,
+      "timestamp": "06:18.574 - 06:18.960",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Dependente",
+      "quemfala": "Juíza",
+      "segundos_inicio": 379.27,
+      "segundos_fim": 380.484,
+      "timestamp": "06:19.270 - 06:20.484",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "menor,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 380.484,
+      "segundos_fim": 381.21,
+      "timestamp": "06:20.484 - 06:21.210",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "ela",
+      "quemfala": "Juíza",
+      "segundos_inicio": 381.21,
+      "segundos_fim": 381.651,
+      "timestamp": "06:21.210 - 06:21.651",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "ou",
+      "quemfala": "Juíza",
+      "segundos_inicio": 381.651,
+      "segundos_fim": 382.008,
+      "timestamp": "06:21.651 - 06:22.008",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "ou?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 382.008,
+      "segundos_fim": 382.58,
+      "timestamp": "06:22.008 - 06:22.580",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Tenho.",
+      "quemfala": "Réu",
+      "segundos_inicio": 382.87,
+      "segundos_fim": 383.547,
+      "timestamp": "06:22.870 - 06:23.547",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "A",
+      "quemfala": "Réu",
+      "segundos_inicio": 383.547,
+      "segundos_fim": 383.694,
+      "timestamp": "06:23.547 - 06:23.694",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "minha",
+      "quemfala": "Réu",
+      "segundos_inicio": 383.694,
+      "segundos_fim": 384.194,
+      "timestamp": "06:23.694 - 06:24.194",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "filha,",
+      "quemfala": "Réu",
+      "segundos_inicio": 384.194,
+      "segundos_fim": 384.792,
+      "timestamp": "06:24.194 - 06:24.792",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Valentina.",
+      "quemfala": "Réu",
+      "segundos_inicio": 384.792,
+      "segundos_fim": 385.9,
+      "timestamp": "06:24.792 - 06:25.900",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Tá.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 386.2,
+      "segundos_fim": 386.5,
+      "timestamp": "06:26.200 - 06:26.500",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "E",
+      "quemfala": "Réu",
+      "segundos_inicio": 386.61,
+      "segundos_fim": 386.712,
+      "timestamp": "06:26.610 - 06:26.712",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "minha",
+      "quemfala": "Réu",
+      "segundos_inicio": 386.712,
+      "segundos_fim": 387.058,
+      "timestamp": "06:26.712 - 06:27.058",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "mulher",
+      "quemfala": "Réu",
+      "segundos_inicio": 387.058,
+      "segundos_fim": 387.452,
+      "timestamp": "06:27.058 - 06:27.452",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "tá",
+      "quemfala": "Réu",
+      "segundos_inicio": 387.452,
+      "segundos_fim": 387.601,
+      "timestamp": "06:27.452 - 06:27.601",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "grávida.",
+      "quemfala": "Réu",
+      "segundos_inicio": 387.601,
+      "segundos_fim": 388.22,
+      "timestamp": "06:27.601 - 06:28.220",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Tá,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 388.43,
+      "segundos_fim": 388.823,
+      "timestamp": "06:28.430 - 06:28.823",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "entendi.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 388.823,
+      "segundos_fim": 389.94,
+      "timestamp": "06:28.823 - 06:29.940",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Quantos",
+      "quemfala": "Juíza",
+      "segundos_inicio": 391.04,
+      "segundos_fim": 392.029,
+      "timestamp": "06:31.040 - 06:32.029",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "anos",
+      "quemfala": "Juíza",
+      "segundos_inicio": 392.029,
+      "segundos_fim": 392.625,
+      "timestamp": "06:32.029 - 06:32.625",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "tem",
+      "quemfala": "Juíza",
+      "segundos_inicio": 392.625,
+      "segundos_fim": 393.018,
+      "timestamp": "06:32.625 - 06:33.018",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Juíza",
+      "segundos_inicio": 393.018,
+      "segundos_fim": 393.221,
+      "timestamp": "06:33.018 - 06:33.221",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Juíza",
+      "segundos_inicio": 393.221,
+      "segundos_fim": 393.424,
+      "timestamp": "06:33.221 - 06:33.424",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Juíza",
+      "segundos_inicio": 393.424,
+      "segundos_fim": 393.627,
+      "timestamp": "06:33.424 - 06:33.627",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Juíza",
+      "segundos_inicio": 393.627,
+      "segundos_fim": 393.83,
+      "timestamp": "06:33.627 - 06:33.830",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Valentina?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 393.83,
+      "segundos_fim": 395.36,
+      "timestamp": "06:33.830 - 06:35.360",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Quatro",
+      "quemfala": "Réu",
+      "segundos_inicio": 396.05,
+      "segundos_fim": 396.308,
+      "timestamp": "06:36.050 - 06:36.308",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "anos.",
+      "quemfala": "Réu",
+      "segundos_inicio": 396.308,
+      "segundos_fim": 396.55,
+      "timestamp": "06:36.308 - 06:36.550",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Quatro",
+      "quemfala": "Juíza",
+      "segundos_inicio": 396.85,
+      "segundos_fim": 397.096,
+      "timestamp": "06:36.850 - 06:37.096",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "anos?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 397.096,
+      "segundos_fim": 397.327,
+      "timestamp": "06:37.096 - 06:37.327",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Qual",
+      "quemfala": "Juíza",
+      "segundos_inicio": 397.327,
+      "segundos_fim": 397.491,
+      "timestamp": "06:37.327 - 06:37.491",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Juíza",
+      "segundos_inicio": 397.491,
+      "segundos_fim": 397.629,
+      "timestamp": "06:37.491 - 06:37.629",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "é",
+      "quemfala": "Juíza",
+      "segundos_inicio": 397.629,
+      "segundos_fim": 397.685,
+      "timestamp": "06:37.629 - 06:37.685",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Juíza",
+      "segundos_inicio": 397.685,
+      "segundos_fim": 397.741,
+      "timestamp": "06:37.685 - 06:37.741",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "data",
+      "quemfala": "Juíza",
+      "segundos_inicio": 397.741,
+      "segundos_fim": 397.905,
+      "timestamp": "06:37.741 - 06:37.905",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "de",
+      "quemfala": "Juíza",
+      "segundos_inicio": 397.905,
+      "segundos_fim": 397.987,
+      "timestamp": "06:37.905 - 06:37.987",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "nascimento",
+      "quemfala": "Juíza",
+      "segundos_inicio": 397.987,
+      "segundos_fim": 398.368,
+      "timestamp": "06:37.987 - 06:38.368",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "dela?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 398.368,
+      "segundos_fim": 398.6,
+      "timestamp": "06:38.368 - 06:38.600",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "26/06/2021.",
+      "quemfala": "Réu",
+      "segundos_inicio": 398.99,
+      "segundos_fim": 401.29,
+      "timestamp": "06:38.990 - 06:41.290",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Ela",
+      "quemfala": "Juíza",
+      "segundos_inicio": 401.98,
+      "segundos_fim": 402.307,
+      "timestamp": "06:41.980 - 06:42.307",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "agora",
+      "quemfala": "Juíza",
+      "segundos_inicio": 402.307,
+      "segundos_fim": 402.829,
+      "timestamp": "06:42.307 - 06:42.829",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "tá",
+      "quemfala": "Juíza",
+      "segundos_inicio": 402.829,
+      "segundos_fim": 403.024,
+      "timestamp": "06:42.829 - 06:43.024",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "com",
+      "quemfala": "Juíza",
+      "segundos_inicio": 403.024,
+      "segundos_fim": 403.281,
+      "timestamp": "06:43.024 - 06:43.281",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Juíza",
+      "segundos_inicio": 403.281,
+      "segundos_fim": 403.414,
+      "timestamp": "06:43.281 - 06:43.414",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "mãe?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 403.414,
+      "segundos_fim": 403.9,
+      "timestamp": "06:43.414 - 06:43.900",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Uhum.",
+      "quemfala": "Réu",
+      "segundos_inicio": 404.2,
+      "segundos_fim": 404.61,
+      "timestamp": "06:44.200 - 06:44.610",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Tá",
+      "quemfala": "Réu",
+      "segundos_inicio": 405.2,
+      "segundos_fim": 405.413,
+      "timestamp": "06:45.200 - 06:45.413",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "com",
+      "quemfala": "Réu",
+      "segundos_inicio": 405.413,
+      "segundos_fim": 405.694,
+      "timestamp": "06:45.413 - 06:45.694",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Réu",
+      "segundos_inicio": 405.694,
+      "segundos_fim": 405.839,
+      "timestamp": "06:45.694 - 06:45.839",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "outro",
+      "quemfala": "Réu",
+      "segundos_inicio": 405.839,
+      "segundos_fim": 406.41,
+      "timestamp": "06:45.839 - 06:46.410",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "filho,",
+      "quemfala": "Réu",
+      "segundos_inicio": 406.41,
+      "segundos_fim": 407.0,
+      "timestamp": "06:46.410 - 06:47.000",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "tá",
+      "quemfala": "Réu",
+      "segundos_inicio": 407.0,
+      "segundos_fim": 407.213,
+      "timestamp": "06:47.000 - 06:47.213",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "com",
+      "quemfala": "Réu",
+      "segundos_inicio": 407.213,
+      "segundos_fim": 407.494,
+      "timestamp": "06:47.213 - 06:47.494",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Réu",
+      "segundos_inicio": 407.494,
+      "segundos_fim": 407.639,
+      "timestamp": "06:47.494 - 06:47.639",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "mãe.",
+      "quemfala": "Réu",
+      "segundos_inicio": 407.639,
+      "segundos_fim": 408.17,
+      "timestamp": "06:47.639 - 06:48.170",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "A",
+      "quemfala": "Réu",
+      "segundos_inicio": 408.47,
+      "segundos_fim": 408.526,
+      "timestamp": "06:48.470 - 06:48.526",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "minha",
+      "quemfala": "Réu",
+      "segundos_inicio": 408.526,
+      "segundos_fim": 408.717,
+      "timestamp": "06:48.526 - 06:48.717",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "esposa",
+      "quemfala": "Réu",
+      "segundos_inicio": 408.717,
+      "segundos_fim": 408.964,
+      "timestamp": "06:48.717 - 06:48.964",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "está",
+      "quemfala": "Réu",
+      "segundos_inicio": 408.964,
+      "segundos_fim": 409.129,
+      "timestamp": "06:48.964 - 06:49.129",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "grávida.",
+      "quemfala": "Réu",
+      "segundos_inicio": 409.129,
+      "segundos_fim": 409.47,
+      "timestamp": "06:49.129 - 06:49.470",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Seis",
+      "quemfala": "Réu",
+      "segundos_inicio": 409.68,
+      "segundos_fim": 409.871,
+      "timestamp": "06:49.680 - 06:49.871",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "meses.",
+      "quemfala": "Réu",
+      "segundos_inicio": 409.871,
+      "segundos_fim": 410.17,
+      "timestamp": "06:49.871 - 06:50.170",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Grávida,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 410.68,
+      "segundos_fim": 411.015,
+      "timestamp": "06:50.680 - 06:51.015",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "seis",
+      "quemfala": "Juíza",
+      "segundos_inicio": 411.015,
+      "segundos_fim": 411.192,
+      "timestamp": "06:51.015 - 06:51.192",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "meses.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 411.192,
+      "segundos_fim": 411.47,
+      "timestamp": "06:51.192 - 06:51.470",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Doutor,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 412.07,
+      "segundos_fim": 412.662,
+      "timestamp": "06:52.070 - 06:52.662",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "tem",
+      "quemfala": "Juíza",
+      "segundos_inicio": 412.662,
+      "segundos_fim": 412.888,
+      "timestamp": "06:52.662 - 06:52.888",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "alguma",
+      "quemfala": "Juíza",
+      "segundos_inicio": 412.888,
+      "segundos_fim": 413.402,
+      "timestamp": "06:52.888 - 06:53.402",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "deficiência",
+      "quemfala": "Juíza",
+      "segundos_inicio": 413.402,
+      "segundos_fim": 414.375,
+      "timestamp": "06:53.402 - 06:54.375",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "física,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 414.375,
+      "segundos_fim": 414.967,
+      "timestamp": "06:54.375 - 06:54.967",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "dependência",
+      "quemfala": "Juíza",
+      "segundos_inicio": 414.967,
+      "segundos_fim": 415.878,
+      "timestamp": "06:54.967 - 06:55.878",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "química,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 415.878,
+      "segundos_fim": 416.587,
+      "timestamp": "06:55.878 - 06:56.587",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "doença",
+      "quemfala": "Juíza",
+      "segundos_inicio": 416.587,
+      "segundos_fim": 417.101,
+      "timestamp": "06:56.587 - 06:57.101",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "ou",
+      "quemfala": "Juíza",
+      "segundos_inicio": 417.101,
+      "segundos_fim": 417.335,
+      "timestamp": "06:57.101 - 06:57.335",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "hermogênia?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 417.335,
+      "segundos_fim": 418.33,
+      "timestamp": "06:57.335 - 06:58.330",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Não.",
+      "quemfala": "Réu",
+      "segundos_inicio": 418.93,
+      "segundos_fim": 419.14,
+      "timestamp": "06:58.930 - 06:59.140",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Não.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 419.53,
+      "segundos_fim": 419.83,
+      "timestamp": "06:59.530 - 06:59.830",
+      "chunk_origem": 2
+    },
+    {
+      "palavra": "Quando",
+      "quemfala": "Juíza",
+      "segundos_inicio": 368.08,
+      "segundos_fim": 368.438,
+      "timestamp": "06:08.080 - 06:08.438",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 368.438,
+      "segundos_fim": 368.519,
+      "timestamp": "06:08.438 - 06:08.519",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "senhor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 368.519,
+      "segundos_fim": 368.834,
+      "timestamp": "06:08.519 - 06:08.834",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "foi",
+      "quemfala": "Juíza",
+      "segundos_inicio": 368.834,
+      "segundos_fim": 369.035,
+      "timestamp": "06:08.834 - 06:09.035",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "preso,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 369.035,
+      "segundos_fim": 369.366,
+      "timestamp": "06:09.035 - 06:09.366",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "foi",
+      "quemfala": "Juíza",
+      "segundos_inicio": 369.366,
+      "segundos_fim": 369.567,
+      "timestamp": "06:09.366 - 06:09.567",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "dada",
+      "quemfala": "Juíza",
+      "segundos_inicio": 369.567,
+      "segundos_fim": 369.806,
+      "timestamp": "06:09.567 - 06:09.806",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Juíza",
+      "segundos_inicio": 369.806,
+      "segundos_fim": 369.887,
+      "timestamp": "06:09.806 - 06:09.887",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "ciência",
+      "quemfala": "Juíza",
+      "segundos_inicio": 369.887,
+      "segundos_fim": 370.327,
+      "timestamp": "06:09.887 - 06:10.327",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "dos",
+      "quemfala": "Juíza",
+      "segundos_inicio": 370.327,
+      "segundos_fim": 370.484,
+      "timestamp": "06:10.327 - 06:10.484",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "direitos",
+      "quemfala": "Juíza",
+      "segundos_inicio": 370.484,
+      "segundos_fim": 370.962,
+      "timestamp": "06:10.484 - 06:10.962",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "constitucionais,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 370.962,
+      "segundos_fim": 371.89,
+      "timestamp": "06:10.962 - 06:11.890",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "de",
+      "quemfala": "Juíza",
+      "segundos_inicio": 371.89,
+      "segundos_fim": 372.009,
+      "timestamp": "06:11.890 - 06:12.009",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "falar",
+      "quemfala": "Juíza",
+      "segundos_inicio": 372.009,
+      "segundos_fim": 372.286,
+      "timestamp": "06:12.009 - 06:12.286",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "com",
+      "quemfala": "Juíza",
+      "segundos_inicio": 372.286,
+      "segundos_fim": 372.443,
+      "timestamp": "06:12.286 - 06:12.443",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 372.443,
+      "segundos_fim": 372.524,
+      "timestamp": "06:12.443 - 06:12.524",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "advogado?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 372.524,
+      "segundos_fim": 373.1,
+      "timestamp": "06:12.524 - 06:13.100",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "Sim.",
+      "quemfala": "Réu",
+      "segundos_inicio": 373.79,
+      "segundos_fim": 374.09,
+      "timestamp": "06:13.790 - 06:14.090",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "O",
+      "quemfala": "Juíza",
+      "segundos_inicio": 375.85,
+      "segundos_fim": 375.978,
+      "timestamp": "06:15.850 - 06:15.978",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "senhor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 375.978,
+      "segundos_fim": 376.473,
+      "timestamp": "06:15.978 - 06:16.473",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "recebeu",
+      "quemfala": "Juíza",
+      "segundos_inicio": 376.473,
+      "segundos_fim": 377.164,
+      "timestamp": "06:16.473 - 06:17.164",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "água",
+      "quemfala": "Juíza",
+      "segundos_inicio": 377.164,
+      "segundos_fim": 377.607,
+      "timestamp": "06:17.164 - 06:17.607",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "potável,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 377.607,
+      "segundos_fim": 378.315,
+      "timestamp": "06:17.607 - 06:18.315",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "alimentação,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 378.315,
+      "segundos_fim": 379.466,
+      "timestamp": "06:18.315 - 06:19.466",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "da",
+      "quemfala": "Juíza",
+      "segundos_inicio": 379.466,
+      "segundos_fim": 379.654,
+      "timestamp": "06:19.466 - 06:19.654",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "prisão?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 379.654,
+      "segundos_fim": 380.37,
+      "timestamp": "06:19.654 - 06:20.370",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "Sim.",
+      "quemfala": "Réu",
+      "segundos_inicio": 380.45,
+      "segundos_fim": 381.76,
+      "timestamp": "06:20.450 - 06:21.760",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "Como",
+      "quemfala": "Juíza",
+      "segundos_inicio": 382.04,
+      "segundos_fim": 382.269,
+      "timestamp": "06:22.040 - 06:22.269",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "é",
+      "quemfala": "Juíza",
+      "segundos_inicio": 382.269,
+      "segundos_fim": 382.347,
+      "timestamp": "06:22.269 - 06:22.347",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Juíza",
+      "segundos_inicio": 382.347,
+      "segundos_fim": 382.539,
+      "timestamp": "06:22.347 - 06:22.539",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "foi",
+      "quemfala": "Juíza",
+      "segundos_inicio": 382.539,
+      "segundos_fim": 382.731,
+      "timestamp": "06:22.539 - 06:22.731",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 382.731,
+      "segundos_fim": 382.809,
+      "timestamp": "06:22.731 - 06:22.809",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "cumprimento",
+      "quemfala": "Juíza",
+      "segundos_inicio": 382.809,
+      "segundos_fim": 383.375,
+      "timestamp": "06:22.809 - 06:23.375",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "do",
+      "quemfala": "Juíza",
+      "segundos_inicio": 383.375,
+      "segundos_fim": 383.489,
+      "timestamp": "06:23.375 - 06:23.489",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "mandado",
+      "quemfala": "Juíza",
+      "segundos_inicio": 383.489,
+      "segundos_fim": 383.868,
+      "timestamp": "06:23.489 - 06:23.868",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "de",
+      "quemfala": "Juíza",
+      "segundos_inicio": 383.868,
+      "segundos_fim": 383.982,
+      "timestamp": "06:23.868 - 06:23.982",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "prisão?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 383.982,
+      "segundos_fim": 384.42,
+      "timestamp": "06:23.982 - 06:24.420",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "Eles",
+      "quemfala": "Réu",
+      "segundos_inicio": 385.9,
+      "segundos_fim": 386.128,
+      "timestamp": "06:25.900 - 06:26.128",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "chegaram",
+      "quemfala": "Réu",
+      "segundos_inicio": 386.128,
+      "segundos_fim": 386.542,
+      "timestamp": "06:26.128 - 06:26.542",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "lá",
+      "quemfala": "Réu",
+      "segundos_inicio": 386.542,
+      "segundos_fim": 386.656,
+      "timestamp": "06:26.542 - 06:26.656",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "em",
+      "quemfala": "Réu",
+      "segundos_inicio": 386.656,
+      "segundos_fim": 386.77,
+      "timestamp": "06:26.656 - 06:26.770",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "casa.",
+      "quemfala": "Réu",
+      "segundos_inicio": 386.77,
+      "segundos_fim": 387.09,
+      "timestamp": "06:26.770 - 06:27.090",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "Tá.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 387.28,
+      "segundos_fim": 388.01,
+      "timestamp": "06:27.280 - 06:28.010",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "É,",
+      "quemfala": "Réu",
+      "segundos_inicio": 389.45,
+      "segundos_fim": 389.655,
+      "timestamp": "06:29.450 - 06:29.655",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "tava",
+      "quemfala": "Réu",
+      "segundos_inicio": 389.655,
+      "segundos_fim": 390.016,
+      "timestamp": "06:29.655 - 06:30.016",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "dormindo.",
+      "quemfala": "Réu",
+      "segundos_inicio": 390.016,
+      "segundos_fim": 390.82,
+      "timestamp": "06:30.016 - 06:30.820",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "Só",
+      "quemfala": "Réu",
+      "segundos_inicio": 390.82,
+      "segundos_fim": 391.001,
+      "timestamp": "06:30.820 - 06:31.001",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "ouvi",
+      "quemfala": "Réu",
+      "segundos_inicio": 391.001,
+      "segundos_fim": 391.428,
+      "timestamp": "06:31.001 - 06:31.428",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Réu",
+      "segundos_inicio": 391.428,
+      "segundos_fim": 391.551,
+      "timestamp": "06:31.428 - 06:31.551",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "barulho",
+      "quemfala": "Réu",
+      "segundos_inicio": 391.551,
+      "segundos_fim": 392.15,
+      "timestamp": "06:31.551 - 06:32.150",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "da",
+      "quemfala": "Réu",
+      "segundos_inicio": 392.15,
+      "segundos_fim": 392.331,
+      "timestamp": "06:32.150 - 06:32.331",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "porta",
+      "quemfala": "Réu",
+      "segundos_inicio": 392.331,
+      "segundos_fim": 392.75,
+      "timestamp": "06:32.331 - 06:32.750",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "batendo,",
+      "quemfala": "Réu",
+      "segundos_inicio": 392.75,
+      "segundos_fim": 393.431,
+      "timestamp": "06:32.750 - 06:33.431",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Réu",
+      "segundos_inicio": 393.431,
+      "segundos_fim": 393.735,
+      "timestamp": "06:33.431 - 06:33.735",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Réu",
+      "segundos_inicio": 393.735,
+      "segundos_fim": 393.858,
+      "timestamp": "06:33.735 - 06:33.858",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "porta",
+      "quemfala": "Réu",
+      "segundos_inicio": 393.858,
+      "segundos_fim": 394.277,
+      "timestamp": "06:33.858 - 06:34.277",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "é",
+      "quemfala": "Réu",
+      "segundos_inicio": 394.277,
+      "segundos_fim": 394.4,
+      "timestamp": "06:34.277 - 06:34.400",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "blindada.",
+      "quemfala": "Réu",
+      "segundos_inicio": 394.4,
+      "segundos_fim": 395.204,
+      "timestamp": "06:34.400 - 06:35.204",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "Eles",
+      "quemfala": "Réu",
+      "segundos_inicio": 395.204,
+      "segundos_fim": 395.565,
+      "timestamp": "06:35.204 - 06:35.565",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "pedindo",
+      "quemfala": "Réu",
+      "segundos_inicio": 395.565,
+      "segundos_fim": 396.164,
+      "timestamp": "06:35.565 - 06:36.164",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "para",
+      "quemfala": "Réu",
+      "segundos_inicio": 396.164,
+      "segundos_fim": 396.525,
+      "timestamp": "06:36.164 - 06:36.525",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "abrir",
+      "quemfala": "Réu",
+      "segundos_inicio": 396.525,
+      "segundos_fim": 396.944,
+      "timestamp": "06:36.525 - 06:36.944",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Réu",
+      "segundos_inicio": 396.944,
+      "segundos_fim": 397.067,
+      "timestamp": "06:36.944 - 06:37.067",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "porta.",
+      "quemfala": "Réu",
+      "segundos_inicio": 397.067,
+      "segundos_fim": 397.633,
+      "timestamp": "06:37.067 - 06:37.633",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "Aí",
+      "quemfala": "Réu",
+      "segundos_inicio": 397.633,
+      "segundos_fim": 397.879,
+      "timestamp": "06:37.633 - 06:37.879",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "eu",
+      "quemfala": "Réu",
+      "segundos_inicio": 397.879,
+      "segundos_fim": 398.125,
+      "timestamp": "06:37.879 - 06:38.125",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "saí",
+      "quemfala": "Réu",
+      "segundos_inicio": 398.125,
+      "segundos_fim": 398.429,
+      "timestamp": "06:38.125 - 06:38.429",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "na",
+      "quemfala": "Réu",
+      "segundos_inicio": 398.429,
+      "segundos_fim": 398.61,
+      "timestamp": "06:38.429 - 06:38.610",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "varanda,",
+      "quemfala": "Réu",
+      "segundos_inicio": 398.61,
+      "segundos_fim": 399.291,
+      "timestamp": "06:38.610 - 06:39.291",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "os",
+      "quemfala": "Réu",
+      "segundos_inicio": 399.291,
+      "segundos_fim": 399.472,
+      "timestamp": "06:39.291 - 06:39.472",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "policiais",
+      "quemfala": "Réu",
+      "segundos_inicio": 399.472,
+      "segundos_fim": 400.317,
+      "timestamp": "06:39.472 - 06:40.317",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "me",
+      "quemfala": "Réu",
+      "segundos_inicio": 400.317,
+      "segundos_fim": 400.498,
+      "timestamp": "06:40.317 - 06:40.498",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "rendeu",
+      "quemfala": "Réu",
+      "segundos_inicio": 400.498,
+      "segundos_fim": 401.04,
+      "timestamp": "06:40.498 - 06:41.040",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "na",
+      "quemfala": "Réu",
+      "segundos_inicio": 401.04,
+      "segundos_fim": 401.221,
+      "timestamp": "06:41.040 - 06:41.221",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "varanda,",
+      "quemfala": "Réu",
+      "segundos_inicio": 401.221,
+      "segundos_fim": 401.902,
+      "timestamp": "06:41.221 - 06:41.902",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "falou",
+      "quemfala": "Réu",
+      "segundos_inicio": 401.902,
+      "segundos_fim": 402.386,
+      "timestamp": "06:41.902 - 06:42.386",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "para",
+      "quemfala": "Réu",
+      "segundos_inicio": 402.386,
+      "segundos_fim": 402.747,
+      "timestamp": "06:42.386 - 06:42.747",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "eu",
+      "quemfala": "Réu",
+      "segundos_inicio": 402.747,
+      "segundos_fim": 402.993,
+      "timestamp": "06:42.747 - 06:42.993",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "ficar",
+      "quemfala": "Réu",
+      "segundos_inicio": 402.993,
+      "segundos_fim": 403.412,
+      "timestamp": "06:42.993 - 06:43.412",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "parado",
+      "quemfala": "Réu",
+      "segundos_inicio": 403.412,
+      "segundos_fim": 403.954,
+      "timestamp": "06:43.412 - 06:43.954",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "e",
+      "quemfala": "Réu",
+      "segundos_inicio": 403.954,
+      "segundos_fim": 404.077,
+      "timestamp": "06:43.954 - 06:44.077",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "pediu",
+      "quemfala": "Réu",
+      "segundos_inicio": 404.077,
+      "segundos_fim": 404.561,
+      "timestamp": "06:44.077 - 06:44.561",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "para",
+      "quemfala": "Réu",
+      "segundos_inicio": 404.561,
+      "segundos_fim": 404.922,
+      "timestamp": "06:44.561 - 06:44.922",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Réu",
+      "segundos_inicio": 404.922,
+      "segundos_fim": 405.045,
+      "timestamp": "06:44.922 - 06:45.045",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "minha",
+      "quemfala": "Réu",
+      "segundos_inicio": 405.045,
+      "segundos_fim": 405.464,
+      "timestamp": "06:45.045 - 06:45.464",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "cunhada",
+      "quemfala": "Réu",
+      "segundos_inicio": 405.464,
+      "segundos_fim": 406.063,
+      "timestamp": "06:45.464 - 06:46.063",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "abrir",
+      "quemfala": "Réu",
+      "segundos_inicio": 406.063,
+      "segundos_fim": 406.482,
+      "timestamp": "06:46.063 - 06:46.482",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Réu",
+      "segundos_inicio": 406.482,
+      "segundos_fim": 406.605,
+      "timestamp": "06:46.482 - 06:46.605",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "porta.",
+      "quemfala": "Réu",
+      "segundos_inicio": 406.605,
+      "segundos_fim": 407.17,
+      "timestamp": "06:46.605 - 06:47.170",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "É,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 407.55,
+      "segundos_fim": 407.655,
+      "timestamp": "06:47.550 - 06:47.655",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 407.655,
+      "segundos_fim": 407.718,
+      "timestamp": "06:47.655 - 06:47.718",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "senhor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 407.718,
+      "segundos_fim": 407.963,
+      "timestamp": "06:47.718 - 06:47.963",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "tem",
+      "quemfala": "Juíza",
+      "segundos_inicio": 407.963,
+      "segundos_fim": 408.085,
+      "timestamp": "06:47.963 - 06:48.085",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "alguma",
+      "quemfala": "Juíza",
+      "segundos_inicio": 408.085,
+      "segundos_fim": 408.364,
+      "timestamp": "06:48.085 - 06:48.364",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "coisa",
+      "quemfala": "Juíza",
+      "segundos_inicio": 408.364,
+      "segundos_fim": 408.613,
+      "timestamp": "06:48.364 - 06:48.613",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Juíza",
+      "segundos_inicio": 408.613,
+      "segundos_fim": 408.676,
+      "timestamp": "06:48.613 - 06:48.676",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "relatar",
+      "quemfala": "Juíza",
+      "segundos_inicio": 408.676,
+      "segundos_fim": 408.984,
+      "timestamp": "06:48.676 - 06:48.984",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "sobre",
+      "quemfala": "Juíza",
+      "segundos_inicio": 408.984,
+      "segundos_fim": 409.199,
+      "timestamp": "06:48.984 - 06:49.199",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Juíza",
+      "segundos_inicio": 409.199,
+      "segundos_fim": 409.262,
+      "timestamp": "06:49.199 - 06:49.262",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "casa,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 409.262,
+      "segundos_fim": 409.49,
+      "timestamp": "06:49.262 - 06:49.490",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 409.49,
+      "segundos_fim": 409.553,
+      "timestamp": "06:49.490 - 06:49.553",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "cumprimento",
+      "quemfala": "Juíza",
+      "segundos_inicio": 409.553,
+      "segundos_fim": 410.013,
+      "timestamp": "06:49.553 - 06:50.013",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "da",
+      "quemfala": "Juíza",
+      "segundos_inicio": 410.013,
+      "segundos_fim": 410.106,
+      "timestamp": "06:50.013 - 06:50.106",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "prisão?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 410.106,
+      "segundos_fim": 410.46,
+      "timestamp": "06:50.106 - 06:50.460",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "Foi",
+      "quemfala": "Juíza",
+      "segundos_inicio": 410.46,
+      "segundos_fim": 410.616,
+      "timestamp": "06:50.460 - 06:50.616",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "tudo",
+      "quemfala": "Juíza",
+      "segundos_inicio": 410.616,
+      "segundos_fim": 410.802,
+      "timestamp": "06:50.616 - 06:50.802",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "bem?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 410.802,
+      "segundos_fim": 411.0,
+      "timestamp": "06:50.802 - 06:51.000",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "Aconteceu",
+      "quemfala": "Juíza",
+      "segundos_inicio": 411.0,
+      "segundos_fim": 411.435,
+      "timestamp": "06:51.000 - 06:51.435",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "alguma",
+      "quemfala": "Juíza",
+      "segundos_inicio": 411.435,
+      "segundos_fim": 411.714,
+      "timestamp": "06:51.435 - 06:51.714",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "coisa?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 411.714,
+      "segundos_fim": 412.04,
+      "timestamp": "06:51.714 - 06:52.040",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "Tudo",
+      "quemfala": "Réu",
+      "segundos_inicio": 412.48,
+      "segundos_fim": 412.625,
+      "timestamp": "06:52.480 - 06:52.625",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "bem.",
+      "quemfala": "Réu",
+      "segundos_inicio": 412.625,
+      "segundos_fim": 412.78,
+      "timestamp": "06:52.625 - 06:52.780",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "Tudo",
+      "quemfala": "Juíza",
+      "segundos_inicio": 413.14,
+      "segundos_fim": 413.377,
+      "timestamp": "06:53.140 - 06:53.377",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "bem?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 413.377,
+      "segundos_fim": 413.63,
+      "timestamp": "06:53.377 - 06:53.630",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "O",
+      "quemfala": "Juíza",
+      "segundos_inicio": 413.63,
+      "segundos_fim": 413.711,
+      "timestamp": "06:53.630 - 06:53.711",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "senhor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 413.711,
+      "segundos_fim": 414.024,
+      "timestamp": "06:53.711 - 06:54.024",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "passou",
+      "quemfala": "Juíza",
+      "segundos_inicio": 414.024,
+      "segundos_fim": 414.38,
+      "timestamp": "06:54.024 - 06:54.380",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "pelo",
+      "quemfala": "Juíza",
+      "segundos_inicio": 414.38,
+      "segundos_fim": 414.617,
+      "timestamp": "06:54.380 - 06:54.617",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "IML?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 414.617,
+      "segundos_fim": 414.87,
+      "timestamp": "06:54.617 - 06:54.870",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "Passei.",
+      "quemfala": "Réu",
+      "segundos_inicio": 415.63,
+      "segundos_fim": 416.15,
+      "timestamp": "06:55.630 - 06:56.150",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "Tá.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 416.81,
+      "segundos_fim": 417.012,
+      "timestamp": "06:56.810 - 06:57.012",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "O",
+      "quemfala": "Juíza",
+      "segundos_inicio": 417.012,
+      "segundos_fim": 417.088,
+      "timestamp": "06:57.012 - 06:57.088",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "senhor",
+      "quemfala": "Juíza",
+      "segundos_inicio": 417.088,
+      "segundos_fim": 417.381,
+      "timestamp": "06:57.088 - 06:57.381",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "quer",
+      "quemfala": "Juíza",
+      "segundos_inicio": 417.381,
+      "segundos_fim": 417.603,
+      "timestamp": "06:57.381 - 06:57.603",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "alguma",
+      "quemfala": "Juíza",
+      "segundos_inicio": 417.603,
+      "segundos_fim": 417.936,
+      "timestamp": "06:57.603 - 06:57.936",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "coisa",
+      "quemfala": "Juíza",
+      "segundos_inicio": 417.936,
+      "segundos_fim": 418.234,
+      "timestamp": "06:57.936 - 06:58.234",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Juíza",
+      "segundos_inicio": 418.234,
+      "segundos_fim": 418.31,
+      "timestamp": "06:58.234 - 06:58.310",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "relatar",
+      "quemfala": "Juíza",
+      "segundos_inicio": 418.31,
+      "segundos_fim": 418.679,
+      "timestamp": "06:58.310 - 06:58.679",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "sobre",
+      "quemfala": "Juíza",
+      "segundos_inicio": 418.679,
+      "segundos_fim": 418.937,
+      "timestamp": "06:58.679 - 06:58.937",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 418.937,
+      "segundos_fim": 419.013,
+      "timestamp": "06:58.937 - 06:59.013",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "cumprimento",
+      "quemfala": "Juíza",
+      "segundos_inicio": 419.013,
+      "segundos_fim": 419.563,
+      "timestamp": "06:59.013 - 06:59.563",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "da",
+      "quemfala": "Juíza",
+      "segundos_inicio": 419.563,
+      "segundos_fim": 419.674,
+      "timestamp": "06:59.563 - 06:59.674",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "prisão?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 419.674,
+      "segundos_fim": 420.098,
+      "timestamp": "06:59.674 - 07:00.098",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "Não",
+      "quemfala": "Juíza",
+      "segundos_inicio": 420.098,
+      "segundos_fim": 420.285,
+      "timestamp": "07:00.098 - 07:00.285",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "tem",
+      "quemfala": "Juíza",
+      "segundos_inicio": 420.285,
+      "segundos_fim": 420.431,
+      "timestamp": "07:00.285 - 07:00.431",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "perguntas.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 420.431,
+      "segundos_fim": 420.961,
+      "timestamp": "07:00.431 - 07:00.961",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "O",
+      "quemfala": "Juíza",
+      "segundos_inicio": 420.961,
+      "segundos_fim": 421.037,
+      "timestamp": "07:00.961 - 07:01.037",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "Dr.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 421.037,
+      "segundos_fim": 421.199,
+      "timestamp": "07:01.037 - 07:01.199",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "quer",
+      "quemfala": "Juíza",
+      "segundos_inicio": 421.199,
+      "segundos_fim": 421.421,
+      "timestamp": "07:01.199 - 07:01.421",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Juíza",
+      "segundos_inicio": 421.421,
+      "segundos_fim": 421.608,
+      "timestamp": "07:01.421 - 07:01.608",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "eu",
+      "quemfala": "Juíza",
+      "segundos_inicio": 421.608,
+      "segundos_fim": 421.759,
+      "timestamp": "07:01.608 - 07:01.759",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "faça",
+      "quemfala": "Juíza",
+      "segundos_inicio": 421.759,
+      "segundos_fim": 421.981,
+      "timestamp": "07:01.759 - 07:01.981",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "assinar?",
+      "quemfala": "Juíza",
+      "segundos_inicio": 421.981,
+      "segundos_fim": 422.44,
+      "timestamp": "07:01.981 - 07:02.440",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "Mesmo,",
+      "quemfala": "Réu",
+      "segundos_inicio": 422.93,
+      "segundos_fim": 423.269,
+      "timestamp": "07:02.930 - 07:03.269",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "é,",
+      "quemfala": "Réu",
+      "segundos_inicio": 423.269,
+      "segundos_fim": 423.408,
+      "timestamp": "07:03.269 - 07:03.408",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "requerimento",
+      "quemfala": "Réu",
+      "segundos_inicio": 423.408,
+      "segundos_fim": 424.141,
+      "timestamp": "07:03.408 - 07:04.141",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "por",
+      "quemfala": "Réu",
+      "segundos_inicio": 424.141,
+      "segundos_fim": 424.302,
+      "timestamp": "07:04.141 - 07:04.302",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "gentileza.",
+      "quemfala": "Réu",
+      "segundos_inicio": 424.302,
+      "segundos_fim": 424.93,
+      "timestamp": "07:04.302 - 07:04.930",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "Ligação",
+      "quemfala": "Juíza",
+      "segundos_inicio": 425.44,
+      "segundos_fim": 426.086,
+      "timestamp": "07:05.440 - 07:06.086",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "para",
+      "quemfala": "Juíza",
+      "segundos_inicio": 426.086,
+      "segundos_fim": 426.437,
+      "timestamp": "07:06.086 - 07:06.437",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "familiar",
+      "quemfala": "Juíza",
+      "segundos_inicio": 426.437,
+      "segundos_fim": 427.139,
+      "timestamp": "07:06.437 - 07:07.139",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "e",
+      "quemfala": "Juíza",
+      "segundos_inicio": 427.139,
+      "segundos_fim": 427.259,
+      "timestamp": "07:07.139 - 07:07.259",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "cobertor.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 427.259,
+      "segundos_fim": 428.04,
+      "timestamp": "07:07.259 - 07:08.040",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "Bom,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 430.11,
+      "segundos_fim": 430.393,
+      "timestamp": "07:10.110 - 07:10.393",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "tendo",
+      "quemfala": "Juíza",
+      "segundos_inicio": 430.393,
+      "segundos_fim": 430.763,
+      "timestamp": "07:10.393 - 07:10.763",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "em",
+      "quemfala": "Juíza",
+      "segundos_inicio": 430.763,
+      "segundos_fim": 430.923,
+      "timestamp": "07:10.763 - 07:10.923",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "vista",
+      "quemfala": "Juíza",
+      "segundos_inicio": 430.923,
+      "segundos_fim": 431.293,
+      "timestamp": "07:10.923 - 07:11.293",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Juíza",
+      "segundos_inicio": 431.293,
+      "segundos_fim": 431.561,
+      "timestamp": "07:11.293 - 07:11.561",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "se",
+      "quemfala": "Juíza",
+      "segundos_inicio": 431.561,
+      "segundos_fim": 431.721,
+      "timestamp": "07:11.561 - 07:11.721",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "trata",
+      "quemfala": "Juíza",
+      "segundos_inicio": 431.721,
+      "segundos_fim": 432.091,
+      "timestamp": "07:11.721 - 07:12.091",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "de",
+      "quemfala": "Juíza",
+      "segundos_inicio": 432.091,
+      "segundos_fim": 432.251,
+      "timestamp": "07:12.091 - 07:12.251",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "carta",
+      "quemfala": "Juíza",
+      "segundos_inicio": 432.251,
+      "segundos_fim": 432.621,
+      "timestamp": "07:12.251 - 07:12.621",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "precatória,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 432.621,
+      "segundos_fim": 433.492,
+      "timestamp": "07:12.621 - 07:13.492",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "não",
+      "quemfala": "Juíza",
+      "segundos_inicio": 433.492,
+      "segundos_fim": 433.76,
+      "timestamp": "07:13.492 - 07:13.760",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "foi",
+      "quemfala": "Juíza",
+      "segundos_inicio": 433.76,
+      "segundos_fim": 434.028,
+      "timestamp": "07:13.760 - 07:14.028",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "verificado",
+      "quemfala": "Juíza",
+      "segundos_inicio": 434.028,
+      "segundos_fim": 434.826,
+      "timestamp": "07:14.028 - 07:14.826",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "nenhuma",
+      "quemfala": "Juíza",
+      "segundos_inicio": 434.826,
+      "segundos_fim": 435.356,
+      "timestamp": "07:14.826 - 07:15.356",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "mácula",
+      "quemfala": "Juíza",
+      "segundos_inicio": 435.356,
+      "segundos_fim": 435.835,
+      "timestamp": "07:15.356 - 07:15.835",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "no",
+      "quemfala": "Juíza",
+      "segundos_inicio": 435.835,
+      "segundos_fim": 435.995,
+      "timestamp": "07:15.835 - 07:15.995",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "cumprimento",
+      "quemfala": "Juíza",
+      "segundos_inicio": 435.995,
+      "segundos_fim": 436.786,
+      "timestamp": "07:15.995 - 07:16.786",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "do",
+      "quemfala": "Juíza",
+      "segundos_inicio": 436.786,
+      "segundos_fim": 436.946,
+      "timestamp": "07:16.786 - 07:16.946",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "mandado",
+      "quemfala": "Juíza",
+      "segundos_inicio": 436.946,
+      "segundos_fim": 437.476,
+      "timestamp": "07:16.946 - 07:17.476",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "de",
+      "quemfala": "Juíza",
+      "segundos_inicio": 437.476,
+      "segundos_fim": 437.636,
+      "timestamp": "07:17.476 - 07:17.636",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "prisão,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 437.636,
+      "segundos_fim": 438.187,
+      "timestamp": "07:17.636 - 07:18.187",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "não",
+      "quemfala": "Juíza",
+      "segundos_inicio": 438.187,
+      "segundos_fim": 438.455,
+      "timestamp": "07:18.187 - 07:18.455",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "há",
+      "quemfala": "Juíza",
+      "segundos_inicio": 438.455,
+      "segundos_fim": 438.615,
+      "timestamp": "07:18.455 - 07:18.615",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "nenhuma",
+      "quemfala": "Juíza",
+      "segundos_inicio": 438.615,
+      "segundos_fim": 439.145,
+      "timestamp": "07:18.615 - 07:19.145",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "providência",
+      "quemfala": "Juíza",
+      "segundos_inicio": 439.145,
+      "segundos_fim": 439.994,
+      "timestamp": "07:19.145 - 07:19.994",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Juíza",
+      "segundos_inicio": 439.994,
+      "segundos_fim": 440.103,
+      "timestamp": "07:19.994 - 07:20.103",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "ser",
+      "quemfala": "Juíza",
+      "segundos_inicio": 440.103,
+      "segundos_fim": 440.313,
+      "timestamp": "07:20.103 - 07:20.313",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "tomada",
+      "quemfala": "Juíza",
+      "segundos_inicio": 440.313,
+      "segundos_fim": 440.792,
+      "timestamp": "07:20.313 - 07:20.792",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "por",
+      "quemfala": "Juíza",
+      "segundos_inicio": 440.792,
+      "segundos_fim": 441.002,
+      "timestamp": "07:20.792 - 07:21.002",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "esse",
+      "quemfala": "Juíza",
+      "segundos_inicio": 441.002,
+      "segundos_fim": 441.321,
+      "timestamp": "07:21.002 - 07:21.321",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "juízo.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 441.321,
+      "segundos_fim": 441.88,
+      "timestamp": "07:21.321 - 07:21.880",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "Quanto",
+      "quemfala": "Juíza",
+      "segundos_inicio": 441.88,
+      "segundos_fim": 442.359,
+      "timestamp": "07:21.880 - 07:22.359",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "aos",
+      "quemfala": "Juíza",
+      "segundos_inicio": 442.359,
+      "segundos_fim": 442.627,
+      "timestamp": "07:22.359 - 07:22.627",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "requerimentos,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 442.627,
+      "segundos_fim": 443.708,
+      "timestamp": "07:22.627 - 07:23.708",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "novamente,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 443.708,
+      "segundos_fim": 444.47,
+      "timestamp": "07:23.708 - 07:24.470",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "o",
+      "quemfala": "Juíza",
+      "segundos_inicio": 444.47,
+      "segundos_fim": 444.579,
+      "timestamp": "07:24.470 - 07:24.579",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "juízo",
+      "quemfala": "Juíza",
+      "segundos_inicio": 444.579,
+      "segundos_fim": 445.007,
+      "timestamp": "07:24.579 - 07:25.007",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "não",
+      "quemfala": "Juíza",
+      "segundos_inicio": 445.007,
+      "segundos_fim": 445.275,
+      "timestamp": "07:25.007 - 07:25.275",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "vê",
+      "quemfala": "Juíza",
+      "segundos_inicio": 445.275,
+      "segundos_fim": 445.435,
+      "timestamp": "07:25.275 - 07:25.435",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "problemas",
+      "quemfala": "Juíza",
+      "segundos_inicio": 445.435,
+      "segundos_fim": 446.066,
+      "timestamp": "07:25.435 - 07:26.066",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "na",
+      "quemfala": "Juíza",
+      "segundos_inicio": 446.066,
+      "segundos_fim": 446.226,
+      "timestamp": "07:26.066 - 07:26.226",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "ligação",
+      "quemfala": "Juíza",
+      "segundos_inicio": 446.226,
+      "segundos_fim": 446.814,
+      "timestamp": "07:26.226 - 07:26.814",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "para",
+      "quemfala": "Juíza",
+      "segundos_inicio": 446.814,
+      "segundos_fim": 447.133,
+      "timestamp": "07:26.814 - 07:27.133",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "um",
+      "quemfala": "Juíza",
+      "segundos_inicio": 447.133,
+      "segundos_fim": 447.293,
+      "timestamp": "07:27.133 - 07:27.293",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "familiar",
+      "quemfala": "Juíza",
+      "segundos_inicio": 447.293,
+      "segundos_fim": 447.931,
+      "timestamp": "07:27.293 - 07:27.931",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "e",
+      "quemfala": "Juíza",
+      "segundos_inicio": 447.931,
+      "segundos_fim": 448.04,
+      "timestamp": "07:27.931 - 07:28.040",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "quanto",
+      "quemfala": "Juíza",
+      "segundos_inicio": 448.04,
+      "segundos_fim": 448.519,
+      "timestamp": "07:28.040 - 07:28.519",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "à",
+      "quemfala": "Juíza",
+      "segundos_inicio": 448.519,
+      "segundos_fim": 448.628,
+      "timestamp": "07:28.519 - 07:28.628",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "cobertura",
+      "quemfala": "Juíza",
+      "segundos_inicio": 448.628,
+      "segundos_fim": 449.317,
+      "timestamp": "07:28.628 - 07:29.317",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "de",
+      "quemfala": "Juíza",
+      "segundos_inicio": 449.317,
+      "segundos_fim": 449.477,
+      "timestamp": "07:29.317 - 07:29.477",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "mais",
+      "quemfala": "Juíza",
+      "segundos_inicio": 449.477,
+      "segundos_fim": 449.796,
+      "timestamp": "07:29.477 - 07:29.796",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "itens",
+      "quemfala": "Juíza",
+      "segundos_inicio": 449.796,
+      "segundos_fim": 450.166,
+      "timestamp": "07:29.796 - 07:30.166",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "específicos",
+      "quemfala": "Juíza",
+      "segundos_inicio": 450.166,
+      "segundos_fim": 451.015,
+      "timestamp": "07:30.166 - 07:31.015",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Juíza",
+      "segundos_inicio": 451.015,
+      "segundos_fim": 451.283,
+      "timestamp": "07:31.015 - 07:31.283",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Juíza",
+      "segundos_inicio": 451.283,
+      "segundos_fim": 451.392,
+      "timestamp": "07:31.283 - 07:31.392",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "defesa",
+      "quemfala": "Juíza",
+      "segundos_inicio": 451.392,
+      "segundos_fim": 451.871,
+      "timestamp": "07:31.392 - 07:31.871",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "queira",
+      "quemfala": "Juíza",
+      "segundos_inicio": 451.871,
+      "segundos_fim": 452.408,
+      "timestamp": "07:31.871 - 07:32.408",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "providenciar,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 452.408,
+      "segundos_fim": 453.38,
+      "timestamp": "07:32.408 - 07:33.380",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "tem",
+      "quemfala": "Juíza",
+      "segundos_inicio": 453.38,
+      "segundos_fim": 453.59,
+      "timestamp": "07:33.380 - 07:33.590",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "que",
+      "quemfala": "Juíza",
+      "segundos_inicio": 453.59,
+      "segundos_fim": 453.858,
+      "timestamp": "07:33.590 - 07:33.858",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "passar",
+      "quemfala": "Juíza",
+      "segundos_inicio": 453.858,
+      "segundos_fim": 454.279,
+      "timestamp": "07:33.858 - 07:34.279",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "antes",
+      "quemfala": "Juíza",
+      "segundos_inicio": 454.279,
+      "segundos_fim": 454.649,
+      "timestamp": "07:34.279 - 07:34.649",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "pelas",
+      "quemfala": "Juíza",
+      "segundos_inicio": 454.649,
+      "segundos_fim": 455.019,
+      "timestamp": "07:34.649 - 07:35.019",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "deliberações",
+      "quemfala": "Juíza",
+      "segundos_inicio": 455.019,
+      "segundos_fim": 455.977,
+      "timestamp": "07:35.019 - 07:35.977",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "de",
+      "quemfala": "Juíza",
+      "segundos_inicio": 455.977,
+      "segundos_fim": 456.137,
+      "timestamp": "07:35.977 - 07:36.137",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "segurança",
+      "quemfala": "Juíza",
+      "segundos_inicio": 456.137,
+      "segundos_fim": 456.826,
+      "timestamp": "07:36.137 - 07:36.826",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "da",
+      "quemfala": "Juíza",
+      "segundos_inicio": 456.826,
+      "segundos_fim": 456.986,
+      "timestamp": "07:36.826 - 07:36.986",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "custódia.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 456.986,
+      "segundos_fim": 457.755,
+      "timestamp": "07:36.986 - 07:37.755",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "Então,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 457.755,
+      "segundos_fim": 458.256,
+      "timestamp": "07:37.755 - 07:38.256",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "declaro",
+      "quemfala": "Juíza",
+      "segundos_inicio": 458.256,
+      "segundos_fim": 458.786,
+      "timestamp": "07:38.256 - 07:38.786",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "encerrada",
+      "quemfala": "Juíza",
+      "segundos_inicio": 458.786,
+      "segundos_fim": 459.475,
+      "timestamp": "07:38.786 - 07:39.475",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "essa",
+      "quemfala": "Juíza",
+      "segundos_inicio": 459.475,
+      "segundos_fim": 459.794,
+      "timestamp": "07:39.475 - 07:39.794",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "audiência,",
+      "quemfala": "Juíza",
+      "segundos_inicio": 459.794,
+      "segundos_fim": 460.672,
+      "timestamp": "07:39.794 - 07:40.672",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "pode",
+      "quemfala": "Juíza",
+      "segundos_inicio": 460.672,
+      "segundos_fim": 460.991,
+      "timestamp": "07:40.672 - 07:40.991",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "parar",
+      "quemfala": "Juíza",
+      "segundos_inicio": 460.991,
+      "segundos_fim": 461.361,
+      "timestamp": "07:40.991 - 07:41.361",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "a",
+      "quemfala": "Juíza",
+      "segundos_inicio": 461.361,
+      "segundos_fim": 461.47,
+      "timestamp": "07:41.361 - 07:41.470",
+      "chunk_origem": 3
+    },
+    {
+      "palavra": "gravação.",
+      "quemfala": "Juíza",
+      "segundos_inicio": 461.47,
+      "segundos_fim": 462.238,
+      "timestamp": "07:41.470 - 07:42.238",
+      "chunk_origem": 3
+    }
+  ]
+}
