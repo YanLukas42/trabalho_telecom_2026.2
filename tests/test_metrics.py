@@ -1,39 +1,43 @@
-import sys
-from pathlib import Path
+import pytest
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-if str(PROJECT_ROOT) not in sys.path:
-    sys.path.insert(0, str(PROJECT_ROOT))
-
-from src.evaluators.accuracy import TextNormalizer, AccuracyEvaluator
-from src.evaluators.cost_latency import CostLatencyEvaluator
+from telecom.metrics import text
+from telecom.metrics.cost import compression_stats, estimate_cost
 
 
-
-def test_text_normalization():
-    raw = "Olá, Mundo! Este é um TESTE... com pontuação."
-    norm = TextNormalizer.normalize(raw)
-    assert norm == "olá mundo este é um teste com pontuação"
+def test_normalize_strips_case_and_punctuation():
+    assert text.normalize("Olá, Mundo! Este é um TESTE... com pontuação.") == "olá mundo este é um teste com pontuação"
 
 
-def test_perfect_wer_cer():
-    ref = "engenharia de telecomunicações é incrível"
-    hyp = "engenharia de telecomunicações é incrível"
-    acc = AccuracyEvaluator.evaluate(ref, hyp)
-    assert acc["wer"] == 0.0
-    assert acc["cer"] == 0.0
-    assert acc["accuracy_word_pct"] == 100.0
+def test_normalize_can_strip_speaker_labels():
+    assert text.normalize("[Juiz] Bom dia.", strip_speaker_labels=True) == "bom dia"
 
 
-def test_wer_with_errors():
-    ref = "o áudio foi transmitido com sucesso"
-    hyp = "o áudio foi enviado com sucesso"
-    acc = AccuracyEvaluator.evaluate(ref, hyp)
-    # 1 substitution out of 6 words => 1/6 ~ 16.67%
-    assert acc["wer"] == 16.67
+def test_wer_perfect_and_with_one_substitution():
+    assert text.wer("engenharia de telecomunicações", "engenharia de telecomunicações") == 0.0
+    assert text.wer("o áudio foi transmitido com sucesso", "o áudio foi enviado com sucesso") == 16.67
 
 
-def test_compression_calculation():
-    stats = CostLatencyEvaluator.calculate_compression_stats(1000, 200)
-    assert stats["compression_ratio"] == 5.0
-    assert stats["bandwidth_saved_pct"] == 80.0
+def test_cer_counts_characters_without_spaces():
+    assert text.cer("abcd", "abce") == 25.0
+
+
+def test_empty_reference_is_handled():
+    assert text.wer("", "") == 0.0
+    assert text.wer("", "algo") == 100.0
+
+
+def test_count_speaker_turns_prefers_labels_then_paragraphs():
+    assert text.count_speaker_turns("[Juiz] oi\n[Réu] tudo bem") == 2
+    assert text.count_speaker_turns("primeiro\n\nsegundo") == 2
+    assert text.count_speaker_turns("") == 0
+
+
+def test_estimate_cost_uses_gemini_flash_prices():
+    cost = estimate_cost(1_000_000, 1_000_000)
+    assert cost.usd == pytest.approx(0.75)
+    assert cost.brl == pytest.approx(0.75 * 5.70)
+
+
+def test_compression_stats():
+    assert compression_stats(1000, 200) == (5.0, 80.0)
+    assert compression_stats(0, 10) == (1.0, 0.0)

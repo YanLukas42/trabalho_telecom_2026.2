@@ -1,47 +1,29 @@
-# Byte-compiled / optimized / DLL files
+# Bytecode e ambiente virtual
 __pycache__/
 *.py[cod]
-*$py.class
-
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
-env/
-venv/
+.pytest_cache/
 .venv/
-ENV/
+venv/
+env/
 
-# Environment variables & secrets
+# Segredos
 .env
 .env.local
 
-# Output files
-output/mp3_variations/*
-!output/mp3_variations/.gitkeep
-output/plots/*
-!output/plots/.gitkeep
-output/reports/*
-!output/reports/.gitkeep
-diarizador2.0/output/audio/
+# Saídas regeneráveis: o benchmark não é versionado, só o placeholder
+output/benchmark/*
+!output/benchmark/.gitkeep
+output/diarizacao/audio/
 
-# Input media files
-input/*.mp4
-input/*.avi
-input/*.mov
-input/*.mkv
-input/*.mp3
-input/*.wav
+# Mídias de entrada (fornecidas pelo usuário)
+input/*
 !input/.gitkeep
 
-# IDEs
+# IDEs e SO
 .vscode/
 .idea/
 *.swp
 *.swo
-
-# OS files
 Thumbs.db
 Desktop.ini
 .DS_Store
