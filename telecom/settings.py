@@ -19,6 +19,9 @@ DEFAULT_DIARIZATION_INPUTS = ("videoplayback.mp4", "999.mp4")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
 
+# Token de leitura do Hugging Face: necessário para os modelos restritos do pyannote.
+HF_TOKEN = os.getenv("HF_TOKEN", "")
+
 # Tarifas do Gemini Flash (USD por 1M de tokens) e câmbio de referência.
 PRICE_INPUT_USD_PER_M = 0.15
 PRICE_OUTPUT_USD_PER_M = 0.60

@@ -26,10 +26,13 @@ telecom/
   diarization/       pipeline de diarização
     pipeline.py      orquestração
     transcriber.py   GeminiDiarizer: envia o áudio inteiro numa chamada
+    pyannote_whisper.py  diarização local: pyannote (turnos) + whisper (palavras); deps pesadas importadas tardiamente
+    timeline.py      alinhamento turno x palavra (funções puras)
     alignment.py     palavra a palavra
     report.py        montagem de JSON/Markdown (funções puras)
     prompts.py       prompts
-    models.py        contratos (Diarizer, Transcription, SpeakerSegment)
+    models.py        contratos (Diarizer, Transcription, Turn, WordTiming, SpeakerWord)
+    review.py        revisão por IA, só texto: nomes dos falantes e possíveis erros
   benchmark/         motor único de benchmark (fase 1 e fase 2)
   cli/               pontos de entrada (diarize, benchmark)
 tests/               pytest; espelha os módulos
@@ -62,7 +65,10 @@ tests/               pytest; espelha os módulos
   Resposta inválida do Gemini (JSON ilegível ou fora do esquema) lança `ValueError`. Nunca grave relatório vazio.
 - **Tipos:** anotações em funções públicas. Use `X | None` e `list[str]` (Python 3.10+).
 - **Sem números mágicos:** constantes nomeadas no topo do módulo (ex.: `DEFAULT_PAD_SEC`, `MAX_OUTPUT_TOKENS`).
-- **Diarização é uma chamada só:** o áudio inteiro vai ao Gemini. Não há paralelismo nem fatiamento. Dados inline da API têm teto de 20 MB.
+- **Revisão por IA não ouve o áudio:** um nome só entra se a evidência literal existir no texto. Correções são sugestões.
+- **Alinhamento pyannote x whisper:** os dois leem o mesmo arquivo, sem recorte. Palavras sem turno viram `desconhecido`,
+  e o aviso de deslocamento vai para `alinhamento.avisos`.
+- **Diarização Gemini é uma chamada só:** o áudio inteiro vai ao Gemini. Não há paralelismo nem fatiamento. Dados inline da API têm teto de 20 MB.
 - **Dependências:** só o que está em `requirements.txt`. Antes de adicionar uma lib, confirme que a stdlib não resolve.
 - **Idioma:** identificadores em inglês. Docstrings, mensagens de log e textos para o usuário em português.
   Chaves dos JSON de saída, prompts e descrições dos esquemas ficam em português: são contrato com os relatórios

@@ -74,3 +74,12 @@ def test_error_after_last_retry_is_raised():
     client._client.models.generate_content = always_fails
     with pytest.raises(RuntimeError, match="indisponível"):
         client.generate(b"a", "audio/mp3", "p", max_retries=2, backoff_sec=0.0)
+
+
+def test_generate_text_sends_only_the_prompt():
+    client = GeminiClient(api_key="chave-de-teste", model="modelo-x")
+    seen = {}
+    client._client.models.generate_content = lambda **kwargs: seen.update(kwargs) or _response(text="ok")
+    result = client.generate_text("só texto")
+    assert seen["contents"] == ["só texto"]
+    assert result.text == "ok"

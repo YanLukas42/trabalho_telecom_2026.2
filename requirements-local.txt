@@ -1,0 +1,5 @@
+# Diarização local (pyannote + whisper). Instale depois de requirements.txt.
+# Pesado: baixa PyTorch. Para GPU, instale antes a build de torch adequada (https://pytorch.org).
+# pyannote.audio 3.x: a versão 4 mudou a API de Pipeline e não é usada aqui.
+pyannote.audio>=3.1,<4
+faster-whisper>=1.0.0

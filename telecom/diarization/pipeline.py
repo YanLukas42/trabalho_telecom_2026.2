@@ -1,4 +1,4 @@
-"""Pipeline de diarização: prepara o áudio, envia o arquivo inteiro ao Gemini e exporta os relatórios."""
+"""Pipeline de diarização: prepara o áudio, diariza o arquivo inteiro, revisa (opcional) e exporta os relatórios."""
 
 import logging
 import time
@@ -11,17 +11,18 @@ from telecom.audio.ffmpeg import probe_duration
 from telecom.audio.filters import WIDEBAND_VOICE
 from telecom.audio.preparer import PreparedAudio, Treatment, prepare_audio
 from telecom.audio.vad import SpeechMap
-from telecom.diarization.alignment import TranscricaoWordLevel, write_word_alignment
-from telecom.diarization.models import Diarizer, SpeakerSegment, Transcription
+from telecom.diarization.alignment import TranscricaoWordLevel, write_speaker_words, write_word_alignment
+from telecom.diarization.models import Diarizer, SpeakerSegment, SpeakerWord, Transcription
 from telecom.diarization.report import RunStats, build_payload, render_markdown
+from telecom.diarization.review import AppliedReview, TranscriptReviewer, apply_review
 from telecom.reporting import write_json
 from telecom.settings import DIARIZATION_OUTPUT_DIR
 from telecom.timefmt import format_range
 
 logger = logging.getLogger(__name__)
 
-# Bitrate fixo por codec: 16 kbps Opus VoIP ou 64 kbps MP3, ambos mono 16 kHz com passa-banda de voz.
-BITRATE_BY_CODEC = {"opus": "16k", "mp3": "64k"}
+# Bitrate por codec. WAV é PCM sem compressão e ignora o bitrate.
+BITRATE_BY_CODEC = {"wav": "", "opus": "16k", "mp3": "64k"}
 PIPELINE_SAMPLE_RATE = 16000
 PIPELINE_CHANNELS = 1
 
@@ -42,16 +43,18 @@ class DiarizationOutputs:
 
 
 class DiarizationPipeline:
-    """Orquestra as etapas. O diarizador é injetado, então o pipeline roda sem API em testes."""
+    """Orquestra as etapas. Diarizador e revisor são injetados, então o pipeline roda sem modelos em testes."""
 
     def __init__(
         self,
         diarizer: Diarizer,
         options: DiarizationOptions = DiarizationOptions(),
         output_dir: Path = DIARIZATION_OUTPUT_DIR,
+        reviewer: TranscriptReviewer | None = None,
     ):
         self._diarizer = diarizer
         self._options = options
+        self._reviewer = reviewer
         self._audio_dir = output_dir / "audio"
         self._reports_dir = output_dir / "reports"
 
@@ -66,12 +69,13 @@ class DiarizationPipeline:
         cloud_started = time.perf_counter()
         transcription = self._diarizer.diarize(prepared.path)
         cloud_elapsed = round(time.perf_counter() - cloud_started, 3)
-        logger.info("Gemini respondeu em %.1fs com %d falas", cloud_elapsed, len(transcription.segments))
+        logger.info("Diarização concluída em %.1fs com %d falas", cloud_elapsed, len(transcription.segments))
 
-        segments = self._timeline(transcription.segments, prepared.speech_map)
+        applied = self._review(transcription.segments)
+        segments = self._timeline(transcription.segments, prepared.speech_map, applied)
         stats = self._stats(source, original_duration, prepared, transcription, started, cloud_elapsed)
         speech_dicts = prepared.speech_map.to_dicts() if prepared.speech_map else None
-        payload = build_payload(stats, segments, speech_dicts)
+        payload = build_payload(stats, segments, speech_dicts, self._extra(transcription, applied))
 
         suffix = "_vad" if self._options.compact_silence else ""
         report_json = self._reports_dir / f"{source.stem}_diarizacao_pydantic{suffix}.json"
@@ -81,7 +85,12 @@ class DiarizationPipeline:
         write_json(payload, report_json)
         report_md.parent.mkdir(parents=True, exist_ok=True)
         report_md.write_text(render_markdown(stats, segments), encoding="utf-8")
-        words = write_word_alignment(report_json, words_json)
+        if transcription.words:
+            words = write_speaker_words(
+                source.name, self._map_words(transcription.words, prepared.speech_map), words_json
+            )
+        else:
+            words = write_word_alignment(report_json, words_json)
 
         logger.info("Relatórios: %s | %s | %s", report_json, report_md, words_json)
         return DiarizationOutputs(payload, report_json, report_md, words_json, words)
@@ -111,7 +120,17 @@ class DiarizationPipeline:
             )
         return prepared
 
-    def _timeline(self, segments: tuple[SpeakerSegment, ...], speech_map: SpeechMap | None) -> list[dict[str, Any]]:
+    def _review(self, segments: tuple[SpeakerSegment, ...]) -> AppliedReview | None:
+        if self._reviewer is None:
+            return None
+        return apply_review(self._reviewer.review(segments), segments)
+
+    def _timeline(
+        self,
+        segments: tuple[SpeakerSegment, ...],
+        speech_map: SpeechMap | None,
+        applied: AppliedReview | None,
+    ) -> list[dict[str, Any]]:
         """Com VAD, os tempos do áudio compactado são levados de volta à linha do tempo original."""
         timeline: list[dict[str, Any]] = []
         for segment in segments:
@@ -134,8 +153,34 @@ class DiarizationPipeline:
                     segundos_fim=orig_end,
                     timestamp=format_range(orig_start, orig_end),
                 )
+            if applied is not None:
+                item["falante_identificado"] = applied.names.get(segment.speaker)
             timeline.append(item)
         return timeline
+
+    @staticmethod
+    def _map_words(words: tuple[SpeakerWord, ...], speech_map: SpeechMap | None) -> list[SpeakerWord]:
+        if speech_map is None:
+            return list(words)
+        mapped: list[SpeakerWord] = []
+        for word in words:
+            start = speech_map.to_original(word.start)
+            end = max(start, speech_map.to_original(word.end))
+            mapped.append(SpeakerWord(word.text, start, end, word.speaker))
+        return mapped
+
+    @staticmethod
+    def _extra(transcription: Transcription, applied: AppliedReview | None) -> dict[str, Any]:
+        extra: dict[str, Any] = {}
+        if transcription.alignment:
+            extra["alinhamento"] = transcription.alignment
+        if applied is not None:
+            extra["revisao"] = {
+                "nomes_aplicados": applied.names,
+                "falantes_propostos": applied.falantes,
+                "revisoes": applied.revisoes,
+            }
+        return extra
 
     def _stats(
         self,

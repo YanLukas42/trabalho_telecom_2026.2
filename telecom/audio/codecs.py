@@ -34,7 +34,18 @@ class OpusCodec(AudioCodec):
         return ["-acodec", "libopus", "-b:a", bitrate, "-vbr", "on", "-application", "voip"]
 
 
-_CODECS: dict[str, AudioCodec] = {codec.name: codec for codec in (Mp3Codec(), OpusCodec())}
+class WavCodec(AudioCodec):
+    """PCM 16 bits sem compressão: entrada dos modelos locais (pyannote e whisper)."""
+
+    name = "wav"
+    extension = ".wav"
+    mime_type = "audio/wav"
+
+    def encode_args(self, bitrate: str) -> list[str]:
+        return ["-acodec", "pcm_s16le"]
+
+
+_CODECS: dict[str, AudioCodec] = {codec.name: codec for codec in (Mp3Codec(), OpusCodec(), WavCodec())}
 
 
 def get_codec(name: str) -> AudioCodec:

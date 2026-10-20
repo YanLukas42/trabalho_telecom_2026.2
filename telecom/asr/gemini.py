@@ -23,7 +23,7 @@ class GenerationResult:
 
 
 class GeminiClient:
-    """Envia áudio + prompt ao Gemini e devolve o texto com contagem de tokens e latência."""
+    """Envia áudio (ou só texto) ao Gemini e devolve o texto com contagem de tokens e latência."""
 
     def __init__(self, api_key: str | None = None, model: str | None = None):
         key = api_key or settings.GEMINI_API_KEY
@@ -44,9 +44,32 @@ class GeminiClient:
         max_retries: int = 1,
         backoff_sec: float = 3.5,
     ) -> GenerationResult:
+        contents: list[Any] = [types.Part.from_bytes(data=audio, mime_type=mime_type), prompt]
+        return self._run(contents, response_schema, temperature, max_output_tokens, max_retries, backoff_sec)
+
+    def generate_text(
+        self,
+        prompt: str,
+        *,
+        response_schema: type | None = None,
+        temperature: float | None = None,
+        max_output_tokens: int | None = None,
+        max_retries: int = 1,
+        backoff_sec: float = 3.5,
+    ) -> GenerationResult:
+        return self._run([prompt], response_schema, temperature, max_output_tokens, max_retries, backoff_sec)
+
+    def _run(
+        self,
+        contents: list[Any],
+        response_schema: type | None,
+        temperature: float | None,
+        max_output_tokens: int | None,
+        max_retries: int,
+        backoff_sec: float,
+    ) -> GenerationResult:
         """Chama a API. Re-tenta erros transitórios com espera linear (`backoff_sec * tentativa`)."""
         config = _build_config(response_schema, temperature, max_output_tokens)
-        contents: list[Any] = [types.Part.from_bytes(data=audio, mime_type=mime_type), prompt]
 
         for attempt in range(1, max_retries + 1):
             started = time.perf_counter()

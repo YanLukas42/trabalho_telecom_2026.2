@@ -24,7 +24,12 @@ class RunStats:
     total_tokens: int
 
 
-def build_payload(stats: RunStats, segments: list[dict[str, Any]], speech_map: list[dict] | None) -> dict[str, Any]:
+def build_payload(
+    stats: RunStats,
+    segments: list[dict[str, Any]],
+    speech_map: list[dict] | None,
+    extra: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     cost = estimate_cost(stats.prompt_tokens, stats.candidate_tokens)
     payload: dict[str, Any] = {
         "arquivo": stats.file_name,
@@ -47,6 +52,7 @@ def build_payload(stats: RunStats, segments: list[dict[str, Any]], speech_map: l
     }
     if speech_map is not None:
         payload["vad_segments_map"] = speech_map
+    payload.update(extra or {})
     return payload
 
 
@@ -74,7 +80,9 @@ def render_markdown(stats: RunStats, segments: list[dict[str, Any]]) -> str:
         "",
     ]
     for seg in segments:
-        lines.append(f"**[{seg['timestamp']}] {seg['quemfala']}:**")
+        identified = seg.get("falante_identificado")
+        name = f"{identified} ({seg['quemfala']})" if identified else seg["quemfala"]
+        lines.append(f"**[{seg['timestamp']}] {name}:**")
         lines.append(f"> {seg['textodefala']}")
         lines.append("")
     return "\n".join(lines)

@@ -3,10 +3,11 @@
 import json
 import re
 from pathlib import Path
-from typing import Any
+from typing import Any, Sequence
 
 from pydantic import BaseModel
 
+from telecom.diarization.models import SpeakerWord
 from telecom.timefmt import format_clock_ms
 
 _VOWELS = frozenset("aeiouáéíóúâêîôûãõàü")
@@ -84,6 +85,24 @@ def align_document(payload: dict[str, Any]) -> TranscricaoWordLevel:
 def write_word_alignment(diarization_json: Path, output_json: Path) -> TranscricaoWordLevel:
     payload = json.loads(diarization_json.read_text(encoding="utf-8"))
     result = align_document(payload)
+    output_json.parent.mkdir(parents=True, exist_ok=True)
+    output_json.write_text(json.dumps(result.model_dump(), ensure_ascii=False, indent=2), encoding="utf-8")
+    return result
+
+
+def write_speaker_words(arquivo: str, words: Sequence[SpeakerWord], output_json: Path) -> TranscricaoWordLevel:
+    """Palavras com o tempo medido pelo transcritor, sem a distribuição proporcional."""
+    items = [
+        PalavraTimestamp(
+            palavra=word.text,
+            quemfala=word.speaker,
+            segundos_inicio=round(word.start, 3),
+            segundos_fim=round(word.end, 3),
+            timestamp=f"{format_clock_ms(word.start)} - {format_clock_ms(word.end)}",
+        )
+        for word in words
+    ]
+    result = TranscricaoWordLevel(arquivo=arquivo, total_palavras=len(items), palavras=items)
     output_json.parent.mkdir(parents=True, exist_ok=True)
     output_json.write_text(json.dumps(result.model_dump(), ensure_ascii=False, indent=2), encoding="utf-8")
     return result

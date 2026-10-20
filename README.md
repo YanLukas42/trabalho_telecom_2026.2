@@ -19,7 +19,10 @@ separação de falantes pela API do Google Gemini, com foco em reduzir custo (to
 ```
 GEMINI_API_KEY=...
 GEMINI_MODEL=gemini-2.5-flash   # opcional
+HF_TOKEN=hf_...                       # só para o pyannote (modelo restrito)
 ```
+- Para a diarização local (pyannote + whisper): `pip install -r requirements-local.txt`. Aceite os termos dos modelos
+  `pyannote/speaker-diarization-3.1` e `pyannote/segmentation-3.0` no Hugging Face antes.
 
 ```bash
 python -m venv .venv
