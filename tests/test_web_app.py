@@ -1,7 +1,10 @@
 import pytest
 from fastapi.testclient import TestClient
 
+from telecom.accounts.models import Tenant
 from telecom.lessons.materials import LessonMaterials, validated_materials
+from telecom.storage.db import Database
+from telecom.storage.repositories import SessionRepository, UserRepository
 from telecom.web.app import create_app
 from telecom.web.jobs import JobService
 from tests.conftest import requires_ffmpeg
@@ -14,7 +17,11 @@ def only_gemini(engine):
 
 @pytest.fixture
 def client(tmp_path):
-    service = JobService(fake_factory, tmp_path / "jobs", ImmediateExecutor())
+    db = Database(tmp_path / "test.db")
+    repo = SessionRepository(db)
+    users = UserRepository(db)
+    users.save_tenant(Tenant(id="default-tenant", name="Default Escola"))
+    service = JobService(fake_factory, repo, tmp_path / "jobs", ImmediateExecutor())
     return TestClient(create_app(service, only_gemini))
 
 
@@ -69,8 +76,12 @@ class FakeLessonWriter:
 
 @pytest.fixture
 def lesson_client(tmp_path):
+    db = Database(tmp_path / "test.db")
+    repo = SessionRepository(db)
+    users = UserRepository(db)
+    users.save_tenant(Tenant(id="default-tenant", name="Default Escola"))
     writer = FakeLessonWriter()
-    service = JobService(fake_factory, tmp_path / "jobs", ImmediateExecutor())
+    service = JobService(fake_factory, repo, tmp_path / "jobs", ImmediateExecutor())
     return TestClient(create_app(service, only_gemini, lambda: writer)), writer, tmp_path
 
 

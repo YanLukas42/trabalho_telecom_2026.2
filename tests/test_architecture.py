@@ -14,10 +14,11 @@ PACKAGE = ROOT / "telecom"
 # Camadas: um pacote só importa de camadas com número MENOR (ou dele mesmo). Irmãos não se importam.
 LAYER = {
     "__init__": 0, "settings": 0, "timefmt": 0, "reporting": 0,
+    "accounts": 1,
     "audio": 1, "asr": 1, "metrics": 1,
     "experiments": 2,
     "diarization": 3, "benchmark": 3,
-    "lessons": 4,
+    "storage": 4, "lessons": 4,
     "web": 5,
     "cli": 6,
 }
@@ -26,6 +27,7 @@ LAYER = {
 SINGLE_CONTACT = {
     "subprocess": "telecom/audio/ffmpeg.py",
     "google": "telecom/asr/gemini.py",
+    "sqlite3": "telecom/storage/db.py",
 }
 
 MAX_PY_LINES = 400

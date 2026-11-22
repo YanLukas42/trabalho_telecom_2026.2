@@ -1,32 +1,34 @@
-"""Fila de transcrições em memória: guarda o estado de cada job e roda o pipeline em segundo plano.
+"""Fila de transcrições e serviço da aplicação (JobService).
 
-Sem banco de dados: o estado vive enquanto o servidor estiver no ar. Os arquivos ficam em WEB_JOBS_DIR/<id>/.
+Persiste sessões via SessionRepository injetado e isola arquivos por tenant.
+# shortcut: ThreadPoolExecutor em processo único no MVP, trocar por fila+worker na VPS (ADR-0003)
+# shortcut: arquivos em disco sob output/tenants/, trocar por S3 com URLs assinadas (ADR-0004)
 """
 
 import logging
 import re
 import shutil
-import threading
 import time
 import uuid
 from concurrent.futures import Executor, ThreadPoolExecutor
-from dataclasses import dataclass, replace
+from dataclasses import dataclass
 from enum import Enum
 from pathlib import Path
-from typing import BinaryIO, Callable
+from typing import Any, BinaryIO, Callable
 
+from telecom.accounts.models import Principal
 from telecom.audio.ffmpeg import FFmpegError
 from telecom.diarization.factory import ENGINES
 from telecom.diarization.pipeline import DiarizationOutputs, DiarizationPipeline
 from telecom.lessons.materials import LessonMaterials
 from telecom.reporting import write_json
-from telecom.settings import MEDIA_EXTENSIONS, WEB_JOBS_DIR
+from telecom.settings import MEDIA_EXTENSIONS, TENANTS_DIR
+from telecom.storage.repositories import SessionRepository
 
 logger = logging.getLogger(__name__)
 
-# Diarização é pesada (CPU ou cota da API): poucos jobs ao mesmo tempo.
+# Diarização é pesada (CPU ou cota da API): poucos jobs concorrentes por processo no MVP.
 MAX_CONCURRENT_JOBS = 2
-JOB_ID_LENGTH = 12
 LESSON_FILE_NAME = "lesson.json"
 UNSAFE_FILENAME_CHARS = re.compile(r"[^\w.\-]+")
 UNEXPECTED_ERROR_MESSAGE = "Erro inesperado no processamento. Veja o log do servidor."
@@ -59,6 +61,8 @@ class Job:
     error: str | None = None
     outputs: DiarizationOutputs | None = None
     lesson: LessonMaterials | None = None
+    tenant_id: str = ""
+    teacher_id: str = ""
 
     @property
     def active(self) -> bool:
@@ -73,73 +77,169 @@ class JobService:
     def __init__(
         self,
         pipeline_factory: PipelineFactory,
-        jobs_dir: Path = WEB_JOBS_DIR,
+        session_repo: SessionRepository,
+        base_dir: Path = TENANTS_DIR,
         executor: Executor | None = None,
     ):
         self._pipeline_factory = pipeline_factory
-        self._jobs_dir = jobs_dir
+        self._repo = session_repo
+        self._base_dir = base_dir
         self._executor = executor or ThreadPoolExecutor(max_workers=MAX_CONCURRENT_JOBS)
-        self._jobs: dict[str, Job] = {}
-        self._lock = threading.Lock()
+        # Ao reiniciar o processo, jobs que ficaram na fila ou processando são marcados como falhos (ADR-0003)
+        recovered = self._repo.recover_active_on_startup()
+        if recovered:
+            logger.info("Recuperadas %d sessões ativas no reinício do servidor", recovered)
 
-    def submit(self, file_name: str, stream: BinaryIO, options: JobOptions) -> Job:
-        """Grava o upload e agenda o processamento. Lança ValueError para arquivo ou opção inválidos."""
+    def submit(self, principal: Principal, file_name: str, stream: BinaryIO, options: JobOptions) -> Job:
+        """Grava o upload sob o diretório do tenant e agenda o processamento."""
         safe_name = sanitize_filename(file_name)
         if Path(safe_name).suffix.lower() not in MEDIA_EXTENSIONS:
             raise ValueError(f"Formato não suportado. Use um destes: {', '.join(MEDIA_EXTENSIONS)}")
         if options.engine not in ENGINES:
             raise ValueError(f"Motor desconhecido: {options.engine}")
 
-        job_id = uuid.uuid4().hex[:JOB_ID_LENGTH]
-        source = self._jobs_dir / job_id / "upload" / safe_name
+        session_id = uuid.uuid4().hex
+        session_dir = self._session_dir(principal.tenant_id, session_id)
+        source = session_dir / "upload" / safe_name
         source.parent.mkdir(parents=True, exist_ok=True)
+
         with source.open("wb") as handle:
             shutil.copyfileobj(stream, handle)
         if source.stat().st_size == 0:
-            shutil.rmtree(source.parent.parent)
+            shutil.rmtree(session_dir, ignore_errors=True)
             raise ValueError("O arquivo enviado está vazio.")
 
-        job = Job(job_id, safe_name, source, options, JobStatus.QUEUED, created_at=time.time())
-        with self._lock:
-            self._jobs[job_id] = job
-        logger.info("Job %s criado: %s (%s)", job_id, safe_name, options)
-        self._executor.submit(self._run, job_id)
-        return self.get(job_id) or job
+        now_sec = time.time()
+        session_data = {
+            "id": session_id,
+            "tenant_id": principal.tenant_id,
+            "teacher_id": principal.user_id,
+            "filename": safe_name,
+            "original_filename": file_name,
+            "engine": options.engine,
+            "compact_silence": options.compact_silence,
+            "review": options.review,
+            "status": JobStatus.QUEUED.value,
+            "started_at": now_sec,
+        }
+        self._repo.save(principal.tenant_id, session_data)
+        logger.info("Job %s criado para tenant %s", session_id, principal.tenant_id)
 
-    def get(self, job_id: str) -> Job | None:
-        with self._lock:
-            return self._jobs.get(job_id)
+        self._executor.submit(self._run, principal.tenant_id, session_id)
+        job = self.get(principal, session_id)
+        if job is None:
+            raise RuntimeError("Falha ao recuperar sessão recém-criada.")
+        return job
 
-    def list(self) -> list[Job]:
-        """Jobs do mais recente para o mais antigo."""
-        with self._lock:
-            return sorted(self._jobs.values(), key=lambda job: job.created_at, reverse=True)
+    def get(self, principal: Principal, session_id: str) -> Job | None:
+        """Busca sessão do tenant. Professor só vê suas próprias aulas (TN-04)."""
+        data = self._repo.get(principal.tenant_id, session_id)
+        if not data:
+            return None
+        if principal.role == "teacher" and data.get("teacher_id") != principal.user_id:
+            return None
+        return self._dict_to_job(data)
 
-    def attach_lesson(self, job_id: str, lesson: LessonMaterials) -> Job:
-        """Guarda o material gerado no job e grava lesson.json na pasta dele."""
-        write_json(lesson.model_dump(), self._jobs_dir / job_id / LESSON_FILE_NAME)
-        return self._update(job_id, lesson=lesson)
+    def list(self, principal: Principal) -> list[Job]:
+        """Lista sessões do tenant. Professores recebem apenas suas aulas."""
+        teacher_filter = principal.user_id if principal.role == "teacher" else None
+        rows = self._repo.list(principal.tenant_id, teacher_id=teacher_filter)
+        return [self._dict_to_job(r) for r in rows]
 
-    def _run(self, job_id: str) -> None:
-        job = self._update(job_id, status=JobStatus.PROCESSING, started_at=time.time())
+    def attach_lesson(self, principal: Principal, session_id: str, lesson: LessonMaterials) -> Job:
+        """Guarda o material pedagógico gerado na sessão e em disco."""
+        job = self.get(principal, session_id)
+        if job is None:
+            raise ValueError("Sessão não encontrada.")
+
+        session_dir = self._session_dir(principal.tenant_id, session_id)
+        write_json(lesson.model_dump(), session_dir / LESSON_FILE_NAME)
+        self._repo.attach_lesson(principal.tenant_id, session_id, lesson.model_dump())
+        updated = self.get(principal, session_id)
+        if updated is None:
+            raise RuntimeError("Falha ao recuperar sessão atualizada.")
+        return updated
+
+    def delete(self, principal: Principal, session_id: str) -> bool:
+        """Exclui a sessão do banco e seus arquivos em disco se pertencer ao tenant (TN-19)."""
+        job = self.get(principal, session_id)
+        if job is None:
+            return False
+        deleted = self._repo.delete(principal.tenant_id, session_id)
+        session_dir = self._session_dir(principal.tenant_id, session_id)
+        shutil.rmtree(session_dir, ignore_errors=True)
+        return deleted
+
+    def _run(self, tenant_id: str, session_id: str) -> None:
+        raw = self._repo.get(tenant_id, session_id)
+        if not raw:
+            return
+        job = self._dict_to_job(raw)
+
+        self._repo.update_status(tenant_id, session_id, JobStatus.PROCESSING.value, started_at=time.time())
+        session_dir = self._session_dir(tenant_id, session_id)
+
         try:
-            pipeline = self._pipeline_factory(job.options, self._jobs_dir / job_id)
+            pipeline = self._pipeline_factory(job.options, session_dir)
             outputs = pipeline.run(job.source)
         except (ValueError, FFmpegError) as exc:
-            logger.warning("Job %s falhou: %s", job_id, exc)
-            self._update(job_id, status=JobStatus.FAILED, error=str(exc), finished_at=time.time())
+            logger.warning("Job %s falhou: %s", session_id, exc)
+            self._repo.update_status(
+                tenant_id, session_id, JobStatus.FAILED.value, error=str(exc), finished_at=time.time()
+            )
         except Exception:
-            logger.exception("Job %s falhou com erro inesperado", job_id)
-            self._update(job_id, status=JobStatus.FAILED, error=UNEXPECTED_ERROR_MESSAGE, finished_at=time.time())
+            logger.exception("Job %s falhou com erro inesperado", session_id)
+            self._repo.update_status(
+                tenant_id, session_id, JobStatus.FAILED.value, error=UNEXPECTED_ERROR_MESSAGE, finished_at=time.time()
+            )
         else:
-            self._update(job_id, status=JobStatus.DONE, outputs=outputs, finished_at=time.time())
-            logger.info("Job %s concluído", job_id)
+            self._repo.attach_results(tenant_id, session_id, outputs.payload, finished_at=time.time())
+            logger.info("Job %s concluído para tenant %s", session_id, tenant_id)
 
-    def _update(self, job_id: str, **changes) -> Job:
-        with self._lock:
-            job = replace(self._jobs[job_id], **changes)
-            self._jobs[job_id] = job
-            return job
+    def _session_dir(self, tenant_id: str, session_id: str) -> Path:
+        return self._base_dir / tenant_id / "sessions" / session_id
+
+    def _dict_to_job(self, data: dict[str, Any]) -> Job:
+        tenant_id = data["tenant_id"]
+        session_id = data["id"]
+        session_dir = self._session_dir(tenant_id, session_id)
+        source = session_dir / "upload" / data["filename"]
+
+        outputs = None
+        if data["status"] == JobStatus.DONE.value and data.get("payload_json"):
+            stem = Path(data["filename"]).stem
+            reports_dir = session_dir / "reports"
+            outputs = DiarizationOutputs(
+                payload=data["payload_json"],
+                report_json=reports_dir / f"{stem}_diarizacao_pydantic.json",
+                report_md=reports_dir / f"{stem}_diarizacao_pydantic.md",
+                words_json=reports_dir / f"{stem}_palavra_por_palavra.json",
+                words=None,  # type: ignore[arg-type]
+            )
+
+        lesson = None
+        if data.get("lesson_json"):
+            lesson = LessonMaterials.model_validate(data["lesson_json"])
+
+        return Job(
+            id=session_id,
+            file_name=data["original_filename"],
+            source=source,
+            options=JobOptions(
+                engine=data["engine"],
+                compact_silence=bool(data["compact_silence"]),
+                review=bool(data["review"]),
+            ),
+            status=JobStatus(data["status"]),
+            created_at=data.get("started_at") or 0.0,
+            started_at=data.get("started_at"),
+            finished_at=data.get("finished_at"),
+            error=data.get("error"),
+            outputs=outputs,
+            lesson=lesson,
+            tenant_id=tenant_id,
+            teacher_id=data.get("teacher_id", ""),
+        )
 
 
 def sanitize_filename(name: str) -> str:

@@ -14,6 +14,8 @@ DIARIZATION_OUTPUT_DIR = OUTPUT_DIR / "diarizacao"
 BENCHMARK_OUTPUT_DIR = OUTPUT_DIR / "benchmark"
 # Cada transcrição feita pela interface web ganha uma pasta própria aqui.
 WEB_JOBS_DIR = DIARIZATION_OUTPUT_DIR / "jobs"
+TENANTS_DIR = OUTPUT_DIR / "tenants"
+DATABASE_PATH = OUTPUT_DIR / "pauta.db"
 
 # Arquivos preferidos quando o diarizador roda sem --file.
 DEFAULT_DIARIZATION_INPUTS = ("videoplayback.mp4", "999.mp4")

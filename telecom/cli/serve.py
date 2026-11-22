@@ -17,6 +17,9 @@ from telecom.diarization.pipeline import DiarizationOptions, DiarizationPipeline
 from telecom.diarization.prompts import build_class_prompt
 from telecom.diarization.review import GeminiReviewer
 from telecom.lessons.materials import GeminiLessonWriter, LessonWriter
+from telecom.settings import DATABASE_PATH, TENANTS_DIR
+from telecom.storage.db import Database
+from telecom.storage.repositories import SessionRepository
 from telecom.web.app import create_app
 from telecom.web.jobs import JobOptions, JobService
 
@@ -49,7 +52,10 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     configure_logging()
-    app = create_app(JobService(build_pipeline), engine_unavailable_reason, build_lesson_writer)
+    db = Database(DATABASE_PATH)
+    session_repo = SessionRepository(db)
+    service = JobService(build_pipeline, session_repo, base_dir=TENANTS_DIR)
+    app = create_app(service, engine_unavailable_reason, build_lesson_writer)
     logger.info("Abra http://%s:%d no navegador", args.host, args.port)
     uvicorn.run(app, host=args.host, port=args.port, log_level="warning")
     return 0

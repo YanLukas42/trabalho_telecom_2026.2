@@ -3,6 +3,7 @@
 A montagem das dependências (pipeline, clientes) fica em telecom.cli.serve; aqui só entram por injeção.
 """
 
+import logging
 from pathlib import Path
 from typing import Callable
 
@@ -10,8 +11,7 @@ from fastapi import FastAPI, File, Form, HTTPException, UploadFile
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
-import logging
-
+from telecom.accounts.models import Principal
 from telecom.diarization.factory import ENGINES
 from telecom.diarization.models import SpeakerSegment
 from telecom.lessons.materials import (
@@ -42,6 +42,10 @@ DOWNLOADS = {
 EngineStatus = Callable[[str], str | None]
 # Cria o gerador de material sob demanda: o cliente do Gemini só nasce quando alguém pede.
 LessonWriterFactory = Callable[[], LessonWriter]
+
+
+# shortcut: Principal dev padrão no localhost até implementação de auth (ADR-0002)
+DEV_PRINCIPAL = Principal(tenant_id="default-tenant", user_id="default-teacher", role="teacher")
 
 
 def create_app(
@@ -87,14 +91,14 @@ def create_app(
         if review and engine_status("gemini"):
             raise HTTPException(400, "A revisão por IA usa o Gemini, que não está configurado.")
         try:
-            job = service.submit(file.filename or "", file.file, JobOptions(engine, compact_silence, review))
+            job = service.submit(DEV_PRINCIPAL, file.filename or "", file.file, JobOptions(engine, compact_silence, review))
         except ValueError as exc:
             raise HTTPException(400, str(exc)) from exc
         return JobView.from_job(job)
 
     @app.get("/api/jobs", response_model=list[JobView])
     def list_jobs() -> list[JobView]:
-        return [JobView.from_job(job, include_result=False) for job in service.list()]
+        return [JobView.from_job(job, include_result=False) for job in service.list(DEV_PRINCIPAL)]
 
     @app.get("/api/jobs/{job_id}", response_model=JobView)
     def get_job(job_id: str) -> JobView:
@@ -116,7 +120,7 @@ def create_app(
         except Exception as exc:
             logger.exception("Falha ao gerar material do job %s", job_id)
             raise HTTPException(502, LESSON_UNEXPECTED_ERROR) from exc
-        return JobView.from_job(service.attach_lesson(job_id, lesson))
+        return JobView.from_job(service.attach_lesson(DEV_PRINCIPAL, job_id, lesson))
 
     @app.get("/api/jobs/{job_id}/media")
     def get_media(job_id: str) -> FileResponse:
@@ -148,7 +152,7 @@ def _segments(job: Job) -> list[SpeakerSegment]:
 
 
 def _find(service: JobService, job_id: str) -> Job:
-    job = service.get(job_id)
+    job = service.get(DEV_PRINCIPAL, job_id)
     if job is None:
         raise HTTPException(404, "Transcrição não encontrada.")
     return job
