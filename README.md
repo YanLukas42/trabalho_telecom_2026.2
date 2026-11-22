@@ -34,7 +34,11 @@ python -m venv .venv
 Coloque as mídias em `input/`. Os resultados vão para `output/`.
 
 ```bash
-# Diarização (usa videoplayback.mp4, 999.mp4 ou a primeira mídia de input/)
+# Interface Web Interativa (Player sincronizado, métricas, relatórios e benchmark)
+python -m telecom.web
+# Acesse no navegador: http://127.0.0.1:8000
+
+# Diarização via CLI (usa videoplayback.mp4, 999.mp4 ou a primeira mídia de input/)
 python -m telecom.cli.diarize
 python -m telecom.cli.diarize --file input/aula.mp4 --codec opus --vad
 
