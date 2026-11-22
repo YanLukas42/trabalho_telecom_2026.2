@@ -7,18 +7,18 @@ from pathlib import Path
 
 from telecom.asr.gemini import GeminiClient
 from telecom.cli.common import configure_logging, media_in_input_dir
+from telecom.diarization.factory import DEFAULT_CODEC, ENGINES, build_diarizer
+from telecom.diarization.models import Diarizer
 from telecom.diarization.pipeline import DiarizationOptions, DiarizationPipeline
 from telecom.diarization.review import GeminiReviewer
-from telecom.settings import DEFAULT_DIARIZATION_INPUTS, HF_TOKEN, INPUT_DIR
+from telecom.settings import DEFAULT_DIARIZATION_INPUTS, INPUT_DIR
 
 logger = logging.getLogger(__name__)
-
-DEFAULT_CODEC = {"pyannote": "wav", "gemini": "opus"}
 
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Diarização de falantes: pyannote + whisper, ou Gemini")
-    parser.add_argument("--engine", choices=["pyannote", "gemini"], default="pyannote",
+    parser.add_argument("--engine", choices=list(ENGINES), default="pyannote",
                         help="pyannote: local (pyannote + whisper). gemini: áudio inteiro na API")
     parser.add_argument("--file", type=Path, help="Áudio ou vídeo de entrada. Padrão: arquivos preferidos em input/")
     parser.add_argument("--codec", choices=["wav", "opus", "mp3"], default=None,
@@ -54,26 +54,20 @@ def main(argv: list[str] | None = None) -> int:
     return 0
 
 
-def _build_diarizer(args: argparse.Namespace):
-    if args.engine == "gemini":
-        from telecom.diarization.transcriber import GeminiDiarizer
-
-        return GeminiDiarizer(GeminiClient(model=args.model))
-
-    if not HF_TOKEN:
-        raise SystemExit("HF_TOKEN não configurado no .env. O modelo do pyannote é restrito no Hugging Face.")
-
-    from telecom.diarization.pyannote_whisper import build_local_diarizer
-
-    return build_local_diarizer(
-        hf_token=HF_TOKEN,
-        whisper_model=args.whisper_model,
-        device=args.device,
-        language=args.language,
-        num_speakers=args.num_speakers,
-        min_speakers=args.min_speakers,
-        max_speakers=args.max_speakers,
-    )
+def _build_diarizer(args: argparse.Namespace) -> Diarizer:
+    try:
+        return build_diarizer(
+            args.engine,
+            model=args.model,
+            whisper_model=args.whisper_model,
+            device=args.device,
+            language=args.language,
+            num_speakers=args.num_speakers,
+            min_speakers=args.min_speakers,
+            max_speakers=args.max_speakers,
+        )
+    except ValueError as exc:
+        raise SystemExit(str(exc)) from exc
 
 
 def _default_inputs() -> list[Path]:

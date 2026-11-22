@@ -7,10 +7,10 @@ python-dotenv>=1.0.1
 # Esquemas de saída estruturada
 pydantic>=2.0
 
+# Interface web local (python -m telecom.cli.serve). python-multipart lê o upload de arquivos.
+fastapi>=0.110
+uvicorn>=0.29
+python-multipart>=0.0.9
+
 # Testes
 pytest>=8.0.0
-
-# Interface Web & API
-fastapi>=0.110.0
-uvicorn>=0.28.0
-python-multipart>=0.0.9

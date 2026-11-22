@@ -1,1 +1,1 @@
-"""Módulo Web do Trabalho Telecom 2026.2."""
+"""Interface web: API de jobs de transcrição e páginas estáticas."""

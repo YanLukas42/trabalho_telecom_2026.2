@@ -14,6 +14,7 @@ env/
 output/benchmark/*
 !output/benchmark/.gitkeep
 output/diarizacao/audio/
+output/diarizacao/jobs/
 
 # Mídias de entrada (fornecidas pelo usuário)
 input/*

@@ -12,6 +12,8 @@ INPUT_DIR = ROOT_DIR / "input"
 OUTPUT_DIR = ROOT_DIR / "output"
 DIARIZATION_OUTPUT_DIR = OUTPUT_DIR / "diarizacao"
 BENCHMARK_OUTPUT_DIR = OUTPUT_DIR / "benchmark"
+# Cada transcrição feita pela interface web ganha uma pasta própria aqui.
+WEB_JOBS_DIR = DIARIZATION_OUTPUT_DIR / "jobs"
 
 # Arquivos preferidos quando o diarizador roda sem --file.
 DEFAULT_DIARIZATION_INPUTS = ("videoplayback.mp4", "999.mp4")

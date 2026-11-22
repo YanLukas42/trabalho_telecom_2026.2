@@ -20,9 +20,10 @@ MAX_RETRIES = 4
 
 
 class GeminiDiarizer:
-    def __init__(self, client: GeminiClient, max_retries: int = MAX_RETRIES):
+    def __init__(self, client: GeminiClient, max_retries: int = MAX_RETRIES, prompt: str | None = None):
         self._client = client
         self._max_retries = max_retries
+        self._prompt = prompt or build_diarization_prompt()
 
     def diarize(self, audio_path: Path) -> Transcription:
         audio = audio_path.read_bytes()
@@ -35,7 +36,7 @@ class GeminiDiarizer:
         result = self._client.generate(
             audio=audio,
             mime_type=mime_type_for_path(audio_path),
-            prompt=build_diarization_prompt(),
+            prompt=self._prompt,
             response_schema=TranscricaoChunkDiarizada,
             temperature=TEMPERATURE,
             max_output_tokens=MAX_OUTPUT_TOKENS,

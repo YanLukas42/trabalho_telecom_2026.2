@@ -32,13 +32,21 @@ telecom/
     report.py        montagem de JSON/Markdown (funções puras)
     prompts.py       prompts
     models.py        contratos (Diarizer, Transcription, Turn, WordTiming, SpeakerWord)
+    factory.py       build_diarizer e disponibilidade dos motores; usado pela CLI e pela web
     review.py        revisão por IA, só texto: nomes dos falantes e possíveis erros
   benchmark/         motor único de benchmark (fase 1 e fase 2)
-  cli/               pontos de entrada (diarize, benchmark)
+  lessons/           material de aula para professores de inglês
+    materials.py     contrato (LessonMaterials), prompt, validação (funções puras) e GeminiLessonWriter
+  web/               interface web local (MVP do SaaS "Pauta": aula gravada → atividades por aluno + plano)
+    jobs.py          JobService: fila em memória, pipeline injetado por fábrica; guarda o material do job
+    app.py           create_app: rotas FastAPI e arquivos estáticos; gerador de material injetado
+    schemas.py       contratos da API
+    static/          HTML, CSS e JS puros, sem build; PDF pelo "imprimir" do navegador (CSS @media print)
+  cli/               pontos de entrada (diarize, benchmark, serve)
 tests/               pytest; espelha os módulos
 ```
 
-**Direção das dependências:** `settings`/`timefmt` ← `audio` ← `diarization`/`benchmark` ← `cli`.
+**Direção das dependências:** `settings`/`timefmt` ← `audio` ← `diarization`/`benchmark`/`lessons` ← `web` ← `cli`.
 `asr` é usado por `diarization`, `benchmark` e `cli`. Um módulo de nível baixo nunca importa um de nível alto:
 `audio` não conhece `asr`, `diarization` ou `benchmark`.
 
@@ -46,8 +54,8 @@ tests/               pytest; espelha os módulos
 
 - **Strategy:** `AudioCodec` (`Mp3Codec`, `OpusCodec`) escolhido por `get_codec(name)`. Novo codec = nova subclasse
   e uma entrada em `_CODECS`.
-- **Injeção de dependência por Protocol:** `DiarizationPipeline` recebe um `Diarizer`, e `BenchmarkEngine`
-  recebe um `AudioTranscriber`. Testes usam fakes. Nunca chame a API nos testes.
+- **Injeção de dependência por Protocol:** `DiarizationPipeline` recebe um `Diarizer`, `BenchmarkEngine`
+  recebe um `AudioTranscriber`, e `JobService` recebe uma fábrica de pipeline (montada em `cli/serve.py`). Testes usam fakes. Nunca chame a API nos testes.
 - **Objetos de valor imutáveis:** `@dataclass(frozen=True)` para `Treatment`, `SpeechMap`, `AudioChunk`,
   `Transcription`, `GenerationResult`.
 - **Funções puras para a lógica:** `SpeechMap.from_silences`, `parse_chunk_json`,
@@ -73,6 +81,12 @@ tests/               pytest; espelha os módulos
 - **Idioma:** identificadores em inglês. Docstrings, mensagens de log e textos para o usuário em português.
   Chaves dos JSON de saída, prompts e descrições dos esquemas ficam em português: são contrato com os relatórios
   já gerados e com o modelo. Não renomeie sem reavaliar a saída.
+- **Web sem estado persistente:** jobs vivem em memória (`JobService`); arquivos em `output/diarizacao/jobs/<id>/`.
+  Chaves do envelope do job em inglês (contrato novo); o `result` é o JSON do relatório, em português, sem alteração.
+- **Material de aula só com texto:** a IA não ouve o áudio. Um erro de aluno só entra se a citação existir literalmente
+  nas falas dele (`validated_materials`). A interface avisa que o professor deve conferir antes de entregar.
+  O PDF sai do `window.print()` com `#print-root`; não adicione biblioteca de PDF. O pedido de material e o
+  `lesson` do job são contrato novo, com chaves em inglês.
 - **Arquivos de saída:** diarização grava em `output/diarizacao/`, benchmark em `output/benchmark/`.
   Nunca grave fora de `output/`.
 

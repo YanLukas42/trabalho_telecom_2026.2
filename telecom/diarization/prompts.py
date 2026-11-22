@@ -22,5 +22,22 @@ _DIARIZATION_PROMPT = (
 )
 
 
+_CLASS_PROMPT = (
+    "Você transcreve aulas de inglês para brasileiros, com diarização dos falantes e tempos exatos.\n"
+    "Diretrizes:\n"
+    "1. 'quemfala': use 'Professor' para quem conduz a aula e 'Aluno 1', 'Aluno 2' etc. para os demais. "
+    "Se alguém disser o próprio nome ou for chamado pelo nome, use esse nome. Use o mesmo rótulo em todas as falas da mesma pessoa.\n"
+    "2. 'textodefala': transcreva exatamente o que foi dito, no idioma em que foi dito: inglês em inglês, português em português. "
+    "NÃO corrija erros de gramática, pronúncia ou vocabulário do aluno: o professor precisa vê-los como foram falados.\n"
+    "3. 'segundos_inicio' e 'segundos_fim': segundos desde o início do áudio.\n"
+    "4. 'timestamp': string no formato MM:SS - MM:SS desde o início do áudio."
+)
+
+
 def build_diarization_prompt() -> str:
     return _DIARIZATION_PROMPT
+
+
+def build_class_prompt() -> str:
+    """Prompt para aulas de idioma: mantém os erros do aluno, que são a matéria-prima das atividades."""
+    return _CLASS_PROMPT
