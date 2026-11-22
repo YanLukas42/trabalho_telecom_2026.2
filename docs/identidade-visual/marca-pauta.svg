@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96" height="96" role="img" aria-label="Pauta">
+  <rect width="48" height="48" rx="11" fill="#1b2559"/>
+  <path d="M13 8v32" stroke="#ff7b8a" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M20 16h18M20 24h18M20 32h11" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+</svg>

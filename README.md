@@ -69,6 +69,12 @@ A IA lê só o texto da transcrição, sem ouvir o áudio: confira o material an
 memória e some quando o servidor reinicia (os arquivos ficam em `output/diarizacao/jobs/<id>/`).
 Documentação da API em `/api/docs`.
 
+## Documentação
+
+- [Histórias de usuário](docs/produto/historias-de-usuario.md) e [regras de negócio](docs/produto/regras-de-negocio.md)
+- [Identidade visual](docs/identidade-visual/README.md)
+- [Arquitetura](docs/arquitetura/README.md), [multi-tenancy](docs/arquitetura/multitenancia.md) e [segurança](docs/arquitetura/seguranca.md)
+
 ## Saídas
 
 | Pasta | Conteúdo |

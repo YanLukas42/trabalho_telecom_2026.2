@@ -83,6 +83,15 @@ tests/               pytest; espelha os módulos
   já gerados e com o modelo. Não renomeie sem reavaliar a saída.
 - **Web sem estado persistente:** jobs vivem em memória (`JobService`); arquivos em `output/diarizacao/jobs/<id>/`.
   Chaves do envelope do job em inglês (contrato novo); o `result` é o JSON do relatório, em português, sem alteração.
+- **Arquitetura e segurança:** siga `docs/arquitetura/` (regras `AR`, `PD`, `MT`, `TN`, `SG`). `tests/test_architecture.py`
+  verifica a direção das dependências, os pontos únicos de contato (FFmpeg, Gemini), `print` fora da CLI, tamanho de arquivo
+  e JS sem HTML injetado; pacote novo entra em `LAYER` antes de existir. Nunca registre em log texto de fala, nome de aluno
+  ou nome de arquivo do usuário. Acesso a dado de cliente sempre com o tenant (hoje ainda não há tenant: ver fase 1).
+  Dependência nova exige ADR em `docs/arquitetura/adr/`.
+- **Produto:** histórias e regras em `docs/produto/` (códigos `RN-xx`). Mudou uma regra no código? Atualize a tabela
+  de regras e a situação da história. Regra nova de negócio entra com código `RN` novo.
+- **Identidade visual:** ao mexer em `web/static/`, siga `docs/identidade-visual/README.md` (tokens no `styles.css`).
+  Vermelho só para correção de erro de inglês; textos em português, com os nomes fixos do guia.
 - **Material de aula só com texto:** a IA não ouve o áudio. Um erro de aluno só entra se a citação existir literalmente
   nas falas dele (`validated_materials`). A interface avisa que o professor deve conferir antes de entregar.
   O PDF sai do `window.print()` com `#print-root`; não adicione biblioteca de PDF. O pedido de material e o
