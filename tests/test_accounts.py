@@ -7,8 +7,11 @@ from telecom.accounts.passwords import hash_password, verify_password
 def test_hash_and_verify_password():
     raw = "senhaForte123!"
     hashed = hash_password(raw)
+    hashed_second = hash_password(raw)
     assert hashed.startswith("scrypt$")
+    assert hashed != hashed_second  # salt aleatório por chamada
     assert verify_password(raw, hashed) is True
+    assert verify_password(raw, hashed_second) is True
     assert verify_password("senhaErrada", hashed) is False
     assert verify_password("", hashed) is False
 

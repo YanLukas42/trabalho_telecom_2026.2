@@ -174,3 +174,54 @@ def test_audit_repository(tmp_path):
         assert row["action"] == "class_session.delete"
         assert row["target"] == "sess-99"
         assert row["actor_id"] == "u-1"
+
+
+def test_every_repository_method_returns_empty_for_wrong_tenant(tmp_path):
+    """Cada método com tenant_id deve devolver vazio/inalterado quando chamado com outro tenant (TN-03)."""
+    db = Database(tmp_path / "test.db")
+    users = UserRepository(db)
+    sessions = SessionRepository(db)
+    usage = UsageRepository(db)
+
+    users.save_tenant(Tenant(id="t-1", name="Escola Certa", monthly_audio_minutes=600))
+    users.save_user(User("u-1", "t-1", "prof@certa.com", "Prof", "hash", "teacher"))
+    sessions.save("t-1", {
+        "id": "sess-1",
+        "tenant_id": "t-1",
+        "teacher_id": "u-1",
+        "file_name": "aula.mp3",
+        "status": "processing",
+        "options_json": {"engine": "gemini"},
+    })
+    usage.record("t-1", "sess-1", "transcription", audio_seconds=180.0, tokens=900)
+
+    wrong = "t-errado"
+
+    # SessionRepository: leituras devolvem vazio / 0 / None
+    assert sessions.get(wrong, "sess-1") is None
+    assert sessions.list(wrong) == []
+    assert sessions.list(wrong, teacher_id="u-1") == []
+    assert sessions.count_active(wrong) == 0
+    assert sessions.count_active(wrong, teacher_id="u-1") == 0
+
+    # SessionRepository: mutações com tenant errado não alteram t-1
+    sessions.update_status(wrong, "sess-1", "failed", error="ataque")
+    sessions.attach_results(wrong, "sess-1", {"report_json": "/x"}, audio_seconds=999.0, finished_at=1.0)
+    sessions.attach_lesson(wrong, "sess-1", {"students": []})
+    sessions.attach_participants(wrong, "sess-1", [{"label": "A", "name": "Hacked", "role": "student"}])
+    assert sessions.delete(wrong, "sess-1") is False
+
+    preserved = sessions.get("t-1", "sess-1")
+    assert preserved is not None
+    assert preserved["status"] == "processing"
+    assert preserved["error"] is None
+    assert preserved["lesson_json"] is None
+    assert preserved["participants_json"] is None
+
+    # UserRepository
+    assert users.get_tenant(wrong) is None
+    assert users.get_user(wrong, "u-1") is None
+
+    # UsageRepository
+    assert usage.get_monthly_audio_minutes(wrong, "2000-01-01T00:00:00+00:00") == 0.0
+    assert usage.get_total_usage(wrong) == {"total_audio_seconds": 0.0, "total_tokens": 0}
