@@ -15,6 +15,10 @@ output/benchmark/*
 !output/benchmark/.gitkeep
 output/diarizacao/audio/
 output/diarizacao/jobs/
+output/tenants/
+output/*.db
+output/*.db-wal
+output/*.db-shm
 
 # Mídias de entrada (fornecidas pelo usuário)
 input/*

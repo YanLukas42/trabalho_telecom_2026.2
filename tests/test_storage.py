@@ -225,3 +225,12 @@ def test_every_repository_method_returns_empty_for_wrong_tenant(tmp_path):
     # UsageRepository
     assert usage.get_monthly_audio_minutes(wrong, "2000-01-01T00:00:00+00:00") == 0.0
     assert usage.get_total_usage(wrong) == {"total_audio_seconds": 0.0, "total_tokens": 0}
+
+
+def test_resolve_db_path_reads_pauta_db_path_env(tmp_path, monkeypatch):
+    from telecom.settings import OUTPUT_DIR, resolve_db_path
+
+    assert resolve_db_path("") == OUTPUT_DIR / "pauta.db"
+    custom = tmp_path / "custom" / "pauta.db"
+    monkeypatch.setenv("PAUTA_DB_PATH", str(custom))
+    assert resolve_db_path() == custom
