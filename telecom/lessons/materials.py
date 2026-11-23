@@ -166,7 +166,7 @@ def validated_materials(
             if quote and quote in spoken[sheet.speaker]:
                 mistakes.append(mistake)
             else:
-                logger.info("Erro descartado (citação ausente nas falas de %s): %s", sheet.speaker, mistake.quote)
+                logger.info("Erro descartado para o participante %s: citação ausente na fala", sheet.speaker)
         sheets.append(sheet.model_copy(update={
             "mistakes": mistakes,
             "exercises": sheet.exercises[: request.exercises_per_student],

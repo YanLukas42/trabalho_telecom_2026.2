@@ -62,7 +62,7 @@ class DiarizationPipeline:
         source = Path(source)
         started = time.perf_counter()
         original_duration = probe_duration(source)
-        logger.info("Arquivo: %s (%.1fs)", source.name, original_duration)
+        logger.info("Áudio preparado: duração %.1fs", original_duration)
 
         prepared = self._prepare(source)
 

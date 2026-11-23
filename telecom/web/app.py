@@ -51,6 +51,34 @@ EngineStatus = Callable[[str], str | None]
 LessonWriterFactory = Callable[[], LessonWriter]
 
 
+SECURITY_HEADERS = (
+    (b"content-security-policy", b"default-src 'self'; media-src 'self'; img-src 'self' data:; frame-ancestors 'none'"),
+    (b"x-content-type-options", b"nosniff"),
+    (b"referrer-policy", b"no-referrer"),
+)
+
+
+class SecurityHeadersMiddleware:
+    """Aplica cabeçalhos de proteção estrita recomendados pelo OWASP ASVS (SG-10)."""
+
+    def __init__(self, app: Any) -> None:
+        self.app = app
+
+    async def __call__(self, scope: Any, receive: Any, send: Any) -> None:
+        if scope["type"] != "http":
+            await self.app(scope, receive, send)
+            return
+
+        async def send_wrapper(message: Any) -> None:
+            if message["type"] == "http.response.start":
+                headers = list(message.get("headers", []))
+                headers.extend(SECURITY_HEADERS)
+                message["headers"] = headers
+            await send(message)
+
+        await self.app(scope, receive, send_wrapper)
+
+
 def create_app(
     service: JobService,
     engine_status: EngineStatus,
@@ -61,6 +89,7 @@ def create_app(
     auth = AuthManager(database)
 
     app = FastAPI(title="Pauta", docs_url="/api/v1/docs", openapi_url="/api/v1/openapi.json")
+    app.add_middleware(SecurityHeadersMiddleware)
 
     # --- Autenticação (/api/v1/auth) e Usuário (/api/v1/me) ---
 

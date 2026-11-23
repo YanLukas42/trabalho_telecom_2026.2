@@ -88,11 +88,11 @@ def identified_names(review: RevisaoTranscricao, segments: Sequence[SpeakerSegme
         if not name:
             continue
         if item.confianca < MIN_CONFIDENCE:
-            logger.info("Nome descartado (confiança %.2f): %s -> %s", item.confianca, item.rotulo, name)
+            logger.info("Nome descartado para o rótulo %s por confiança insuficiente (%.2f)", item.rotulo, item.confianca)
             continue
         evidence = normalize(item.evidencia)
         if not evidence or evidence not in corpus:
-            logger.info("Nome descartado (evidência ausente no texto): %s -> %s", item.rotulo, name)
+            logger.info("Nome descartado para o rótulo %s por evidência ausente no texto", item.rotulo)
             continue
         names[item.rotulo] = name
     return names

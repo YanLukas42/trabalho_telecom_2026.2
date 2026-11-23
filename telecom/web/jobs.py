@@ -298,7 +298,7 @@ class JobService:
             pipeline = self._pipeline_factory(job.options, session_dir)
             outputs = pipeline.run(job.source)
         except (ValueError, FFmpegError) as exc:
-            logger.warning("Job %s falhou: %s", session_id, exc)
+            logger.warning("Job %s falhou no processamento", session_id)
             self._repo.update_status(
                 tenant_id, session_id, JobStatus.FAILED.value, error=str(exc), finished_at=time.time()
             )
