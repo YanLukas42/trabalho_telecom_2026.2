@@ -59,6 +59,7 @@ class JobView(BaseModel):
     error: str | None
     result: dict[str, Any] | None
     lesson: dict[str, Any] | None = None
+    participants: list[dict[str, Any]] | None = None
 
     @classmethod
     def from_job(cls, job: Job, include_result: bool = True) -> "JobView":
@@ -74,6 +75,7 @@ class JobView(BaseModel):
             error=job.error,
             result=job.outputs.payload if include_result and job.outputs else None,
             lesson=job.lesson.model_dump() if include_result and job.lesson else None,
+            participants=job.participants,
         )
 
 

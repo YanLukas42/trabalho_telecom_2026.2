@@ -1,33 +1,37 @@
-"""Aplicação web: API REST dos jobs de transcrição, autenticação e interface estática.
+"""Aplicação web: API REST v1 para sessões de aula, autenticação e interface estática.
 
-A montagem das dependências (pipeline, clientes) fica em telecom.cli.serve; aqui entram por injeção.
+A montagem das dependências fica em telecom.cli.serve; aqui entram por injeção.
 # shortcut: sessão em cookie HttpOnly de 12h com isolamento estrito via Principal (ADR-0002)
+# shortcut: arquivos sob output/tenants/<tenant_id>/sessions/<id>/ (ADR-0004)
 """
 
 import logging
 from pathlib import Path
-from typing import Callable
+from typing import Any, Callable
 
 from fastapi import Depends, FastAPI, File, Form, HTTPException, Request, Response, UploadFile
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
+from pydantic import ValidationError
 
 from telecom.accounts.models import Principal
 from telecom.diarization.factory import ENGINES
 from telecom.diarization.models import SpeakerSegment
 from telecom.lessons.materials import (
-    DEFAULT_EXERCISES, LEVELS, MAX_EXERCISES, MAX_FOCUS_CHARS, MIN_EXERCISES, LessonWriter,
+    DEFAULT_EXERCISES, LEVELS, MAX_EXERCISES, MAX_FOCUS_CHARS, MIN_EXERCISES,
+    LessonMaterials, LessonWriter,
 )
 from telecom.settings import DATABASE_PATH, MEDIA_EXTENSIONS
 from telecom.storage.db import Database
 from telecom.web.auth import AuthManager, LoginRequest, LoginResponse, MeResponse, verify_csrf
 from telecom.web.jobs import Job, JobOptions, JobService, JobStatus
-from telecom.web.schemas import AppConfig, EngineInfo, JobView, LessonRequestBody
+from telecom.web.schemas import AppConfig, EngineInfo, JobView, LessonRequestBody, ParticipantBody
 
 logger = logging.getLogger(__name__)
 
 STATIC_DIR = Path(__file__).resolve().parent / "static"
-LESSON_UNEXPECTED_ERROR = "Não foi possível gerar o material agora. Veja o log do servidor."
+NOT_FOUND_MESSAGE = "Aula não encontrada. Verifique se o identificador está correto ou se você possui acesso."
+LESSON_UNEXPECTED_ERROR = "Não foi possível gerar o material pedagógico agora. Tente novamente em instantes."
 
 ENGINE_LABELS = {
     "gemini": ("Gemini", "Na nuvem. Rápido, envia o áudio inteiro numa chamada."),
@@ -53,9 +57,9 @@ def create_app(
     database = db or getattr(service._repo, "_db", None) or Database(DATABASE_PATH)
     auth = AuthManager(database)
 
-    app = FastAPI(title="Pauta", docs_url="/api/docs", openapi_url="/api/openapi.json")
+    app = FastAPI(title="Pauta", docs_url="/api/v1/docs", openapi_url="/api/v1/openapi.json")
 
-    # --- Autenticação (/api/v1/auth) ---
+    # --- Autenticação (/api/v1/auth) e Usuário (/api/v1/me) ---
 
     @app.post("/api/v1/auth/login", response_model=LoginResponse)
     def login(req: Request, resp: Response, body: LoginRequest) -> LoginResponse:
@@ -69,10 +73,9 @@ def create_app(
     def me(principal: Principal = Depends(auth.current_principal)) -> MeResponse:
         return auth.me(principal)
 
-    # --- Configuração e catálogo ---
+    # --- Configurações e motores (/api/v1/config) ---
 
     @app.get("/api/v1/config", response_model=AppConfig)
-    @app.get("/api/config", response_model=AppConfig)
     def config(principal: Principal = Depends(auth.current_principal)) -> AppConfig:
         engines = []
         for engine in ENGINES:
@@ -97,90 +100,163 @@ def create_app(
             max_focus_chars=MAX_FOCUS_CHARS,
         )
 
-    # --- Jobs de transcrição e geração ---
+    # --- Sessões de Aula (/api/v1/sessions) ---
 
-    @app.post("/api/v1/jobs", response_model=JobView, status_code=202)
-    @app.post("/api/jobs", response_model=JobView, status_code=202)
-    def create_job(
+    @app.get("/api/v1/sessions", response_model=list[JobView])
+    def list_sessions(principal: Principal = Depends(auth.current_principal)) -> list[JobView]:
+        """Lista as sessões da escola visíveis para o professor autenticado."""
+        return [JobView.from_job(job, include_result=False) for job in service.list(principal)]
+
+    @app.post("/api/v1/sessions", response_model=JobView, status_code=202)
+    def create_session(
         request: Request,
         file: UploadFile = File(...),
+        consent: bool = Form(...),
         engine: str = Form("gemini"),
         compact_silence: bool = Form(False),
         review: bool = Form(False),
         principal: Principal = Depends(auth.current_principal),
     ) -> JobView:
+        """Upload de áudio de aula. Exige consentimento explícito (consent=true)."""
         verify_csrf(request)
+        if not consent:
+            raise HTTPException(
+                status_code=400,
+                detail="É obrigatório confirmar o termo de consentimento para processamento da aula. Marque a opção antes de prosseguir.",
+            )
         if engine not in ENGINES:
-            raise HTTPException(400, f"Motor desconhecido: {engine}")
+            raise HTTPException(
+                status_code=400,
+                detail=f"Motor de processamento '{engine}' desconhecido. Escolha um motor suportado.",
+            )
         reason = engine_status(engine)
         if reason:
-            raise HTTPException(400, reason)
+            raise HTTPException(
+                status_code=400,
+                detail=f"O motor '{engine}' está indisponível: {reason}. Selecione outro motor de transcrição.",
+            )
         if review and engine_status("gemini"):
-            raise HTTPException(400, "A revisão por IA usa o Gemini, que não está configurado.")
+            raise HTTPException(
+                status_code=400,
+                detail="A revisão por inteligência artificial requer a chave do Gemini configurada. Ajuste as variáveis de ambiente.",
+            )
         try:
-            job = service.submit(principal, file.filename or "", file.file, JobOptions(engine, compact_silence, review))
+            job = service.submit(
+                principal,
+                file.filename or "",
+                file.file,
+                JobOptions(engine, compact_silence, review),
+                consent=consent,
+            )
         except ValueError as exc:
-            raise HTTPException(400, str(exc)) from exc
+            raise HTTPException(status_code=400, detail=f"{exc} Selecione um arquivo válido e tente novamente.") from exc
         return JobView.from_job(job)
 
-    @app.get("/api/v1/jobs", response_model=list[JobView])
-    @app.get("/api/jobs", response_model=list[JobView])
-    def list_jobs(principal: Principal = Depends(auth.current_principal)) -> list[JobView]:
-        return [JobView.from_job(job, include_result=False) for job in service.list(principal)]
+    @app.get("/api/v1/sessions/{session_id}", response_model=JobView)
+    def get_session(session_id: str, principal: Principal = Depends(auth.current_principal)) -> JobView:
+        return JobView.from_job(_find(service, principal, session_id))
 
-    @app.get("/api/v1/jobs/{job_id}", response_model=JobView)
-    @app.get("/api/jobs/{job_id}", response_model=JobView)
-    def get_job(job_id: str, principal: Principal = Depends(auth.current_principal)) -> JobView:
-        return JobView.from_job(_find(service, principal, job_id))
-
-    @app.delete("/api/v1/jobs/{job_id}")
-    @app.delete("/api/jobs/{job_id}")
-    def delete_job(request: Request, job_id: str, principal: Principal = Depends(auth.current_principal)) -> dict[str, str]:
+    @app.delete("/api/v1/sessions/{session_id}")
+    def delete_session(
+        request: Request,
+        session_id: str,
+        principal: Principal = Depends(auth.current_principal),
+    ) -> dict[str, str]:
+        """Exclui a sessão e seus arquivos do disco e registra auditoria LGPD."""
         verify_csrf(request)
-        if not service.delete(principal, job_id):
-            raise HTTPException(404, "Transcrição não encontrada.")
-        return {"detail": "Sessão excluída com sucesso."}
+        _find(service, principal, session_id)
+        service.delete(principal, session_id)
+        auth.audit.record(principal.tenant_id, principal.user_id, "session.delete", target=session_id)
+        return {"detail": "Aula e seus arquivos foram excluídos com sucesso em conformidade com a LGPD."}
 
-    @app.post("/api/v1/jobs/{job_id}/lesson", response_model=JobView)
-    @app.post("/api/jobs/{job_id}/lesson", response_model=JobView)
+    @app.put("/api/v1/sessions/{session_id}/participants", response_model=JobView)
+    def update_participants(
+        request: Request,
+        session_id: str,
+        participants: list[ParticipantBody],
+        principal: Principal = Depends(auth.current_principal),
+    ) -> JobView:
+        """Salva a identificação de alunos e professores da aula."""
+        verify_csrf(request)
+        _find(service, principal, session_id)
+        parts_data = [p.model_dump() for p in participants]
+        updated = service.attach_participants(principal, session_id, parts_data)
+        return JobView.from_job(updated)
+
+    @app.post("/api/v1/sessions/{session_id}/lesson", response_model=JobView)
     def create_lesson(
         request: Request,
-        job_id: str,
+        session_id: str,
         body: LessonRequestBody,
         principal: Principal = Depends(auth.current_principal),
     ) -> JobView:
+        """Gera atividades por aluno e o plano da próxima aula."""
         verify_csrf(request)
-        job = _find(service, principal, job_id)
+        job = _find(service, principal, session_id)
         if job.status is not JobStatus.DONE or job.outputs is None:
-            raise HTTPException(409, "A transcrição ainda não terminou.")
+            raise HTTPException(
+                status_code=409,
+                detail="A transcrição da aula ainda não foi finalizada. Aguarde o término do áudio para gerar o material.",
+            )
         if lesson_writer_factory is None or engine_status("gemini"):
-            raise HTTPException(400, "Gerar material usa o Gemini, que não está configurado.")
+            raise HTTPException(
+                status_code=400,
+                detail="A geração de materiais pedagógicos requer o Gemini configurado. Adicione a chave GEMINI_API_KEY no arquivo .env.",
+            )
         try:
             req = body.to_request()
             lesson = lesson_writer_factory().write(_segments(job), req)
         except ValueError as exc:
-            raise HTTPException(400, str(exc)) from exc
+            raise HTTPException(status_code=400, detail=f"{exc} Ajuste os parâmetros e tente novamente.") from exc
         except Exception as exc:
-            logger.exception("Falha ao gerar material do job %s", job_id)
-            raise HTTPException(502, LESSON_UNEXPECTED_ERROR) from exc
-        return JobView.from_job(service.attach_lesson(principal, job_id, lesson))
+            logger.exception("Falha ao gerar material para sessão %s", session_id)
+            raise HTTPException(status_code=502, detail=LESSON_UNEXPECTED_ERROR) from exc
+        return JobView.from_job(service.attach_lesson(principal, session_id, lesson))
 
-    @app.get("/api/v1/jobs/{job_id}/media")
-    @app.get("/api/jobs/{job_id}/media")
-    def get_media(job_id: str, principal: Principal = Depends(auth.current_principal)) -> FileResponse:
-        job = _find(service, principal, job_id)
+    @app.put("/api/v1/sessions/{session_id}/lesson", response_model=JobView)
+    def update_lesson(
+        request: Request,
+        session_id: str,
+        body: dict[str, Any],
+        principal: Principal = Depends(auth.current_principal),
+    ) -> JobView:
+        """Salva edições feitas pelo professor no material pedagógico, validando a estrutura."""
+        verify_csrf(request)
+        _find(service, principal, session_id)
+        try:
+            lesson = LessonMaterials.model_validate(body)
+        except ValidationError as exc:
+            raise HTTPException(
+                status_code=400,
+                detail=f"A estrutura do material pedagógico é inválida: {exc.errors()[0]['msg']}. Verifique as edições antes de salvar.",
+            ) from exc
+        updated = service.attach_lesson(principal, session_id, lesson)
+        return JobView.from_job(updated)
+
+    @app.get("/api/v1/sessions/{session_id}/media")
+    def get_media(session_id: str, principal: Principal = Depends(auth.current_principal)) -> FileResponse:
+        job = _find(service, principal, session_id)
+        if not job.source.is_file():
+            raise HTTPException(status_code=404, detail="Arquivo de áudio da aula não foi encontrado no servidor.")
         return FileResponse(job.source)
 
-    @app.get("/api/v1/jobs/{job_id}/files/{kind}")
-    @app.get("/api/jobs/{job_id}/files/{kind}")
-    def download(job_id: str, kind: str, principal: Principal = Depends(auth.current_principal)) -> FileResponse:
+    @app.get("/api/v1/sessions/{session_id}/files/{kind}")
+    def download(session_id: str, kind: str, principal: Principal = Depends(auth.current_principal)) -> FileResponse:
         if kind not in DOWNLOADS:
-            raise HTTPException(404, "Relatório desconhecido.")
-        job = _find(service, principal, job_id)
+            raise HTTPException(
+                status_code=404,
+                detail=f"Tipo de relatório '{kind}' desconhecido. Escolha entre: {', '.join(DOWNLOADS.keys())}.",
+            )
+        job = _find(service, principal, session_id)
         if job.status is not JobStatus.DONE or job.outputs is None:
-            raise HTTPException(409, "A transcrição ainda não terminou.")
+            raise HTTPException(
+                status_code=409,
+                detail="A transcrição ainda está sendo processada. Aguarde o término para baixar o relatório.",
+            )
         attribute, media_type = DOWNLOADS[kind]
         path: Path = getattr(job.outputs, attribute)
+        if not path.is_file():
+            raise HTTPException(status_code=404, detail="Arquivo de relatório não encontrado em disco.")
         return FileResponse(path, media_type=media_type, filename=path.name)
 
     app.mount("/", StaticFiles(directory=STATIC_DIR, html=True), name="static")
@@ -195,8 +271,9 @@ def _segments(job: Job) -> list[SpeakerSegment]:
     ]
 
 
-def _find(service: JobService, principal: Principal, job_id: str) -> Job:
-    job = service.get(principal, job_id)
+def _find(service: JobService, principal: Principal, session_id: str) -> Job:
+    """Busca a sessão exigindo isolamento por tenant e professor (TN-03, TN-04)."""
+    job = service.get(principal, session_id)
     if job is None:
-        raise HTTPException(404, "Transcrição não encontrada.")
+        raise HTTPException(status_code=404, detail=NOT_FOUND_MESSAGE)
     return job

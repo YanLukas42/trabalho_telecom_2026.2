@@ -13,6 +13,7 @@ import time
 import uuid
 from concurrent.futures import Executor, ThreadPoolExecutor
 from dataclasses import dataclass
+from datetime import datetime, timezone
 from enum import Enum
 from pathlib import Path
 from typing import Any, BinaryIO, Callable
@@ -62,6 +63,7 @@ class Job:
     error: str | None = None
     outputs: DiarizationOutputs | None = None
     lesson: LessonMaterials | None = None
+    participants: list[dict[str, Any]] | None = None
     tenant_id: str = ""
     teacher_id: str = ""
 
@@ -91,7 +93,15 @@ class JobService:
         if recovered:
             logger.info("Recuperadas %d sessões ativas no reinício do servidor", recovered)
 
-    def submit(self, principal: Principal, file_name: str, stream: BinaryIO, options: JobOptions) -> Job:
+    def submit(
+        self,
+        principal: Principal,
+        file_name: str,
+        stream: BinaryIO,
+        options: JobOptions,
+        consent: bool = True,
+        consent_version: str = "v1",
+    ) -> Job:
         """Grava o upload sob o diretório do tenant e agenda o processamento."""
         safe_name = sanitize_filename(file_name)
         if Path(safe_name).suffix.lower() not in MEDIA_EXTENSIONS:
@@ -111,6 +121,7 @@ class JobService:
             raise ValueError("O arquivo enviado está vazio.")
 
         now_sec = time.time()
+        consent_at = datetime.now(timezone.utc).isoformat() if consent else None
         session_data = {
             "id": session_id,
             "tenant_id": principal.tenant_id,
@@ -124,6 +135,8 @@ class JobService:
                 "original_filename": file_name,
             },
             "started_at": now_sec,
+            "consent_at": consent_at,
+            "consent_version": consent_version if consent else None,
         }
         self._repo.save(principal.tenant_id, session_data)
         logger.info("Job %s criado para tenant %s", session_id, principal.tenant_id)
@@ -158,6 +171,17 @@ class JobService:
         session_dir = self._session_dir(principal.tenant_id, session_id)
         write_json(lesson.model_dump(), session_dir / LESSON_FILE_NAME)
         self._repo.attach_lesson(principal.tenant_id, session_id, lesson.model_dump())
+        updated = self.get(principal, session_id)
+        if updated is None:
+            raise RuntimeError("Falha ao recuperar sessão atualizada.")
+        return updated
+
+    def attach_participants(self, principal: Principal, session_id: str, participants: list[dict[str, Any]]) -> Job:
+        """Salva a lista de participantes identificados na sessão."""
+        job = self.get(principal, session_id)
+        if job is None:
+            raise ValueError("Sessão não encontrada.")
+        self._repo.attach_participants(principal.tenant_id, session_id, participants)
         updated = self.get(principal, session_id)
         if updated is None:
             raise RuntimeError("Falha ao recuperar sessão atualizada.")
@@ -259,6 +283,7 @@ class JobService:
             error=data.get("error"),
             outputs=outputs,
             lesson=lesson,
+            participants=data.get("participants_json"),
             tenant_id=tenant_id,
             teacher_id=data.get("teacher_id", ""),
         )

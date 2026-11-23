@@ -16,6 +16,7 @@ from telecom.accounts.passwords import hash_token, verify_password
 from telecom.settings import PAUTA_COOKIE_SECURE, SESSION_COOKIE_NAME, SESSION_DURATION_HOURS
 from telecom.storage.db import Database
 from telecom.storage.repositories import (
+    AuditRepository,
     AuthSessionRepository,
     LoginAttemptRepository,
     UsageRepository,
@@ -78,6 +79,7 @@ class AuthManager:
         self.auth_sessions = AuthSessionRepository(db)
         self.login_attempts = LoginAttemptRepository(db)
         self.usage = UsageRepository(db)
+        self.audit = AuditRepository(db)
 
     def login(self, request: Request, response: Response, body: LoginRequest) -> LoginResponse:
         verify_csrf(request)
