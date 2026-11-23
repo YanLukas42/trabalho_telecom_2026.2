@@ -70,6 +70,11 @@ Pensada para professores de inglês e escolas (multi-tenant). Fluxo:
 A IA lê só o texto da transcrição, sem ouvir o áudio: confira o material antes de entregar. As sessões, nomes, materiais e eventos de uso ficam salvos no SQLite (`output/pauta.db`) e os arquivos por escola em `output/tenants/<tenant_id>/sessions/<session_id>/`.
 Documentação da API v1 em `/api/v1/docs`.
 
+### Navegadores suportados e PDF
+
+- **Navegadores:** Chrome, Edge, Firefox e Safari nas **2 últimas versões** (a interface usa `<ruby>`, CSS `:has()` e módulos ES nativos).
+- **PDF:** gerado diretamente pelo navegador em **"Imprimir → Salvar como PDF"** (sem biblioteca externa de PDF).
+
 ## Referência de deploy em VPS (futuro — não aplicar agora)
 
 - **Máquina base:** Ubuntu 24.04, 2 vCPU, 4 GB RAM, 40 GB de disco, Python 3.12, FFmpeg, domínio configurado e firewall permitindo apenas portas `80`, `443` e SSH.
