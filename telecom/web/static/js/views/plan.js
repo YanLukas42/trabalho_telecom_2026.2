@@ -28,50 +28,48 @@ export function renderPlan({ id }) {
   function handlePrintPlan() {
     const plan = session?.lesson?.plan;
     if (!plan) return;
-    const title = `Plano da próxima aula, ${session.file_name}`;
-    const doc = renderPlanPaper(plan);
-    printDocuments(title, [doc]);
+    printDocuments(`Plano da próxima aula, ${session.file_name}`, [renderPlanPaper(plan)]);
   }
 
   function renderPlanPaper(plan) {
-    const stageItems = (plan.stages || []).map((stage) =>
+    const blockItems = (plan.blocks || []).map((block) =>
       h("li", { class: "plan-block" },
         h("div", { class: "plan-min" },
-          `${stage.minutes}`,
-          h("small", {}, "minutos")
+          `${block.minutes}`,
+          h("small", {}, "min")
         ),
         h("div", {},
-          h("h4", {}, stage.name),
-          h("p", {}, stage.activity)
+          h("h4", {}, block.title),
+          h("p", {}, block.description)
         )
       )
     );
 
-    const topics = (plan.review_topics || []).map((t) => h("li", {}, t));
+    const topics = (plan.topics || []).map((t) => h("li", {}, t));
 
     return h("div", { class: "paper" },
       h("div", { class: "paper-head" },
         h("h3", {}, "Plano da próxima aula"),
         h("span", { class: "hint" }, session.file_name)
       ),
-      h("div", { style: { marginBottom: "16px" } },
-        h("strong", {}, "Nível da turma: "),
-        h("span", {}, plan.class_level)
-      ),
-      h("div", { style: { marginBottom: "16px" } },
-        h("strong", {}, "Objetivo: "),
-        h("p", { class: "lead" }, plan.goal)
-      ),
+      plan.objective
+        ? h("div", { style: { marginBottom: "16px" } },
+            h("strong", {}, "Objetivo: "),
+            h("p", { class: "lead" }, plan.objective)
+          )
+        : null,
       topics.length > 0
         ? h("div", { style: { marginBottom: "20px" } },
             h("h4", {}, "Tópicos a retomar"),
             h("ul", { class: "topic-list", style: { marginTop: "8px" } }, topics)
           )
         : null,
-      h("div", { style: { marginBottom: "20px" } },
-        h("h4", {}, "Etapas da aula"),
-        h("ul", { class: "plan-blocks", style: { marginTop: "8px" } }, stageItems)
-      ),
+      blockItems.length > 0
+        ? h("div", { style: { marginBottom: "20px" } },
+            h("h4", {}, "Etapas da aula"),
+            h("ul", { class: "plan-blocks", style: { marginTop: "8px" } }, blockItems)
+          )
+        : null,
       plan.homework
         ? h("div", { style: { marginTop: "16px" } },
             h("h4", {}, "Tarefa de casa"),
@@ -93,19 +91,24 @@ export function renderPlan({ id }) {
       h("a", { class: "tab", href: `#/aulas/${id}`, onClick: (e) => { e.preventDefault(); navigate(`/aulas/${id}`); } }, "Aula"),
       h("a", { class: "tab", href: `#/aulas/${id}/atividades`, onClick: (e) => { e.preventDefault(); navigate(`/aulas/${id}/atividades`); } },
         "Atividades",
-        session.has_lesson ? h("span", { class: "tab-badge" }, "pronto") : null
+        session?.has_lesson ? h("span", { class: "tab-badge" }, "pronto") : null
       ),
       h("a", { class: "tab", "aria-selected": "true", href: `#/aulas/${id}/proxima` }, "Próxima aula")
     );
 
-    let content;
+    if (errorMessage) {
+      v.replaceChildren(navTabs, h("div", { class: "alert" }, errorMessage));
+      return;
+    }
+
     const plan = session?.lesson?.plan;
+    let content;
     if (!plan) {
       content = h(
         "div",
         { class: "card state" },
         h("h2", { style: { fontSize: "20px" } }, "Nenhum plano gerado ainda"),
-        h("p", { class: "hint" }, "Gere as atividades da aula primeiro para criar o plano pedagógico da próxima aula."),
+        h("p", { class: "hint" }, "Gere as atividades da aula primeiro para criar o plano da próxima aula."),
         h("a", {
           class: "button button-primary",
           style: { marginTop: "16px" },
@@ -119,7 +122,6 @@ export function renderPlan({ id }) {
         { style: { display: "flex", justifyContent: "flex-end", marginBottom: "16px" } },
         h("button", { class: "button", onClick: handlePrintPlan }, "Imprimir plano")
       );
-
       content = h("div", {}, printBtn, renderPlanPaper(plan));
     }
 

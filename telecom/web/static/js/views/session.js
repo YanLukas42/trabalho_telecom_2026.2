@@ -73,12 +73,13 @@ export function renderSession({ id, activeTab = "aula" }) {
   async function saveParticipants(participantsMap) {
     savingParticipants = true;
     try {
-      await api.updateParticipants(id, participantsMap);
-      session.participants = Object.entries(participantsMap).map(([label, p]) => ({
+      const payload = Object.entries(participantsMap).map(([label, p]) => ({
         label,
-        name: p.name,
+        name: (p.name || label).trim(),
         role: p.role,
       }));
+      const updated = await api.updateParticipants(id, payload);
+      session.participants = updated.participants || payload;
     } catch (err) {
       console.error("Falha ao salvar participantes:", err);
     } finally {
@@ -127,8 +128,8 @@ export function renderSession({ id, activeTab = "aula" }) {
     if (session.status === "failed") {
       v.replaceChildren(
         h("div", { class: "card state" },
-          h("h2", { style: { color: "var(--pen)" } }, "Falha no processamento"),
-          h("p", {}, session.error || "Ocorreu um erro ao processar o arquivo de áudio."),
+          h("h2", {}, "Falha no processamento"),
+          h("div", { class: "alert", role: "alert" }, session.error || "Ocorreu um erro ao processar o arquivo de áudio."),
           h("div", { style: { display: "flex", gap: "10px", marginTop: "16px" } },
             h("a", { class: "button button-primary", href: "#/nova" }, "Tentar outro arquivo"),
             h("button", { class: "button button-ghost", onClick: handleDelete }, "Excluir aula")
@@ -189,26 +190,38 @@ export function renderSession({ id, activeTab = "aula" }) {
 
     // Pessoas / Quem é quem
     const result = session.result || {};
-    const segments = result.segments || [];
-    const speakers = result.speakers || [];
-    const participantsList = session.participants || [];
+    const segments = result.segmentos || [];
+    const reviewedNames = result.revisao?.nomes_aplicados || {};
+    const speakers = [];
+    const speakerDurations = {};
+    let totalDuration = 0;
+    for (const seg of segments) {
+      const spk = seg.quemfala || "Desconhecido";
+      if (!speakers.includes(spk)) speakers.push(spk);
+      const dur = Math.max(0, (seg.segundos_fim || 0) - (seg.segundos_inicio || 0));
+      speakerDurations[spk] = (speakerDurations[spk] || 0) + dur;
+      totalDuration += dur;
+    }
+    totalDuration = totalDuration || 1;
+
     const partMap = {};
-    for (const p of participantsList) {
+    for (const p of session.participants || []) {
       partMap[p.label] = { name: p.name, role: p.role };
     }
-
-    // Cálculo da porcentagem de fala
-    const totalDuration = segments.reduce((sum, s) => sum + (s.end - s.start), 0) || 1;
-    const speakerDurations = {};
-    for (const seg of segments) {
-      speakerDurations[seg.speaker] = (speakerDurations[seg.speaker] || 0) + (seg.end - seg.start);
-    }
+    const topSpeaker = speakers.reduce((best, spk) => (
+      !best || (speakerDurations[spk] || 0) > (speakerDurations[best] || 0) ? spk : best
+    ), null);
+    const hasTeacherHint = (label, name) => /prof|teacher|tutor/i.test(`${label} ${name}`);
 
     const peopleItems = speakers.map((speaker, idx) => {
       const colorVar = SPEAKER_COLORS[idx % SPEAKER_COLORS.length];
+      const suggestedName = reviewedNames[speaker] || speaker;
+      const guessedTeacher = speakers.some((s) => hasTeacherHint(s, reviewedNames[s] || ""))
+        ? hasTeacherHint(speaker, suggestedName)
+        : speaker === topSpeaker;
       const current = partMap[speaker] || {
-        name: result.identified_names?.[speaker] || speaker,
-        role: idx === 0 ? "teacher" : "student",
+        name: suggestedName,
+        role: guessedTeacher ? "teacher" : "student",
       };
       partMap[speaker] = current;
 
@@ -287,7 +300,9 @@ export function renderSession({ id, activeTab = "aula" }) {
     const copyBtn = h("button", {
       class: "button button-sm",
       onClick: async () => {
-        const text = segments.map((s) => `[${formatTime(s.start)}] ${partMap[s.speaker]?.name || s.speaker}: ${s.text}`).join("\n\n");
+        const text = segments
+          .map((s) => `[${formatTime(s.segundos_inicio)}] ${partMap[s.quemfala]?.name || s.quemfala}: ${s.textodefala}`)
+          .join("\n\n");
         await navigator.clipboard.writeText(text);
         copyBtn.textContent = "Copiado!";
         setTimeout(() => { copyBtn.textContent = "Copiar texto"; }, 1500);
@@ -309,7 +324,7 @@ export function renderSession({ id, activeTab = "aula" }) {
       clear(transcriptList);
       const query = searchQuery.trim().toLowerCase();
       const filtered = query
-        ? segments.filter((s) => s.text.toLowerCase().includes(query))
+        ? segments.filter((s) => (s.textodefala || "").toLowerCase().includes(query))
         : segments;
 
       if (filtered.length === 0) {
@@ -318,35 +333,37 @@ export function renderSession({ id, activeTab = "aula" }) {
       }
 
       for (const seg of filtered) {
-        const idx = speakers.indexOf(seg.speaker);
+        const label = seg.quemfala || "Desconhecido";
+        const idx = speakers.indexOf(label);
         const colorVar = SPEAKER_COLORS[(idx >= 0 ? idx : 0) % SPEAKER_COLORS.length];
-        const participant = partMap[seg.speaker] || { name: seg.speaker, role: "student" };
+        const participant = partMap[label] || { name: label, role: "student" };
         const isTeacher = participant.role === "teacher";
+        const text = seg.textodefala || "";
 
         const timeBtn = h("button", {
           class: "turn-time",
           onClick: () => {
             if (mediaEl) {
-              mediaEl.currentTime = seg.start;
+              mediaEl.currentTime = seg.segundos_inicio || 0;
               mediaEl.play();
             }
           },
-        }, formatTime(seg.start));
+        }, formatTime(seg.segundos_inicio));
 
         const turnHeader = h("div", {},
-          h("span", { class: "turn-speaker", style: { color: `var(${colorVar})` } }, participant.name || seg.speaker),
+          h("span", { class: "turn-speaker", style: { color: `var(${colorVar})` } }, participant.name || label),
           h("span", { class: "turn-role" }, isTeacher ? "(Professor)" : "(Aluno)")
         );
 
         let turnBody;
         if (query) {
-          const parts = seg.text.split(new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`, "gi"));
+          const parts = text.split(new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`, "gi"));
           const spans = parts.map((part) =>
             part.toLowerCase() === query ? h("mark", {}, part) : document.createTextNode(part)
           );
           turnBody = h("div", { class: "turn-text" }, spans);
         } else {
-          turnBody = h("div", { class: "turn-text" }, seg.text);
+          turnBody = h("div", { class: "turn-text" }, text);
         }
 
         const turnEl = h("li", { class: `turn ${isTeacher ? "is-teacher" : ""}` },

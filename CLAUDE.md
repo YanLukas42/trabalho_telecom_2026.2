@@ -37,16 +37,21 @@ telecom/
   benchmark/         motor único de benchmark (fase 1 e fase 2)
   lessons/           material de aula para professores de inglês
     materials.py     contrato (LessonMaterials), prompt, validação (funções puras) e GeminiLessonWriter
+  accounts/          modelos multi-tenant (Tenant, User, Principal) e hashing scrypt (puro, sem I/O)
+  storage/           SQLite com WAL, migrações (db.py é ponto único de sqlite3) e repositórios por tenant_id
   web/               interface web local (MVP do SaaS "Pauta": aula gravada → atividades por aluno + plano)
-    jobs.py          JobService: fila em memória, pipeline injetado por fábrica; guarda o material do job
-    app.py           create_app: rotas FastAPI e arquivos estáticos; gerador de material injetado
-    schemas.py       contratos da API
-    static/          HTML, CSS e JS puros, sem build; PDF pelo "imprimir" do navegador (CSS @media print)
-  cli/               pontos de entrada (diarize, benchmark, serve)
+    auth.py          autenticação por cookie HttpOnly, taxa de tentativas, CSRF e dependência current_principal
+    jobs.py          JobService: repositório SQLite, ThreadPoolExecutor, limites (300 MB / 3 h / cota) e recuperação
+    app.py           create_app: rotas FastAPI /api/v1, cabeçalhos de segurança (CSP) e arquivos estáticos
+    schemas.py       contratos da API v1
+    static/          HTML, CSS e módulos ES puros (<script type="module" src="/js/main.js">), sem build
+      fonts/         fontes locais (Bricolage Grotesque e Atkinson Hyperlegible Next)
+      js/            dom.js, api.js, format.js, router.js, print.js, main.js e views/
+  cli/               pontos de entrada (diarize, benchmark, serve, admin)
 tests/               pytest; espelha os módulos
 ```
 
-**Direção das dependências:** `settings`/`timefmt` ← `audio` ← `diarization`/`benchmark`/`lessons` ← `web` ← `cli`.
+**Direção das dependências:** `settings`/`timefmt` ← `audio`/`accounts` ← `diarization`/`benchmark` ← `storage`/`lessons` ← `web` ← `cli`.
 `asr` é usado por `diarization`, `benchmark` e `cli`. Um módulo de nível baixo nunca importa um de nível alto:
 `audio` não conhece `asr`, `diarization` ou `benchmark`.
 
@@ -81,12 +86,12 @@ tests/               pytest; espelha os módulos
 - **Idioma:** identificadores em inglês. Docstrings, mensagens de log e textos para o usuário em português.
   Chaves dos JSON de saída, prompts e descrições dos esquemas ficam em português: são contrato com os relatórios
   já gerados e com o modelo. Não renomeie sem reavaliar a saída.
-- **Web sem estado persistente:** jobs vivem em memória (`JobService`); arquivos em `output/diarizacao/jobs/<id>/`.
-  Chaves do envelope do job em inglês (contrato novo); o `result` é o JSON do relatório, em português, sem alteração.
+- **Web persistente e multi-tenant:** sessões, usuários, uso e auditoria vivem no SQLite (`output/pauta.db`, acessado exclusivamente via `telecom/storage/db.py`); arquivos em `output/tenants/<tenant_id>/sessions/<id>/`.
+  Chaves do envelope do job em inglês (contrato `/api/v1`); o `result` é o JSON do relatório, em português, sem alteração.
 - **Arquitetura e segurança:** siga `docs/arquitetura/` (regras `AR`, `PD`, `MT`, `TN`, `SG`). `tests/test_architecture.py`
-  verifica a direção das dependências, os pontos únicos de contato (FFmpeg, Gemini), `print` fora da CLI, tamanho de arquivo
+  verifica a direção das dependências, os pontos únicos de contato (FFmpeg, Gemini, sqlite3), `print` fora da CLI, tamanho de arquivo
   e JS sem HTML injetado; pacote novo entra em `LAYER` antes de existir. Nunca registre em log texto de fala, nome de aluno
-  ou nome de arquivo do usuário. Acesso a dado de cliente sempre com o tenant (hoje ainda não há tenant: ver fase 1).
+  ou nome de arquivo do usuário. Acesso a dado de cliente sempre recebe `tenant_id` primeiro (`404` para outro tenant ou professor).
   Dependência nova exige ADR em `docs/arquitetura/adr/`.
 - **Produto:** histórias e regras em `docs/produto/` (códigos `RN-xx`). Mudou uma regra no código? Atualize a tabela
   de regras e a situação da história. Regra nova de negócio entra com código `RN` novo.

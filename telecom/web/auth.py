@@ -45,12 +45,6 @@ class MeResponse(BaseModel):
     role: str
     used_minutes_month: float
     monthly_audio_minutes: int
-    # Aliases de compatibilidade para interface
-    nome: str
-    escola: str
-    papel: str
-    uso_mes: float
-    limite_mes: int
 
 
 def _utc_now() -> datetime:
@@ -153,11 +147,6 @@ class AuthManager:
             role=principal.role,
             used_minutes_month=rounded_used,
             monthly_audio_minutes=monthly_limit,
-            nome=user.name,
-            escola=school_name,
-            papel=principal.role,
-            uso_mes=rounded_used,
-            limite_mes=monthly_limit,
         )
 
     def current_principal(self, request: Request) -> Principal:

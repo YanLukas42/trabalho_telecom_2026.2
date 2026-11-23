@@ -69,7 +69,7 @@ export function renderSessions({ me, onNavigate }) {
     ];
 
     const quotaText = me
-      ? `${me.used_audio_minutes} de ${me.monthly_audio_minutes} minutos usados este mês`
+      ? `${Math.round(me.used_minutes_month || 0)} de ${me.monthly_audio_minutes} minutos usados este mês`
       : "";
 
     const head = h(
@@ -270,7 +270,7 @@ export function renderSessions({ me, onNavigate }) {
             },
             h("span", {}, `Enviada em ${formatDate(s.created_at)}`),
             durationStr ? h("span", {}, `Duração: ${durationStr}`) : null,
-            s.error ? h("span", { style: { color: "var(--pen)" } }, s.error) : null
+            s.error ? h("span", { style: { color: "#8d1424" } }, s.error) : null
           )
         );
       });

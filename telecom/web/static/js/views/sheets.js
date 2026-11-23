@@ -10,6 +10,12 @@ import { navigate } from "../router.js";
 
 const DEFAULT_LEVEL = "B1";
 const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"];
+const EXERCISE_KINDS = [
+  ["fill_blank", "Completar lacuna"],
+  ["multiple_choice", "Múltipla escolha"],
+  ["rewrite", "Reescrita"],
+  ["short_answer", "Resposta curta"],
+];
 
 function fld(label, input) {
   return h("div", { class: "field" }, h("label", {}, label), input);
@@ -28,8 +34,29 @@ export function renderSheets({ id }) {
   let showForm = false;
 
   let selectedLevel = DEFAULT_LEVEL;
-  let exercisesCount = 5;
+  let exercisesCount = 6;
   let focusText = "";
+
+  function studentDisplayName(speakerLabel) {
+    const found = (session?.participants || []).find((p) => p.label === speakerLabel);
+    return found?.name || speakerLabel;
+  }
+
+  function defaultParticipants() {
+    if (session?.participants?.length) {
+      return session.participants.map((p) => ({ label: p.label, name: p.name, role: p.role }));
+    }
+    const segs = session?.result?.segmentos || [];
+    const seen = [];
+    for (const s of segs) {
+      if (s.quemfala && !seen.includes(s.quemfala)) seen.push(s.quemfala);
+    }
+    return seen.map((label, idx) => ({
+      label,
+      name: session?.result?.revisao?.nomes_aplicados?.[label] || label,
+      role: idx === 0 ? "teacher" : "student",
+    }));
+  }
 
   async function loadData() {
     try {
@@ -50,16 +77,15 @@ export function renderSheets({ id }) {
     errorMessage = "";
     render();
 
-    const parts = (session.participants || []).map((p) => ({ label: p.label, name: p.name, role: p.role }));
     try {
-      const lesson = await api.createLesson(id, {
+      const updated = await api.createLesson(id, {
         level: selectedLevel,
-        exercises_per_student: Number(exercisesCount) || 5,
+        exercises_per_student: Number(exercisesCount) || 6,
         focus: focusText.trim(),
-        participants: parts,
+        participants: defaultParticipants(),
       });
-      session.lesson = lesson;
-      session.has_lesson = true;
+      session.lesson = updated.lesson;
+      session.has_lesson = updated.has_lesson;
       showForm = false;
       isEditing = false;
     } catch (err) {
@@ -76,7 +102,9 @@ export function renderSheets({ id }) {
     successMessage = "";
     render();
     try {
-      await api.saveLesson(id, session.lesson);
+      const updated = await api.saveLesson(id, session.lesson);
+      session.lesson = updated.lesson;
+      session.has_lesson = updated.has_lesson;
       isEditing = false;
       successMessage = "Alterações salvas com sucesso!";
       setTimeout(() => { successMessage = ""; render(); }, 3000);
@@ -89,27 +117,32 @@ export function renderSheets({ id }) {
   }
 
   function printAllSheets() {
-    if (!session?.lesson) return;
-    printDocuments(`Atividades, ${session.file_name}`, session.lesson.sheets.map((s) => renderPaper(s, false)));
+    if (!session?.lesson?.students) return;
+    printDocuments(`Atividades, ${session.file_name}`, session.lesson.students.map((s) => renderPaper(s, false)));
   }
 
   function printAnswerKey() {
-    if (!session?.lesson?.answer_key) return;
-    const keyItems = session.lesson.answer_key.map((item) =>
+    const students = session?.lesson?.students || [];
+    if (students.length === 0) return;
+    const keyItems = students.map((sheet) =>
       h("div", { style: { marginBottom: "16px" } },
-        h("h4", {}, item.student_name),
-        h("ul", { class: "exercises" }, item.items.map((ex) => h("li", {}, h("strong", {}, ex.prompt), h("div", { class: "answer" }, ex.answer))))
+        h("h4", {}, studentDisplayName(sheet.speaker)),
+        h("ol", { class: "exercises" },
+          (sheet.exercises || []).map((ex) =>
+            h("li", {}, h("strong", {}, ex.prompt), h("div", { class: "answer" }, ex.answer))
+          )
+        )
       )
     );
     printDocuments(`Gabarito, ${session.file_name}`, [
-      h("div", { class: "paper" }, h("div", { class: "paper-head" }, h("h3", {}, `Gabarito — ${session.file_name}`)), h("div", {}, keyItems))
+      h("div", { class: "paper" }, h("div", { class: "paper-head" }, h("h3", {}, `Gabarito — ${session.file_name}`)), h("div", {}, keyItems)),
     ]);
   }
 
   function renderPaper(sheet, forEdit = false) {
     let reviewSection;
     if (forEdit) {
-      const mistakeItems = sheet.mistakes.map((m, mIdx) =>
+      const mistakeItems = (sheet.mistakes || []).map((m, mIdx) =>
         h("div", { class: "card", style: { padding: "10px", display: "grid", gap: "6px" } },
           fld("Fala do aluno:", h("input", { type: "text", value: m.quote, onInput: (e) => { m.quote = e.target.value; } })),
           fld("Forma correta:", h("input", { type: "text", value: m.correction, onInput: (e) => { m.correction = e.target.value; } })),
@@ -117,53 +150,49 @@ export function renderSheets({ id }) {
           h("button", {
             type: "button",
             class: "button button-sm button-ghost",
-            style: { justifySelf: "start", color: "var(--pen)" },
+            style: { justifySelf: "start" },
             onClick: () => { sheet.mistakes.splice(mIdx, 1); render(); },
           }, "Remover erro")
         )
       );
       reviewSection = h("div", {}, h("h4", {}, "O que revisar"), h("div", { style: { display: "grid", gap: "10px" } }, mistakeItems));
     } else {
-      const reviewItems = sheet.mistakes.map((m) =>
+      const mistakes = sheet.mistakes || [];
+      const reviewItems = mistakes.map((m) =>
         h("li", { class: "review-item" },
           h("div", {}, h("del", {}, m.quote), " → ", h("ins", {}, m.correction)),
           h("div", { class: "why" }, m.explanation)
         )
       );
-      reviewSection = sheet.mistakes.length > 0
+      reviewSection = mistakes.length > 0
         ? h("div", {}, h("h4", {}, "O que revisar"), h("ul", { class: "review-list" }, reviewItems))
         : null;
     }
 
     let exercisesSection;
     if (forEdit) {
-      const exItems = sheet.exercises.map((ex, eIdx) => {
+      const exItems = (sheet.exercises || []).map((ex, eIdx) => {
         const typeSelect = h("select", {
-          onChange: (e) => { ex.type = e.target.value; render(); },
-        },
-          h("option", { value: "multiple_choice", selected: ex.type === "multiple_choice" }, "Múltipla escolha"),
-          h("option", { value: "rewrite", selected: ex.type === "rewrite" }, "Reescrita"),
-          h("option", { value: "short_answer", selected: ex.type === "short_answer" }, "Resposta curta")
-        );
+          onChange: (e) => { ex.kind = e.target.value; render(); },
+        }, EXERCISE_KINDS.map(([val, lbl]) => h("option", { value: val, selected: ex.kind === val }, lbl)));
 
-        let optionsField = null;
-        if (ex.type === "multiple_choice") {
-          optionsField = fld("Opções (uma por linha):", h("textarea", {
-            rows: 3,
-            value: (ex.options || []).join("\n"),
-            onInput: (e) => { ex.options = e.target.value.split("\n").map((s) => s.trim()).filter(Boolean); },
-          }));
-        }
+        const optionsField = ex.kind === "multiple_choice"
+          ? fld("Opções (uma por linha):", h("textarea", {
+              rows: 3,
+              value: (ex.options || []).join("\n"),
+              onInput: (e) => { ex.options = e.target.value.split("\n").map((s) => s.trim()).filter(Boolean); },
+            }))
+          : null;
 
         return h("div", { class: "card", style: { padding: "12px", display: "grid", gap: "8px" } },
-          fld(`Exercício ${eIdx + 1} - Enunciado:`, h("input", { type: "text", value: ex.prompt, onInput: (e) => { ex.prompt = e.target.value; } })),
+          fld(`Atividade ${eIdx + 1} - Enunciado:`, h("input", { type: "text", value: ex.prompt, onInput: (e) => { ex.prompt = e.target.value; } })),
           fld("Tipo:", typeSelect),
           optionsField,
           fld("Resposta esperada:", h("input", { type: "text", value: ex.answer, onInput: (e) => { ex.answer = e.target.value; } })),
           h("button", {
             type: "button",
             class: "button button-sm button-ghost",
-            style: { justifySelf: "start", color: "var(--pen)" },
+            style: { justifySelf: "start" },
             onClick: () => { sheet.exercises.splice(eIdx, 1); render(); },
           }, "Remover atividade")
         );
@@ -177,14 +206,14 @@ export function renderSheets({ id }) {
           class: "button button-sm",
           style: { marginTop: "10px" },
           onClick: () => {
-            sheet.exercises.push({ prompt: "Complete the sentence:", type: "short_answer", options: [], answer: "" });
+            sheet.exercises.push({ kind: "short_answer", prompt: "Complete the sentence:", options: [], answer: "" });
             render();
           },
         }, "+ Adicionar atividade")
       );
     } else {
-      const exItems = sheet.exercises.map((ex) => {
-        const optEl = ex.type === "multiple_choice" && ex.options?.length
+      const exItems = (sheet.exercises || []).map((ex) => {
+        const optEl = ex.kind === "multiple_choice" && ex.options?.length
           ? h("ol", { class: "ex-options" }, ex.options.map((opt) => h("li", {}, opt)))
           : h("div", {}, h("span", { class: "write-line" }), h("span", { class: "write-line" }));
 
@@ -200,8 +229,8 @@ export function renderSheets({ id }) {
 
     return h("div", { class: "paper", style: { marginBottom: "24px" } },
       h("div", { class: "paper-head" },
-        h("h3", {}, sheet.student_name),
-        h("span", { class: "hint" }, session.lesson?.school_name || "Pauta")
+        h("h3", {}, studentDisplayName(sheet.speaker)),
+        h("span", { class: "hint" }, session.file_name || "Pauta")
       ),
       sheet.strength ? h("div", { class: "strength" }, `Ponto forte: ${sheet.strength}`) : null,
       reviewSection,
@@ -234,8 +263,8 @@ export function renderSheets({ id }) {
       content = h(
         "form",
         { class: "card maker", onSubmit: handleGenerate },
-        h("h2", { style: { fontSize: "20px" } }, "Criar atividades e plano da aula"),
-        h("p", { class: "hint" }, "Gera uma folha de atividades sob medida para cada aluno e um roteiro para a próxima aula."),
+        h("h2", { style: { fontSize: "20px" } }, "Criar atividades e plano"),
+        h("p", { class: "hint" }, "Gera uma folha de atividades sob medida para cada aluno e o plano da próxima aula."),
         fld("Nível da turma:", h("select", {
           id: "lesson-level",
           value: selectedLevel,
@@ -265,14 +294,14 @@ export function renderSheets({ id }) {
         )
       );
     } else {
-      const sheetsList = (session.lesson?.sheets || []).map((sheet) => renderPaper(sheet, isEditing));
+      const sheetsList = (session.lesson?.students || []).map((sheet) => renderPaper(sheet, isEditing));
       const actionButtons = h(
         "div",
         { class: "sheet-actions", style: { marginBottom: "20px" } },
         h("div", { style: { display: "flex", gap: "8px", flexWrap: "wrap" } },
           isEditing
             ? h("button", { class: "button button-primary", disabled: saving, onClick: handleSaveEdits }, saving ? "Salvando..." : "Salvar alterações")
-            : h("button", { class: "button", onClick: () => { isEditing = true; render(); } }, "Editar material"),
+            : h("button", { class: "button", onClick: () => { isEditing = true; render(); } }, "Editar"),
           isEditing ? h("button", { class: "button button-ghost", onClick: () => { isEditing = false; render(); } }, "Cancelar edição") : null
         ),
         !isEditing

@@ -34,10 +34,11 @@ def test_logs_do_not_contain_student_speech(caplog):
 
     validated_materials(materials, request, segments)
 
-    # Garante que a fala "nonexistent secret speech of student" NÃO foi para os logs
+    # Garante que a fala "nonexistent secret speech of student" e o nome do aluno NÃO foram para os logs
     log_text = caplog.text
     assert "nonexistent secret speech of student" not in log_text
-    assert "Erro descartado para o participante A1" in log_text
+    assert "Carlos" not in log_text
+    assert "Erro descartado: citação ausente na fala do aluno" in log_text
 
 
 def test_logs_do_not_contain_personal_names(caplog):
@@ -58,6 +59,25 @@ def test_logs_do_not_contain_personal_names(caplog):
     assert "Maria Eduarda Santos" not in log_text
     assert "Nome descartado para o rótulo F1 por confiança insuficiente" in log_text
     assert "Nome descartado para o rótulo F2 por evidência ausente no texto" in log_text
+
+
+def test_pipeline_logs_do_not_leak_user_filename(caplog, tmp_path):
+    from telecom.audio.preparer import PreparedAudio
+    from telecom.diarization.pipeline import DiarizationOptions, DiarizationPipeline
+    from tests.test_pipeline import FakeDiarizer
+
+    caplog.set_level(logging.INFO)
+    source = tmp_path / "aula_secreta_joao_silva.mp3"
+    source.write_bytes(b"fake")
+    pipe = DiarizationPipeline(FakeDiarizer(), DiarizationOptions(), tmp_path / "out")
+
+    with patch("telecom.diarization.pipeline.probe_duration", return_value=12.0), patch(
+        "telecom.diarization.pipeline.prepare_audio",
+        return_value=PreparedAudio(path=source, size_bytes=1024, prep_time_sec=0.1),
+    ):
+        pipe.run(source)
+
+    assert "aula_secreta_joao_silva" not in caplog.text
 
 
 # --- Item 2: FFmpeg/FFprobe com timeout e protocol_whitelist ---

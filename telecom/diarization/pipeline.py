@@ -92,7 +92,7 @@ class DiarizationPipeline:
         else:
             words = write_word_alignment(report_json, words_json)
 
-        logger.info("Relatórios: %s | %s | %s", report_json, report_md, words_json)
+        logger.info("Relatórios da transcrição gravados com sucesso.")
         return DiarizationOutputs(payload, report_json, report_md, words_json, words)
 
     def _prepare(self, source: Path) -> PreparedAudio:

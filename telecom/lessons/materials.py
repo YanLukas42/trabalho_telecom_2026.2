@@ -158,7 +158,7 @@ def validated_materials(
     sheets: list[StudentSheet] = []
     for sheet in materials.students:
         if sheet.speaker not in spoken:
-            logger.info("Folha descartada (não é um aluno do pedido): %s", sheet.speaker)
+            logger.info("Folha descartada: participante fora do pedido")
             continue
         mistakes = []
         for mistake in sheet.mistakes:
@@ -166,7 +166,7 @@ def validated_materials(
             if quote and quote in spoken[sheet.speaker]:
                 mistakes.append(mistake)
             else:
-                logger.info("Erro descartado para o participante %s: citação ausente na fala", sheet.speaker)
+                logger.info("Erro descartado: citação ausente na fala do aluno")
         sheets.append(sheet.model_copy(update={
             "mistakes": mistakes,
             "exercises": sheet.exercises[: request.exercises_per_student],

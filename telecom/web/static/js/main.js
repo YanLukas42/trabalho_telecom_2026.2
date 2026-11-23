@@ -97,7 +97,7 @@ function renderTopbar() {
       class: "hint",
       style: { color: "rgba(255, 255, 255, 0.85)", fontWeight: "600" },
     },
-    state.user.school_name || ""
+    state.user.school || ""
   );
 
   const logoutBtn = h(
@@ -165,7 +165,11 @@ async function handleRoute() {
     case "login":
       renderLogin({
         onSuccess: async (user) => {
-          state.user = user;
+          try {
+            state.user = await api.me();
+          } catch {
+            state.user = user;
+          }
           try {
             state.config = await api.config();
           } catch {}
