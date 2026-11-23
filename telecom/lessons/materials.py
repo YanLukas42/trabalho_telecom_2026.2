@@ -185,6 +185,7 @@ class GeminiLessonWriter:
 
     def __init__(self, client: GeminiClient):
         self._client = client
+        self.last_tokens: int = 0
 
     def write(self, segments: Sequence[SpeakerSegment], request: LessonRequest) -> LessonMaterials:
         result = self._client.generate_text(
@@ -194,5 +195,6 @@ class GeminiLessonWriter:
             max_output_tokens=LESSON_MAX_OUTPUT_TOKENS,
             max_retries=LESSON_MAX_RETRIES,
         )
+        self.last_tokens = result.total_tokens
         logger.info("Material de aula: %d tokens", result.total_tokens)
         return validated_materials(parse_materials(result.text), request, segments)

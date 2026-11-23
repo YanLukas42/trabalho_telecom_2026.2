@@ -19,13 +19,13 @@ from pathlib import Path
 from typing import Any, BinaryIO, Callable
 
 from telecom.accounts.models import Principal
-from telecom.audio.ffmpeg import FFmpegError
+from telecom.audio.ffmpeg import FFmpegError, probe_duration
 from telecom.diarization.factory import ENGINES
 from telecom.diarization.pipeline import DiarizationOutputs, DiarizationPipeline
 from telecom.lessons.materials import LessonMaterials
 from telecom.reporting import write_json
 from telecom.settings import MEDIA_EXTENSIONS, TENANTS_DIR
-from telecom.storage.repositories import SessionRepository
+from telecom.storage.repositories import SessionRepository, UsageRepository, UserRepository
 
 logger = logging.getLogger(__name__)
 
@@ -34,6 +34,38 @@ MAX_CONCURRENT_JOBS = 2
 LESSON_FILE_NAME = "lesson.json"
 UNSAFE_FILENAME_CHARS = re.compile(r"[^\w.\-]+")
 UNEXPECTED_ERROR_MESSAGE = "Erro inesperado no processamento. Veja o log do servidor."
+
+# Limites de upload, duração e concorrência (Item 8)
+MAX_UPLOAD_BYTES = 300 * 1024 * 1024  # 300 MB (SG-06)
+MAX_AUDIO_DURATION_SEC = 3 * 3600.0   # 3 horas (10.800 s)
+MAX_ACTIVE_PER_TEACHER = 1
+MAX_ACTIVE_PER_TENANT = 2
+
+
+class ConcurrencyLimitError(ValueError):
+    """Limite de aulas ativas por professor ou por escola atingido."""
+
+
+class QuotaExceededError(ValueError):
+    """Cota mensal de áudio da escola excedida."""
+
+
+class UploadLimitError(ValueError):
+    """Tamanho do upload ultrapassa o limite de 300 MB."""
+
+
+class DurationLimitError(ValueError):
+    """Duração do áudio ultrapassa o limite de 3 horas."""
+
+
+def _default_duration_prober(path: Path) -> float:
+    try:
+        return probe_duration(path)
+    except (FileNotFoundError, FFmpegError):
+        return 60.0
+
+
+DurationProber = Callable[[Path], float]
 
 
 class JobStatus(str, Enum):
@@ -83,11 +115,17 @@ class JobService:
         session_repo: SessionRepository,
         base_dir: Path = TENANTS_DIR,
         executor: Executor | None = None,
+        duration_prober: DurationProber | None = None,
+        user_repo: UserRepository | None = None,
+        usage_repo: UsageRepository | None = None,
     ):
         self._pipeline_factory = pipeline_factory
         self._repo = session_repo
         self._base_dir = base_dir
         self._executor = executor or ThreadPoolExecutor(max_workers=MAX_CONCURRENT_JOBS)
+        self._duration_prober = duration_prober or _default_duration_prober
+        self._user_repo = user_repo or UserRepository(session_repo._db)
+        self._usage_repo = usage_repo or UsageRepository(session_repo._db)
         # Ao reiniciar o processo, jobs que ficaram na fila ou processando são marcados como falhos (ADR-0003)
         recovered = self._repo.recover_active_on_startup()
         if recovered:
@@ -102,7 +140,15 @@ class JobService:
         consent: bool = True,
         consent_version: str = "v1",
     ) -> Job:
-        """Grava o upload sob o diretório do tenant e agenda o processamento."""
+        """Grava o upload sob o diretório do tenant e agenda o processamento respeitando limites."""
+        # 1. Limite de concorrência: 1 por professor, 2 por escola (Item 8.4)
+        active_teacher = self._repo.count_active(principal.tenant_id, teacher_id=principal.user_id)
+        if active_teacher >= MAX_ACTIVE_PER_TEACHER:
+            raise ConcurrencyLimitError("Você já possui uma aula em processamento. Espere a aula anterior terminar.")
+        active_school = self._repo.count_active(principal.tenant_id)
+        if active_school >= MAX_ACTIVE_PER_TENANT:
+            raise ConcurrencyLimitError("Sua escola já possui 2 aulas em processamento. Espere a aula anterior terminar.")
+
         safe_name = sanitize_filename(file_name)
         if Path(safe_name).suffix.lower() not in MEDIA_EXTENSIONS:
             raise ValueError(f"Formato não suportado. Use um destes: {', '.join(MEDIA_EXTENSIONS)}")
@@ -114,11 +160,52 @@ class JobService:
         source = session_dir / "upload" / safe_name
         source.parent.mkdir(parents=True, exist_ok=True)
 
+        # 2. Upload com teto de 300 MB, contado enquanto lê o stream (Item 8.1)
+        total_bytes = 0
+        chunk_size = 1024 * 64
         with source.open("wb") as handle:
-            shutil.copyfileobj(stream, handle)
-        if source.stat().st_size == 0:
+            while True:
+                chunk = stream.read(chunk_size)
+                if not chunk:
+                    break
+                total_bytes += len(chunk)
+                if total_bytes > MAX_UPLOAD_BYTES:
+                    handle.close()
+                    shutil.rmtree(session_dir, ignore_errors=True)
+                    raise UploadLimitError("O arquivo enviado ultrapassa o limite de 300 MB. Envie um arquivo menor.")
+                handle.write(chunk)
+
+        if total_bytes == 0:
             shutil.rmtree(session_dir, ignore_errors=True)
-            raise ValueError("O arquivo enviado está vazio.")
+            raise ValueError("O arquivo enviado está vazio. Selecione um arquivo com áudio.")
+
+        # 3. Duração máxima de 3 horas via ffprobe (Item 8.2)
+        try:
+            duration_sec = self._duration_prober(source)
+        except Exception as exc:
+            shutil.rmtree(session_dir, ignore_errors=True)
+            raise ValueError(f"Não foi possível ler a duração do arquivo de áudio: {exc}") from exc
+
+        if duration_sec > MAX_AUDIO_DURATION_SEC:
+            shutil.rmtree(session_dir, ignore_errors=True)
+            raise DurationLimitError("A gravação excede a duração máxima permitida de 3 horas. Envie um arquivo com até 3 horas de áudio.")
+
+        # 4. Verificação de cota mensal (Item 8.3)
+        now = datetime.now(timezone.utc)
+        month_start = datetime(now.year, now.month, 1, tzinfo=timezone.utc).isoformat()
+        used_minutes = self._usage_repo.get_monthly_audio_minutes(principal.tenant_id, month_start)
+        tenant = self._user_repo.get_tenant(principal.tenant_id)
+        monthly_limit = tenant.monthly_audio_minutes if tenant else 300
+        duration_minutes = duration_sec / 60.0
+
+        if used_minutes + duration_minutes > monthly_limit:
+            next_m = 1 if now.month == 12 else now.month + 1
+            next_y = now.year + 1 if now.month == 12 else now.year
+            renewal_date = f"01/{next_m:02d}/{next_y}"
+            shutil.rmtree(session_dir, ignore_errors=True)
+            raise QuotaExceededError(
+                f"Sua escola usou {int(round(used_minutes))} de {monthly_limit} minutos este mês. Renova em {renewal_date}."
+            )
 
         now_sec = time.time()
         consent_at = datetime.now(timezone.utc).isoformat() if consent else None
@@ -128,6 +215,7 @@ class JobService:
             "teacher_id": principal.user_id,
             "file_name": safe_name,
             "status": JobStatus.QUEUED.value,
+            "audio_seconds": duration_sec,
             "options_json": {
                 "engine": options.engine,
                 "compact_silence": options.compact_silence,
@@ -226,7 +314,9 @@ class JobService:
                 "words_json": str(outputs.words_json),
             }
             duration = float(outputs.payload.get("duracao_original_segundos", 0.0))
+            tokens = int(outputs.payload.get("metricas_tokens", {}).get("total_tokens", 0))
             self._repo.attach_results(tenant_id, session_id, paths, audio_seconds=duration, finished_at=time.time())
+            self._usage_repo.record(tenant_id, session_id, "transcription", audio_seconds=duration, tokens=tokens)
             logger.info("Job %s concluído para tenant %s", session_id, tenant_id)
 
     def _session_dir(self, tenant_id: str, session_id: str) -> Path:

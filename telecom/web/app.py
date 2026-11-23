@@ -24,7 +24,10 @@ from telecom.lessons.materials import (
 from telecom.settings import DATABASE_PATH, MEDIA_EXTENSIONS
 from telecom.storage.db import Database
 from telecom.web.auth import AuthManager, LoginRequest, LoginResponse, MeResponse, verify_csrf
-from telecom.web.jobs import Job, JobOptions, JobService, JobStatus
+from telecom.web.jobs import (
+    ConcurrencyLimitError, DurationLimitError, Job, JobOptions, JobService,
+    JobStatus, QuotaExceededError, UploadLimitError,
+)
 from telecom.web.schemas import AppConfig, EngineInfo, JobView, LessonRequestBody, ParticipantBody
 
 logger = logging.getLogger(__name__)
@@ -148,6 +151,14 @@ def create_app(
                 JobOptions(engine, compact_silence, review),
                 consent=consent,
             )
+        except ConcurrencyLimitError as exc:
+            raise HTTPException(status_code=429, detail=str(exc)) from exc
+        except QuotaExceededError as exc:
+            raise HTTPException(status_code=429, detail=str(exc)) from exc
+        except UploadLimitError as exc:
+            raise HTTPException(status_code=413, detail=str(exc)) from exc
+        except DurationLimitError as exc:
+            raise HTTPException(status_code=400, detail=str(exc)) from exc
         except ValueError as exc:
             raise HTTPException(status_code=400, detail=f"{exc} Selecione um arquivo válido e tente novamente.") from exc
         return JobView.from_job(job)
@@ -205,13 +216,18 @@ def create_app(
             )
         try:
             req = body.to_request()
-            lesson = lesson_writer_factory().write(_segments(job), req)
+            writer = lesson_writer_factory()
+            lesson = writer.write(_segments(job), req)
         except ValueError as exc:
             raise HTTPException(status_code=400, detail=f"{exc} Ajuste os parâmetros e tente novamente.") from exc
         except Exception as exc:
             logger.exception("Falha ao gerar material para sessão %s", session_id)
             raise HTTPException(status_code=502, detail=LESSON_UNEXPECTED_ERROR) from exc
-        return JobView.from_job(service.attach_lesson(principal, session_id, lesson))
+
+        updated = service.attach_lesson(principal, session_id, lesson)
+        tokens = getattr(writer, "last_tokens", 0) or 1500
+        auth.usage.record(principal.tenant_id, session_id, "lesson", audio_seconds=0.0, tokens=tokens)
+        return JobView.from_job(updated)
 
     @app.put("/api/v1/sessions/{session_id}/lesson", response_model=JobView)
     def update_lesson(

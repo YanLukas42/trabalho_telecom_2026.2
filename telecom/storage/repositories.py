@@ -43,6 +43,17 @@ class SessionRepository:
             rows = conn.execute(query, params).fetchall()
             return [self._row_to_dict(r) for r in rows]
 
+    def count_active(self, tenant_id: str, teacher_id: str | None = None) -> int:
+        """Conta sessões ativas (queued ou processing) do tenant ou do professor."""
+        query = "SELECT COUNT(*) as total FROM class_sessions WHERE tenant_id = ? AND status IN ('queued', 'processing')"
+        params: list[Any] = [tenant_id]
+        if teacher_id:
+            query += " AND teacher_id = ?"
+            params.append(teacher_id)
+        with self._db.connection() as conn:
+            row = conn.execute(query, params).fetchone()
+            return int(row["total"]) if row else 0
+
     def save(self, tenant_id: str, data: dict[str, Any]) -> None:
         """Cria ou atualiza uma sessão vinculada ao tenant."""
         opts = data.get("options_json")
