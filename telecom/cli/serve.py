@@ -55,7 +55,7 @@ def main(argv: list[str] | None = None) -> int:
     db = Database(DATABASE_PATH)
     session_repo = SessionRepository(db)
     service = JobService(build_pipeline, session_repo, base_dir=TENANTS_DIR)
-    app = create_app(service, engine_unavailable_reason, build_lesson_writer)
+    app = create_app(service, engine_unavailable_reason, build_lesson_writer, db=db)
     logger.info("Abra http://%s:%d no navegador", args.host, args.port)
     uvicorn.run(app, host=args.host, port=args.port, log_level="warning")
     return 0

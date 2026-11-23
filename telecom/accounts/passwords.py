@@ -56,3 +56,8 @@ def verify_password(password: str, stored_hash: str) -> bool:
         return hmac.compare_digest(derived, expected)
     except Exception:
         return False
+
+
+def hash_token(token: str) -> str:
+    """Gera hash SHA-256 do token de sessão para armazenamento seguro."""
+    return hashlib.sha256(token.encode("utf-8")).hexdigest()

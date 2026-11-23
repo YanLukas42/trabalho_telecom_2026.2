@@ -31,4 +31,9 @@ PRICE_INPUT_USD_PER_M = 0.15
 PRICE_OUTPUT_USD_PER_M = 0.60
 USD_TO_BRL = 5.70
 
+# Autenticação e cookies de sessão
+PAUTA_COOKIE_SECURE = os.getenv("PAUTA_COOKIE_SECURE", "0") == "1"
+SESSION_COOKIE_NAME = "pauta_session"
+SESSION_DURATION_HOURS = 12
+
 MEDIA_EXTENSIONS = (".mp4", ".mp3", ".wav", ".m4a", ".aac", ".ogg", ".flac", ".mkv", ".webm")

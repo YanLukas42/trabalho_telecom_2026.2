@@ -1,13 +1,14 @@
-"""Aplicação web: API REST dos jobs de transcrição e a interface estática.
+"""Aplicação web: API REST dos jobs de transcrição, autenticação e interface estática.
 
-A montagem das dependências (pipeline, clientes) fica em telecom.cli.serve; aqui só entram por injeção.
+A montagem das dependências (pipeline, clientes) fica em telecom.cli.serve; aqui entram por injeção.
+# shortcut: sessão em cookie HttpOnly de 12h com isolamento estrito via Principal (ADR-0002)
 """
 
 import logging
 from pathlib import Path
 from typing import Callable
 
-from fastapi import FastAPI, File, Form, HTTPException, UploadFile
+from fastapi import Depends, FastAPI, File, Form, HTTPException, Request, Response, UploadFile
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
@@ -17,7 +18,9 @@ from telecom.diarization.models import SpeakerSegment
 from telecom.lessons.materials import (
     DEFAULT_EXERCISES, LEVELS, MAX_EXERCISES, MAX_FOCUS_CHARS, MIN_EXERCISES, LessonWriter,
 )
-from telecom.settings import MEDIA_EXTENSIONS
+from telecom.settings import DATABASE_PATH, MEDIA_EXTENSIONS
+from telecom.storage.db import Database
+from telecom.web.auth import AuthManager, LoginRequest, LoginResponse, MeResponse, verify_csrf
 from telecom.web.jobs import Job, JobOptions, JobService, JobStatus
 from telecom.web.schemas import AppConfig, EngineInfo, JobView, LessonRequestBody
 
@@ -31,38 +34,56 @@ ENGINE_LABELS = {
     "pyannote": ("pyannote + Whisper", "Local. Nada sai da máquina, mas exige mais CPU."),
 }
 
-# Tipo de cada relatório para download: (atributo em DiarizationOutputs, media type).
 DOWNLOADS = {
     "json": ("report_json", "application/json"),
     "md": ("report_md", "text/markdown; charset=utf-8"),
     "words": ("words_json", "application/json"),
 }
 
-# Recebe o motor e devolve o motivo de indisponibilidade, ou None.
 EngineStatus = Callable[[str], str | None]
-# Cria o gerador de material sob demanda: o cliente do Gemini só nasce quando alguém pede.
 LessonWriterFactory = Callable[[], LessonWriter]
-
-
-# shortcut: Principal dev padrão no localhost até implementação de auth (ADR-0002)
-DEV_PRINCIPAL = Principal(tenant_id="default-tenant", user_id="default-teacher", role="teacher")
 
 
 def create_app(
     service: JobService,
     engine_status: EngineStatus,
     lesson_writer_factory: LessonWriterFactory | None = None,
+    db: Database | None = None,
 ) -> FastAPI:
-    app = FastAPI(title="Transcritor", docs_url="/api/docs", openapi_url="/api/openapi.json")
+    database = db or getattr(service._repo, "_db", None) or Database(DATABASE_PATH)
+    auth = AuthManager(database)
 
+    app = FastAPI(title="Pauta", docs_url="/api/docs", openapi_url="/api/openapi.json")
+
+    # --- Autenticação (/api/v1/auth) ---
+
+    @app.post("/api/v1/auth/login", response_model=LoginResponse)
+    def login(req: Request, resp: Response, body: LoginRequest) -> LoginResponse:
+        return auth.login(req, resp, body)
+
+    @app.post("/api/v1/auth/logout")
+    def logout(req: Request, resp: Response) -> dict[str, str]:
+        return auth.logout(req, resp)
+
+    @app.get("/api/v1/me", response_model=MeResponse)
+    def me(principal: Principal = Depends(auth.current_principal)) -> MeResponse:
+        return auth.me(principal)
+
+    # --- Configuração e catálogo ---
+
+    @app.get("/api/v1/config", response_model=AppConfig)
     @app.get("/api/config", response_model=AppConfig)
-    def config() -> AppConfig:
+    def config(principal: Principal = Depends(auth.current_principal)) -> AppConfig:
         engines = []
         for engine in ENGINES:
             reason = engine_status(engine)
             label, description = ENGINE_LABELS[engine]
-            engines.append(EngineInfo(id=engine, label=label, description=description,
-                                      available=reason is None, unavailable_reason=reason))
+            engines.append(
+                EngineInfo(
+                    id=engine, label=label, description=description,
+                    available=reason is None, unavailable_reason=reason,
+                )
+            )
         gemini_ready = engine_status("gemini") is None
         return AppConfig(
             engines=engines,
@@ -76,13 +97,19 @@ def create_app(
             max_focus_chars=MAX_FOCUS_CHARS,
         )
 
+    # --- Jobs de transcrição e geração ---
+
+    @app.post("/api/v1/jobs", response_model=JobView, status_code=202)
     @app.post("/api/jobs", response_model=JobView, status_code=202)
     def create_job(
+        request: Request,
         file: UploadFile = File(...),
         engine: str = Form("gemini"),
         compact_silence: bool = Form(False),
         review: bool = Form(False),
+        principal: Principal = Depends(auth.current_principal),
     ) -> JobView:
+        verify_csrf(request)
         if engine not in ENGINES:
             raise HTTPException(400, f"Motor desconhecido: {engine}")
         reason = engine_status(engine)
@@ -91,47 +118,65 @@ def create_app(
         if review and engine_status("gemini"):
             raise HTTPException(400, "A revisão por IA usa o Gemini, que não está configurado.")
         try:
-            job = service.submit(DEV_PRINCIPAL, file.filename or "", file.file, JobOptions(engine, compact_silence, review))
+            job = service.submit(principal, file.filename or "", file.file, JobOptions(engine, compact_silence, review))
         except ValueError as exc:
             raise HTTPException(400, str(exc)) from exc
         return JobView.from_job(job)
 
+    @app.get("/api/v1/jobs", response_model=list[JobView])
     @app.get("/api/jobs", response_model=list[JobView])
-    def list_jobs() -> list[JobView]:
-        return [JobView.from_job(job, include_result=False) for job in service.list(DEV_PRINCIPAL)]
+    def list_jobs(principal: Principal = Depends(auth.current_principal)) -> list[JobView]:
+        return [JobView.from_job(job, include_result=False) for job in service.list(principal)]
 
+    @app.get("/api/v1/jobs/{job_id}", response_model=JobView)
     @app.get("/api/jobs/{job_id}", response_model=JobView)
-    def get_job(job_id: str) -> JobView:
-        return JobView.from_job(_find(service, job_id))
+    def get_job(job_id: str, principal: Principal = Depends(auth.current_principal)) -> JobView:
+        return JobView.from_job(_find(service, principal, job_id))
 
+    @app.delete("/api/v1/jobs/{job_id}")
+    @app.delete("/api/jobs/{job_id}")
+    def delete_job(request: Request, job_id: str, principal: Principal = Depends(auth.current_principal)) -> dict[str, str]:
+        verify_csrf(request)
+        if not service.delete(principal, job_id):
+            raise HTTPException(404, "Transcrição não encontrada.")
+        return {"detail": "Sessão excluída com sucesso."}
+
+    @app.post("/api/v1/jobs/{job_id}/lesson", response_model=JobView)
     @app.post("/api/jobs/{job_id}/lesson", response_model=JobView)
-    def create_lesson(job_id: str, body: LessonRequestBody) -> JobView:
-        """Gera atividades por aluno e o plano da próxima aula a partir da transcrição pronta."""
-        job = _find(service, job_id)
+    def create_lesson(
+        request: Request,
+        job_id: str,
+        body: LessonRequestBody,
+        principal: Principal = Depends(auth.current_principal),
+    ) -> JobView:
+        verify_csrf(request)
+        job = _find(service, principal, job_id)
         if job.status is not JobStatus.DONE or job.outputs is None:
             raise HTTPException(409, "A transcrição ainda não terminou.")
         if lesson_writer_factory is None or engine_status("gemini"):
             raise HTTPException(400, "Gerar material usa o Gemini, que não está configurado.")
         try:
-            request = body.to_request()
-            lesson = lesson_writer_factory().write(_segments(job), request)
+            req = body.to_request()
+            lesson = lesson_writer_factory().write(_segments(job), req)
         except ValueError as exc:
             raise HTTPException(400, str(exc)) from exc
         except Exception as exc:
             logger.exception("Falha ao gerar material do job %s", job_id)
             raise HTTPException(502, LESSON_UNEXPECTED_ERROR) from exc
-        return JobView.from_job(service.attach_lesson(DEV_PRINCIPAL, job_id, lesson))
+        return JobView.from_job(service.attach_lesson(principal, job_id, lesson))
 
+    @app.get("/api/v1/jobs/{job_id}/media")
     @app.get("/api/jobs/{job_id}/media")
-    def get_media(job_id: str) -> FileResponse:
-        job = _find(service, job_id)
+    def get_media(job_id: str, principal: Principal = Depends(auth.current_principal)) -> FileResponse:
+        job = _find(service, principal, job_id)
         return FileResponse(job.source)
 
+    @app.get("/api/v1/jobs/{job_id}/files/{kind}")
     @app.get("/api/jobs/{job_id}/files/{kind}")
-    def download(job_id: str, kind: str) -> FileResponse:
+    def download(job_id: str, kind: str, principal: Principal = Depends(auth.current_principal)) -> FileResponse:
         if kind not in DOWNLOADS:
             raise HTTPException(404, "Relatório desconhecido.")
-        job = _find(service, job_id)
+        job = _find(service, principal, job_id)
         if job.status is not JobStatus.DONE or job.outputs is None:
             raise HTTPException(409, "A transcrição ainda não terminou.")
         attribute, media_type = DOWNLOADS[kind]
@@ -143,7 +188,6 @@ def create_app(
 
 
 def _segments(job: Job) -> list[SpeakerSegment]:
-    """Falas do relatório (chaves em português) no tipo que o gerador de material espera."""
     payload = job.outputs.payload if job.outputs else {}
     return [
         SpeakerSegment(s["quemfala"], s["textodefala"], s["segundos_inicio"], s["segundos_fim"])
@@ -151,8 +195,8 @@ def _segments(job: Job) -> list[SpeakerSegment]:
     ]
 
 
-def _find(service: JobService, job_id: str) -> Job:
-    job = service.get(DEV_PRINCIPAL, job_id)
+def _find(service: JobService, principal: Principal, job_id: str) -> Job:
+    job = service.get(principal, job_id)
     if job is None:
         raise HTTPException(404, "Transcrição não encontrada.")
     return job
