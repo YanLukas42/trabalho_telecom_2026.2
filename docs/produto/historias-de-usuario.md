@@ -46,7 +46,7 @@ Como professor preocupado com privacidade, quero poder transcrever sem enviar o 
 Como professor, quero dizer quais vozes são minhas e quais são de alunos, para que só os alunos recebam folha.
 - A tela sugere como professor quem mais fala, ou quem tem "professor", "teacher" ou "tutor" no nome. Eu posso trocar. (RN-10)
 - Vejo a porcentagem de fala de cada pessoa. Isso ajuda a perceber uma voz trocada.
-- A escolha e os nomes que digito ficam guardados neste navegador para aquela aula. (RN-11)
+- A escolha e os nomes que digito ficam salvos no servidor por aula e aparecem em qualquer computador ou navegador. (RN-11)
 
 ### US-06. Usar o nome real dos alunos (parcial)
 Como professor, quero ver o nome de cada aluno na transcrição e na folha, para entregar a folha certa.
@@ -91,13 +91,13 @@ Como professor, quero um plano que parta do que aconteceu, para não começar do
 
 Estas histórias foram identificadas e ainda não existem. Estão em ordem de valor para o professor.
 
-### US-13. Editar o material antes de imprimir (a fazer)
+### US-13. Editar o material antes de imprimir (feito)
 Como professor, quero corrigir um enunciado, apagar uma atividade ou trocar uma resposta, porque a IA erra e eu não quero reimprimir do zero.
-- Critério: editar texto de enunciado, opções e resposta; remover atividade; a folha impressa reflete a edição.
+- Critério: editar texto de erros, enunciado, opções e resposta; remover erro ou atividade; a folha impressa reflete a edição salva no servidor via `PUT /api/v1/sessions/{id}/lesson`. (RN-36)
 
-### US-14. Guardar minhas aulas (a fazer)
-Como professor, quero encontrar a aula de semana passada, porque hoje a lista some quando o servidor reinicia. (RN-26)
-- Critério: lista de aulas e material continuam após reiniciar; posso excluir uma aula e seus arquivos.
+### US-14. Guardar minhas aulas (feito)
+Como professor, quero encontrar a aula de semana passada, porque antes a lista sumia quando o servidor reiniciava. (RN-26, RN-35)
+- Critério: lista de aulas e material continuam após reiniciar (SQLite em `output/pauta.db` e arquivos em `output/tenants/`); posso excluir uma aula e seus arquivos com confirmação e log de auditoria LGPD.
 
 ### US-15. Acompanhar a evolução de um aluno (a fazer)
 Como professor, quero ver os erros de um aluno ao longo das aulas, para saber se ele aprendeu o passado simples.
@@ -107,14 +107,14 @@ Como professor, quero ver os erros de um aluno ao longo das aulas, para saber se
 Como professor, quero cadastrar os alunos uma vez, para que os nomes e o nível já venham preenchidos.
 - Critério: turma com alunos e nível; a tela "Quem é quem" sugere o nome da turma por voz (depende de US-15).
 
-### US-17. Entrar com minha conta (a fazer)
+### US-17. Entrar com minha conta (feito)
 Como professor, quero que só eu veja minhas aulas, porque elas contêm a voz e os erros de pessoas.
-- Critério: autenticação; aulas separadas por professor. Hoje a aplicação roda só na máquina local e não tem login.
+- Critério: autenticação por senha (`scrypt`) e cookie `pauta_session` (`HttpOnly`, `SameSite=Strict`), rotas protegidas por `Principal` com isolamento multi-tenant (`404` para outro professor ou escola) e contas provisionadas por CLI administrativa. (RN-33)
 
 ### US-18. Trabalhar com aulas longas ou pesadas (parcial)
 Como professor, quero enviar a aula inteira, mesmo com 2 horas ou em vídeo.
-- Hoje: o áudio enviado ao Gemini precisa caber em 20 MB. A conversão para Opus 16 kbps cobre cerca de 2 h 50 min, e a opção de remover pausas ajuda. (RN-03)
-- A fazer: mensagem antecipada no envio, antes de gastar tempo; divisão da aula quando passar do limite.
+- Feito: recusa antecipada no envio para arquivos acima de 300 MB ou com duração superior a 3 horas (`ffprobe`), com o limite na mensagem, evitando esperar minutos antes de falhar. (RN-03, RN-04)
+- A fazer: divisão automática da aula em partes quando passar do limite.
 
 ### US-19. Escolher o formato da folha (a fazer)
 Como professor, quero escolher a identidade da folha (logo da minha escola, nome do curso) e o tamanho do papel.
@@ -135,10 +135,10 @@ Como professor, quero escolher a identidade da folha (logo da minha escola, nome
 | US-10 | Imprimir ou salvar em PDF | feito |
 | US-11 | Gerar de novo | feito |
 | US-12 | Plano da próxima aula | feito |
-| US-13 | Editar o material | a fazer |
-| US-14 | Guardar as aulas | a fazer |
+| US-13 | Editar o material | feito |
+| US-14 | Guardar as aulas | feito |
 | US-15 | Evolução do aluno | a fazer |
 | US-16 | Cadastrar a turma | a fazer |
-| US-17 | Conta e privacidade | a fazer |
+| US-17 | Conta e privacidade | feito |
 | US-18 | Aulas longas | parcial |
 | US-19 | Formato da folha | a fazer |
