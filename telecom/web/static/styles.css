@@ -47,14 +47,13 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.015em; line-he
 .brand-mark .mark-tick { stroke: var(--pen); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
 .topbar .button-ghost { color: #fff; border-color: rgb(255 255 255 / 0.35); }
 .topbar .button-ghost:hover { background: rgb(255 255 255 / 0.12); }
+.topbar-link { font-size: 15px; transition: opacity 0.15s; }
+.topbar-link:hover { opacity: 1 !important; color: #fff !important; }
 
-.shell { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 32px; max-width: 1160px; margin: 0 auto; padding: 32px 24px 72px; }
+.shell-main { max-width: 960px; margin: 0 auto; padding: 32px 24px 72px; min-width: 0; outline: none; }
 .view { min-width: 0; outline: none; }
-.history { position: sticky; top: 90px; align-self: start; }
-.side-title { font-size: 16px; margin-bottom: 10px; color: var(--ink-soft); font-weight: 600; font-family: var(--font); letter-spacing: 0; }
 @media (max-width: 860px) {
-  .shell { grid-template-columns: 1fr; gap: 24px; padding: 20px 16px 56px; }
-  .history { position: static; order: 2; }
+  .shell-main { padding: 20px 16px 56px; }
   .topbar { padding: 0 16px; }
 }
 

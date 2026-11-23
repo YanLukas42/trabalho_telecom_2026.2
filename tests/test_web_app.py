@@ -45,4 +45,4 @@ def test_app_routes_are_all_under_api_v1(tmp_path: Path):
 def test_static_interface_files_exist():
     assert STATIC_DIR.is_dir()
     assert (STATIC_DIR / "index.html").is_file()
-    assert (STATIC_DIR / "app.js").is_file()
+    assert (STATIC_DIR / "js" / "main.js").is_file()

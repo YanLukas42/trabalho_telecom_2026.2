@@ -57,6 +57,8 @@ class JobView(BaseModel):
     created_at: datetime
     elapsed_sec: float | None
     error: str | None
+    audio_seconds: float | None = None
+    has_lesson: bool = False
     result: dict[str, Any] | None
     lesson: dict[str, Any] | None = None
     participants: list[dict[str, Any]] | None = None
@@ -73,6 +75,8 @@ class JobView(BaseModel):
             created_at=datetime.fromtimestamp(job.created_at, tz=timezone.utc),
             elapsed_sec=_elapsed(job),
             error=job.error,
+            audio_seconds=getattr(job, "audio_seconds", None),
+            has_lesson=bool(job.lesson),
             result=job.outputs.payload if include_result and job.outputs else None,
             lesson=job.lesson.model_dump() if include_result and job.lesson else None,
             participants=job.participants,

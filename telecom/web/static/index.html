@@ -7,29 +7,11 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%231b2559'/%3E%3Cpath d='M6 8h12M6 12h12M6 16h7' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M16 15l2 2 3-4' stroke='%23ff7b8a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="/fonts.css">
   <link rel="stylesheet" href="/styles.css">
-  <script src="/app.js" defer></script>
+  <script type="module" src="/js/main.js"></script>
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="#/">
-      <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
-        <rect width="24" height="24" rx="6"></rect>
-        <path class="mark-rules" d="M6 8h12M6 12h12M6 16h7"></path>
-        <path class="mark-tick" d="M16 15l2 2 3-4"></path>
-      </svg>
-      <span>Pauta</span>
-    </a>
-    <a class="button button-ghost" href="#/">Nova aula</a>
-  </header>
-
-  <div class="shell">
-    <aside class="history" aria-labelledby="history-title">
-      <h2 id="history-title" class="side-title">Suas aulas</h2>
-      <ul id="job-list" class="job-list"></ul>
-    </aside>
-    <main id="view" class="view" tabindex="-1"></main>
-  </div>
-
+  <header id="topbar" class="topbar"></header>
+  <main id="view" class="view shell-main" tabindex="-1"></main>
   <div id="print-root" aria-hidden="true"></div>
 </body>
 </html>

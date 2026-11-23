@@ -96,6 +96,7 @@ class Job:
     outputs: DiarizationOutputs | None = None
     lesson: LessonMaterials | None = None
     participants: list[dict[str, Any]] | None = None
+    audio_seconds: float | None = None
     tenant_id: str = ""
     teacher_id: str = ""
 
@@ -374,6 +375,7 @@ class JobService:
             outputs=outputs,
             lesson=lesson,
             participants=data.get("participants_json"),
+            audio_seconds=data.get("audio_seconds"),
             tenant_id=tenant_id,
             teacher_id=data.get("teacher_id", ""),
         )

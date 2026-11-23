@@ -31,8 +31,8 @@ SINGLE_CONTACT = {
 }
 
 MAX_PY_LINES = 400
-# Dívida registrada: o limite só pode diminuir. Ao quebrar o arquivo, reduza ou remova a entrada.
-MAX_LINES_EXCEPTIONS = {"telecom/web/static/app.js": 950}
+# Dívida técnica eliminada: todo JS agora está em módulos ES de até 400 linhas.
+MAX_LINES_EXCEPTIONS: dict[str, int] = {}
 MAX_JS_LINES = 400
 
 FORBIDDEN_JS = ("innerHTML", "outerHTML", "insertAdjacentHTML", "document.write", "eval(", "new Function(")
@@ -106,14 +106,14 @@ def test_no_print_or_path_hacks_outside_the_cli():
     assert not offenders, f"Use logging em vez de print e imports absolutos em vez de sys.path: {offenders}"
 
 
-@pytest.mark.parametrize("path", python_files() + sorted((PACKAGE / "web" / "static").glob("*.js")), ids=relative)
+@pytest.mark.parametrize("path", python_files() + sorted((PACKAGE / "web" / "static").rglob("*.js")), ids=relative)
 def test_files_stay_small_enough_to_read(path):
     limit = MAX_LINES_EXCEPTIONS.get(relative(path), MAX_PY_LINES if path.suffix == ".py" else MAX_JS_LINES)
     lines = len(path.read_text(encoding="utf-8").splitlines())
     assert lines <= limit, f"{relative(path)} tem {lines} linhas (limite {limit}). Divida o módulo em partes coesas."
 
 
-@pytest.mark.parametrize("path", sorted((PACKAGE / "web" / "static").glob("*.js")), ids=relative)
+@pytest.mark.parametrize("path", sorted((PACKAGE / "web" / "static").rglob("*.js")), ids=relative)
 def test_front_end_never_injects_markup(path):
     """O texto vem de transcrição e de IA: sempre createTextNode/textContent, nunca HTML montado."""
     text = path.read_text(encoding="utf-8")
