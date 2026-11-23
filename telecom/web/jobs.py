@@ -5,6 +5,7 @@ Persiste sessões via SessionRepository injetado e isola arquivos por tenant.
 # shortcut: arquivos em disco sob output/tenants/, trocar por S3 com URLs assinadas (ADR-0004)
 """
 
+import json
 import logging
 import re
 import shutil
@@ -114,12 +115,14 @@ class JobService:
             "id": session_id,
             "tenant_id": principal.tenant_id,
             "teacher_id": principal.user_id,
-            "filename": safe_name,
-            "original_filename": file_name,
-            "engine": options.engine,
-            "compact_silence": options.compact_silence,
-            "review": options.review,
+            "file_name": safe_name,
             "status": JobStatus.QUEUED.value,
+            "options_json": {
+                "engine": options.engine,
+                "compact_silence": options.compact_silence,
+                "review": options.review,
+                "original_filename": file_name,
+            },
             "started_at": now_sec,
         }
         self._repo.save(principal.tenant_id, session_data)
@@ -193,7 +196,13 @@ class JobService:
                 tenant_id, session_id, JobStatus.FAILED.value, error=UNEXPECTED_ERROR_MESSAGE, finished_at=time.time()
             )
         else:
-            self._repo.attach_results(tenant_id, session_id, outputs.payload, finished_at=time.time())
+            paths = {
+                "report_json": str(outputs.report_json),
+                "report_md": str(outputs.report_md),
+                "words_json": str(outputs.words_json),
+            }
+            duration = float(outputs.payload.get("duracao_original_segundos", 0.0))
+            self._repo.attach_results(tenant_id, session_id, paths, audio_seconds=duration, finished_at=time.time())
             logger.info("Job %s concluído para tenant %s", session_id, tenant_id)
 
     def _session_dir(self, tenant_id: str, session_id: str) -> Path:
@@ -203,17 +212,27 @@ class JobService:
         tenant_id = data["tenant_id"]
         session_id = data["id"]
         session_dir = self._session_dir(tenant_id, session_id)
-        source = session_dir / "upload" / data["filename"]
+        file_name = data.get("file_name") or data.get("filename", "")
+        source = session_dir / "upload" / file_name
 
         outputs = None
-        if data["status"] == JobStatus.DONE.value and data.get("payload_json"):
-            stem = Path(data["filename"]).stem
+        if data["status"] == JobStatus.DONE.value:
+            stem = Path(file_name).stem
             reports_dir = session_dir / "reports"
+            rep_json = Path(data.get("report_json_path") or (reports_dir / f"{stem}_diarizacao_pydantic.json"))
+            rep_md = Path(data.get("report_md_path") or (reports_dir / f"{stem}_diarizacao_pydantic.md"))
+            w_json = Path(data.get("words_json_path") or (reports_dir / f"{stem}_palavra_por_palavra.json"))
+            payload: dict[str, Any] = {}
+            if rep_json.is_file():
+                try:
+                    payload = json.loads(rep_json.read_text(encoding="utf-8"))
+                except Exception:
+                    payload = {}
             outputs = DiarizationOutputs(
-                payload=data["payload_json"],
-                report_json=reports_dir / f"{stem}_diarizacao_pydantic.json",
-                report_md=reports_dir / f"{stem}_diarizacao_pydantic.md",
-                words_json=reports_dir / f"{stem}_palavra_por_palavra.json",
+                payload=payload,
+                report_json=rep_json,
+                report_md=rep_md,
+                words_json=w_json,
                 words=None,  # type: ignore[arg-type]
             )
 
@@ -221,14 +240,17 @@ class JobService:
         if data.get("lesson_json"):
             lesson = LessonMaterials.model_validate(data["lesson_json"])
 
+        opts = data.get("options_json") or {}
+        orig_name = opts.get("original_filename") or data.get("original_filename") or file_name
+
         return Job(
             id=session_id,
-            file_name=data["original_filename"],
+            file_name=orig_name,
             source=source,
             options=JobOptions(
-                engine=data["engine"],
-                compact_silence=bool(data["compact_silence"]),
-                review=bool(data["review"]),
+                engine=opts.get("engine", data.get("engine", "gemini")),
+                compact_silence=bool(opts.get("compact_silence", data.get("compact_silence", False))),
+                review=bool(opts.get("review", data.get("review", False))),
             ),
             status=JobStatus(data["status"]),
             created_at=data.get("started_at") or 0.0,

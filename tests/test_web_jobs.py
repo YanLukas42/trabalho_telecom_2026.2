@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 
-from telecom.accounts.models import Principal, Tenant
+from telecom.accounts.models import Principal, Tenant, User
 from telecom.diarization.pipeline import DiarizationOptions, DiarizationPipeline
 from telecom.storage.db import Database
 from telecom.storage.repositories import SessionRepository, UserRepository
@@ -40,6 +40,10 @@ def make_service(tmp_path: Path, factory=fake_factory) -> JobService:
     users = UserRepository(db)
     users.save_tenant(Tenant(id="tenant-1", name="Escola Alpha"))
     users.save_tenant(Tenant(id="tenant-2", name="Escola Beta"))
+    users.save_user(User("user-1", "tenant-1", "u1@alpha.com", "User 1", "hash", "teacher"))
+    users.save_user(User("user-2", "tenant-1", "u2@alpha.com", "User 2", "hash", "teacher"))
+    users.save_user(User("user-3", "tenant-2", "u3@beta.com", "User 3", "hash", "teacher"))
+    users.save_user(User("user-admin", "tenant-1", "admin@alpha.com", "Admin", "hash", "owner"))
     return JobService(factory, repo, base_dir=tmp_path / "jobs", executor=ImmediateExecutor())
 
 
@@ -119,6 +123,7 @@ def test_recovers_active_jobs_on_startup(tmp_path):
     repo = SessionRepository(db)
     users = UserRepository(db)
     users.save_tenant(Tenant(id="tenant-1", name="Escola Alpha"))
+    users.save_user(User("user-1", "tenant-1", "u1@alpha.com", "User 1", "hash", "teacher"))
     repo.save("tenant-1", {
         "id": "job-hung", "tenant_id": "tenant-1", "teacher_id": "user-1",
         "filename": "a.mp3", "original_filename": "a.mp3", "engine": "gemini",
