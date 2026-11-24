@@ -57,6 +57,12 @@ SECURITY_HEADERS = (
     (b"x-content-type-options", b"nosniff"),
     (b"referrer-policy", b"no-referrer"),
 )
+_NO_CACHE_SUFFIXES = (".html", ".js", ".css")
+
+
+def should_revalidate_asset(path: str) -> bool:
+    """Garante revalidação pelo navegador em HTML, CSS e módulos ES sem impedir cache de fontes."""
+    return path == "/" or path.endswith(_NO_CACHE_SUFFIXES)
 
 
 class SecurityHeadersMiddleware:
@@ -70,10 +76,14 @@ class SecurityHeadersMiddleware:
             await self.app(scope, receive, send)
             return
 
+        no_cache = should_revalidate_asset(scope.get("path", ""))
+
         async def send_wrapper(message: Any) -> None:
             if message["type"] == "http.response.start":
                 headers = list(message.get("headers", []))
                 headers.extend(SECURITY_HEADERS)
+                if no_cache:
+                    headers.append((b"cache-control", b"no-cache"))
                 message["headers"] = headers
             await send(message)
 

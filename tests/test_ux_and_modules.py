@@ -71,7 +71,7 @@ def test_job_view_includes_audio_seconds_and_has_lesson(tmp_path):
 def test_static_files_and_csp(tmp_path):
     from telecom.storage.db import Database
     from telecom.storage.repositories import SessionRepository
-    from telecom.web.auth import AuthManager
+    from telecom.web.app import should_revalidate_asset
 
     db = Database(tmp_path / "test.db")
     session_repo = SessionRepository(db)
@@ -81,3 +81,9 @@ def test_static_files_and_csp(tmp_path):
     # Verifica se os arquivos estáticos foram montados
     routes = [r.path for r in app.routes if hasattr(r, "path")]
     assert any(p.startswith("") or p == "/" for p in routes)
+
+    # HTML, JS e CSS forçam revalidação no navegador; fontes ficam livres para cache
+    assert should_revalidate_asset("/") is True
+    assert should_revalidate_asset("/js/views/session.js") is True
+    assert should_revalidate_asset("/styles.css") is True
+    assert should_revalidate_asset("/fonts/fonte.woff2") is False
