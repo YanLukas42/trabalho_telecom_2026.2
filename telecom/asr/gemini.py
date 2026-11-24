@@ -6,11 +6,45 @@ from dataclasses import dataclass
 from typing import Any
 
 from google import genai
+from google.genai import errors as genai_errors
 from google.genai import types
 
 from telecom import settings
 
 logger = logging.getLogger(__name__)
+
+NON_RETRYABLE_STATUS_CODES = frozenset({400, 401, 403, 404})
+
+_API_ERROR_MESSAGES = {
+    400: "A API do Gemini recusou o arquivo enviado (erro 400). Verifique a gravação e tente novamente.",
+    401: "Chave da API do Gemini inválida ou sem permissão. Verifique GEMINI_API_KEY no arquivo .env.",
+    403: "Chave da API do Gemini inválida ou sem permissão. Verifique GEMINI_API_KEY no arquivo .env.",
+    429: "Limite de requisições da API do Gemini atingido. Aguarde alguns instantes e tente novamente.",
+}
+
+
+class GeminiAPIError(ValueError):
+    """Falha conhecida ao consultar a API do Gemini, com mensagem segura para o professor."""
+
+    def __init__(self, message: str, status_code: int | None = None) -> None:
+        super().__init__(message)
+        self.status_code = status_code
+
+
+def describe_api_error(code: int | None, model: str) -> str:
+    """Traduz o código de erro da API do Gemini para uma mensagem clara em português."""
+    if code is None:
+        return "Não foi possível conectar à API do Gemini. Verifique sua conexão com a internet e tente novamente."
+    if code == 404:
+        return f"O modelo '{model}' não está disponível na API do Gemini. Atualize GEMINI_MODEL no arquivo .env."
+    if code in _API_ERROR_MESSAGES:
+        return _API_ERROR_MESSAGES[code]
+    if 500 <= code < 600:
+        return (
+            f"A API do Gemini está temporariamente sobrecarregada ou indisponível (erro {code}). "
+            "Aguarde alguns instantes e tente novamente."
+        )
+    return f"A API do Gemini retornou erro {code}. Tente novamente em instantes."
 
 
 @dataclass(frozen=True)
@@ -76,12 +110,22 @@ class GeminiClient:
             try:
                 response = self._client.models.generate_content(model=self.model, contents=contents, config=config)
                 break
+            except genai_errors.APIError as exc:
+                code = getattr(exc, "code", None)
+                if code in NON_RETRYABLE_STATUS_CODES or attempt == max_retries:
+                    raise GeminiAPIError(describe_api_error(code, self.model), status_code=code) from exc
+                last_exc: Exception = exc
+            except (ConnectionError, TimeoutError) as exc:
+                if attempt == max_retries:
+                    raise GeminiAPIError(describe_api_error(None, self.model), status_code=503) from exc
+                last_exc = exc
             except Exception as exc:
                 if attempt == max_retries:
                     raise
-                wait = attempt * backoff_sec
-                logger.warning("Erro temporário na API (%s). Nova tentativa em %.1fs.", exc, wait)
-                time.sleep(wait)
+                last_exc = exc
+            wait = attempt * backoff_sec
+            logger.warning("Erro temporário na API (%s). Nova tentativa em %.1fs.", last_exc, wait)
+            time.sleep(wait)
 
         usage = response.usage_metadata
         prompt_tokens = getattr(usage, "prompt_token_count", 0) or 0

@@ -15,6 +15,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import ValidationError
 
 from telecom.accounts.models import Principal
+from telecom.asr.gemini import GeminiAPIError
 from telecom.diarization.factory import ENGINES
 from telecom.diarization.models import SpeakerSegment
 from telecom.lessons.materials import (
@@ -247,6 +248,8 @@ def create_app(
             req = body.to_request()
             writer = lesson_writer_factory()
             lesson = writer.write(_segments(job), req)
+        except GeminiAPIError as exc:
+            raise HTTPException(status_code=exc.status_code or 502, detail=str(exc)) from exc
         except ValueError as exc:
             raise HTTPException(status_code=400, detail=f"{exc} Ajuste os parâmetros e tente novamente.") from exc
         except Exception as exc:
