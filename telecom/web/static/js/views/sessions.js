@@ -20,6 +20,7 @@ export function renderSessions({ me, onNavigate }) {
   let loading = true;
   let errorMessage = "";
   let sessions = [];
+  let retryingId = null;
 
   function cleanup() {
     if (pollTimer) {
@@ -47,6 +48,21 @@ export function renderSessions({ me, onNavigate }) {
     cleanup();
     if (hasActive) {
       pollTimer = setTimeout(() => loadSessions(true), 3000);
+    }
+  }
+
+  async function handleRetry(session) {
+    if (retryingId) return;
+    retryingId = session.id;
+    render();
+    try {
+      await api.retrySession(session.id);
+      await loadSessions(true);
+    } catch (err) {
+      alert(err.message || "Falha ao reenviar aula para processamento.");
+    } finally {
+      retryingId = null;
+      render();
     }
   }
 
@@ -235,6 +251,17 @@ export function renderSessions({ me, onNavigate }) {
                 },
                 "Abrir aula"
               ),
+              isFailed
+                ? h(
+                    "button",
+                    {
+                      class: "button button-sm button-primary",
+                      disabled: retryingId === s.id,
+                      onClick: () => handleRetry(s),
+                    },
+                    retryingId === s.id ? "Reenviando..." : "Tentar novamente"
+                  )
+                : null,
               s.has_lesson
                 ? h(
                     "a",

@@ -55,6 +55,11 @@ export const api = {
       method: "DELETE",
     }),
 
+  retrySession: (id) =>
+    api.request(`/api/v1/sessions/${encodeURIComponent(id)}/retry`, {
+      method: "POST",
+    }),
+
   updateParticipants: (id, participants) =>
     api.request(`/api/v1/sessions/${encodeURIComponent(id)}/participants`, {
       method: "PUT",

@@ -31,6 +31,7 @@ def test_app_routes_are_all_under_api_v1(tmp_path: Path):
         "/api/v1/config",
         "/api/v1/sessions",
         "/api/v1/sessions/{session_id}",
+        "/api/v1/sessions/{session_id}/retry",
         "/api/v1/sessions/{session_id}/participants",
         "/api/v1/sessions/{session_id}/lesson",
         "/api/v1/sessions/{session_id}/media",

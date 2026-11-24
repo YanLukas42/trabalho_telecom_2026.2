@@ -131,10 +131,10 @@ class SessionRepository:
                 UPDATE class_sessions
                 SET status = ?, error = ?,
                     started_at = COALESCE(?, started_at),
-                    finished_at = COALESCE(?, finished_at)
+                    finished_at = CASE WHEN ? = 'queued' THEN NULL ELSE COALESCE(?, finished_at) END
                 WHERE tenant_id = ? AND id = ?
                 """,
-                (status, error, started_at, finished_at, tenant_id, session_id),
+                (status, error, started_at, status, finished_at, tenant_id, session_id),
             )
 
     def attach_results(

@@ -133,23 +133,11 @@ class JobService:
             logger.info("Recuperadas %d sessões ativas no reinício do servidor", recovered)
 
     def submit(
-        self,
-        principal: Principal,
-        file_name: str,
-        stream: BinaryIO,
-        options: JobOptions,
-        consent: bool = True,
-        consent_version: str = "v1",
+        self, principal: Principal, file_name: str, stream: BinaryIO,
+        options: JobOptions, consent: bool = True, consent_version: str = "v1",
     ) -> Job:
         """Grava o upload sob o diretório do tenant e agenda o processamento respeitando limites."""
-        # 1. Limite de concorrência: 1 por professor, 2 por escola (Item 8.4)
-        active_teacher = self._repo.count_active(principal.tenant_id, teacher_id=principal.user_id)
-        if active_teacher >= MAX_ACTIVE_PER_TEACHER:
-            raise ConcurrencyLimitError("Você já possui uma aula em processamento. Espere a aula anterior terminar.")
-        active_school = self._repo.count_active(principal.tenant_id)
-        if active_school >= MAX_ACTIVE_PER_TENANT:
-            raise ConcurrencyLimitError("Sua escola já possui 2 aulas em processamento. Espere a aula anterior terminar.")
-
+        self._enforce_concurrency(principal)
         safe_name = sanitize_filename(file_name)
         if Path(safe_name).suffix.lower() not in MEDIA_EXTENSIONS:
             raise ValueError(f"Formato não suportado. Use um destes: {', '.join(MEDIA_EXTENSIONS)}")
@@ -161,80 +149,86 @@ class JobService:
         source = session_dir / "upload" / safe_name
         source.parent.mkdir(parents=True, exist_ok=True)
 
-        # 2. Upload com teto de 300 MB, contado enquanto lê o stream (Item 8.1)
         total_bytes = 0
-        chunk_size = 1024 * 64
         with source.open("wb") as handle:
-            while True:
-                chunk = stream.read(chunk_size)
-                if not chunk:
-                    break
+            while chunk := stream.read(1024 * 64):
                 total_bytes += len(chunk)
                 if total_bytes > MAX_UPLOAD_BYTES:
                     handle.close()
                     shutil.rmtree(session_dir, ignore_errors=True)
                     raise UploadLimitError("O arquivo enviado ultrapassa o limite de 300 MB. Envie um arquivo menor.")
                 handle.write(chunk)
-
         if total_bytes == 0:
             shutil.rmtree(session_dir, ignore_errors=True)
             raise ValueError("O arquivo enviado está vazio. Selecione um arquivo com áudio.")
 
-        # 3. Duração máxima de 3 horas via ffprobe (Item 8.2)
         try:
             duration_sec = self._duration_prober(source)
         except Exception as exc:
             shutil.rmtree(session_dir, ignore_errors=True)
             raise ValueError(f"Não foi possível ler a duração do arquivo de áudio: {exc}") from exc
-
         if duration_sec > MAX_AUDIO_DURATION_SEC:
             shutil.rmtree(session_dir, ignore_errors=True)
             raise DurationLimitError("A gravação excede a duração máxima permitida de 3 horas. Envie um arquivo com até 3 horas de áudio.")
 
-        # 4. Verificação de cota mensal (Item 8.3)
-        now = datetime.now(timezone.utc)
-        month_start = datetime(now.year, now.month, 1, tzinfo=timezone.utc).isoformat()
-        used_minutes = self._usage_repo.get_monthly_audio_minutes(principal.tenant_id, month_start)
-        tenant = self._user_repo.get_tenant(principal.tenant_id)
-        monthly_limit = tenant.monthly_audio_minutes if tenant else 300
-        duration_minutes = duration_sec / 60.0
-
-        if used_minutes + duration_minutes > monthly_limit:
-            next_m = 1 if now.month == 12 else now.month + 1
-            next_y = now.year + 1 if now.month == 12 else now.year
-            renewal_date = f"01/{next_m:02d}/{next_y}"
-            shutil.rmtree(session_dir, ignore_errors=True)
-            raise QuotaExceededError(
-                f"Sua escola usou {int(round(used_minutes))} de {monthly_limit} minutos este mês. Renova em {renewal_date}."
-            )
-
-        now_sec = time.time()
+        self._enforce_quota(principal, duration_sec, cleanup_dir=session_dir)
         consent_at = datetime.now(timezone.utc).isoformat() if consent else None
         session_data = {
-            "id": session_id,
-            "tenant_id": principal.tenant_id,
-            "teacher_id": principal.user_id,
-            "file_name": safe_name,
-            "status": JobStatus.QUEUED.value,
-            "audio_seconds": duration_sec,
+            "id": session_id, "tenant_id": principal.tenant_id, "teacher_id": principal.user_id,
+            "file_name": safe_name, "status": JobStatus.QUEUED.value, "audio_seconds": duration_sec,
             "options_json": {
-                "engine": options.engine,
-                "compact_silence": options.compact_silence,
-                "review": options.review,
-                "original_filename": file_name,
+                "engine": options.engine, "compact_silence": options.compact_silence,
+                "review": options.review, "original_filename": file_name,
             },
-            "started_at": now_sec,
-            "consent_at": consent_at,
+            "started_at": time.time(), "consent_at": consent_at,
             "consent_version": consent_version if consent else None,
         }
         self._repo.save(principal.tenant_id, session_data)
         logger.info("Job %s criado para tenant %s", session_id, principal.tenant_id)
-
         self._executor.submit(self._run, principal.tenant_id, session_id)
         job = self.get(principal, session_id)
         if job is None:
             raise RuntimeError("Falha ao recuperar sessão recém-criada.")
         return job
+
+    def retry(self, principal: Principal, session_id: str) -> Job:
+        """Reenvia uma aula já gravada em disco para a fila de processamento."""
+        job = self.get(principal, session_id)
+        if job is None:
+            raise ValueError("Sessão não encontrada.")
+        if job.active:
+            raise ValueError("Esta aula já está em processamento.")
+        if not job.source.is_file():
+            raise ValueError("O arquivo de áudio desta aula não está mais disponível no servidor. Envie a gravação novamente.")
+        self._enforce_concurrency(principal)
+        self._enforce_quota(principal, job.audio_seconds or 0.0)
+        self._repo.update_status(principal.tenant_id, session_id, JobStatus.QUEUED.value, error=None, started_at=time.time())
+        self._executor.submit(self._run, principal.tenant_id, session_id)
+        updated = self.get(principal, session_id)
+        if updated is None:
+            raise RuntimeError("Falha ao recuperar sessão atualizada.")
+        return updated
+
+    def _enforce_concurrency(self, principal: Principal) -> None:
+        if self._repo.count_active(principal.tenant_id, teacher_id=principal.user_id) >= MAX_ACTIVE_PER_TEACHER:
+            raise ConcurrencyLimitError("Você já possui uma aula em processamento. Espere a aula anterior terminar.")
+        if self._repo.count_active(principal.tenant_id) >= MAX_ACTIVE_PER_TENANT:
+            raise ConcurrencyLimitError("Sua escola já possui 2 aulas em processamento. Espere a aula anterior terminar.")
+
+    def _enforce_quota(self, principal: Principal, duration_sec: float, cleanup_dir: Path | None = None) -> None:
+        now = datetime.now(timezone.utc)
+        month_start = datetime(now.year, now.month, 1, tzinfo=timezone.utc).isoformat()
+        used_minutes = self._usage_repo.get_monthly_audio_minutes(principal.tenant_id, month_start)
+        tenant = self._user_repo.get_tenant(principal.tenant_id)
+        monthly_limit = tenant.monthly_audio_minutes if tenant else 300
+        if used_minutes + (duration_sec / 60.0) > monthly_limit:
+            next_m = 1 if now.month == 12 else now.month + 1
+            next_y = now.year + 1 if now.month == 12 else now.year
+            if cleanup_dir is not None:
+                shutil.rmtree(cleanup_dir, ignore_errors=True)
+            raise QuotaExceededError(
+                f"Sua escola usou {int(round(used_minutes))} de {monthly_limit} minutos este mês. Renova em 01/{next_m:02d}/{next_y}."
+            )
 
     def get(self, principal: Principal, session_id: str) -> Job | None:
         """Busca sessão do tenant. Professor só vê suas próprias aulas (TN-04)."""

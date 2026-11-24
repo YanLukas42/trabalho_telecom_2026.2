@@ -197,6 +197,24 @@ def create_app(
     def get_session(session_id: str, principal: Principal = Depends(auth.current_principal)) -> JobView:
         return JobView.from_job(_find(service, principal, session_id))
 
+    @app.post("/api/v1/sessions/{session_id}/retry", response_model=JobView)
+    def retry_session(
+        request: Request,
+        session_id: str,
+        principal: Principal = Depends(auth.current_principal),
+    ) -> JobView:
+        """Reenvia uma aula com falha ou parada para a fila de processamento."""
+        verify_csrf(request)
+        _find(service, principal, session_id)
+        try:
+            updated = service.retry(principal, session_id)
+        except (ConcurrencyLimitError, QuotaExceededError) as exc:
+            raise HTTPException(status_code=429, detail=str(exc)) from exc
+        except ValueError as exc:
+            code = 409 if "já está em processamento" in str(exc) else 400
+            raise HTTPException(status_code=code, detail=str(exc)) from exc
+        return JobView.from_job(updated)
+
     @app.delete("/api/v1/sessions/{session_id}")
     def delete_session(
         request: Request,

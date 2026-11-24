@@ -136,3 +136,70 @@ def test_recovers_active_jobs_on_startup(tmp_path):
     assert recovered is not None
     assert recovered.status is JobStatus.FAILED
     assert "servidor reiniciou" in recovered.error
+
+
+def test_retry_reprocesses_failed_session_and_enforces_guards(tmp_path):
+    from telecom.diarization.pipeline import DiarizationOutputs
+    from telecom.web.jobs import ConcurrencyLimitError
+
+    state = {"should_fail": True}
+
+    class SwitchablePipeline:
+        def __init__(self, out_dir: Path):
+            self.out_dir = out_dir
+
+        def run(self, source: Path) -> DiarizationOutputs:
+            if state["should_fail"]:
+                raise ValueError("API sobrecarregada")
+            reports = self.out_dir / "reports"
+            reports.mkdir(parents=True, exist_ok=True)
+            rep_json = reports / f"{source.stem}_diarizacao_pydantic.json"
+            rep_md = reports / f"{source.stem}_diarizacao_pydantic.md"
+            w_json = reports / f"{source.stem}_palavra_por_palavra.json"
+            rep_json.write_text('{"segmentos": []}', encoding="utf-8")
+            rep_md.write_text("# OK", encoding="utf-8")
+            w_json.write_text("{}", encoding="utf-8")
+            return DiarizationOutputs(
+                payload={"duracao_original_segundos": 30.0, "metricas_tokens": {"total_tokens": 50}, "segmentos": []},
+                report_json=rep_json,
+                report_md=rep_md,
+                words_json=w_json,
+                words=None,
+            )
+
+    service = make_service(tmp_path, lambda opts, out: SwitchablePipeline(out))
+    failed_job = service.submit(PRINCIPAL_A, "aula.mp3", io.BytesIO(b"audio"), JobOptions())
+    assert failed_job.status is JobStatus.FAILED
+    assert failed_job.error == "API sobrecarregada"
+
+    # Outro professor não pode dar retry
+    with pytest.raises(ValueError, match="não encontrada"):
+        service.retry(PRINCIPAL_B, failed_job.id)
+
+    # Reprocessa com sucesso após falha
+    state["should_fail"] = False
+    retried = service.retry(PRINCIPAL_A, failed_job.id)
+    assert retried.status is JobStatus.DONE
+    assert retried.error is None
+
+    # Arquivo removido no disco -> erro claro ao tentar de novo
+    retried.source.unlink()
+    with pytest.raises(ValueError, match="não está mais disponível"):
+        service.retry(PRINCIPAL_A, retried.id)
+
+    # Sessão ativa não pode ser reenviada
+    service._repo.update_status(PRINCIPAL_A.tenant_id, retried.id, JobStatus.PROCESSING.value)
+    with pytest.raises(ValueError, match="já está em processamento"):
+        service.retry(PRINCIPAL_A, retried.id)
+
+    # Se outra aula do mesmo professor estiver ativa, respeita limite de concorrência
+    service._repo.save(PRINCIPAL_A.tenant_id, {
+        "id": "outra-ativa", "tenant_id": PRINCIPAL_A.tenant_id, "teacher_id": PRINCIPAL_A.user_id,
+        "file_name": "x.mp3", "status": "queued",
+    })
+    another_failed = service.get(PRINCIPAL_A, retried.id)
+    assert another_failed is not None
+    service._repo.update_status(PRINCIPAL_A.tenant_id, retried.id, JobStatus.FAILED.value)
+    retried.source.write_bytes(b"audio")
+    with pytest.raises(ConcurrencyLimitError):
+        service.retry(PRINCIPAL_A, retried.id)

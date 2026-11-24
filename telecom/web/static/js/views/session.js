@@ -21,10 +21,11 @@ export function renderSession({ id, activeTab = "aula" }) {
   let secondsElapsed = 0;
   let searchQuery = "";
   let savingParticipants = false;
+  let retrying = false;
 
   function cleanup() {
-    if (pollTimer) clearTimeout(pollTimer);
-    if (elapsedTimer) clearInterval(elapsedTimer);
+    if (pollTimer) { clearTimeout(pollTimer); pollTimer = null; }
+    if (elapsedTimer) { clearInterval(elapsedTimer); elapsedTimer = null; }
   }
 
   async function loadData() {
@@ -33,15 +34,13 @@ export function renderSession({ id, activeTab = "aula" }) {
       errorMessage = "";
       if (session.status === "queued" || session.status === "processing") {
         if (!elapsedTimer) {
-          secondsElapsed = session.elapsed_sec || 0;
-          elapsedTimer = setInterval(() => {
-            secondsElapsed += 1;
-            renderTimer();
-          }, 1000);
+          secondsElapsed = Math.max(0, session.elapsed_sec || 0);
+          elapsedTimer = setInterval(() => { secondsElapsed += 1; renderTimer(); }, 1000);
         }
         pollTimer = setTimeout(loadData, 1500);
-      } else {
-        if (elapsedTimer) clearInterval(elapsedTimer);
+      } else if (elapsedTimer) {
+        clearInterval(elapsedTimer);
+        elapsedTimer = null;
       }
     } catch (err) {
       errorMessage = err.message || "Não foi possível carregar os detalhes da aula.";
@@ -53,8 +52,23 @@ export function renderSession({ id, activeTab = "aula" }) {
 
   function renderTimer() {
     const timerEl = document.getElementById("session-timer");
-    if (timerEl) {
-      timerEl.textContent = formatTime(secondsElapsed);
+    if (timerEl) timerEl.textContent = formatTime(secondsElapsed);
+  }
+
+  async function handleRetry() {
+    if (retrying) return;
+    retrying = true;
+    render();
+    try {
+      await api.retrySession(id);
+      secondsElapsed = 0;
+      cleanup();
+      await loadData();
+    } catch (err) {
+      alert(err.message || "Falha ao reenviar aula para processamento.");
+    } finally {
+      retrying = false;
+      render();
     }
   }
 
@@ -74,9 +88,7 @@ export function renderSession({ id, activeTab = "aula" }) {
     savingParticipants = true;
     try {
       const payload = Object.entries(participantsMap).map(([label, p]) => ({
-        label,
-        name: (p.name || label).trim(),
-        role: p.role,
+        label, name: (p.name || label).trim(), role: p.role,
       }));
       const updated = await api.updateParticipants(id, payload);
       session.participants = updated.participants || payload;
@@ -89,12 +101,7 @@ export function renderSession({ id, activeTab = "aula" }) {
 
   function render() {
     if (loading && !session) {
-      v.replaceChildren(
-        h("div", { class: "card state" },
-          h("div", { class: "spinner", "aria-hidden": "true" }),
-          h("p", {}, "Carregando aula...")
-        )
-      );
+      v.replaceChildren(h("div", { class: "card state" }, h("div", { class: "spinner", "aria-hidden": "true" }), h("p", {}, "Carregando aula...")));
       return;
     }
 
@@ -115,11 +122,7 @@ export function renderSession({ id, activeTab = "aula" }) {
           h("div", { id: "session-timer", class: "timer" }, formatTime(secondsElapsed)),
           h("h2", { style: { fontSize: "20px" } }, session.status === "queued" ? "Na fila para transcrição" : "Transcrevendo a aula..."),
           h("p", { class: "hint" }, "Você pode sair desta página se quiser. O processamento continua no servidor."),
-          h("button", {
-            class: "button button-ghost button-sm",
-            style: { marginTop: "16px" },
-            onClick: handleDelete,
-          }, "Cancelar e excluir aula")
+          h("button", { class: "button button-ghost button-sm", style: { marginTop: "16px" }, onClick: handleDelete }, "Cancelar e excluir aula")
         )
       );
       return;
@@ -130,8 +133,9 @@ export function renderSession({ id, activeTab = "aula" }) {
         h("div", { class: "card state" },
           h("h2", {}, "Falha no processamento"),
           h("div", { class: "alert", role: "alert" }, session.error || "Ocorreu um erro ao processar o arquivo de áudio."),
-          h("div", { style: { display: "flex", gap: "10px", marginTop: "16px" } },
-            h("a", { class: "button button-primary", href: "#/nova" }, "Tentar outro arquivo"),
+          h("div", { style: { display: "flex", gap: "10px", marginTop: "16px", flexWrap: "wrap", justifyContent: "center" } },
+            h("button", { class: "button button-primary", disabled: retrying, onClick: handleRetry }, retrying ? "Reenviando..." : "Tentar novamente"),
+            h("a", { class: "button", href: "#/nova" }, "Enviar outro arquivo"),
             h("button", { class: "button button-ghost", onClick: handleDelete }, "Excluir aula")
           )
         )
@@ -380,16 +384,10 @@ export function renderSession({ id, activeTab = "aula" }) {
     v.replaceChildren(
       head,
       navTabs,
-      h("div", { class: "panel" },
-        playerWrapper,
-        peopleCard,
-        toolbar,
-        transcriptList
-      )
+      h("div", { class: "panel" }, playerWrapper, peopleCard, toolbar, transcriptList)
     );
   }
 
   loadData();
-
   return cleanup;
 }
