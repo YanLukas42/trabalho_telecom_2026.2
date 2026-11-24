@@ -292,7 +292,17 @@ class JobService:
         try:
             pipeline = self._pipeline_factory(job.options, session_dir)
             outputs = pipeline.run(job.source)
-        except (ValueError, FFmpegError) as exc:
+        except FFmpegError as exc:
+            logger.warning("Job %s falhou no processamento de áudio (FFmpeg)", session_id)
+            msg = (
+                "O processamento do áudio excedeu o tempo limite (FFMPEG_TIMEOUT). Tente enviar um arquivo menor."
+                if "tempo limite" in str(exc)
+                else "Não foi possível processar o arquivo de áudio (erro FFmpeg). Verifique se o arquivo é válido e tente novamente."
+            )
+            self._repo.update_status(
+                tenant_id, session_id, JobStatus.FAILED.value, error=msg, finished_at=time.time()
+            )
+        except ValueError as exc:
             logger.warning("Job %s falhou no processamento", session_id)
             self._repo.update_status(
                 tenant_id, session_id, JobStatus.FAILED.value, error=str(exc), finished_at=time.time()

@@ -16,11 +16,11 @@ class FFmpegError(RuntimeError):
 
 def run_ffmpeg(args: list[str], stdin: bytes | None = None) -> tuple[bytes, str]:
     """Executa o ffmpeg com timeout e restrição estrita de protocolos (SG-07)."""
-    # Insere "-protocol_whitelist file,pipe" antes de cada "-i"
+    # Insere "-protocol_whitelist file,pipe,fd" antes de cada "-i" (FFmpeg 9+ usa fd em pipe)
     sanitized_args: list[str] = []
     for arg in args:
         if arg == "-i":
-            sanitized_args.extend(["-protocol_whitelist", "file,pipe", "-i"])
+            sanitized_args.extend(["-protocol_whitelist", "file,pipe,fd", "-i"])
         else:
             sanitized_args.append(arg)
 

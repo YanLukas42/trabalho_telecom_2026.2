@@ -203,3 +203,17 @@ def test_retry_reprocesses_failed_session_and_enforces_guards(tmp_path):
     retried.source.write_bytes(b"audio")
     with pytest.raises(ConcurrencyLimitError):
         service.retry(PRINCIPAL_A, retried.id)
+
+
+def test_ffmpeg_error_shows_brief_message_without_stderr_details(tmp_path):
+    from telecom.audio.ffmpeg import FFmpegError
+
+    service = make_service(
+        tmp_path,
+        failing_factory(FFmpegError("ffmpeg falhou (código 1): [fd @ 0x7fff] Protocol 'fd' error\r\ninvalid")),
+    )
+    job = service.submit(PRINCIPAL_A, "aula.mp3", io.BytesIO(b"audio"), JobOptions())
+    assert job.status is JobStatus.FAILED
+    assert "erro FFmpeg" in (job.error or "")
+    assert "0x7fff" not in (job.error or "")
+    assert "Protocol" not in (job.error or "")

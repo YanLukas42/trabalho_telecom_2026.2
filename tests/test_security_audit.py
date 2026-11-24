@@ -96,7 +96,7 @@ def test_ffmpeg_protocol_whitelist_and_timeout():
         called_cmd = mock_run.call_args[0][0]
         assert "-protocol_whitelist" in called_cmd
         i_idx = called_cmd.index("-i")
-        assert called_cmd[i_idx - 2:i_idx] == ["-protocol_whitelist", "file,pipe"]
+        assert called_cmd[i_idx - 2:i_idx] == ["-protocol_whitelist", "file,pipe,fd"]
         assert mock_run.call_args[1]["timeout"] == FFMPEG_TIMEOUT_SEC
 
 
